@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblConfiguracionAvanzada = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,15 +41,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblConfiguracionAvanzada
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(179, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Configuracion Avanzada:";
+            this.lblConfiguracionAvanzada.AutoSize = true;
+            this.lblConfiguracionAvanzada.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfiguracionAvanzada.Location = new System.Drawing.Point(179, 43);
+            this.lblConfiguracionAvanzada.Name = "lblConfiguracionAvanzada";
+            this.lblConfiguracionAvanzada.Size = new System.Drawing.Size(405, 38);
+            this.lblConfiguracionAvanzada.TabIndex = 0;
+            this.lblConfiguracionAvanzada.Text = "Configuracion Avanzada:";
             // 
             // label2
             // 
@@ -171,7 +171,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblConfiguracionAvanzada);
             this.Name = "FrmConfiguracion";
             this.Text = "FrmConfiguracion";
             this.ResumeLayout(false);
@@ -181,7 +181,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblConfiguracionAvanzada;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
