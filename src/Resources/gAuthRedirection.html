@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirección</title>
+    <script>
+        // Función para iniciar el contador y cerrar la ventana
+        function iniciarContador() {
+            var contador = 5; // Tiempo en segundos
+            var intervalo = setInterval(function() {
+                contador--;
+                document.getElementById('contador').innerText = contador; // Actualizar el contador en el HTML
+                if (contador <= 0) {
+                    clearInterval(intervalo); // Detener el contador
+                    window.close(); // Cerrar la ventana
+                }
+            }, 1000); // Intervalo de actualización del contador (1 segundo)
+        }
+    </script>
+</head>
+<body onload="iniciarContador()">
+    <div>
+        <p>Esta ventana se cerrará en <span id="contador">5</span> segundos.</p>
+        <p>Por favor, regresa a la aplicación.</p>
+    </div>
+</body>
+</html>
