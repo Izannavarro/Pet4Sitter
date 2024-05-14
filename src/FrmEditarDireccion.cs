@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace piTest
 {
-    public partial class FrmDarseDeAlta : Form
+    public partial class FrmEditarDireccion : Form
     {
-        public FrmDarseDeAlta()
+        public FrmEditarDireccion()
         {
             InitializeComponent();
         }
 
-        private void FrmDarseDeAlta_Load(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }
