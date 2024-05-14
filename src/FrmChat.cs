@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace piTest
 {
-    public partial class FrmDarseDeAlta : Form
+    public partial class FrmChat : Form
     {
-        public FrmDarseDeAlta()
+        public FrmChat()
         {
             InitializeComponent();
-        }
-
-        private void FrmDarseDeAlta_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

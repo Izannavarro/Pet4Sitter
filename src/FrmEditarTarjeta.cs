@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace piTest
 {
-    public partial class FrmDarseDeAlta : Form
+    public partial class FrmEditarTarjeta : Form
     {
-        public FrmDarseDeAlta()
+        public FrmEditarTarjeta()
         {
             InitializeComponent();
         }
 
-        private void FrmDarseDeAlta_Load(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

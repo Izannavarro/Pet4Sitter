@@ -209,7 +209,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1279, 673);
+            this.ClientSize = new System.Drawing.Size(1267, 668);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox3);
@@ -228,6 +228,7 @@
             this.Controls.Add(this.label5);
             this.Name = "FrmDarseDeAlta";
             this.Text = "FrmDarseDeAlta";
+            this.Load += new System.EventHandler(this.FrmDarseDeAlta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
