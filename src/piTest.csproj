@@ -126,6 +126,18 @@
     <Compile Include="Data.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="ForgotPasswordMail.cs" />
+    <Compile Include="FrmCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCarrito.Designer.cs">
+      <DependentUpon>FrmCarrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChat.Designer.cs">
+      <DependentUpon>FrmChat.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,11 +150,23 @@
     <Compile Include="FrmDarseDeAlta.Designer.cs">
       <DependentUpon>FrmDarseDeAlta.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEditarDireccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarDireccion.Designer.cs">
+      <DependentUpon>FrmEditarDireccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditarPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEditarPerfil.Designer.cs">
       <DependentUpon>FrmEditarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditarTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarTarjeta.Designer.cs">
+      <DependentUpon>FrmEditarTarjeta.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmFiltrador.cs">
       <SubType>Form</SubType>
@@ -168,6 +192,12 @@
     <Compile Include="FrmPerfil.Designer.cs">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTienda.Designer.cs">
+      <DependentUpon>FrmTienda.cs</DependentUpon>
+    </Compile>
     <Compile Include="GoogleAuthenticator.cs" />
     <Compile Include="googleData.cs" />
     <Compile Include="MasterMailServer.cs" />
@@ -189,14 +219,26 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCarrito.resx">
+      <DependentUpon>FrmCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChat.resx">
+      <DependentUpon>FrmChat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConfiguracion.resx">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDarseDeAlta.resx">
       <DependentUpon>FrmDarseDeAlta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarDireccion.resx">
+      <DependentUpon>FrmEditarDireccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarPerfil.resx">
       <DependentUpon>FrmEditarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarTarjeta.resx">
+      <DependentUpon>FrmEditarTarjeta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFiltrador.resx">
       <DependentUpon>FrmFiltrador.cs</DependentUpon>
@@ -209,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTienda.resx">
+      <DependentUpon>FrmTienda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
