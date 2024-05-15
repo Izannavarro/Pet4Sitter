@@ -117,176 +117,176 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data.cs" />
-    <Compile Include="DB.cs" />
-    <Compile Include="ForgotPasswordMail.cs" />
-    <Compile Include="FrmAdminProductos.cs">
+    <Compile Include="Clases\Data.cs" />
+    <Compile Include="Clases\DB.cs" />
+    <Compile Include="Clases\ForgotPasswordMail.cs" />
+    <Compile Include="Forms\FrmAdminProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAdminProductos.Designer.cs">
+    <Compile Include="Forms\FrmAdminProductos.Designer.cs">
       <DependentUpon>FrmAdminProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCarrito.cs">
+    <Compile Include="Forms\FrmCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCarrito.Designer.cs">
+    <Compile Include="Forms\FrmCarrito.Designer.cs">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmChat.cs">
+    <Compile Include="Forms\FrmChat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmChat.Designer.cs">
+    <Compile Include="Forms\FrmChat.Designer.cs">
       <DependentUpon>FrmChat.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmConfiguracion.cs">
+    <Compile Include="Forms\FrmConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmConfiguracion.Designer.cs">
+    <Compile Include="Forms\FrmConfiguracion.Designer.cs">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDarseDeAlta.cs">
+    <Compile Include="Forms\FrmDarseDeAlta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDarseDeAlta.Designer.cs">
+    <Compile Include="Forms\FrmDarseDeAlta.Designer.cs">
       <DependentUpon>FrmDarseDeAlta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditarDireccion.cs">
+    <Compile Include="Forms\FrmEditarDireccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditarDireccion.Designer.cs">
+    <Compile Include="Forms\FrmEditarDireccion.Designer.cs">
       <DependentUpon>FrmEditarDireccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditarPerfil.cs">
+    <Compile Include="Forms\FrmEditarPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditarPerfil.Designer.cs">
+    <Compile Include="Forms\FrmEditarPerfil.Designer.cs">
       <DependentUpon>FrmEditarPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditarTarjeta.cs">
+    <Compile Include="Forms\FrmEditarTarjeta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditarTarjeta.Designer.cs">
+    <Compile Include="Forms\FrmEditarTarjeta.Designer.cs">
       <DependentUpon>FrmEditarTarjeta.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFiltrador.cs">
+    <Compile Include="Forms\FrmFiltrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmFiltrador.Designer.cs">
+    <Compile Include="Forms\FrmFiltrador.Designer.cs">
       <DependentUpon>FrmFiltrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInicio.cs">
+    <Compile Include="Forms\FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInicio.Designer.cs">
+    <Compile Include="Forms\FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInicioAdmin.cs">
+    <Compile Include="Forms\FrmInicioAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInicioAdmin.Designer.cs">
+    <Compile Include="Forms\FrmInicioAdmin.Designer.cs">
       <DependentUpon>FrmInicioAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmNoticias.cs">
+    <Compile Include="Forms\FrmNoticias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmNoticias.Designer.cs">
+    <Compile Include="Forms\FrmNoticias.Designer.cs">
       <DependentUpon>FrmNoticias.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPerfil.cs">
+    <Compile Include="Forms\FrmPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPerfil.Designer.cs">
+    <Compile Include="Forms\FrmPerfil.Designer.cs">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmResultadoFiltrado.cs">
+    <Compile Include="Forms\FrmResultadoFiltrado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmResultadoFiltrado.Designer.cs">
+    <Compile Include="Forms\FrmResultadoFiltrado.Designer.cs">
       <DependentUpon>FrmResultadoFiltrado.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTienda.cs">
+    <Compile Include="Forms\FrmTienda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTienda.Designer.cs">
+    <Compile Include="Forms\FrmTienda.Designer.cs">
       <DependentUpon>FrmTienda.cs</DependentUpon>
     </Compile>
-    <Compile Include="GoogleAuthenticator.cs" />
-    <Compile Include="googleData.cs" />
-    <Compile Include="MasterMailServer.cs" />
-    <Compile Include="RegisterForm.cs">
+    <Compile Include="Clases\GoogleAuthenticator.cs" />
+    <Compile Include="Clases\googleData.cs" />
+    <Compile Include="Clases\MasterMailServer.cs" />
+    <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegisterForm.Designer.cs">
+    <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PortManager.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Clases\PortManager.cs" />
+    <Compile Include="Clases\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAdminProductos.resx">
+    <EmbeddedResource Include="Forms\FrmAdminProductos.resx">
       <DependentUpon>FrmAdminProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCarrito.resx">
+    <EmbeddedResource Include="Forms\FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmChat.resx">
+    <EmbeddedResource Include="Forms\FrmChat.resx">
       <DependentUpon>FrmChat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmConfiguracion.resx">
+    <EmbeddedResource Include="Forms\FrmConfiguracion.resx">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDarseDeAlta.resx">
+    <EmbeddedResource Include="Forms\FrmDarseDeAlta.resx">
       <DependentUpon>FrmDarseDeAlta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditarDireccion.resx">
+    <EmbeddedResource Include="Forms\FrmEditarDireccion.resx">
       <DependentUpon>FrmEditarDireccion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditarPerfil.resx">
+    <EmbeddedResource Include="Forms\FrmEditarPerfil.resx">
       <DependentUpon>FrmEditarPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditarTarjeta.resx">
+    <EmbeddedResource Include="Forms\FrmEditarTarjeta.resx">
       <DependentUpon>FrmEditarTarjeta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmFiltrador.resx">
+    <EmbeddedResource Include="Forms\FrmFiltrador.resx">
       <DependentUpon>FrmFiltrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInicio.resx">
+    <EmbeddedResource Include="Forms\FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInicioAdmin.resx">
+    <EmbeddedResource Include="Forms\FrmInicioAdmin.resx">
       <DependentUpon>FrmInicioAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmNoticias.resx">
+    <EmbeddedResource Include="Forms\FrmNoticias.resx">
       <DependentUpon>FrmNoticias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPerfil.resx">
+    <EmbeddedResource Include="Forms\FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmResultadoFiltrado.resx">
+    <EmbeddedResource Include="Forms\FrmResultadoFiltrado.resx">
       <DependentUpon>FrmResultadoFiltrado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTienda.resx">
+    <EmbeddedResource Include="Forms\FrmTienda.resx">
       <DependentUpon>FrmTienda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegisterForm.resx">
+    <EmbeddedResource Include="Forms\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
