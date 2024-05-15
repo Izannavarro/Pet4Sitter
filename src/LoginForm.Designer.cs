@@ -37,6 +37,7 @@ namespace piTest
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblPass = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLine = new System.Windows.Forms.Label();
             this.lblLinePassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -44,10 +45,9 @@ namespace piTest
             this.lblForgPass = new System.Windows.Forms.Label();
             this.btnContinueWGoogle = new System.Windows.Forms.Button();
             this.pictureBoxContinueGoogle = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWelcomeLogin
@@ -81,7 +81,7 @@ namespace piTest
             this.txtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.txtMail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(170)))), ((int)(((byte)(110)))));
             this.txtMail.Location = new System.Drawing.Point(411, 110);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(576, 33);
@@ -97,7 +97,7 @@ namespace piTest
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(170)))), ((int)(((byte)(110)))));
             this.txtPass.Location = new System.Drawing.Point(411, 194);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(576, 33);
@@ -122,10 +122,21 @@ namespace piTest
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-5, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(351, 412);
             this.panel1.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::piTest.Properties.Resources.piTestLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 62);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(343, 277);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lblLine
             // 
@@ -149,7 +160,7 @@ namespace piTest
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(411, 260);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(576, 34);
             this.btnLogin.TabIndex = 8;
@@ -160,7 +171,7 @@ namespace piTest
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(411, 302);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(576, 34);
             this.btnRegister.TabIndex = 9;
@@ -187,7 +198,7 @@ namespace piTest
             // 
             this.btnContinueWGoogle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContinueWGoogle.Location = new System.Drawing.Point(411, 343);
-            this.btnContinueWGoogle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnContinueWGoogle.Margin = new System.Windows.Forms.Padding(4);
             this.btnContinueWGoogle.Name = "btnContinueWGoogle";
             this.btnContinueWGoogle.Size = new System.Drawing.Size(576, 34);
             this.btnContinueWGoogle.TabIndex = 11;
@@ -211,17 +222,6 @@ namespace piTest
             this.pictureBoxContinueGoogle.TabStop = false;
             this.pictureBoxContinueGoogle.Click += new System.EventHandler(this.pictureBoxContinueGoogle_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::piTest.Properties.Resources.piTestLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 62);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(343, 277);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -243,15 +243,15 @@ namespace piTest
             this.Controls.Add(this.lblWelcomeLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login App";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
