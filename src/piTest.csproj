@@ -192,6 +192,12 @@
     <Compile Include="FrmPerfil.Designer.cs">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmResultadoFiltrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmResultadoFiltrado.Designer.cs">
+      <DependentUpon>FrmResultadoFiltrado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTienda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPerfil.resx">
       <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmResultadoFiltrado.resx">
+      <DependentUpon>FrmResultadoFiltrado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTienda.resx">
       <DependentUpon>FrmTienda.cs</DependentUpon>
