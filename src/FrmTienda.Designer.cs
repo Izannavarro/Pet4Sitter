@@ -61,9 +61,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(189, 106);
+            this.panel3.Location = new System.Drawing.Point(219, 106);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(675, 536);
+            this.panel3.Size = new System.Drawing.Size(645, 536);
             this.panel3.TabIndex = 5;
             // 
             // dataGridView1
@@ -75,7 +75,7 @@
             this.Precio,
             this.Descripcion,
             this.Valoracion});
-            this.dataGridView1.Location = new System.Drawing.Point(38, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 20);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -163,7 +163,7 @@
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Location = new System.Drawing.Point(690, 9);
+            this.panel5.Location = new System.Drawing.Point(660, 10);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(256, 42);
             this.panel5.TabIndex = 44;
@@ -202,15 +202,15 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(14, 9);
+            this.textBox1.Location = new System.Drawing.Point(17, 10);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(574, 41);
+            this.textBox1.Size = new System.Drawing.Size(536, 41);
             this.textBox1.TabIndex = 18;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(594, 9);
+            this.button4.Location = new System.Drawing.Point(571, 10);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(63, 42);
             this.button4.TabIndex = 41;
@@ -223,9 +223,9 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(189, 25);
+            this.panel2.Location = new System.Drawing.Point(219, 25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 63);
+            this.panel2.Size = new System.Drawing.Size(930, 63);
             this.panel2.TabIndex = 7;
             // 
             // button6
