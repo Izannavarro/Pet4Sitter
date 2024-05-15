@@ -45,6 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -114,7 +117,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(888, 35);
             this.panel1.Name = "panel1";
@@ -124,7 +127,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(89, 528);
+            this.button5.Location = new System.Drawing.Point(70, 434);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(190, 32);
             this.button5.TabIndex = 47;
@@ -134,6 +137,9 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.button5);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.button4);
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.label5);
@@ -159,18 +165,18 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 32);
             this.button3.TabIndex = 48;
-            this.button3.Text = "Editar Pedido";
+            this.button3.Text = "Editar Direccion";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(62, 31);
+            this.label5.Location = new System.Drawing.Point(18, 33);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 22);
+            this.label5.Size = new System.Drawing.Size(231, 22);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Descripcion Extensa";
+            this.label5.Text = "Descripcion Localización";
             // 
             // button1
             // 
@@ -212,6 +218,36 @@
             this.button2.TabIndex = 48;
             this.button2.Text = "Volver";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(28, 171);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 22);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "Metodo de Pago:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 260);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(185, 22);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Descripcion Tarjeta";
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(94, 533);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(190, 32);
+            this.button6.TabIndex = 52;
+            this.button6.Text = "Volver";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // FrmCarrito
             // 
@@ -257,5 +293,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

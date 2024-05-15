@@ -126,6 +126,12 @@
     <Compile Include="Data.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="ForgotPasswordMail.cs" />
+    <Compile Include="FrmAdminProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdminProductos.Designer.cs">
+      <DependentUpon>FrmAdminProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCarrito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,12 @@
     <Compile Include="FrmInicio.Designer.cs">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInicioAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicioAdmin.Designer.cs">
+      <DependentUpon>FrmInicioAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmNoticias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +237,9 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdminProductos.resx">
+      <DependentUpon>FrmAdminProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCarrito.resx">
       <DependentUpon>FrmCarrito.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInicioAdmin.resx">
+      <DependentUpon>FrmInicioAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNoticias.resx">
       <DependentUpon>FrmNoticias.cs</DependentUpon>
