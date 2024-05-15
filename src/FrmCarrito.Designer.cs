@@ -38,13 +38,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -142,6 +142,26 @@
             this.panel4.Size = new System.Drawing.Size(317, 486);
             this.panel4.TabIndex = 45;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(211, 205);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(91, 32);
+            this.button4.TabIndex = 49;
+            this.button4.Text = "Editar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(166, 103);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 32);
+            this.button3.TabIndex = 48;
+            this.button3.Text = "Editar Pedido";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -192,26 +212,6 @@
             this.button2.TabIndex = 48;
             this.button2.Text = "Volver";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(166, 103);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 32);
-            this.button3.TabIndex = 48;
-            this.button3.Text = "Editar Pedido";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(211, 205);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 32);
-            this.button4.TabIndex = 49;
-            this.button4.Text = "Editar";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // FrmCarrito
             // 

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace piTest
 {
-    public partial class FrmTienda : Form
+    public partial class FrmResultadoFiltrado : Form
     {
-        public FrmTienda()
+        public FrmResultadoFiltrado()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
