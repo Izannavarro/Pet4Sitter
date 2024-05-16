@@ -252,6 +252,21 @@
     <Compile Include="Clases\PortManager.cs" />
     <Compile Include="Clases\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Recursos Localizable\FrmAdminProductos.en-US.Designer.cs">
+      <DependentUpon>FrmAdminProductos.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmAdminProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmAdminProductos.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmAdminUsuarios.en-US.Designer.cs">
+      <DependentUpon>FrmAdminUsuarios.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Resources\Recursos Localizable\FrmAlta.en-US.Designer.cs">
       <DependentUpon>FrmAlta.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -291,6 +306,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmConf.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmEditarDireccion.en-US.Designer.cs">
+      <DependentUpon>FrmEditarDireccion.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmEditarDireccion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmEditarDireccion.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\Recursos Localizable\FrmInicioAdmin.en-US.Designer.cs">
       <DependentUpon>FrmInicioAdmin.en-US.resx</DependentUpon>
@@ -341,6 +366,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmTienda.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmAdminUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmAdminUsuarios.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -414,6 +444,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAdminProductos.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAdminProductos.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAdminProductos.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAdminProductos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAdminUsuarios.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAdminUsuarios.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmAlta.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FrmAlta.en-US.Designer.cs</LastGenOutput>
@@ -452,6 +497,16 @@
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmConf.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FrmConf.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmEditarDireccion.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmEditarDireccion.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmEditarDireccion.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmEditarDireccion.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmInicioAdmin.en-US.resx">
@@ -503,6 +558,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>FrmTienda.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAdminUsuarios.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAdminUsuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

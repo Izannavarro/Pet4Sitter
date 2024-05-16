@@ -35,6 +35,7 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDireccion
@@ -112,12 +113,23 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(136, 50);
+            this.button1.TabIndex = 59;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmEditarDireccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(645, 345);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.btnVolver);
@@ -127,6 +139,7 @@
             this.Controls.Add(this.lblEditarDireccion);
             this.Name = "FrmEditarDireccion";
             this.Text = "FrmEditarDireccion";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmEditarDireccion_FormClosed);
             this.Load += new System.EventHandler(this.FrmEditarDireccion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,5 +155,6 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button button1;
     }
 }
