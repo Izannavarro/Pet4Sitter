@@ -15,15 +15,16 @@ using System.Net.Sockets;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
 using static System.Net.WebRequestMethods;
-using System.Net.Mail;
-using System.Globalization;
+using static Google.Apis.Requests.BatchRequest;
+using System.Runtime.Remoting.Contexts;
 using piTest.Clases;
+using Mysqlx;
 
 namespace piTest
 {
-    public partial class LoginForm : Form
+    public partial class FrmRegister : Form
     {
-        public LoginForm()
+        public FrmRegister()
         {
             InitializeComponent();
         }
@@ -36,7 +37,6 @@ namespace piTest
                 txtMail.Text = "";
                 txtMail.ForeColor = Color.White; // Cambiar el color del texto al color normal
             }
-            this.lblLine.BackColor = Color.FromArgb(0, 200, 100);
         }
 
         private void txtMail_Leave(object sender, EventArgs e)
@@ -44,9 +44,8 @@ namespace piTest
             if (string.IsNullOrWhiteSpace(txtMail.Text))
             {
                 txtMail.Text = "Introduce email";
-                txtMail.ForeColor = Color.FromArgb(0, 200, 100);
+                txtMail.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
             }
-            this.lblLine.BackColor = Color.White;
         }
 
         private void txtPass_Enter(object sender, EventArgs e)
@@ -56,7 +55,6 @@ namespace piTest
                 txtPass.Text = "";
                 txtPass.ForeColor = Color.White; // Cambiar el color del texto al color normal
             }
-            this.lblLinePassword.BackColor = Color.FromArgb(0, 200, 100);
         }
 
         private void txtPass_Leave(object sender, EventArgs e)
@@ -64,23 +62,10 @@ namespace piTest
             if (string.IsNullOrWhiteSpace(txtPass.Text))
             {
                 txtPass.Text = "Introduce contraseña";
-                txtPass.ForeColor = Color.FromArgb(0, 200, 100);
+                txtPass.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
             }
-            this.lblLinePassword.BackColor = Color.White;
         }
 
-        //Hover for the label I forgot my password:
-        private void lblForgPass_MouseEnter(object sender, EventArgs e)
-        {
-            // Establecer el estilo de subrayado cuando el cursor entra en el Label
-            lblForgPass.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Underline);
-        }
-
-        private void lblForgPass_MouseLeave(object sender, EventArgs e)
-        {
-            // Restaurar el estilo normal cuando el cursor sale del Label
-            lblForgPass.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Regular);
-        }
 
 
         private void lblClose_Click(object sender, EventArgs e)
@@ -98,8 +83,6 @@ namespace piTest
             {
                 // Código para recuperar la contraseña aquí
                 MessageBox.Show("Se ha enviado un enlace de recuperación a tu correo electrónico.", "Recuperar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                var mailService = new MailServices.ForgotPasswordMail();
-                mailService.sendMail("Recuperar Contraseña Proyecto Integrado", "Hola esto es un test desde mi app para el grupo del proyecto integrado\nTU nueva contraseña es xxxxxxxxxxxxxxxxx", txtMail.Text.ToString());
             }
             else
             {
@@ -109,17 +92,33 @@ namespace piTest
 
         private async void btnIniciarSesionGoogle_Click(object sender, EventArgs e)
         {
-            await GoogleAuthenticator.exchangeCode();
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                await GoogleAuthenticator.exchangeCode();
+                if (Data.UserGoogle.IdGoogle != null && !User.CompruebaUsuarioConGoogle(Data.UserGoogle.IdGoogle))
+                {
+                    this.Activate();
+                    txtNombre.Text = Data.UserGoogle.Name;
+                    MessageBox.Show("Es la primera vez que te registras, completa tus datos, solo será una vez", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe un usuario vinculado a esa cuenta de google");
+                }
+                ConBD.CerrarConexion();
+            }else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }//Comprueba si la bd está disponible
         }
 
 
         // Agrega el texto dado al registro en pantalla y a la consola de depuración
         public void output(string output)
         {
-            //textBoxOutput.Text = textBoxOutput.Text + output + Environment.NewLine;
             Console.WriteLine(output);
         }
-
 
         private void btnContinueWGoogle_MouseHover(object sender, EventArgs e)
         {
@@ -133,57 +132,38 @@ namespace piTest
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario RegisterForm
-            RegisterForm registerForm = new RegisterForm();
 
-            // Mostrar el formulario RegisterForm
-            registerForm.Show();
-
-            // Opcionalmente, puedes ocultar el formulario actual (LoginForm) si lo deseas
-            this.Hide();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            CultureInfo systemCulture = CultureInfo.CurrentCulture;
-            string idiomaSistema = systemCulture.Name;
-            ChangeThemeMode();
-        }
-
-        private void pictureBoxContinueGoogle_Click(object sender, EventArgs e)
-        {
-            btnIniciarSesionGoogle_Click(null, null);
-        }
-
-        private void ChangeThemeMode()
-        {
-            if (Data.IsDarkModeEnabled())
-            {
-                // Configurar el tema oscuro
-                panel1.BackColor = Color.Black;
-                this.BackColor = Color.DarkGreen;
-                this.txtMail.BackColor = Color.DarkGreen;
-                this.txtPass.BackColor = Color.DarkGreen;
-            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            FrmLogin l = new FrmLogin();
+            this.Dispose();
+            l.Show();
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                if (User.CompruebaUsuarioExistente(txtMail.Text))
+                if (!User.CompruebaUsuarioExistente(txtMail.Text))
                 {
-                    if(User.CompruebaCredencialesUsuario(txtMail.Text,txtPass.Text))
+                    MessageBox.Show("Si");
+                    User u = null;
+                    if (Data.UserGoogle != null)
                     {
-                        MessageBox.Show("Si");
-                        Dashboard d = new Dashboard(null);
-                        d.Show();
+                        u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
                     }
+                    else
+                    {
+                        u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
+                    }
+                    User.RegistrarUsuario(u);
                 }
                 else
                 {
-                    MessageBox.Show("El usuario no existe, Regístrate", "Usuario no Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Ya existe un usuario con ese email", "Usuario Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 ConBD.CerrarConexion();
             }
@@ -191,6 +171,33 @@ namespace piTest
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
             }//Comprueba si la bd está disponible
+        }
+
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "Nombre")
+            {
+                txtNombre.Text = "";
+                txtNombre.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                txtNombre.Text = "Nombre";
+                txtNombre.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "Nombre")
+            {
+                txtNombre.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
         }
     }
 }

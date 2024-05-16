@@ -1,4 +1,5 @@
-﻿using System;
+﻿using piTest.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace piTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAdminProductos());
+            Application.Run(new FrmAdminNoticias());
         }
     }
 }

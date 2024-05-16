@@ -120,5 +120,20 @@ namespace piTest.Clases
 
         }
 
+        public static bool CompruebaUsuarioConGoogle(string idGoogle)
+        {
+            string query = "Select count(*) from users where id_google=@idGoogle";
+            MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
+            com.Parameters.AddWithValue("idGoogle", idGoogle);
+
+            int res = int.Parse(com.ExecuteScalar().ToString());
+            if (res > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
     }
 }
