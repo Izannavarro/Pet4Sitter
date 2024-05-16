@@ -248,10 +248,6 @@ namespace piTest
             // 
             // surname
             // 
-            this.surname.HeaderText = "surname";
-            this.surname.MinimumWidth = 6;
-            this.surname.Name = "surname";
-            this.surname.Width = 125;
             // 
             // email
             // 
@@ -266,28 +262,6 @@ namespace piTest
             this.dni.MinimumWidth = 6;
             this.dni.Name = "dni";
             this.dni.Width = 125;
-            // 
-            // password
-            // 
-            this.password.HeaderText = "password";
-            this.password.MinimumWidth = 6;
-            this.password.Name = "password";
-            this.password.Width = 125;
-            // 
-            // premium
-            // 
-            this.premium.HeaderText = "premium";
-            this.premium.MinimumWidth = 6;
-            this.premium.Name = "premium";
-            this.premium.Width = 125;
-            // 
-            // sitter
-            // 
-            this.sitter.HeaderText = "sitter";
-            this.sitter.MinimumWidth = 6;
-            this.sitter.Name = "sitter";
-            this.sitter.Width = 125;
-            // 
             // admin
             // 
             this.admin.HeaderText = "admin";
