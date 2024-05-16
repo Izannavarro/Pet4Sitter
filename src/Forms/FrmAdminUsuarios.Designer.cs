@@ -200,7 +200,7 @@ namespace piTest
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(123, 31);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 25);
+            this.label5.Size = new System.Drawing.Size(130, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Usuario";
             // 
@@ -244,30 +244,62 @@ namespace piTest
             this.name.HeaderText = "name";
             this.name.MinimumWidth = 6;
             this.name.Name = "name";
+            this.name.Width = 125;
+            // 
+            // surname
+            // 
+            this.surname.HeaderText = "surname";
+            this.surname.MinimumWidth = 6;
+            this.surname.Name = "surname";
+            this.surname.Width = 125;
             // 
             // email
             // 
             this.email.HeaderText = "email";
             this.email.MinimumWidth = 6;
             this.email.Name = "email";
+            this.email.Width = 125;
             // 
             // dni
             // 
             this.dni.HeaderText = "dni";
             this.dni.MinimumWidth = 6;
             this.dni.Name = "dni";
+            this.dni.Width = 125;
+            // 
+            // password
+            // 
+            this.password.HeaderText = "password";
+            this.password.MinimumWidth = 6;
+            this.password.Name = "password";
+            this.password.Width = 125;
+            // 
+            // premium
+            // 
+            this.premium.HeaderText = "premium";
+            this.premium.MinimumWidth = 6;
+            this.premium.Name = "premium";
+            this.premium.Width = 125;
+            // 
+            // sitter
+            // 
+            this.sitter.HeaderText = "sitter";
+            this.sitter.MinimumWidth = 6;
+            this.sitter.Name = "sitter";
+            this.sitter.Width = 125;
             // 
             // admin
             // 
             this.admin.HeaderText = "admin";
             this.admin.MinimumWidth = 6;
             this.admin.Name = "admin";
+            this.admin.Width = 125;
             // 
             // FrmAdminUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1366, 709);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
