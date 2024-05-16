@@ -245,6 +245,7 @@
             this.Controls.Add(this.lbl2pasos);
             this.Controls.Add(this.lblConfiguracionAvanzada);
             this.Name = "FrmConfiguracion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConfiguracion";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmConfiguracion_FormClosed);
             this.Load += new System.EventHandler(this.FrmConfiguracion_Load);
