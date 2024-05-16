@@ -226,9 +226,9 @@
             // 
             // btnOpciones
             // 
-            this.btnOpciones.Location = new System.Drawing.Point(613, 24);
+            this.btnOpciones.Location = new System.Drawing.Point(599, 24);
             this.btnOpciones.Name = "btnOpciones";
-            this.btnOpciones.Size = new System.Drawing.Size(78, 60);
+            this.btnOpciones.Size = new System.Drawing.Size(92, 60);
             this.btnOpciones.TabIndex = 14;
             this.btnOpciones.Text = "opciones";
             this.btnOpciones.UseVisualStyleBackColor = true;
@@ -300,7 +300,9 @@
             this.Controls.Add(this.pnl6);
             this.Controls.Add(this.panel3);
             this.Name = "FrmChat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChat";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmChat_FormClosed);
             this.Load += new System.EventHandler(this.FrmChat_Load);
             this.panel3.ResumeLayout(false);
             this.pnl1.ResumeLayout(false);
