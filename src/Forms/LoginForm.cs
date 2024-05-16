@@ -106,9 +106,9 @@ namespace piTest
             }
         }
 
-        private void btnIniciarSesionGoogle_Click(object sender, EventArgs e)
+        private async void btnIniciarSesionGoogle_Click(object sender, EventArgs e)
         {
-            GoogleAuthenticator.exchangeCode(this);
+            await GoogleAuthenticator.exchangeCode();
         }
 
 

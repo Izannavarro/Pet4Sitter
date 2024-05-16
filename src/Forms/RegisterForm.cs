@@ -17,6 +17,8 @@ using System.Reflection;
 using static System.Net.WebRequestMethods;
 using static Google.Apis.Requests.BatchRequest;
 using System.Runtime.Remoting.Contexts;
+using piTest.Clases;
+using Mysqlx;
 
 namespace piTest
 {
@@ -88,16 +90,21 @@ namespace piTest
             }
         }
 
-        private void btnIniciarSesionGoogle_Click(object sender, EventArgs e)
+        private async void btnIniciarSesionGoogle_Click(object sender, EventArgs e)
         {
-            GoogleAuthenticator.exchangeCode(this);
+            await GoogleAuthenticator.exchangeCode();
+            if(Data.UserGoogle.IdGoogle != null)
+            {
+                this.Activate();
+                txtNombre.Text = Data.UserGoogle.Name;
+                MessageBox.Show("Es la primera vez que te registras, completa tus datos, solo será una vez", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        
+
         // Agrega el texto dado al registro en pantalla y a la consola de depuración
         public void output(string output)
         {
-            textBoxOutput.Text = textBoxOutput.Text + output + Environment.NewLine;
             Console.WriteLine(output);
         }
 
@@ -121,6 +128,57 @@ namespace piTest
             LoginForm l = new LoginForm();
             this.Hide();
             l.Show();
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                MessageBox.Show("Si");
+                User u = null;
+                if (Data.UserGoogle != null)
+                {
+                    u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
+                }
+                else
+                {
+                    u = new User(null,null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
+                }
+                User.RegistrarUsuario(u);
+                ConBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }
+        }
+
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            if (txtNombre.Text == "Nombre")
+            {
+                txtNombre.Text = "";
+                txtNombre.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                txtNombre.Text = "Nombre";
+                txtNombre.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
+            }
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombre.Text != "Nombre")
+            {
+                txtNombre.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
         }
     }
 }
