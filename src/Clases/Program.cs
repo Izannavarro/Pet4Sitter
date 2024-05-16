@@ -16,7 +16,7 @@ namespace piTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmConfiguracion());
+            Application.Run(new FrmChat());
         }
     }
 }
