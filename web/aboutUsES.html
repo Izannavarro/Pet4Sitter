@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pet4Sitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo de Pet4Sitter">
+            <h1>Pet4Sitter</h1>
+        </div>
+        <div id="changemode" onclick="toggleTheme()">
+            <img id="theme-image" src="sol.jpg" alt="Modo Claro">
+        </div>
+        <div id="opciones">
+            <a href="#home" class ="opcion home">Home</a>
+            <a href="#services" class ="opcion download">Download</a> <!-- Cambio de texto -->
+            <a href="#about" class ="opcion aboutus">About us</a> <!-- Cambio de texto -->
+            <a href="#contact" class ="opcion contactus">Contact us</a> <!-- Cambio de texto -->
+        </div>
+    </header>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>¡Bienvenido a Pet4Sitter, tu destino confiable para encontrar los mejores cuidadores para tus queridas mascotas! Somos un equipo de estudiantes de Florida Universitaria dedicados al estudio del desarrollo de aplicaciones, y este proyecto es nuestro emocionante proyecto final.
+            <br>
+            En Pet4Sitter, entendemos lo importante que son tus mascotas para ti, y nos esforzamos por proporcionar servicios de cuidado de alta calidad que te den tranquilidad mientras estás lejos. Ya sea que necesites a alguien para pasear a tu perro, cuidar de tu gato o alimentar a tus peces, estamos aquí para cubrir todas las necesidades de tus amigos peludos o escamosos.
+            <br>
+            Como estudiantes comprometidos con la excelencia en el desarrollo de aplicaciones, hemos puesto nuestro corazón y alma en crear una plataforma fácil de usar y segura que conecte a los amantes de las mascotas con cuidadores confiables y apasionados. Nuestro objetivo es brindarte una experiencia sin preocupaciones al encontrar el cuidador perfecto para tus mascotas mientras estás ocupado con tu vida diaria.
+            <br>
+            En Pet4Sitter, nos enorgullece ofrecer un servicio personalizado y orientado a satisfacer las necesidades individuales de cada mascota y propietario. Confía en nosotros para cuidar de tus compañeros peludos como si fueran nuestros propios amigos de cuatro patas.
+            <br>
+            Únete a la comunidad de Pet4Sitter hoy mismo y descubre la tranquilidad que viene con saber que tus mascotas están en las mejores manos posibles. ¡Gracias por confiar en nosotros para el cuidado de tus adorables amigos de cuatro patas!</p>
+        <h3>Integrantes del Grupo</h3>
+        <div class="team-members">
+            <div class="member-card">
+                <div class="member">
+                    <img src="rafa.jpg" alt="Rafa Navarrete" class="avatar">
+                    <h4>Rafa Navarrete</h4>
+                    <p>Correo: rafa@example.com</p>
+                    <a href="https://github.com/rxvlc" target="_blank">
+                        <img src="github.png" alt="GitHub de Rafa Navarrete" class="github-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member">
+                    <img src="aaron.jpg" alt="Aaron Aparisi" class="avatar">
+                    <h4>Aaron Aparisi</h4>
+                    <p>Correo: aaron@example.com</p>
+                    <a href="https://github.com/AaronAparisiMiralles" target="_blank">
+                        <img src="github.png" alt="GitHub de Aaron Aparisi" class="github-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member">
+                    <img src="dani.jpg" alt="Dani Hernandez" class="avatar">
+                    <h4>Dani Hernandez</h4>
+                    <p>Correo: dani@example.com</p>
+                    <a href="https://github.com/Dani858585" target="_blank">
+                        <img src="github.png" alt="GitHub de Dani Hernandez" class="github-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member">
+                    <img src="izan.jpg" alt="Izan Navarro" class="avatar">
+                    <h4>Izan Navarro</h4>
+                    <p>Correo: izan@example.com</p>
+                    <a href="https://github.com/Izannavarro" target="_blank">
+                        <img src="github.png" alt="GitHub de Izan Navarro" class="github-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member">
+                    <img src="hugo.jpg" alt="Hugo Miquel" class="avatar">
+                    <h4>Hugo Miquel</h4>
+                    <p>Correo: hugo@example.com</p>
+                    <a href="https://github.com/Hugo2313" target="_blank">
+                        <img src="github.png" alt="GitHub de Hugo Miquel" class="github-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Pet4Sitter. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeImage = document.getElementById('theme-image');
+        
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                themeImage.src = 'sol.jpg';
+                themeImage.alt = 'Modo Claro';
+                toggleElementStyles('light');
+            } else {
+                body.classList.add('dark-mode');
+                themeImage.src = 'luna.jpg';
+                themeImage.alt = 'Modo Oscuro';
+                toggleElementStyles('dark');
+            }
+        }
+        
+        function toggleElementStyles(theme) {
+            const elements = document.querySelectorAll('*');
+        
+            elements.forEach(el => {
+                if (theme === 'dark') {
+                    el.classList.add('dark-mode');
+                } else {
+                    el.classList.remove('dark-mode');
+                }
+            });
+        }
+        
+        </script>
+        
+</body>
+</html>

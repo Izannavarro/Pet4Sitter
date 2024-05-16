@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet4Sitter - Cuidadores de Animales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo de Pet4Sitter">
+        <h1>Pet4Sitter</h1>
+    </div>
+    <div id="changemode" onclick="toggleTheme()">
+        <img id="theme-image" src="sol.jpg" alt="Modo Claro">
+    </div>
+    <div id="opciones">
+        <a href="#home" class ="opcion home">Home</a>
+        <a href="#services" class ="opcion download">Download</a> <!-- Cambio de texto -->
+        <a href="#about" class ="opcion aboutus">About us</a> <!-- Cambio de texto -->
+        <a href="#contact" class ="opcion contactus">Contact us</a> <!-- Cambio de texto -->
+    </div>
+</header>
+
+
+
+
+<div class="container">
+    <section class="intro">
+        <h2>Bienvenido a Pet4Sitter</h2>
+        <p>En Pet4Sitter, nos dedicamos a proporcionar los mejores cuidadores para tus animales de compañía. Ya sea que necesites alguien que pasee a tu perro, cuide de tu gato o alimente a tus peces, ¡estamos aquí para ayudarte!</p>
+        <a href="url-de-descarga-de-la-app" class="download-button">Descargar la aplicación</a>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Download</h2> <!-- Cambio de texto -->
+        <ul>
+            <li>Cuidado de mascotas</li>
+            <li>Paseo de perros</li>
+            <li>Alojamiento para mascotas</li>
+            <li>Cuidado de animales exóticos</li>
+        </ul>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About us</h2> <!-- Cambio de texto -->
+        <p>Pet4Sitter está compuesto por un equipo de amantes de los animales con años de experiencia en el cuidado de mascotas. Nos apasiona asegurarnos de que tus amigos peludos reciban el mejor cuidado posible cuando no puedes estar con ellos.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact us</h2> ¿Quieres reservar uno de nuestros servicios? ¡Contáctanos!</p>
+        <form>
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Pet4Sitter. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+function toggleTheme() {
+    const body = document.body;
+    const themeImage = document.getElementById('theme-image');
+
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        themeImage.src = 'sol.jpg';
+        themeImage.alt = 'Modo Claro';
+        toggleElementStyles('light');
+    } else {
+        body.classList.add('dark-mode');
+        themeImage.src = 'luna.jpg';
+        themeImage.alt = 'Modo Oscuro';
+        toggleElementStyles('dark');
+    }
+}
+
+function toggleElementStyles(theme) {
+    const elements = document.querySelectorAll('*');
+
+    elements.forEach(el => {
+        if (theme === 'dark') {
+            el.classList.add('dark-mode');
+        } else {
+            el.classList.remove('dark-mode');
+        }
+    });
+}
+
+</script>
+
+</body>
+</html>
