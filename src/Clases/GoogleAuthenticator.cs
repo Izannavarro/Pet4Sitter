@@ -189,7 +189,7 @@ public class GoogleAuthenticator
 
                 // Mostrar la información del usuario en el formulario
                 //ShowUserInfo(userinfoResponseText);
-                googleData.Ginfo = userinfoResponseText;
+                Data.Ginfo = userinfoResponseText;
             }
         }
         catch (Exception ex)
@@ -374,7 +374,7 @@ public class GoogleAuthenticator
             }
 
             // Parsear la cadena JSON
-            JObject userInfoObject = JObject.Parse(googleData.Ginfo);
+            JObject userInfoObject = JObject.Parse(Data.Ginfo);
             Console.WriteLine(userInfoObject);
 
             string googleId = (string)userInfoObject["sub"];

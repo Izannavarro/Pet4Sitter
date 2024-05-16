@@ -10,7 +10,13 @@ namespace piTest
 {
     public class Data
     {
+
+        static string ginfo;
+
+        
         public static User UserGoogle = null;
+
+        public static string Ginfo { get { return ginfo; } set { ginfo = value; } }
 
         public static bool IsDarkModeEnabled()
         {

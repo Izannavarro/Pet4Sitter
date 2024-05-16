@@ -62,9 +62,10 @@ namespace piTest
             // 
             this.btnVolver.BackColor = System.Drawing.Color.White;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(849, 630);
+            this.btnVolver.Location = new System.Drawing.Point(637, 512);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(367, 32);
+            this.btnVolver.Size = new System.Drawing.Size(275, 26);
             this.btnVolver.TabIndex = 53;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
@@ -73,9 +74,10 @@ namespace piTest
             // 
             this.lblUsuarioss.AutoSize = true;
             this.lblUsuarioss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarioss.Location = new System.Drawing.Point(158, 53);
+            this.lblUsuarioss.Location = new System.Drawing.Point(118, 43);
+            this.lblUsuarioss.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuarioss.Name = "lblUsuarioss";
-            this.lblUsuarioss.Size = new System.Drawing.Size(229, 25);
+            this.lblUsuarioss.Size = new System.Drawing.Size(190, 20);
             this.lblUsuarioss.TabIndex = 55;
             this.lblUsuarioss.Text = "Usuarios Desplegados";
             // 
@@ -84,9 +86,10 @@ namespace piTest
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel1.Controls.Add(this.btnEliminarUsuario);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(849, 47);
+            this.panel1.Location = new System.Drawing.Point(637, 38);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 577);
+            this.panel1.Size = new System.Drawing.Size(275, 469);
             this.panel1.TabIndex = 52;
             // 
             // btnEliminarUsuario
@@ -94,9 +97,10 @@ namespace piTest
             this.btnEliminarUsuario.BackColor = System.Drawing.Color.Red;
             this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(89, 528);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(67, 429);
+            this.btnEliminarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(190, 32);
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(142, 26);
             this.btnEliminarUsuario.TabIndex = 47;
             this.btnEliminarUsuario.Text = "Eliminar Usuario";
             this.btnEliminarUsuario.UseVisualStyleBackColor = false;
@@ -114,16 +118,18 @@ namespace piTest
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.ptbImagen);
             this.panel4.Controls.Add(this.lblUsuario);
-            this.panel4.Location = new System.Drawing.Point(24, 27);
+            this.panel4.Location = new System.Drawing.Point(18, 22);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(317, 486);
+            this.panel4.Size = new System.Drawing.Size(238, 395);
             this.panel4.TabIndex = 45;
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(8, 95);
+            this.btnEditar.Location = new System.Drawing.Point(6, 77);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 67);
+            this.btnEditar.Size = new System.Drawing.Size(56, 54);
             this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar Imagen";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -132,9 +138,10 @@ namespace piTest
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(39, 440);
+            this.label10.Location = new System.Drawing.Point(29, 358);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 25);
+            this.label10.Size = new System.Drawing.Size(116, 20);
             this.label10.TabIndex = 17;
             this.label10.Text = "Administrator";
             // 
@@ -142,9 +149,10 @@ namespace piTest
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(39, 404);
+            this.label9.Location = new System.Drawing.Point(29, 328);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 25);
+            this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 16;
             this.label9.Text = "Sitter";
             // 
@@ -152,9 +160,10 @@ namespace piTest
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(39, 367);
+            this.label8.Location = new System.Drawing.Point(29, 298);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 25);
+            this.label8.Size = new System.Drawing.Size(86, 20);
             this.label8.TabIndex = 15;
             this.label8.Text = "Password";
             // 
@@ -162,9 +171,10 @@ namespace piTest
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(39, 327);
+            this.label7.Location = new System.Drawing.Point(29, 266);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 25);
+            this.label7.Size = new System.Drawing.Size(36, 20);
             this.label7.TabIndex = 14;
             this.label7.Text = "Dni";
             // 
@@ -172,9 +182,10 @@ namespace piTest
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(39, 288);
+            this.label6.Location = new System.Drawing.Point(29, 234);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 25);
+            this.label6.Size = new System.Drawing.Size(53, 20);
             this.label6.TabIndex = 13;
             this.label6.Text = "Email";
             // 
@@ -182,9 +193,10 @@ namespace piTest
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(39, 248);
+            this.label4.Location = new System.Drawing.Point(29, 202);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 25);
+            this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 12;
             this.label4.Text = "Name";
             // 
@@ -192,17 +204,19 @@ namespace piTest
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 212);
+            this.label3.Location = new System.Drawing.Point(29, 172);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 25);
+            this.label3.Size = new System.Drawing.Size(28, 20);
             this.label3.TabIndex = 11;
             this.label3.Text = "ID";
             // 
             // ptbImagen
             // 
-            this.ptbImagen.Location = new System.Drawing.Point(94, 70);
+            this.ptbImagen.Location = new System.Drawing.Point(70, 57);
+            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ptbImagen.Name = "ptbImagen";
-            this.ptbImagen.Size = new System.Drawing.Size(152, 112);
+            this.ptbImagen.Size = new System.Drawing.Size(114, 91);
             this.ptbImagen.TabIndex = 10;
             this.ptbImagen.TabStop = false;
             // 
@@ -210,9 +224,10 @@ namespace piTest
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(123, 31);
+            this.lblUsuario.Location = new System.Drawing.Point(92, 25);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(86, 25);
+            this.lblUsuario.Size = new System.Drawing.Size(71, 20);
             this.lblUsuario.TabIndex = 9;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -220,9 +235,10 @@ namespace piTest
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Location = new System.Drawing.Point(150, 85);
+            this.panel3.Location = new System.Drawing.Point(112, 69);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(675, 539);
+            this.panel3.Size = new System.Drawing.Size(506, 438);
             this.panel3.TabIndex = 50;
             // 
             // dataGridView1
@@ -235,11 +251,12 @@ namespace piTest
             this.email,
             this.dni,
             this.admin});
-            this.dataGridView1.Location = new System.Drawing.Point(38, 20);
+            this.dataGridView1.Location = new System.Drawing.Point(28, 16);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(618, 490);
+            this.dataGridView1.Size = new System.Drawing.Size(464, 398);
             this.dataGridView1.TabIndex = 0;
             // 
             // name
@@ -277,9 +294,10 @@ namespace piTest
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(30, 105);
+            this.button2.Location = new System.Drawing.Point(22, 85);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 67);
+            this.button2.Size = new System.Drawing.Size(56, 54);
             this.button2.TabIndex = 56;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -287,15 +305,16 @@ namespace piTest
             // 
             // FrmAdminUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1366, 709);
+            this.ClientSize = new System.Drawing.Size(1109, 596);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblUsuarioss);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmAdminUsuarios";
             this.Text = "FrmAdminUsuarios";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminUsuarios_FormClosed);
