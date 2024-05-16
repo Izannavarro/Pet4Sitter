@@ -11,7 +11,6 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.VisualBasic.PowerPacks;
 using System.Net.Sockets;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
