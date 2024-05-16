@@ -135,23 +135,30 @@ namespace piTest
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                MessageBox.Show("Si");
-                User u = null;
-                if (Data.UserGoogle != null)
+                if (!User.CompruebaUsuarioExistente(txtMail.Text))
                 {
-                    u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
+                    MessageBox.Show("Si");
+                    User u = null;
+                    if (Data.UserGoogle != null)
+                    {
+                        u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
+                    }
+                    else
+                    {
+                        u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
+                    }
+                    User.RegistrarUsuario(u);
                 }
                 else
                 {
-                    u = new User(null,null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
+                    MessageBox.Show("Ya existe un usuario con ese email", "Usuario Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                User.RegistrarUsuario(u);
                 ConBD.CerrarConexion();
             }
             else
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
-            }
+            }//Comprueba si la bd está disponible
         }
 
 

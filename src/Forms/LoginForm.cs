@@ -17,6 +17,7 @@ using System.Reflection;
 using static System.Net.WebRequestMethods;
 using System.Net.Mail;
 using System.Globalization;
+using piTest.Clases;
 
 namespace piTest
 {
@@ -168,7 +169,28 @@ namespace piTest
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                if (User.CompruebaUsuarioExistente(txtMail.Text))
+                {
+                    if(User.CompruebaCredencialesUsuario(txtMail.Text,txtPass.Text))
+                    {
+                        MessageBox.Show("Si");
+                        Dashboard d = new Dashboard(null);
+                        d.Show();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no existe, Regístrate", "Usuario no Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                ConBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }//Comprueba si la bd está disponible
         }
     }
 }

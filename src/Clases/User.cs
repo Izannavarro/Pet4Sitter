@@ -84,5 +84,41 @@ namespace piTest.Clases
 
             return res;
         }
+
+        public static bool CompruebaUsuarioExistente(string email)
+        {
+            string query = "Select count(email) from users where email=@email";
+            MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
+            com.Parameters.AddWithValue("email", email);
+
+            int res = int.Parse(com.ExecuteScalar().ToString());
+            if(res > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static bool CompruebaCredencialesUsuario(string email,string password)
+        {
+            string query = "select password from users where email=@email";
+            MySqlCommand com = new MySqlCommand(query,ConBD.Conexion);
+            com.Parameters.AddWithValue("email", email);
+
+            string hashContraseñaAlmacenada = com.ExecuteScalar() as string;
+
+            if (hashContraseñaAlmacenada != null && BCrypt.Net.BCrypt.Verify(password, hashContraseñaAlmacenada))
+            {
+                // La contraseña coincide, devolver true
+                return true;
+            }
+            else
+            {
+                // La contraseña no coincide o no se encontró el usuario, devolver false
+                return false;
+            }
+
+        }
+
     }
 }
