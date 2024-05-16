@@ -70,7 +70,7 @@ namespace piTest
 
         private void FrmConfiguracion_FormClosed(object sender, FormClosedEventArgs e)
         {
-            FrmChat f = new FrmChat(); // Crea una nueva instancia de FrmChat
+            FrmNoticias f = new FrmNoticias(); // Crea una nueva instancia de FrmChat
             f.Show(); // Muestra el formulario FrmChat
         }
     }
