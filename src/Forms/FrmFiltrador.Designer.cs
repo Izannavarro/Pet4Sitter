@@ -28,174 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblBuscarCuidador = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblFiltros = new System.Windows.Forms.Label();
+            this.lblRango = new System.Windows.Forms.Label();
+            this.lblUbicacion = new System.Windows.Forms.Label();
+            this.nudDesde = new System.Windows.Forms.NumericUpDown();
+            this.lblDesde = new System.Windows.Forms.Label();
+            this.lblHasta = new System.Windows.Forms.Label();
+            this.nudHasta = new System.Windows.Forms.NumericUpDown();
+            this.txtUbi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblBuscarCuidador
+            // lblFiltros
             // 
-            this.lblBuscarCuidador.AutoSize = true;
-            this.lblBuscarCuidador.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarCuidador.ForeColor = System.Drawing.Color.White;
-            this.lblBuscarCuidador.Location = new System.Drawing.Point(392, 92);
-            this.lblBuscarCuidador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBuscarCuidador.Name = "lblBuscarCuidador";
-            this.lblBuscarCuidador.Size = new System.Drawing.Size(308, 37);
-            this.lblBuscarCuidador.TabIndex = 0;
-            this.lblBuscarCuidador.Text = "Filtros de Cuidador";
+            this.lblFiltros.AutoSize = true;
+            this.lblFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltros.ForeColor = System.Drawing.Color.White;
+            this.lblFiltros.Location = new System.Drawing.Point(523, 113);
+            this.lblFiltros.Name = "lblFiltros";
+            this.lblFiltros.Size = new System.Drawing.Size(376, 46);
+            this.lblFiltros.TabIndex = 0;
+            this.lblFiltros.Text = "Filtros de Cuidador";
             // 
-            // label4
+            // lblRango
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(207, 187);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 29);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Rango de Precios:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblRango.AutoSize = true;
+            this.lblRango.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRango.ForeColor = System.Drawing.Color.White;
+            this.lblRango.Location = new System.Drawing.Point(276, 230);
+            this.lblRango.Name = "lblRango";
+            this.lblRango.Size = new System.Drawing.Size(278, 36);
+            this.lblRango.TabIndex = 8;
+            this.lblRango.Text = "Rango de Precios:";
+            this.lblRango.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label5
+            // lblUbicacion
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(587, 187);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 29);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Ubicación:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblUbicacion.AutoSize = true;
+            this.lblUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUbicacion.ForeColor = System.Drawing.Color.White;
+            this.lblUbicacion.Location = new System.Drawing.Point(783, 230);
+            this.lblUbicacion.Name = "lblUbicacion";
+            this.lblUbicacion.Size = new System.Drawing.Size(166, 36);
+            this.lblUbicacion.TabIndex = 7;
+            this.lblUbicacion.Text = "Ubicación:";
+            this.lblUbicacion.Click += new System.EventHandler(this.label5_Click);
             // 
-            // numericUpDown2
+            // nudDesde
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(238, 233);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(56, 28);
-            this.numericUpDown2.TabIndex = 6;
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            this.nudDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudDesde.Location = new System.Drawing.Point(317, 287);
+            this.nudDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudDesde.Name = "nudDesde";
+            this.nudDesde.Size = new System.Drawing.Size(75, 34);
+            this.nudDesde.TabIndex = 6;
+            this.nudDesde.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
-            // label7
+            // lblDesde
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(155, 234);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 24);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Desde:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.lblDesde.AutoSize = true;
+            this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesde.ForeColor = System.Drawing.Color.White;
+            this.lblDesde.Location = new System.Drawing.Point(207, 288);
+            this.lblDesde.Name = "lblDesde";
+            this.lblDesde.Size = new System.Drawing.Size(96, 29);
+            this.lblDesde.TabIndex = 9;
+            this.lblDesde.Text = "Desde:";
+            this.lblDesde.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label8
+            // lblHasta
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(339, 235);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 24);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Hasta:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.lblHasta.AutoSize = true;
+            this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHasta.ForeColor = System.Drawing.Color.White;
+            this.lblHasta.Location = new System.Drawing.Point(452, 289);
+            this.lblHasta.Name = "lblHasta";
+            this.lblHasta.Size = new System.Drawing.Size(86, 29);
+            this.lblHasta.TabIndex = 10;
+            this.lblHasta.Text = "Hasta:";
+            this.lblHasta.Click += new System.EventHandler(this.label8_Click);
             // 
-            // numericUpDown3
+            // nudHasta
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(408, 232);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(56, 28);
-            this.numericUpDown3.TabIndex = 11;
-            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            this.nudHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudHasta.Location = new System.Drawing.Point(544, 286);
+            this.nudHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudHasta.Name = "nudHasta";
+            this.nudHasta.Size = new System.Drawing.Size(75, 34);
+            this.nudHasta.TabIndex = 11;
+            this.nudHasta.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
-            // textBox1
+            // txtUbi
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(592, 232);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(242, 28);
-            this.textBox1.TabIndex = 12;
+            this.txtUbi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUbi.Location = new System.Drawing.Point(789, 286);
+            this.txtUbi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUbi.Name = "txtUbi";
+            this.txtUbi.Size = new System.Drawing.Size(321, 34);
+            this.txtUbi.TabIndex = 12;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(858, 204);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(1144, 251);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 29);
+            this.label9.Size = new System.Drawing.Size(0, 36);
             this.label9.TabIndex = 15;
             // 
-            // button1
+            // btnBuscar
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(291, 414);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(510, 39);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "BUSCAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBuscar.BackColor = System.Drawing.Color.White;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBuscar.Location = new System.Drawing.Point(388, 510);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(680, 48);
+            this.btnBuscar.TabIndex = 22;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnBorrar
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(291, 458);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(510, 39);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "BORRAR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnBorrar.BackColor = System.Drawing.Color.White;
+            this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBorrar.Location = new System.Drawing.Point(388, 564);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(680, 48);
+            this.btnBorrar.TabIndex = 23;
+            this.btnBorrar.Text = "BORRAR";
+            this.btnBorrar.UseVisualStyleBackColor = false;
             // 
             // FrmFiltrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1109, 596);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1479, 734);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.lblBuscarCuidador);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.txtUbi);
+            this.Controls.Add(this.nudHasta);
+            this.Controls.Add(this.lblHasta);
+            this.Controls.Add(this.lblDesde);
+            this.Controls.Add(this.lblRango);
+            this.Controls.Add(this.lblUbicacion);
+            this.Controls.Add(this.nudDesde);
+            this.Controls.Add(this.lblFiltros);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmFiltrador";
             this.Text = "FrmFiltrador";
             this.Load += new System.EventHandler(this.FrmFiltrador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -203,16 +197,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblBuscarCuidador;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblFiltros;
+        private System.Windows.Forms.Label lblRango;
+        private System.Windows.Forms.Label lblUbicacion;
+        private System.Windows.Forms.NumericUpDown nudDesde;
+        private System.Windows.Forms.Label lblDesde;
+        private System.Windows.Forms.Label lblHasta;
+        private System.Windows.Forms.NumericUpDown nudHasta;
+        private System.Windows.Forms.TextBox txtUbi;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }

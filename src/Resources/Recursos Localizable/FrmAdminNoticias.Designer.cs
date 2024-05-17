@@ -22,14 +22,14 @@ namespace piTest.Resources.Recursos_Localizable {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class FrmEditarTarjeta {
+    internal class FrmAdminNoticias {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal FrmEditarTarjeta() {
+        internal FrmAdminNoticias() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace piTest.Resources.Recursos_Localizable {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Resources.Recursos_Localizable.FrmEditarTarjeta", typeof(FrmEditarTarjeta).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Resources.Recursos_Localizable.FrmAdminNoticias", typeof(FrmAdminNoticias).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,6 +61,33 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Anterior.
+        /// </summary>
+        internal static string btnAnterior_Text {
+            get {
+                return ResourceManager.GetString("btnAnterior.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Añadir .
+        /// </summary>
+        internal static string btnAnyadir_Text {
+            get {
+                return ResourceManager.GetString("btnAnyadir.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Editar.
+        /// </summary>
+        internal static string btnEditar_Text {
+            get {
+                return ResourceManager.GetString("btnEditar.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Eliminar.
         /// </summary>
         internal static string btnEliminar_Text {
@@ -70,11 +97,20 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Guardar Cambios.
+        ///   Busca una cadena traducida similar a Cambiar foto.
         /// </summary>
-        internal static string btnGuardar_Text {
+        internal static string btnFoto_Text {
             get {
-                return ResourceManager.GetString("btnGuardar.Text", resourceCulture);
+                return ResourceManager.GetString("btnFoto.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Siguiente.
+        /// </summary>
+        internal static string btnSiguiente_Text {
+            get {
+                return ResourceManager.GetString("btnSiguiente.Text", resourceCulture);
             }
         }
         
@@ -88,66 +124,62 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Editar Tarjeta.
+        ///   Busca una cadena traducida similar a Noticia.
         /// </summary>
-        internal static string lblConfiguracionAvanzada_Text {
+        internal static string label2_Text {
             get {
-                return ResourceManager.GetString("lblConfiguracionAvanzada.Text", resourceCulture);
+                return ResourceManager.GetString("label2.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a CVC:.
+        ///   Busca una cadena traducida similar a Noticia.
         /// </summary>
-        internal static string lblCVC_Text {
+        internal static string label3_Text {
             get {
-                return ResourceManager.GetString("lblCVC.Text", resourceCulture);
+                return ResourceManager.GetString("label3.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Nueva Dirección:.
+        ///   Busca una cadena traducida similar a Noticia.
         /// </summary>
-        internal static string lblDireccion_Text {
+        internal static string label6_Text {
             get {
-                return ResourceManager.GetString("lblDireccion.Text", resourceCulture);
+                return ResourceManager.GetString("label6.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Fecha:.
+        ///   Busca una cadena traducida similar a Contenido:.
         /// </summary>
-        internal static string lblFecha_Text {
+        internal static string lblContenido_Text {
             get {
-                return ResourceManager.GetString("lblFecha.Text", resourceCulture);
+                return ResourceManager.GetString("lblContenido.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Número:.
+        ///   Busca una cadena traducida similar a ID Noticias:.
         /// </summary>
-        internal static string lblNumero_Text {
+        internal static string lblIdNoticias_Text {
             get {
-                return ResourceManager.GetString("lblNumero.Text", resourceCulture);
+                return ResourceManager.GetString("lblIdNoticias.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Tarjeta Actual:.
-        /// </summary>
-        internal static string lblTarjeta_Text {
-            get {
-                return ResourceManager.GetString("lblTarjeta.Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Titular de la tarjeta:.
+        ///   Busca una cadena traducida similar a Titular :.
         /// </summary>
         internal static string lblTitular_Text {
             get {
                 return ResourceManager.GetString("lblTitular.Text", resourceCulture);
             }
+        }
+
+        internal void Show()
+        {
+            throw new NotImplementedException();
         }
     }
 }
