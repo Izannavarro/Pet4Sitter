@@ -33,10 +33,11 @@ CREATE TABLE IF NOT EXISTS reviews (
 
 CREATE TABLE IF NOT EXISTS products (
     id_product INT AUTO_INCREMENT PRIMARY KEY,
+    name varchar(30) NOT NULL,
     price DOUBLE NOT NULL,	
     quantity INT NOT NULL,
     description VARCHAR(99) CHARACTER SET utf8mb4,
-    image longblob
+    image longblob NULL
 ) CHARACTER SET utf8mb4;
 
 CREATE TABLE IF NOT EXISTS chat (
