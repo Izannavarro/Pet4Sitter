@@ -42,7 +42,7 @@ namespace piTest.Clases
             catch (Exception ex)
             {
                 // Manejar cualquier error que ocurra durante la solicitud
-                Console.WriteLine($"Error en la solicitud de coordenadas: {ex.Message}");
+                Console.WriteLine($"Error en la solicitud de coordenadsas: {ex.Message}");
                 return (null, null);
             }
         }
