@@ -351,6 +351,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmEditarTarjeta.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmFiltrador.en-US.Designer.cs">
+      <DependentUpon>FrmFiltrador.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmFiltrador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmFiltrador.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Recursos Localizable\FrmInicioAdmin.en-US.Designer.cs">
       <DependentUpon>FrmInicioAdmin.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -360,6 +370,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmInicioAdmin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmLogin.en-US.Designer.cs">
+      <DependentUpon>FrmLogin.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmLogin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmLogin.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\Recursos Localizable\FrmNoticias.en-US.Designer.cs">
       <DependentUpon>FrmNoticias.en-US.resx</DependentUpon>
@@ -380,6 +400,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmPerfil.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmRegister.en-US.Designer.cs">
+      <DependentUpon>FrmRegister.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmRegister.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmRegister.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\Recursos Localizable\FrmResultadoFiltrado.en-US.Designer.cs">
       <DependentUpon>FrmResultadoFiltrado.en-US.resx</DependentUpon>
@@ -574,6 +604,16 @@
       <LastGenOutput>FrmEditarTarjeta.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmFiltrador.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmFiltrador.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmFiltrador.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmFiltrador.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmInicioAdmin.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FrmInicioAdmin.en-US.Designer.cs</LastGenOutput>
@@ -582,6 +622,16 @@
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmInicioAdmin.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FrmInicioAdmin.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmLogin.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmLogin.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmLogin.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmLogin.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmNoticias.en-US.resx">
@@ -602,6 +652,16 @@
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmPerfil.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FrmPerfil.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmRegister.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmRegister.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmRegister.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmRegister.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmResultadoFiltrado.en-US.resx">

@@ -48,11 +48,22 @@ namespace piTest
 
         }
 
-        //private void FrmFiltrador_Load(object sender, EventArgs e)
-        //{
-        //    CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
-        //    AplicarIdioma();
-        //}
+        private void FrmFiltrador_Load(object sender, EventArgs e)
+        {
+            CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblFiltros.Text = Resources.Recursos_Localizable.FrmFiltrador.lblFiltros_Text;
+            lblRango.Text = Resources.Recursos_Localizable.FrmFiltrador.lblRango_Text;
+            lblUbicacion.Text = Resources.Recursos_Localizable.FrmFiltrador.lblUbicacion_Text;
+            lblDesde.Text = Resources.Recursos_Localizable.FrmFiltrador.lblDesde_Text;
+            lblHasta.Text = Resources.Recursos_Localizable.FrmFiltrador.lblHasta_Text;
+            btnBuscar.Text = Resources.Recursos_Localizable.FrmFiltrador.btnBuscar_Text;
+            btnBorrar.Text = Resources.Recursos_Localizable.FrmFiltrador.btnBorrar_Text;
+        }
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -89,8 +100,16 @@ namespace piTest
 
         }
 
-        private void FrmFiltrador_Load(object sender, EventArgs e)
+        private void FrmFiltrador_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
+            frm.Show();
         }
     }
 }

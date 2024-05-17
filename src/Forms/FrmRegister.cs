@@ -19,6 +19,7 @@ using static Google.Apis.Requests.BatchRequest;
 using System.Runtime.Remoting.Contexts;
 using piTest.Clases;
 using Mysqlx;
+using System.Globalization;
 
 namespace piTest
 {
@@ -199,5 +200,44 @@ namespace piTest
                 txtNombre.ForeColor = Color.White; // Cambiar el color del texto al color normal
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
+            frm.Show();
+        }
+
+        private void FrmRegister_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FrmRegister_Load(object sender, EventArgs e)
+        {
+            CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
+            AplicarIdioma();
+        }
+        private void AplicarIdioma()
+        {
+            lblWelcomeLogin.Text = Resources.Recursos_Localizable.FrmRegister.lblWelcomeLogin_Text;
+            lblMail.Text = Resources.Recursos_Localizable.FrmRegister.lblMail_Text;
+            txtMail.Text = Resources.Recursos_Localizable.FrmRegister.txtMail_Text;
+            txtPass.Text = Resources.Recursos_Localizable.FrmRegister.txtPass_Text;
+            lblPass.Text = Resources.Recursos_Localizable.FrmRegister.lblPass_Text;
+            btnLogin.Text = Resources.Recursos_Localizable.FrmRegister.btnLogin_Text;
+            btnContinueWGoogle.Text = Resources.Recursos_Localizable.FrmRegister.btnContinueWGoogle_Text;
+            lblNombre.Text = Resources.Recursos_Localizable.FrmRegister.lblNombre_Text;
+            txtNombre.Text = Resources.Recursos_Localizable.FrmRegister.txtNombre_Text;
+            lblApellido.Text = Resources.Recursos_Localizable.FrmRegister.lblApellido_Text;
+            txtApellido.Text = Resources.Recursos_Localizable.FrmRegister.txtApellido_Text;
+            lblDni.Text = Resources.Recursos_Localizable.FrmRegister.lblDni_Text;
+            txtDni.Text = Resources.Recursos_Localizable.FrmRegister.txtDni_Text;
+            lblDireccion.Text = Resources.Recursos_Localizable.FrmRegister.lblDireccion_Text;
+            txtDireccion.Text = Resources.Recursos_Localizable.FrmRegister.txtDireccion_Text;
+            chkCuidador.Text = Resources.Recursos_Localizable.FrmRegister.chkCuidador_Text;
+            btnRegistro.Text = Resources.Recursos_Localizable.FrmRegister.btnRegistro_Text;
+        }
+
     }
 }

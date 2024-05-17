@@ -45,6 +45,7 @@ namespace piTest
             this.lblForgPass = new System.Windows.Forms.Label();
             this.btnContinueWGoogle = new System.Windows.Forms.Button();
             this.pictureBoxContinueGoogle = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).BeginInit();
@@ -222,12 +223,23 @@ namespace piTest
             this.pictureBoxContinueGoogle.TabStop = false;
             this.pictureBoxContinueGoogle.Click += new System.EventHandler(this.pictureBoxContinueGoogle_Click);
             // 
-            // LoginForm
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(908, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(104, 44);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1040, 406);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBoxContinueGoogle);
             this.Controls.Add(this.btnContinueWGoogle);
             this.Controls.Add(this.lblForgPass);
@@ -245,9 +257,10 @@ namespace piTest
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "LoginForm";
+            this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLogin_FormClosed);
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -273,5 +286,6 @@ namespace piTest
         private System.Windows.Forms.Button btnContinueWGoogle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBoxContinueGoogle;
+        private System.Windows.Forms.Button button1;
     }
 }
