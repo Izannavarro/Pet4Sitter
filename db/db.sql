@@ -46,4 +46,4 @@ CREATE TABLE IF NOT EXISTS chat (
     messages VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL,
     FOREIGN KEY (id_receiver) REFERENCES users(id_user),
     FOREIGN KEY (id_sender) REFERENCES users(id_user)
-)
+) CHARACTER SET utf8mb4;pet4sitter
