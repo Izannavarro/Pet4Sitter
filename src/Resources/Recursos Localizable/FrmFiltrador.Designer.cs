@@ -22,14 +22,14 @@ namespace piTest.Resources.Recursos_Localizable {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class FrmEditarTarjeta {
+    internal class FrmFiltrador {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal FrmEditarTarjeta() {
+        internal FrmFiltrador() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace piTest.Resources.Recursos_Localizable {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Resources.Recursos_Localizable.FrmEditarTarjeta", typeof(FrmEditarTarjeta).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Resources.Recursos_Localizable.FrmFiltrador", typeof(FrmFiltrador).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,92 +61,65 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Eliminar.
+        ///   Busca una cadena traducida similar a BORRAR.
         /// </summary>
-        internal static string btnEliminar_Text {
+        internal static string btnBorrar_Text {
             get {
-                return ResourceManager.GetString("btnEliminar.Text", resourceCulture);
+                return ResourceManager.GetString("btnBorrar.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Guardar Cambios.
+        ///   Busca una cadena traducida similar a BUSCAR.
         /// </summary>
-        internal static string btnGuardar_Text {
+        internal static string btnBuscar_Text {
             get {
-                return ResourceManager.GetString("btnGuardar.Text", resourceCulture);
+                return ResourceManager.GetString("btnBuscar.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Volver.
+        ///   Busca una cadena traducida similar a Desde:.
         /// </summary>
-        internal static string btnVolver_Text {
+        internal static string lblDesde_Text {
             get {
-                return ResourceManager.GetString("btnVolver.Text", resourceCulture);
+                return ResourceManager.GetString("lblDesde.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Editar Tarjeta.
+        ///   Busca una cadena traducida similar a Filtros de Cuidador.
         /// </summary>
-        internal static string lblConfiguracionAvanzada_Text {
+        internal static string lblFiltros_Text {
             get {
-                return ResourceManager.GetString("lblConfiguracionAvanzada.Text", resourceCulture);
+                return ResourceManager.GetString("lblFiltros.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a CVC:.
+        ///   Busca una cadena traducida similar a Hasta:.
         /// </summary>
-        internal static string lblCVC_Text {
+        internal static string lblHasta_Text {
             get {
-                return ResourceManager.GetString("lblCVC.Text", resourceCulture);
+                return ResourceManager.GetString("lblHasta.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Nueva Dirección:.
+        ///   Busca una cadena traducida similar a Rango de Precios:.
         /// </summary>
-        internal static string lblDireccion_Text {
+        internal static string lblRango_Text {
             get {
-                return ResourceManager.GetString("lblDireccion.Text", resourceCulture);
+                return ResourceManager.GetString("lblRango.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Fecha:.
+        ///   Busca una cadena traducida similar a Ubicación:.
         /// </summary>
-        internal static string lblFecha_Text {
+        internal static string lblUbicacion_Text {
             get {
-                return ResourceManager.GetString("lblFecha.Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Número:.
-        /// </summary>
-        internal static string lblNumero_Text {
-            get {
-                return ResourceManager.GetString("lblNumero.Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Tarjeta Actual:.
-        /// </summary>
-        internal static string lblTarjeta_Text {
-            get {
-                return ResourceManager.GetString("lblTarjeta.Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Titular de la tarjeta:.
-        /// </summary>
-        internal static string lblTitular_Text {
-            get {
-                return ResourceManager.GetString("lblTitular.Text", resourceCulture);
+                return ResourceManager.GetString("lblUbicacion.Text", resourceCulture);
             }
         }
     }

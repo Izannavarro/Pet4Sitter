@@ -98,34 +98,46 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="btnEliminar.Text" xml:space="preserve">
-  <value>Eliminar</value>
+	<!-- Labels -->
+	<data name="lblContenido.Text" xml:space="preserve">
+  <value>Content:</value>
 </data>
-	<data name="btnVolver.Text" xml:space="preserve">
-  <value>Volver</value>
-</data>
-	<data name="btnGuardar.Text" xml:space="preserve">
-  <value>Guardar Cambios</value>
-</data>
-	<data name="lblDireccion.Text" xml:space="preserve">
-  <value>Nueva Dirección:</value>
-</data>
-	<data name="lblTarjeta.Text" xml:space="preserve">
-  <value>Tarjeta Actual:</value>
-</data>
-	<data name="lblConfiguracionAvanzada.Text" xml:space="preserve">
-  <value>Editar Tarjeta</value>
+	<data name="lblIdNoticias.Text" xml:space="preserve">
+  <value>News ID:</value>
 </data>
 	<data name="lblTitular.Text" xml:space="preserve">
-  <value>Titular de la tarjeta:</value>
+  <value>Headline:</value>
 </data>
-	<data name="lblNumero.Text" xml:space="preserve">
-  <value>Número:</value>
+	<data name="label2.Text" xml:space="preserve">
+  <value>News</value>
 </data>
-	<data name="lblFecha.Text" xml:space="preserve">
-  <value>Fecha:</value>
+	<data name="label3.Text" xml:space="preserve">
+  <value>News</value>
 </data>
-	<data name="lblCVC.Text" xml:space="preserve">
-  <value>CVC:</value>
+	<data name="label6.Text" xml:space="preserve">
+  <value>News</value>
+</data>
+
+	<!-- Buttons -->
+	<data name="btnVolver.Text" xml:space="preserve">
+  <value>Back</value>
+</data>
+	<data name="btnEliminar.Text" xml:space="preserve">
+  <value>Delete</value>
+</data>
+	<data name="btnEditar.Text" xml:space="preserve">
+  <value>Edit</value>
+</data>
+	<data name="btnFoto.Text" xml:space="preserve">
+  <value>Change photo</value>
+</data>
+	<data name="btnAnyadir.Text" xml:space="preserve">
+  <value>Add</value>
+</data>
+	<data name="btnSiguiente.Text" xml:space="preserve">
+  <value>Next</value>
+</data>
+	<data name="btnAnterior.Text" xml:space="preserve">
+  <value>Previous</value>
 </data>
 </root>

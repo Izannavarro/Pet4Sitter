@@ -22,14 +22,14 @@ namespace piTest.Resources.Recursos_Localizable {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class FrmEditarTarjeta {
+    internal class FrmLogin {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal FrmEditarTarjeta() {
+        internal FrmLogin() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace piTest.Resources.Recursos_Localizable {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Resources.Recursos_Localizable.FrmEditarTarjeta", typeof(FrmEditarTarjeta).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Resources.Recursos_Localizable.FrmLogin", typeof(FrmLogin).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,92 +61,83 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Eliminar.
+        ///   Busca una cadena traducida similar a Continuar con google.
         /// </summary>
-        internal static string btnEliminar_Text {
+        internal static string btnContinueWGoogle_Text {
             get {
-                return ResourceManager.GetString("btnEliminar.Text", resourceCulture);
+                return ResourceManager.GetString("btnContinueWGoogle.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Guardar Cambios.
+        ///   Busca una cadena traducida similar a Iniciar Sesión.
         /// </summary>
-        internal static string btnGuardar_Text {
+        internal static string btnLogin_Text {
             get {
-                return ResourceManager.GetString("btnGuardar.Text", resourceCulture);
+                return ResourceManager.GetString("btnLogin.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Volver.
+        ///   Busca una cadena traducida similar a Regístrate.
         /// </summary>
-        internal static string btnVolver_Text {
+        internal static string btnRegister_Text {
             get {
-                return ResourceManager.GetString("btnVolver.Text", resourceCulture);
+                return ResourceManager.GetString("btnRegister.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Editar Tarjeta.
+        ///   Busca una cadena traducida similar a ¿Has olvidado tu contraseña?.
         /// </summary>
-        internal static string lblConfiguracionAvanzada_Text {
+        internal static string lblForgPass_Text {
             get {
-                return ResourceManager.GetString("lblConfiguracionAvanzada.Text", resourceCulture);
+                return ResourceManager.GetString("lblForgPass.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a CVC:.
+        ///   Busca una cadena traducida similar a Introduce tu email:.
         /// </summary>
-        internal static string lblCVC_Text {
+        internal static string lblMail_Text {
             get {
-                return ResourceManager.GetString("lblCVC.Text", resourceCulture);
+                return ResourceManager.GetString("lblMail.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Nueva Dirección:.
+        ///   Busca una cadena traducida similar a Introduce tu contraseña:.
         /// </summary>
-        internal static string lblDireccion_Text {
+        internal static string lblPass_Text {
             get {
-                return ResourceManager.GetString("lblDireccion.Text", resourceCulture);
+                return ResourceManager.GetString("lblPass.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Fecha:.
+        ///   Busca una cadena traducida similar a Iniciar sesión.
         /// </summary>
-        internal static string lblFecha_Text {
+        internal static string lblWelcomeLogin_Text {
             get {
-                return ResourceManager.GetString("lblFecha.Text", resourceCulture);
+                return ResourceManager.GetString("lblWelcomeLogin.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Número:.
+        ///   Busca una cadena traducida similar a Introduce email.
         /// </summary>
-        internal static string lblNumero_Text {
+        internal static string txtMail_Text {
             get {
-                return ResourceManager.GetString("lblNumero.Text", resourceCulture);
+                return ResourceManager.GetString("txtMail.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Tarjeta Actual:.
+        ///   Busca una cadena traducida similar a Introduce contraseña.
         /// </summary>
-        internal static string lblTarjeta_Text {
+        internal static string txtPass_Text {
             get {
-                return ResourceManager.GetString("lblTarjeta.Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Titular de la tarjeta:.
-        /// </summary>
-        internal static string lblTitular_Text {
-            get {
-                return ResourceManager.GetString("lblTitular.Text", resourceCulture);
+                return ResourceManager.GetString("txtPass.Text", resourceCulture);
             }
         }
     }

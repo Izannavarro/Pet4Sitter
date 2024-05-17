@@ -62,16 +62,5 @@ namespace piTest
             ConfiguracionIdioma.CambiarIdioma(new CultureInfo(idioma));
             AplicarIdioma();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close(); // Cierra completamente el formulario actual
-        }
-
-        private void FrmConfiguracion_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            FrmAdminProductos f = new FrmAdminProductos(); // Crea una nueva instancia de FrmChat
-            f.Show(); // Muestra el formulario FrmChat
-        }
     }
 }

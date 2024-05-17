@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace piTest.Properties {
+namespace piTest.Resources.Recursos_Localizable {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace piTest.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class FrmAdminNoticias {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal FrmAdminNoticias() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace piTest.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Resources.Recursos_Localizable.FrmAdminNoticias", typeof(FrmAdminNoticias).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,133 +61,125 @@ namespace piTest.Properties {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Anterior.
         /// </summary>
-        internal static System.Drawing.Bitmap _2931142_minimize_minus_remove_line_icon {
+        internal static string btnAnterior_Text {
             get {
-                object obj = ResourceManager.GetObject("2931142_minimize_minus_remove_line_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("btnAnterior.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Añadir .
         /// </summary>
-        internal static System.Drawing.Bitmap ajuste {
+        internal static string btnAnyadir_Text {
             get {
-                object obj = ResourceManager.GetObject("ajuste", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("btnAnyadir.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Editar.
         /// </summary>
-        internal static System.Drawing.Bitmap ayuda {
+        internal static string btnEditar_Text {
             get {
-                object obj = ResourceManager.GetObject("ayuda", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("btnEditar.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Eliminar.
         /// </summary>
-        internal static System.Drawing.Bitmap busqueda {
+        internal static string btnEliminar_Text {
             get {
-                object obj = ResourceManager.GetObject("busqueda", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("btnEliminar.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Cambiar foto.
         /// </summary>
-        internal static System.Drawing.Bitmap carro {
+        internal static string btnFoto_Text {
             get {
-                object obj = ResourceManager.GetObject("carro", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("btnFoto.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Siguiente.
         /// </summary>
-        internal static System.Drawing.Bitmap chat {
+        internal static string btnSiguiente_Text {
             get {
-                object obj = ResourceManager.GetObject("chat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("btnSiguiente.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Volver.
         /// </summary>
-        internal static System.Drawing.Bitmap chat1 {
+        internal static string btnVolver_Text {
             get {
-                object obj = ResourceManager.GetObject("chat1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("btnVolver.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Noticia.
         /// </summary>
-        internal static System.Drawing.Bitmap google_icon {
+        internal static string label2_Text {
             get {
-                object obj = ResourceManager.GetObject("google_icon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("label2.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Noticia.
         /// </summary>
-        internal static System.Drawing.Bitmap google_icon_icons_com_62736 {
+        internal static string label3_Text {
             get {
-                object obj = ResourceManager.GetObject("google_icon-icons.com_62736", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("label3.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Noticia.
         /// </summary>
-        internal static System.Drawing.Bitmap lgo {
+        internal static string label6_Text {
             get {
-                object obj = ResourceManager.GetObject("lgo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("label6.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Contenido:.
         /// </summary>
-        internal static System.Drawing.Bitmap noticias {
+        internal static string lblContenido_Text {
             get {
-                object obj = ResourceManager.GetObject("noticias", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("lblContenido.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a ID Noticias:.
         /// </summary>
-        internal static System.Drawing.Bitmap piTestLogo {
+        internal static string lblIdNoticias_Text {
             get {
-                object obj = ResourceManager.GetObject("piTestLogo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("lblIdNoticias.Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        ///   Busca una cadena traducida similar a Titular :.
         /// </summary>
-        internal static System.Drawing.Bitmap usuario {
+        internal static string lblTitular_Text {
             get {
-                object obj = ResourceManager.GetObject("usuario", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("lblTitular.Text", resourceCulture);
             }
+        }
+
+        internal void Show()
+        {
+            throw new NotImplementedException();
         }
     }
 }
