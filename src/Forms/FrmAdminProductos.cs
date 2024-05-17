@@ -45,6 +45,7 @@ namespace piTest
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            dgvProductos.DataSource = Producto.CantidadProductos();
         }
 
         private void AplicarIdioma()
@@ -92,14 +93,24 @@ namespace piTest
             string descrip = txtDescripcion.Text;
             Image img = ptbImagen.Image;
 
-            Producto p1 = new Producto(nombre, cant, precio, descrip, img);
+            Producto p1 = new Producto(nombre, cant, precio, descrip,img);
 
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                Producto.
+                Producto.AnyadirProducto(p1);
+                LimpiarTablaProductos();
                 ConBD.CerrarConexion();
             }
+        }
+
+        private void LimpiarTablaProductos()
+        {
+            if (dgvProductos.Rows.Count > 0)
+            {
+                dgvProductos.Rows.Clear(); 
+            }
+            dgvProductos.DataSource = Producto.CantidadProductos();
         }
     }
 }
