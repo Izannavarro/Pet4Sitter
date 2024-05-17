@@ -230,7 +230,8 @@ namespace piTest
         {
             FrmFiltrador form = new FrmFiltrador();
             form.Show();
-            formActual.Close();
+            form.StartPosition = FormStartPosition.Manual; // Esto evita animaciones del sistema
+            formActual.Dispose();
         }
     }
 }
