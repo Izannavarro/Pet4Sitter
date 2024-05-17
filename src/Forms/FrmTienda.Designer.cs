@@ -60,10 +60,12 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.dgvProductos);
-            this.panel3.Location = new System.Drawing.Point(164, 86);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(270, 104);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(484, 436);
             this.panel3.TabIndex = 5;
@@ -78,7 +80,7 @@
             this.Descripcion,
             this.Valoracion});
             this.dgvProductos.Location = new System.Drawing.Point(16, 16);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
@@ -122,12 +124,13 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel1.Controls.Add(this.btnAñadir);
             this.panel1.Controls.Add(this.ptbImagenProducto);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(659, 86);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(765, 104);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 436);
             this.panel1.TabIndex = 6;
@@ -136,7 +139,7 @@
             // 
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadir.Location = new System.Drawing.Point(90, 407);
-            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(102, 26);
             this.btnAñadir.TabIndex = 47;
@@ -147,7 +150,7 @@
             // 
             this.ptbImagenProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ptbImagenProducto.Location = new System.Drawing.Point(18, 26);
-            this.ptbImagenProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbImagenProducto.Margin = new System.Windows.Forms.Padding(2);
             this.ptbImagenProducto.Name = "ptbImagenProducto";
             this.ptbImagenProducto.Size = new System.Drawing.Size(238, 122);
             this.ptbImagenProducto.TabIndex = 46;
@@ -158,7 +161,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.lblDescripcion);
             this.panel4.Location = new System.Drawing.Point(18, 163);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(238, 239);
             this.panel4.TabIndex = 45;
@@ -181,7 +184,7 @@
             this.panel5.Controls.Add(this.btnFlecha2);
             this.panel5.Controls.Add(this.btnFlecha1);
             this.panel5.Location = new System.Drawing.Point(495, 8);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(192, 34);
             this.panel5.TabIndex = 44;
@@ -190,7 +193,7 @@
             // 
             this.btnFlecha3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFlecha3.Location = new System.Drawing.Point(131, 0);
-            this.btnFlecha3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFlecha3.Margin = new System.Windows.Forms.Padding(2);
             this.btnFlecha3.Name = "btnFlecha3";
             this.btnFlecha3.Size = new System.Drawing.Size(34, 34);
             this.btnFlecha3.TabIndex = 45;
@@ -201,7 +204,7 @@
             // 
             this.btnFlecha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFlecha2.Location = new System.Drawing.Point(68, 0);
-            this.btnFlecha2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFlecha2.Margin = new System.Windows.Forms.Padding(2);
             this.btnFlecha2.Name = "btnFlecha2";
             this.btnFlecha2.Size = new System.Drawing.Size(34, 34);
             this.btnFlecha2.TabIndex = 44;
@@ -212,7 +215,7 @@
             // 
             this.btnFlecha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFlecha1.Location = new System.Drawing.Point(0, 0);
-            this.btnFlecha1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFlecha1.Margin = new System.Windows.Forms.Padding(2);
             this.btnFlecha1.Name = "btnFlecha1";
             this.btnFlecha1.Size = new System.Drawing.Size(36, 34);
             this.btnFlecha1.TabIndex = 42;
@@ -223,7 +226,7 @@
             // 
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.Location = new System.Drawing.Point(13, 8);
-            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(403, 35);
             this.txtBusqueda.TabIndex = 18;
@@ -232,7 +235,7 @@
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(428, 8);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(47, 34);
             this.btnBuscar.TabIndex = 41;
@@ -241,21 +244,25 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel2.Controls.Add(this.btnBuscar);
             this.panel2.Controls.Add(this.txtBusqueda);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(164, 20);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(270, 38);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(698, 51);
             this.panel2.TabIndex = 7;
             // 
             // button6
             // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(866, 20);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Location = new System.Drawing.Point(972, 38);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(68, 51);
             this.button6.TabIndex = 48;
@@ -263,8 +270,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(25, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.Location = new System.Drawing.Point(131, 38);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 42);
             this.button1.TabIndex = 45;
@@ -283,7 +292,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTienda";
             this.Text = "FrmTienda";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmTienda_FormClosed);
