@@ -29,227 +29,304 @@
         private void InitializeComponent()
         {
             this.pnlBarraLateral = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblNombreApp = new System.Windows.Forms.Label();
+            this.lblPerfil = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAjustes = new System.Windows.Forms.Label();
+            this.pcbAjustes = new System.Windows.Forms.PictureBox();
+            this.lblIaYuda = new System.Windows.Forms.Label();
+            this.pcbIaYuda = new System.Windows.Forms.PictureBox();
+            this.lblTienda = new System.Windows.Forms.Label();
+            this.pcbTienda = new System.Windows.Forms.PictureBox();
+            this.lblNoticias = new System.Windows.Forms.Label();
+            this.pcbNoticias = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pcbChat = new System.Windows.Forms.PictureBox();
+            this.LblBúsqueda = new System.Windows.Forms.Label();
+            this.pcbBuscar = new System.Windows.Forms.PictureBox();
+            this.lblNombreApp = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlBarraLateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAjustes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIaYuda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTienda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbChat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbBuscar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBarraLateral
             // 
             this.pnlBarraLateral.BackColor = System.Drawing.Color.White;
-            this.pnlBarraLateral.Controls.Add(this.label6);
-            this.pnlBarraLateral.Controls.Add(this.pictureBox7);
-            this.pnlBarraLateral.Controls.Add(this.label5);
-            this.pnlBarraLateral.Controls.Add(this.pictureBox6);
-            this.pnlBarraLateral.Controls.Add(this.label4);
-            this.pnlBarraLateral.Controls.Add(this.pictureBox5);
-            this.pnlBarraLateral.Controls.Add(this.label3);
-            this.pnlBarraLateral.Controls.Add(this.pictureBox4);
-            this.pnlBarraLateral.Controls.Add(this.label2);
-            this.pnlBarraLateral.Controls.Add(this.pictureBox3);
-            this.pnlBarraLateral.Controls.Add(this.label1);
+            this.pnlBarraLateral.Controls.Add(this.lblPerfil);
             this.pnlBarraLateral.Controls.Add(this.pictureBox2);
+            this.pnlBarraLateral.Controls.Add(this.lblAjustes);
+            this.pnlBarraLateral.Controls.Add(this.pcbAjustes);
+            this.pnlBarraLateral.Controls.Add(this.lblIaYuda);
+            this.pnlBarraLateral.Controls.Add(this.pcbIaYuda);
+            this.pnlBarraLateral.Controls.Add(this.lblTienda);
+            this.pnlBarraLateral.Controls.Add(this.pcbTienda);
+            this.pnlBarraLateral.Controls.Add(this.lblNoticias);
+            this.pnlBarraLateral.Controls.Add(this.pcbNoticias);
+            this.pnlBarraLateral.Controls.Add(this.label2);
+            this.pnlBarraLateral.Controls.Add(this.pcbChat);
+            this.pnlBarraLateral.Controls.Add(this.LblBúsqueda);
+            this.pnlBarraLateral.Controls.Add(this.pcbBuscar);
             this.pnlBarraLateral.Controls.Add(this.lblNombreApp);
+            this.pnlBarraLateral.Controls.Add(this.panel1);
             this.pnlBarraLateral.Controls.Add(this.pictureBox1);
             this.pnlBarraLateral.Location = new System.Drawing.Point(0, 1);
+            this.pnlBarraLateral.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBarraLateral.Name = "pnlBarraLateral";
-            this.pnlBarraLateral.Size = new System.Drawing.Size(101, 598);
+            this.pnlBarraLateral.Size = new System.Drawing.Size(347, 736);
             this.pnlBarraLateral.TabIndex = 0;
+            this.pnlBarraLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBarraLateral_Paint);
             this.pnlBarraLateral.MouseLeave += new System.EventHandler(this.pnlBarraLateral_MouseLeave);
             this.pnlBarraLateral.MouseHover += new System.EventHandler(this.pnlBarraLateral_MouseHover);
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.AutoSize = true;
+            this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.Location = new System.Drawing.Point(148, 648);
+            this.lblPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(95, 39);
+            this.lblPerfil.TabIndex = 15;
+            this.lblPerfil.Text = "Perfil";
+            this.lblPerfil.MouseLeave += new System.EventHandler(this.lblPerfil_MouseLeave);
+            this.lblPerfil.MouseHover += new System.EventHandler(this.lblPerfil_MouseHover);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::piTest.Properties.Resources.usuario;
+            this.pictureBox2.Location = new System.Drawing.Point(23, 631);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(84, 75);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave_1);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover_1);
+            // 
+            // lblAjustes
+            // 
+            this.lblAjustes.AutoSize = true;
+            this.lblAjustes.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAjustes.Location = new System.Drawing.Point(148, 565);
+            this.lblAjustes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAjustes.Name = "lblAjustes";
+            this.lblAjustes.Size = new System.Drawing.Size(129, 39);
+            this.lblAjustes.TabIndex = 13;
+            this.lblAjustes.Text = "Ajustes";
+            this.lblAjustes.MouseLeave += new System.EventHandler(this.lblAjustes_MouseLeave);
+            this.lblAjustes.MouseHover += new System.EventHandler(this.lblAjustes_MouseHover);
+            // 
+            // pcbAjustes
+            // 
+            this.pcbAjustes.Image = global::piTest.Properties.Resources.ajuste;
+            this.pcbAjustes.Location = new System.Drawing.Point(23, 548);
+            this.pcbAjustes.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbAjustes.Name = "pcbAjustes";
+            this.pcbAjustes.Size = new System.Drawing.Size(84, 75);
+            this.pcbAjustes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbAjustes.TabIndex = 12;
+            this.pcbAjustes.TabStop = false;
+            this.pcbAjustes.MouseLeave += new System.EventHandler(this.pictureBox7_MouseLeave);
+            this.pcbAjustes.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
+            // 
+            // lblIaYuda
+            // 
+            this.lblIaYuda.AutoSize = true;
+            this.lblIaYuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIaYuda.Location = new System.Drawing.Point(148, 476);
+            this.lblIaYuda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIaYuda.Name = "lblIaYuda";
+            this.lblIaYuda.Size = new System.Drawing.Size(145, 39);
+            this.lblIaYuda.TabIndex = 11;
+            this.lblIaYuda.Text = "IAYUDA";
+            this.lblIaYuda.MouseLeave += new System.EventHandler(this.lblIaYuda_MouseLeave);
+            this.lblIaYuda.MouseHover += new System.EventHandler(this.lblIaYuda_MouseHover);
+            // 
+            // pcbIaYuda
+            // 
+            this.pcbIaYuda.Image = global::piTest.Properties.Resources.ayuda;
+            this.pcbIaYuda.Location = new System.Drawing.Point(23, 462);
+            this.pcbIaYuda.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbIaYuda.Name = "pcbIaYuda";
+            this.pcbIaYuda.Size = new System.Drawing.Size(84, 75);
+            this.pcbIaYuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbIaYuda.TabIndex = 10;
+            this.pcbIaYuda.TabStop = false;
+            this.pcbIaYuda.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
+            this.pcbIaYuda.MouseHover += new System.EventHandler(this.pictureBox6_MouseHover);
+            // 
+            // lblTienda
+            // 
+            this.lblTienda.AutoSize = true;
+            this.lblTienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTienda.Location = new System.Drawing.Point(148, 392);
+            this.lblTienda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTienda.Name = "lblTienda";
+            this.lblTienda.Size = new System.Drawing.Size(122, 39);
+            this.lblTienda.TabIndex = 9;
+            this.lblTienda.Text = "Tienda";
+            this.lblTienda.MouseLeave += new System.EventHandler(this.lblTienda_MouseLeave);
+            this.lblTienda.MouseHover += new System.EventHandler(this.lblTienda_MouseHover);
+            // 
+            // pcbTienda
+            // 
+            this.pcbTienda.Image = global::piTest.Properties.Resources.carro;
+            this.pcbTienda.Location = new System.Drawing.Point(23, 375);
+            this.pcbTienda.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbTienda.Name = "pcbTienda";
+            this.pcbTienda.Size = new System.Drawing.Size(84, 75);
+            this.pcbTienda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbTienda.TabIndex = 8;
+            this.pcbTienda.TabStop = false;
+            this.pcbTienda.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
+            this.pcbTienda.MouseHover += new System.EventHandler(this.pictureBox5_MouseHover);
+            // 
+            // lblNoticias
+            // 
+            this.lblNoticias.AutoSize = true;
+            this.lblNoticias.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoticias.Location = new System.Drawing.Point(148, 303);
+            this.lblNoticias.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNoticias.Name = "lblNoticias";
+            this.lblNoticias.Size = new System.Drawing.Size(139, 39);
+            this.lblNoticias.TabIndex = 7;
+            this.lblNoticias.Text = "Noticias";
+            this.lblNoticias.MouseLeave += new System.EventHandler(this.lblNoticias_MouseLeave);
+            this.lblNoticias.MouseHover += new System.EventHandler(this.lblNoticias_MouseHover);
+            // 
+            // pcbNoticias
+            // 
+            this.pcbNoticias.Image = global::piTest.Properties.Resources.noticias;
+            this.pcbNoticias.Location = new System.Drawing.Point(23, 289);
+            this.pcbNoticias.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbNoticias.Name = "pcbNoticias";
+            this.pcbNoticias.Size = new System.Drawing.Size(84, 75);
+            this.pcbNoticias.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbNoticias.TabIndex = 6;
+            this.pcbNoticias.TabStop = false;
+            this.pcbNoticias.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
+            this.pcbNoticias.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(148, 217);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 39);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Chat";
+            this.label2.Leave += new System.EventHandler(this.label2_Leave);
+            this.label2.MouseLeave += new System.EventHandler(this.label2_Leave);
+            this.label2.MouseHover += new System.EventHandler(this.label2_MouseHover);
+            // 
+            // pcbChat
+            // 
+            this.pcbChat.Image = global::piTest.Properties.Resources.chat1;
+            this.pcbChat.Location = new System.Drawing.Point(23, 200);
+            this.pcbChat.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbChat.Name = "pcbChat";
+            this.pcbChat.Size = new System.Drawing.Size(84, 75);
+            this.pcbChat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbChat.TabIndex = 4;
+            this.pcbChat.TabStop = false;
+            this.pcbChat.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
+            this.pcbChat.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
+            // 
+            // LblBúsqueda
+            // 
+            this.LblBúsqueda.AutoSize = true;
+            this.LblBúsqueda.BackColor = System.Drawing.Color.Transparent;
+            this.LblBúsqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblBúsqueda.Location = new System.Drawing.Point(148, 129);
+            this.LblBúsqueda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblBúsqueda.Name = "LblBúsqueda";
+            this.LblBúsqueda.Size = new System.Drawing.Size(171, 39);
+            this.LblBúsqueda.TabIndex = 3;
+            this.LblBúsqueda.Text = "Búsqueda";
+            this.LblBúsqueda.MouseLeave += new System.EventHandler(this.LblBúsqueda_MouseLeave);
+            this.LblBúsqueda.MouseHover += new System.EventHandler(this.LblBúsqueda_MouseHover);
+            // 
+            // pcbBuscar
+            // 
+            this.pcbBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.pcbBuscar.Image = global::piTest.Properties.Resources.busqueda;
+            this.pcbBuscar.Location = new System.Drawing.Point(23, 113);
+            this.pcbBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbBuscar.Name = "pcbBuscar";
+            this.pcbBuscar.Size = new System.Drawing.Size(84, 75);
+            this.pcbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbBuscar.TabIndex = 2;
+            this.pcbBuscar.TabStop = false;
+            this.pcbBuscar.Click += new System.EventHandler(this.pcbBuscar_Click);
+            this.pcbBuscar.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pcbBuscar.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
+            // lblNombreApp
+            // 
+            this.lblNombreApp.AutoSize = true;
+            this.lblNombreApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreApp.Location = new System.Drawing.Point(160, 47);
+            this.lblNombreApp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreApp.Name = "lblNombreApp";
+            this.lblNombreApp.Size = new System.Drawing.Size(166, 39);
+            this.lblNombreApp.TabIndex = 1;
+            this.lblNombreApp.Text = "Pet4Sitter";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::piTest.Properties.Resources.piTestLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(124, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
-            // lblNombreApp
+            // panel1
             // 
-            this.lblNombreApp.AutoSize = true;
-            this.lblNombreApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreApp.Location = new System.Drawing.Point(120, 38);
-            this.lblNombreApp.Name = "lblNombreApp";
-            this.lblNombreApp.Size = new System.Drawing.Size(134, 31);
-            this.lblNombreApp.TabIndex = 1;
-            this.lblNombreApp.Text = "Pet4Sitter";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::piTest.Properties.Resources.google_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 117);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(111, 137);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Pet4Sitter";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(111, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 31);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Pet4Sitter";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::piTest.Properties.Resources.google_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 194);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.pictureBox3.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(111, 291);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 31);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Pet4Sitter";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::piTest.Properties.Resources.google_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(10, 271);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox4_MouseLeave);
-            this.pictureBox4.MouseHover += new System.EventHandler(this.pictureBox4_MouseHover);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 368);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 31);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Pet4Sitter";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::piTest.Properties.Resources.google_icon;
-            this.pictureBox5.Location = new System.Drawing.Point(10, 348);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox5_MouseLeave);
-            this.pictureBox5.MouseHover += new System.EventHandler(this.pictureBox5_MouseHover);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(111, 445);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 31);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Pet4Sitter";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::piTest.Properties.Resources.google_icon;
-            this.pictureBox6.Location = new System.Drawing.Point(10, 425);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox6_MouseLeave);
-            this.pictureBox6.MouseHover += new System.EventHandler(this.pictureBox6_MouseHover);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(111, 522);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 31);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Pet4Sitter";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::piTest.Properties.Resources.google_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(10, 502);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(80, 71);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 12;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.MouseLeave += new System.EventHandler(this.pictureBox7_MouseLeave);
-            this.pictureBox7.MouseHover += new System.EventHandler(this.pictureBox7_MouseHover);
+            this.panel1.Location = new System.Drawing.Point(124, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(223, 737);
+            this.panel1.TabIndex = 16;
+            this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
+            this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // BarraLateral
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlBarraLateral);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BarraLateral";
-            this.Size = new System.Drawing.Size(311, 599);
+            this.Size = new System.Drawing.Size(415, 737);
+            this.Load += new System.EventHandler(this.BarraLateral_Load);
             this.MouseLeave += new System.EventHandler(this.BarraLateral_MouseLeave);
             this.MouseHover += new System.EventHandler(this.BarraLateral_MouseHover);
             this.pnlBarraLateral.ResumeLayout(false);
             this.pnlBarraLateral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbAjustes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIaYuda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTienda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbChat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbBuscar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,18 +335,21 @@
 
         private System.Windows.Forms.Panel pnlBarraLateral;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label LblBúsqueda;
+        private System.Windows.Forms.PictureBox pcbBuscar;
         private System.Windows.Forms.Label lblNombreApp;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblAjustes;
+        private System.Windows.Forms.PictureBox pcbAjustes;
+        private System.Windows.Forms.Label lblIaYuda;
+        private System.Windows.Forms.PictureBox pcbIaYuda;
+        private System.Windows.Forms.Label lblTienda;
+        private System.Windows.Forms.PictureBox pcbTienda;
+        private System.Windows.Forms.Label lblNoticias;
+        private System.Windows.Forms.PictureBox pcbNoticias;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pcbChat;
+        private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

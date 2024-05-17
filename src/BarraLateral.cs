@@ -12,10 +12,17 @@ namespace piTest
 {
     public partial class BarraLateral : UserControl
     {
+        private Form formActual;
         public BarraLateral()
         {
             InitializeComponent();
         }
+        public BarraLateral(Form formActual)
+        {
+            InitializeComponent();
+            this.formActual = formActual;
+        }
+        
         private void HoverBarraLateral()
         {
             pnlBarraLateral.Size = new Size(310, 635);
@@ -118,6 +125,112 @@ namespace piTest
         private void BarraLateral_MouseLeave(object sender, EventArgs e)
         {
             LeaveBarraLateral();
+        }
+
+        private void LblBúsqueda_MouseHover(object sender, EventArgs e)
+        {
+            HoverBarraLateral();
+        }
+
+        private void label2_MouseHover(object sender, EventArgs e)
+        {
+            HoverBarraLateral();
+        }
+
+        private void lblNoticias_MouseHover(object sender, EventArgs e)
+        {
+            HoverBarraLateral();
+        }
+
+        private void lblTienda_MouseHover(object sender, EventArgs e)
+        {
+            HoverBarraLateral();
+        }
+
+        private void lblIaYuda_MouseHover(object sender, EventArgs e)
+        {
+            HoverBarraLateral();
+        }
+
+        private void lblAjustes_MouseHover(object sender, EventArgs e)
+        {
+            HoverBarraLateral();
+        }
+
+        private void lblPerfil_MouseHover(object sender, EventArgs e)
+        {
+            HoverBarraLateral();
+        }
+
+        private void LblBúsqueda_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void label2_Leave(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void lblNoticias_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void lblTienda_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void lblIaYuda_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void lblAjustes_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void lblPerfil_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void pictureBox2_MouseHover_1(object sender, EventArgs e)
+        {
+            HoverBarraLateral();
+        }
+
+        private void pictureBox2_MouseLeave_1(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void panel1_MouseHover(object sender, EventArgs e)
+        {
+            HoverBarraLateral();
+        }
+
+        private void panel1_MouseLeave(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void pnlBarraLateral_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void BarraLateral_Load(object sender, EventArgs e)
+        {
+            LeaveBarraLateral();
+        }
+
+        private void pcbBuscar_Click(object sender, EventArgs e)
+        {
+            FrmFiltrador form = new FrmFiltrador();
+            form.Show();
+            formActual.Close();
         }
     }
 }

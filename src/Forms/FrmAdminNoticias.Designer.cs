@@ -54,7 +54,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.barraLateral1 = new piTest.BarraLateral();
+            this.barraLateral1 = new piTest.BarraLateral(this);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();

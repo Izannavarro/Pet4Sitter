@@ -596,8 +596,16 @@
     <None Include="Resources\2931142_minimize_minus_remove_line_icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\usuario.png" />
+    <None Include="Resources\noticias.png" />
     <None Include="Resources\piTestLogo.png" />
     <None Include="lgo.ico" />
+    <None Include="Resources\busqueda.png" />
+    <None Include="Resources\chat.png" />
+    <None Include="Resources\chat1.png" />
+    <None Include="Resources\carro.png" />
+    <None Include="Resources\ayuda.png" />
+    <None Include="Resources\ajuste.png" />
     <Content Include="Resources\gAuthRedirection.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
