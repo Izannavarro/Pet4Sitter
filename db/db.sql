@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS users (
     surname VARCHAR(60) CHARACTER SET utf8mb4,
     email VARCHAR(60) CHARACTER SET utf8mb4 NOT NULL,
     dni VARCHAR(9) CHARACTER SET utf8mb4,
-    password VARCHAR(30) CHARACTER SET utf8mb4 NOT NULL,
+    password VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL,
     maxpets INT,
     price DOUBLE,
     location VARCHAR(50) CHARACTER SET utf8mb4,
@@ -16,6 +16,8 @@ CREATE TABLE IF NOT EXISTS users (
     sitter TINYINT,
     admin TINYINT,
     image longblob,
+    latitud float,
+    longitud float,
     PRIMARY KEY (id_user)
 ) CHARACTER SET utf8mb4;
 
