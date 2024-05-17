@@ -121,6 +121,7 @@
   <ItemGroup>
     <Compile Include="Clases\ConfiguracionIdioma.cs" />
     <Compile Include="Clases\ConBD.cs" />
+    <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\User.cs" />
     <Compile Include="BarraLateral.cs">
       <SubType>UserControl</SubType>

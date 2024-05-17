@@ -53,7 +53,7 @@
             // 
             this.lblConfiguracionAvanzada.AutoSize = true;
             this.lblConfiguracionAvanzada.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfiguracionAvanzada.Location = new System.Drawing.Point(179, 43);
+            this.lblConfiguracionAvanzada.Location = new System.Drawing.Point(189, 43);
             this.lblConfiguracionAvanzada.Name = "lblConfiguracionAvanzada";
             this.lblConfiguracionAvanzada.Size = new System.Drawing.Size(405, 38);
             this.lblConfiguracionAvanzada.TabIndex = 0;
