@@ -98,34 +98,34 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="btnEliminar_Text" xml:space="preserve">
-    <value>Delete</value>
+	<data name="btnEliminar.Text" xml:space="preserve">
+  <value>Delete</value>
 </data>
-	<data name="btnVolver_Text" xml:space="preserve">
-    <value>Back</value>
+<data name="btnVolver.Text" xml:space="preserve">
+  <value>Back</value>
 </data>
-	<data name="btnGuardar_Text" xml:space="preserve">
-    <value>Save Changes</value>
+<data name="btnGuardar.Text" xml:space="preserve">
+  <value>Save Changes</value>
 </data>
-	<data name="lblNuevaDireccion_Text" xml:space="preserve">
-    <value>New Address:</value>
+<data name="lblDireccion.Text" xml:space="preserve">
+  <value>New Address:</value>
 </data>
-	<data name="lblTarjeta_Text" xml:space="preserve">
-    <value>Current Card:</value>
+<data name="lblTarjeta.Text" xml:space="preserve">
+  <value>Current Card:</value>
 </data>
-	<data name="lblConfiguracionAvanzada_Text" xml:space="preserve">
-    <value>Edit Card</value>
+<data name="lblConfiguracionAvanzada.Text" xml:space="preserve">
+  <value>Edit Card</value>
 </data>
-	<data name="lblTitular_Text" xml:space="preserve">
-    <value>Cardholder:</value>
+<data name="lblTitular.Text" xml:space="preserve">
+  <value>Cardholder:</value>
 </data>
-	<data name="lblNumeroTarjeta_Text" xml:space="preserve">
-    <value>Number:</value>
+<data name="lblNumero.Text" xml:space="preserve">
+  <value>Number:</value>
 </data>
-	<data name="lblFecha_Text" xml:space="preserve">
-    <value>Expiration Date:</value>
+<data name="lblFecha.Text" xml:space="preserve">
+  <value>Date:</value>
 </data>
-	<data name="lblCVC_Text" xml:space="preserve">
-    <value>CVC:</value>
+<data name="lblCVC.Text" xml:space="preserve">
+  <value>CVC:</value>
 </data>
 </root>

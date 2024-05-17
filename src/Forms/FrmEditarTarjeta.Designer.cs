@@ -28,86 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.txtTitular = new System.Windows.Forms.TextBox();
+            this.btnVolver = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblTarjeta = new System.Windows.Forms.Label();
             this.lblConfiguracionAvanzada = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.txtCVC = new System.Windows.Forms.TextBox();
+            this.lblTitular = new System.Windows.Forms.Label();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.lblCVC = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button4
+            // btnEliminar
             // 
-            this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(436, 75);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 32);
-            this.button4.TabIndex = 65;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(436, 75);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(116, 32);
+            this.btnEliminar.TabIndex = 65;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtTitular
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(70, 229);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(482, 34);
-            this.textBox1.TabIndex = 64;
+            this.txtTitular.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitular.Location = new System.Drawing.Point(70, 229);
+            this.txtTitular.Name = "txtTitular";
+            this.txtTitular.Size = new System.Drawing.Size(482, 34);
+            this.txtTitular.TabIndex = 64;
             // 
-            // button2
+            // btnVolver
             // 
-            this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(383, 433);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 32);
-            this.button2.TabIndex = 63;
-            this.button2.Text = "Volver";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnVolver.BackColor = System.Drawing.Color.Red;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.White;
+            this.btnVolver.Location = new System.Drawing.Point(383, 433);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(169, 32);
+            this.btnVolver.TabIndex = 63;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnGuardar
             // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(70, 433);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(307, 32);
-            this.button1.TabIndex = 62;
-            this.button1.Text = "Guardar Cambios";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.Lime;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.Location = new System.Drawing.Point(70, 433);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(307, 32);
+            this.btnGuardar.TabIndex = 62;
+            this.btnGuardar.Text = "Guardar Cambios";
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // label7
+            // lblDireccion
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(65, 145);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(196, 29);
-            this.label7.TabIndex = 61;
-            this.label7.Text = "Nueva Dirección:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(65, 145);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(196, 29);
+            this.lblDireccion.TabIndex = 61;
+            this.lblDireccion.Text = "Nueva Dirección:";
+            this.lblDireccion.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label6
+            // lblTarjeta
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(65, 78);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 29);
-            this.label6.TabIndex = 60;
-            this.label6.Text = "Tarjeta Actual: ";
+            this.lblTarjeta.AutoSize = true;
+            this.lblTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTarjeta.Location = new System.Drawing.Point(65, 78);
+            this.lblTarjeta.Name = "lblTarjeta";
+            this.lblTarjeta.Size = new System.Drawing.Size(172, 29);
+            this.lblTarjeta.TabIndex = 60;
+            this.lblTarjeta.Text = "Tarjeta Actual: ";
             // 
             // lblConfiguracionAvanzada
             // 
@@ -119,69 +120,79 @@
             this.lblConfiguracionAvanzada.TabIndex = 59;
             this.lblConfiguracionAvanzada.Text = "Editar Tarjeta";
             // 
-            // textBox2
+            // txtNumero
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(70, 301);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(482, 34);
-            this.textBox2.TabIndex = 66;
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(70, 301);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(482, 34);
+            this.txtNumero.TabIndex = 66;
             // 
-            // textBox3
+            // txtFecha
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(70, 378);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 34);
-            this.textBox3.TabIndex = 67;
+            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.Location = new System.Drawing.Point(70, 378);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(167, 34);
+            this.txtFecha.TabIndex = 67;
             // 
-            // textBox4
+            // txtCVC
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(346, 378);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(135, 34);
-            this.textBox4.TabIndex = 68;
+            this.txtCVC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCVC.Location = new System.Drawing.Point(346, 378);
+            this.txtCVC.Name = "txtCVC";
+            this.txtCVC.Size = new System.Drawing.Size(135, 34);
+            this.txtCVC.TabIndex = 68;
             // 
-            // label1
+            // lblTitular
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 197);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 29);
-            this.label1.TabIndex = 69;
-            this.label1.Text = "Titular de la tarjeta:";
+            this.lblTitular.AutoSize = true;
+            this.lblTitular.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitular.Location = new System.Drawing.Point(65, 197);
+            this.lblTitular.Name = "lblTitular";
+            this.lblTitular.Size = new System.Drawing.Size(218, 29);
+            this.lblTitular.TabIndex = 69;
+            this.lblTitular.Text = "Titular de la tarjeta:";
             // 
-            // label2
+            // lblNumero
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(65, 269);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 29);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Número:";
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Location = new System.Drawing.Point(65, 269);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(106, 29);
+            this.lblNumero.TabIndex = 70;
+            this.lblNumero.Text = "Número:";
             // 
-            // label3
+            // lblFecha
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(65, 346);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 29);
-            this.label3.TabIndex = 71;
-            this.label3.Text = "Fecha:";
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(65, 346);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(86, 29);
+            this.lblFecha.TabIndex = 71;
+            this.lblFecha.Text = "Fecha:";
             // 
-            // label4
+            // lblCVC
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(341, 346);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 29);
-            this.label4.TabIndex = 72;
-            this.label4.Text = "CVC:";
+            this.lblCVC.AutoSize = true;
+            this.lblCVC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCVC.Location = new System.Drawing.Point(341, 346);
+            this.lblCVC.Name = "lblCVC";
+            this.lblCVC.Size = new System.Drawing.Size(68, 29);
+            this.lblCVC.TabIndex = 72;
+            this.lblCVC.Text = "CVC:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 49);
+            this.button1.TabIndex = 73;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmEditarTarjeta
             // 
@@ -189,22 +200,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(613, 477);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblCVC);
+            this.Controls.Add(this.lblFecha);
+            this.Controls.Add(this.lblNumero);
+            this.Controls.Add(this.lblTitular);
+            this.Controls.Add(this.txtCVC);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.txtTitular);
+            this.Controls.Add(this.btnVolver);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.lblTarjeta);
             this.Controls.Add(this.lblConfiguracionAvanzada);
             this.Name = "FrmEditarTarjeta";
             this.Text = "FrmEditarTarjeta";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmEditarTarjeta_FormClosed);
+            this.Load += new System.EventHandler(this.FrmEditarTarjeta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,19 +226,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.TextBox txtTitular;
+        private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblTarjeta;
         private System.Windows.Forms.Label lblConfiguracionAvanzada;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.TextBox txtCVC;
+        private System.Windows.Forms.Label lblTitular;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Label lblCVC;
+        private System.Windows.Forms.Button button1;
     }
 }
