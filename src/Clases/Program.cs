@@ -17,7 +17,7 @@ namespace piTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmAdminNoticias());
+            Application.Run(new FrmAdminProductos());
         }
     }
 }

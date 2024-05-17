@@ -123,6 +123,12 @@
     <Compile Include="Clases\ConfiguracionIdioma.cs" />
     <Compile Include="Clases\ConBD.cs" />
     <Compile Include="Clases\User.cs" />
+    <Compile Include="BarraLateral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BarraLateral.Designer.cs">
+      <DependentUpon>BarraLateral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +377,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmAdminUsuarios.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BarraLateral.resx">
+      <DependentUpon>BarraLateral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>

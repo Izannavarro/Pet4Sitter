@@ -21,5 +21,10 @@ namespace piTest.Forms
         {
 
         }
+
+        private void FrmAdminNoticias_Load(object sender, EventArgs e)
+        {
+        }
+
     }
 }
