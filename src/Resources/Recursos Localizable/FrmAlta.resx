@@ -117,44 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ajuste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ajuste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblDescripcion_Text" xml:space="preserve">
+    <value>Descripción:</value>
   </data>
-  <data name="chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblLocalizacion_Text" xml:space="preserve">
+    <value>Localización:</value>
   </data>
-  <data name="ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ayuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblPrecioDia_Text" xml:space="preserve">
+    <value>Precio por Día:</value>
   </data>
-  <data name="carro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnGuardar_Text" xml:space="preserve">
+    <value>Guardar</value>
   </data>
-  <data name="google_icon-icons.com_62736" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\res\icons\google_icon-icons.com_62736.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnVolver_Text" xml:space="preserve">
+    <value>Volver</value>
   </data>
-  <data name="lgo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\lgo.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnButton1_Text" xml:space="preserve">
+    <value>button1</value>
   </data>
-  <data name="chat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chat1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblNombre_Text" xml:space="preserve">
+    <value>Nombre:</value>
   </data>
-  <data name="noticias" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\noticias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="piTestLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\piTestLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="google_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\res\icons\google_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="busqueda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\busqueda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2931142_minimize_minus_remove_line_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2931142_minimize_minus_remove_line_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblTittle_Text" xml:space="preserve">
+    <value>Darse de Alta como Cuidador:</value>
   </data>
 </root>
