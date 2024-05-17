@@ -44,6 +44,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).BeginInit();
             this.SuspendLayout();
             // 
+            // barraLateral1
+            // 
+            this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
+            this.barraLateral1.Location = new System.Drawing.Point(0, 0);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLateral1.Name = "barraLateral1";
+            this.barraLateral1.Size = new System.Drawing.Size(415, 737);
+            this.barraLateral1.TabIndex = 0;
+            // 
             // lblFiltros
             // 
             this.lblFiltros.AutoSize = true;

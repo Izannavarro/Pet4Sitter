@@ -88,5 +88,10 @@ namespace piTest
         {
 
         }
+
+        private void FrmFiltrador_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
