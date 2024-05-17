@@ -22,13 +22,15 @@ namespace piTest.Clases
         private bool? sitter;
         private bool? admin;
         private byte[] image;
+        private double? latitud;
+        private double? longitud;
 
         public string IdGoogle { get { return this.idGoogle; } }
 
         public string Name { get { return this.name; } }
 
         // Constructor
-        public User(int? idUser, string idGoogle, string name, string surname, string email, string dni, string password, string location, bool? premium, bool? sitter, bool? admin, byte[] image)
+        public User(int? idUser, string idGoogle, string name, string surname, string email, string dni, string password, string location, bool? premium, bool? sitter, bool? admin, byte[] image, double? latitud, double? longitud)
         {
             this.idUser = idUser;
             this.idGoogle = idGoogle;
@@ -42,6 +44,8 @@ namespace piTest.Clases
             this.sitter = sitter;
             this.admin = admin;
             this.image = image;
+            this.latitud = latitud;
+            this.longitud = longitud;
         }
 
         public static int RegistrarUsuario(User u)
@@ -60,13 +64,15 @@ namespace piTest.Clases
             // Verificar si idGoogle no es nulo y agregarlo a la consulta
             if (u.idGoogle != null)
             {
-                query += ", id_google)";
+                query += ", id_google";
                 comando.Parameters.AddWithValue("@idGoogle", u.idGoogle);
             }
             else
             {
-                query += ")";
+                query += "";
             }
+
+            query += ",latitud,longitud)";
 
             query += " VALUES (@name, @surname, @email, @dni, @password, @location, @sitter";
 
@@ -76,7 +82,9 @@ namespace piTest.Clases
                 query += ", @idGoogle";
             }
 
-            query += ");";
+            query += ", @latitud,@longitud);";
+            comando.Parameters.AddWithValue("latitud", u.latitud);
+            comando.Parameters.AddWithValue("longitud", u.longitud);
 
             comando.CommandText = query;
 
