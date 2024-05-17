@@ -39,7 +39,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(61, 100);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(220, 181);
             this.pictureBox1.TabIndex = 0;
@@ -93,7 +93,7 @@
             this.Controls.Add(this.lblLang);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";

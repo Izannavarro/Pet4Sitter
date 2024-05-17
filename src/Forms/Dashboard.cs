@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace piTest
 {
@@ -42,6 +43,14 @@ namespace piTest
         private void Dashboard_Load(object sender, EventArgs e)
         {
             //DB.SelectAllFromUsers();
+            CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblName.Text = Resources.Recursos_Localizable.Dashboard.lblNombre;
+            lblLang.Text = Resources.Recursos_Localizable.Dashboard.lblLang;
         }
     }
 }
