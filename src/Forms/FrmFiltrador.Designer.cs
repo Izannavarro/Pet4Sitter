@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.barraLateral1 = new piTest.BarraLateral(this);
+            this.barraLateral1 = new piTest.BarraLateral();
             this.lblFiltros = new System.Windows.Forms.Label();
             this.lblRango = new System.Windows.Forms.Label();
             this.lblUbicacion = new System.Windows.Forms.Label();
@@ -40,6 +40,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +49,7 @@
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(0, 0);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4);
             this.barraLateral1.Name = "barraLateral1";
             this.barraLateral1.Size = new System.Drawing.Size(415, 737);
             this.barraLateral1.TabIndex = 0;
@@ -177,12 +178,23 @@
             this.btnBorrar.Text = "BORRAR";
             this.btnBorrar.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1106, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(126, 50);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmFiltrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1479, 734);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.barraLateral1);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnBuscar);
@@ -199,6 +211,7 @@
             this.Name = "FrmFiltrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFiltrador";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmFiltrador_FormClosed);
             this.Load += new System.EventHandler(this.FrmFiltrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).EndInit();
@@ -221,5 +234,6 @@
         private BarraLateral barraLateral1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -144,9 +144,22 @@ namespace piTest
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            CultureInfo systemCulture = CultureInfo.CurrentCulture;
-            string idiomaSistema = systemCulture.Name;
+            CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
+            AplicarIdioma();
             ChangeThemeMode();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblWelcomeLogin.Text = Resources.Recursos_Localizable.FrmLogin.lblWelcomeLogin_Text;
+            lblMail.Text = Resources.Recursos_Localizable.FrmLogin.lblMail_Text;
+            txtMail.Text = Resources.Recursos_Localizable.FrmLogin.txtMail_Text;
+            txtPass.Text = Resources.Recursos_Localizable.FrmLogin.txtPass_Text;
+            lblPass.Text = Resources.Recursos_Localizable.FrmLogin.lblPass_Text;
+            btnLogin.Text = Resources.Recursos_Localizable.FrmLogin.btnLogin_Text;
+            btnRegister.Text = Resources.Recursos_Localizable.FrmLogin.btnRegister_Text;
+            lblForgPass.Text = Resources.Recursos_Localizable.FrmLogin.lblForgPass_Text;
+            btnContinueWGoogle.Text = Resources.Recursos_Localizable.FrmLogin.btnContinueWGoogle_Text;
         }
 
         private void pictureBoxContinueGoogle_Click(object sender, EventArgs e)
@@ -191,6 +204,18 @@ namespace piTest
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
             }//Comprueba si la bd está disponible
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
+            frm.Show();
+        }
+
+        private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
