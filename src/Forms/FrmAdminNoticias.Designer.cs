@@ -1,4 +1,4 @@
-﻿namespace piTest.Forms
+﻿namespace pet4sitter.Forms
 {
     partial class FrmAdminNoticias
     {
@@ -52,7 +52,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.barraLateral1 = new piTest.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();

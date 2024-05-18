@@ -17,9 +17,9 @@ using System.Reflection;
 using static System.Net.WebRequestMethods;
 using System.Net.Mail;
 using System.Globalization;
-using piTest.Clases;
+using pet4sitter.Clases;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class FrmLogin : Form
     {

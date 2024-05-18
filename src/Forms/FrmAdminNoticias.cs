@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace piTest.Forms
+namespace pet4sitter.Forms
 {
     public partial class FrmAdminNoticias : Form
     {

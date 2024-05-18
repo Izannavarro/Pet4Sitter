@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace piTest
+namespace pet4sitter
 {
     partial class FrmLogin
     {
@@ -130,7 +130,7 @@ namespace piTest
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::piTest.Properties.Resources.piTestLogo;
+            this.pictureBox1.Image = global::pet4sitter.Properties.Resources.pet4sitterLogo;
             this.pictureBox1.Location = new System.Drawing.Point(4, 62);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -213,7 +213,7 @@ namespace piTest
             // pictureBoxContinueGoogle
             // 
             this.pictureBoxContinueGoogle.BackColor = System.Drawing.Color.White;
-            this.pictureBoxContinueGoogle.Image = global::piTest.Properties.Resources.google_icon_icons_com_62736;
+            this.pictureBoxContinueGoogle.Image = global::pet4sitter.Properties.Resources.google_icon_icons_com_62736;
             this.pictureBoxContinueGoogle.Location = new System.Drawing.Point(593, 347);
             this.pictureBoxContinueGoogle.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBoxContinueGoogle.Name = "pictureBoxContinueGoogle";

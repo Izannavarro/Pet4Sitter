@@ -1,4 +1,4 @@
-﻿namespace piTest.Forms
+﻿namespace pet4sitter.Forms
 {
     partial class FrmTest
     {

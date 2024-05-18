@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace piTest.Clases
+namespace pet4sitter.Clases
 {
      class Producto
     {
@@ -37,7 +37,7 @@ namespace piTest.Clases
         {
             try
             {
-                string consulta = string.Format("INSERT INTO products (name, price, quantity, description,image) VALUES ('{0}', '{1}', '{2}','{3}')", p.NombreProducto, p.Precio, p.Cantidad, p.Descripcion,p.imagen);
+                string consulta = string.Format("INSERT INTO products (name, price, quantity, description,image) VALUES ('{0}', '{1}', '{2}','{3}')", p.NombreProducto, p.Precio, p.Cantidad, p.Descripcion,p.UrlImagen);
                 MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
                 reader.Close();
@@ -66,7 +66,7 @@ namespace piTest.Clases
                         double precio = reader.GetDouble(2);
                         int cantidad = reader.GetInt32(3);
                         string descripcion = reader.GetString(4);
-                        productos.Add(new Producto(nombre, cantidad, precio, descripcion));
+                        productos.Add(new Producto(nombre, cantidad, precio, descripcion, reader["urlImagen"].ToString()));
                     }
                 }
                 reader.Close();

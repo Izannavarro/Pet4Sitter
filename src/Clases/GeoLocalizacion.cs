@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
-namespace piTest.Clases
+namespace pet4sitter.Clases
 {
     public class GeoLocalizacion
     {

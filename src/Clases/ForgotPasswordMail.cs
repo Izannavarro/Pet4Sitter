@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace piTest.MailServices
+namespace pet4sitter.MailServices
 {
     public class ForgotPasswordMail:MasterMailServer
     {

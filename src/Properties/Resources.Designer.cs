@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace piTest.Properties {
+namespace pet4sitter.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace piTest.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("pet4sitter.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -173,9 +173,9 @@ namespace piTest.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap piTestLogo {
+        internal static System.Drawing.Bitmap pet4sitterLogo {
             get {
-                object obj = ResourceManager.GetObject("piTestLogo", resourceCulture);
+                object obj = ResourceManager.GetObject("pet4sitterLogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
