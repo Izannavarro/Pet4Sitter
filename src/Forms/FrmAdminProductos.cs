@@ -93,7 +93,7 @@ namespace piTest
             string descrip = txtDescripcion.Text;
             Image img = ptbImagen.Image;
 
-            Producto p1 = new Producto(nombre, cant, precio, descrip,img);
+            Producto p1 = new Producto(nombre, cant, precio, descrip, null);
 
             if (ConBD.Conexion != null)
             {
@@ -101,6 +101,8 @@ namespace piTest
                 Producto.AnyadirProducto(p1);
                 LimpiarTablaProductos();
                 ConBD.CerrarConexion();
+                //Producto.
+                //ConBD.CerrarConexion();
             }
         }
 
