@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.lblFiltros = new System.Windows.Forms.Label();
             this.lblRango = new System.Windows.Forms.Label();
             this.lblUbicacion = new System.Windows.Forms.Label();

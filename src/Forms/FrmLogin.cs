@@ -189,6 +189,8 @@ namespace pet4sitter
                     if(User.CompruebaCredencialesUsuario(txtMail.Text,txtPass.Text))
                     {
                         MessageBox.Show("Si");
+                        Data.CurrentUser = User.EncontrarUsuario(txtMail.Text);
+                        ConBD.CerrarConexion();
                         FrmInicio frmInicio = new FrmInicio();
                         frmInicio.Show();
                         this.Hide();

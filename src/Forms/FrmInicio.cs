@@ -31,8 +31,17 @@ namespace pet4sitter
 
         private async void FrmInicio_Load(object sender, EventArgs e)
         {
+            if ((bool)Data.CurrentUser.Premium)
+            {
+                await MostrarNoticia();
+                pnlNoticiaPremium.Visible = false;
+            }
+            else
+            {
+                pnlNoticiaPremium.Visible = true;
+                pnlNoticiaPremium.BringToFront();
+            }
             CargarProductosDestacados();
-            await MostrarNoticia();
         }
         private void CargarProductosDestacados()
         {

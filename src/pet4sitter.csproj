@@ -772,6 +772,7 @@
     <None Include="Resources\carro.png" />
     <None Include="Resources\ayuda.png" />
     <None Include="Resources\ajuste.png" />
+    <None Include="Resources\corona.png" />
     <Content Include="Resources\gAuthRedirection.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
