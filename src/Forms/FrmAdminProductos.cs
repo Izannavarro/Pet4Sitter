@@ -97,8 +97,8 @@ namespace piTest
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                Producto.
-                ConBD.CerrarConexion();
+                //Producto.
+                //ConBD.CerrarConexion();
             }
         }
     }

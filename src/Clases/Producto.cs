@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -31,7 +32,21 @@ namespace piTest.Clases
 
         public void AnyadirProducto(Producto p)
         {
-            string consulta = "INSERT INTO products (name, price, quantity,description) VALUES ('{0}', '{1}', '{2}','{3}')",p.;
+            //string consulta = "INSERT INTO products (name, price, quantity,description) VALUES ('{0}', '{1}', '{2}','{3}')",p.;
         }
+
+        public static List<Producto> ListarProductos(string query)
+        {
+            List<Producto> lProd = new List<Producto>();
+            MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
+            MySqlDataReader reader = com.ExecuteReader();
+            while (reader.Read())
+            {
+                Producto p = new Producto(reader["name"].ToString(), int.Parse(reader["quantity"].ToString()), double.Parse(reader["price"].ToString()), reader["description"].ToString(), null);
+                lProd.Add(p);
+            }
+            return lProd;
+        }
+
     }
 }
