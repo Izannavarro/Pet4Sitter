@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS products (
     price DOUBLE NOT NULL,	
     quantity INT NOT NULL,
     description VARCHAR(99) CHARACTER SET utf8mb4,
-    image longblob NULL
+    image varchar(255) NOT NULL
 ) CHARACTER SET utf8mb4;
 
 CREATE TABLE IF NOT EXISTS chat (
