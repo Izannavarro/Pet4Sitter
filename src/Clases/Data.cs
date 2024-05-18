@@ -17,6 +17,11 @@ namespace piTest
         public static User UserGoogle = null;
 
         public static string Ginfo { get { return ginfo; } set { ginfo = value; } }
+        public static string tokenNoticias;
+        static Data()
+        {
+            tokenNoticias = Utiles.CargarTokenNoticias();
+        }
 
         public static bool IsDarkModeEnabled()
         {
@@ -28,6 +33,8 @@ namespace piTest
             // Si lightThemeValue es 1, significa que está activado el tema claro; si es 0, está activado el tema oscuro
             return lightThemeValue == 0;
         }
+
+
 
     }
 }
