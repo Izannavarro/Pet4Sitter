@@ -92,7 +92,7 @@ namespace piTest
             string descrip = txtDescripcion.Text;
             Image img = ptbImagen.Image;
 
-            Producto p1 = new Producto(nombre, cant, precio, descrip, img);
+            Producto p1 = new Producto(nombre, cant, precio, descrip, null);
 
             if (ConBD.Conexion != null)
             {
