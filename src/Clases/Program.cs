@@ -1,11 +1,11 @@
-﻿using piTest.Forms;
+﻿using pet4sitter.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace piTest
+namespace pet4sitter
 {
     internal static class Program
     {

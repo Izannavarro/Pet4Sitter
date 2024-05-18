@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using piTest;
-using piTest.Clases;
+using pet4sitter;
+using pet4sitter.Clases;
 
 public class GoogleAuthenticator
 {

@@ -1,4 +1,4 @@
-﻿namespace piTest
+﻿namespace pet4sitter
 {
     partial class FrmInicio
     {
@@ -58,7 +58,7 @@
             this.pcbNoticia = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.linkNoticia = new System.Windows.Forms.LinkLabel();
-            this.barraLateral1 = new piTest.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();

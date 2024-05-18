@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{748E1FCF-A3BB-44DC-96E9-5B7A0B44BF19}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>piTest</RootNamespace>
-    <AssemblyName>piTest</AssemblyName>
+    <RootNamespace>pet4sitter</RootNamespace>
+    <AssemblyName>pet4sitter</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,6 +34,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>lgo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
@@ -299,6 +302,11 @@
     <Compile Include="Clases\PortManager.cs" />
     <Compile Include="Clases\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Recursos Localizable\Dashboard.en-US.Designer.cs">
       <DependentUpon>Dashboard.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -549,14 +557,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Resources\Recursos Localizable\Dashboard.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Dashboard.en-US.Designer.cs</LastGenOutput>

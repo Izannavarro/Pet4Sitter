@@ -1,4 +1,4 @@
-﻿using piTest.Clases;
+﻿using pet4sitter.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class FrmAdminProductos : Form
     {

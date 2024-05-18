@@ -17,11 +17,11 @@ using System.Reflection;
 using static System.Net.WebRequestMethods;
 using static Google.Apis.Requests.BatchRequest;
 using System.Runtime.Remoting.Contexts;
-using piTest.Clases;
+using pet4sitter.Clases;
 using Mysqlx;
 using System.Globalization;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class FrmRegister : Form
     {

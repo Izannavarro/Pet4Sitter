@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Threading;
 
-using piTest.Resources.Recursos_Localizable;
+using pet4sitter.Resources.Recursos_Localizable;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class FrmConfiguracion : Form
     {

@@ -7,7 +7,7 @@ using NewsAPI.Constants;
 using NewsAPI.Models;
 using Newtonsoft.Json.Linq;
 
-namespace piTest.Clases
+namespace pet4sitter.Clases
 {
     public class NewsFetcher
     {

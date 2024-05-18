@@ -1,4 +1,4 @@
-﻿namespace piTest
+﻿namespace pet4sitter
 {
     partial class BarraLateral
     {
@@ -101,7 +101,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::piTest.Properties.Resources.usuario;
+            this.pictureBox2.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pictureBox2.Location = new System.Drawing.Point(23, 631);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
@@ -127,7 +127,7 @@
             // 
             // pcbAjustes
             // 
-            this.pcbAjustes.Image = global::piTest.Properties.Resources.ajuste;
+            this.pcbAjustes.Image = global::pet4sitter.Properties.Resources.ajuste;
             this.pcbAjustes.Location = new System.Drawing.Point(23, 548);
             this.pcbAjustes.Margin = new System.Windows.Forms.Padding(4);
             this.pcbAjustes.Name = "pcbAjustes";
@@ -153,7 +153,7 @@
             // 
             // pcbIaYuda
             // 
-            this.pcbIaYuda.Image = global::piTest.Properties.Resources.ayuda;
+            this.pcbIaYuda.Image = global::pet4sitter.Properties.Resources.ayuda;
             this.pcbIaYuda.Location = new System.Drawing.Point(23, 462);
             this.pcbIaYuda.Margin = new System.Windows.Forms.Padding(4);
             this.pcbIaYuda.Name = "pcbIaYuda";
@@ -179,7 +179,7 @@
             // 
             // pcbTienda
             // 
-            this.pcbTienda.Image = global::piTest.Properties.Resources.carro;
+            this.pcbTienda.Image = global::pet4sitter.Properties.Resources.carro;
             this.pcbTienda.Location = new System.Drawing.Point(23, 375);
             this.pcbTienda.Margin = new System.Windows.Forms.Padding(4);
             this.pcbTienda.Name = "pcbTienda";
@@ -205,7 +205,7 @@
             // 
             // pcbNoticias
             // 
-            this.pcbNoticias.Image = global::piTest.Properties.Resources.noticias;
+            this.pcbNoticias.Image = global::pet4sitter.Properties.Resources.noticias;
             this.pcbNoticias.Location = new System.Drawing.Point(23, 289);
             this.pcbNoticias.Margin = new System.Windows.Forms.Padding(4);
             this.pcbNoticias.Name = "pcbNoticias";
@@ -232,7 +232,7 @@
             // 
             // pcbChat
             // 
-            this.pcbChat.Image = global::piTest.Properties.Resources.chat1;
+            this.pcbChat.Image = global::pet4sitter.Properties.Resources.chat1;
             this.pcbChat.Location = new System.Drawing.Point(23, 200);
             this.pcbChat.Margin = new System.Windows.Forms.Padding(4);
             this.pcbChat.Name = "pcbChat";
@@ -260,7 +260,7 @@
             // pcbBuscar
             // 
             this.pcbBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.pcbBuscar.Image = global::piTest.Properties.Resources.busqueda;
+            this.pcbBuscar.Image = global::pet4sitter.Properties.Resources.busqueda;
             this.pcbBuscar.Location = new System.Drawing.Point(23, 113);
             this.pcbBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.pcbBuscar.Name = "pcbBuscar";
@@ -285,7 +285,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::piTest.Properties.Resources.piTestLogo;
+            this.pictureBox1.Image = global::pet4sitter.Properties.Resources.pet4sitterLogo;
             this.pictureBox1.Location = new System.Drawing.Point(5, 20);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";

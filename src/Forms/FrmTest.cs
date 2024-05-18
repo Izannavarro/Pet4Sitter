@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using piTest.Clases;
+using pet4sitter.Clases;
 
-namespace piTest.Forms
+namespace pet4sitter.Forms
 {
     public partial class FrmTest : Form
     {

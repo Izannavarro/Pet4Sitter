@@ -1,4 +1,4 @@
-﻿namespace piTest
+﻿namespace pet4sitter
 {
     partial class FrmAdminProductos
     {
@@ -57,7 +57,7 @@
             this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.barraLateral2 = new piTest.BarraLateral();
+            this.barraLateral2 = new pet4sitter.BarraLateral();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
