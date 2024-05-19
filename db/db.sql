@@ -41,10 +41,10 @@ CREATE TABLE IF NOT EXISTS products (
 ) CHARACTER SET utf8mb4;
 
 CREATE TABLE IF NOT EXISTS chat (
-    id_chat INT AUTO_INCREMENT PRIMARY KEY,
     id_receiver INT NOT NULL,
     id_sender INT NOT NULL,
+    `date` DATETIME DEFAULT NOW() NOT NULL,
     messages VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL,
     FOREIGN KEY (id_receiver) REFERENCES users(id_user),
     FOREIGN KEY (id_sender) REFERENCES users(id_user)
-) CHARACTER SET utf8mb4;pet4sitter
+) CHARACTER SET utf8mb4;
