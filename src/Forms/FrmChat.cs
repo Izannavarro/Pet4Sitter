@@ -65,30 +65,26 @@ namespace pet4sitter
                 adapter.Fill(mensajes);
                 if(mensajes != null)
                 {
-                    MensajeEnviado[] mensajesEnviados = new MensajeEnviado[mensajes.Rows.Count];
-                    MensajeRecibido[] mensajesRecibidos = new MensajeRecibido[mensajes.Rows.Count];
-                    for(int i = 0; i< 1; i++)
-                    {
                         foreach (DataRow row in mensajes.Rows)
                         {
                             //Aquí comprobaría si los usuarios son correctos en cuanto al res de la consulta(Próximamente)
                             if (row["id_receiver"].ToString() == "1")
                             {
-                                mensajesEnviados[i] = new MensajeEnviado();
-                                mensajesEnviados[i].Dock = DockStyle.Top;
-                                mensajesEnviados[i].BringToFront();
-                                mensajesEnviados[i].Title = row["messages"].ToString();
-                                fLPanelChat.Controls.Add(mensajesEnviados[i]);
-                                fLPanelChat.ScrollControlIntoView(mensajesEnviados[i]);
-                            }else if(row["id_sender"].ToString() == "1")
+                            MensajeEnviado mensajeEnviado = new MensajeEnviado();
+                            mensajeEnviado.Dock = DockStyle.Top;
+                            mensajeEnviado.BringToFront();
+                            mensajeEnviado.Title = row["messages"].ToString();
+                            fLPanelChat.Controls.Add(mensajeEnviado);
+                            fLPanelChat.ScrollControlIntoView(mensajeEnviado); // Asegura que el mensaje esté visible
+                        }
+                        else if(row["id_sender"].ToString() == "1")
                             {
-                                mensajesRecibidos[i] = new MensajeRecibido();
-                                mensajesRecibidos[i].Dock = DockStyle.Top;
-                                mensajesRecibidos[i].BringToFront();
-                                mensajesRecibidos[i].Title = row["messages"].ToString();
-                                fLPanelChat.Controls.Add(mensajesRecibidos[i]);
-                                fLPanelChat.ScrollControlIntoView(mensajesRecibidos[i]);
-                            }
+                            MensajeRecibido mensajeRecibido = new MensajeRecibido();
+                            mensajeRecibido.Dock = DockStyle.Top;
+                            mensajeRecibido.BringToFront();
+                            mensajeRecibido.Title = row["messages"].ToString();
+                            fLPanelChat.Controls.Add(mensajeRecibido);
+                            fLPanelChat.ScrollControlIntoView(mensajeRecibido); // Asegura que el mensaje esté visible
                         }
                     }
 

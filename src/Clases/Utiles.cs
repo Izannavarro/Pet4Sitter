@@ -46,10 +46,11 @@ namespace pet4sitter.Clases
 
         public static int ObtenerAlturaTexto(Label lbl)
         {
-            using(Graphics g = lbl.CreateGraphics())
+            using (Graphics g = lbl.CreateGraphics())
             {
-                SizeF size = g.MeasureString(lbl.Text, lbl.Font,495);
-                return (int)Math.Ceiling(size.Height);
+                SizeF size = g.MeasureString(lbl.Text, lbl.Font, lbl.Width);
+                int padding = 10; // Añadir margen para asegurar que el texto no se corte
+                return (int)Math.Ceiling(size.Height) + padding;
             }
         }
     }

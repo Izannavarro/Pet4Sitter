@@ -2,15 +2,8 @@
 {
     partial class MensajeRecibido
     {
-        /// <summary> 
-        /// Variable del diseñador necesaria.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Limpiar los recursos que se estén usando.
-        /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,24 +13,16 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de componentes
-
-        /// <summary> 
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
-        /// </summary>
         private void InitializeComponent()
         {
             this.lblMensajeRecibido = new System.Windows.Forms.Label();
             this.pcbIcon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).BeginInit();
             this.SuspendLayout();
+
             // 
             // lblMensajeRecibido
             // 
-            this.lblMensajeRecibido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMensajeRecibido.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.lblMensajeRecibido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensajeRecibido.Location = new System.Drawing.Point(59, 0);
@@ -45,6 +30,9 @@
             this.lblMensajeRecibido.Size = new System.Drawing.Size(346, 62);
             this.lblMensajeRecibido.TabIndex = 0;
             this.lblMensajeRecibido.Text = "label1";
+            this.lblMensajeRecibido.AutoEllipsis = true;
+            this.lblMensajeRecibido.AutoSize = false;
+
             // 
             // pcbIcon
             // 
@@ -55,6 +43,7 @@
             this.pcbIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbIcon.TabIndex = 1;
             this.pcbIcon.TabStop = false;
+
             // 
             // MensajeRecibido
             // 
@@ -70,8 +59,6 @@
             this.ResumeLayout(false);
 
         }
-
-        #endregion
 
         private System.Windows.Forms.Label lblMensajeRecibido;
         private System.Windows.Forms.PictureBox pcbIcon;

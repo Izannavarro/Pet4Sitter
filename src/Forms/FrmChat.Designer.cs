@@ -287,6 +287,7 @@
             // 
             // fLPanelChat
             // 
+            this.fLPanelChat.AutoScroll = true;
             this.fLPanelChat.BackColor = System.Drawing.Color.DarkSlateGray;
             this.fLPanelChat.Location = new System.Drawing.Point(3, 11);
             this.fLPanelChat.Name = "fLPanelChat";
