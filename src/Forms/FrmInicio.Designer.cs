@@ -53,12 +53,15 @@
             this.pcbProductoDestacado2 = new System.Windows.Forms.PictureBox();
             this.pnlNoticia = new System.Windows.Forms.Panel();
             this.pnlNoticia1 = new System.Windows.Forms.Panel();
-            this.lblCuerpoNoticia = new System.Windows.Forms.Label();
-            this.lblTítuloNoticia = new System.Windows.Forms.Label();
-            this.pcbNoticia = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.linkNoticia = new System.Windows.Forms.LinkLabel();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTítuloNoticia = new System.Windows.Forms.Label();
+            this.lblCuerpoNoticia = new System.Windows.Forms.Label();
+            this.pcbNoticia = new System.Windows.Forms.PictureBox();
+            this.pnlNoticiaPremium = new System.Windows.Forms.Panel();
+            this.lblPremium = new System.Windows.Forms.Label();
+            this.pcbPremium = new System.Windows.Forms.PictureBox();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -77,12 +80,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbProductoDestacado2)).BeginInit();
             this.pnlNoticia.SuspendLayout();
             this.pnlNoticia1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia)).BeginInit();
+            this.pnlNoticiaPremium.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbPremium)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel7);
@@ -192,6 +198,7 @@
             // 
             // pnlProductosDestacados
             // 
+            this.pnlProductosDestacados.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlProductosDestacados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.pnlProductosDestacados.Controls.Add(this.pnlProductoDestacado1);
             this.pnlProductosDestacados.Controls.Add(this.pnlProductoDestacado2);
@@ -347,6 +354,7 @@
             // 
             // pnlNoticia
             // 
+            this.pnlNoticia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlNoticia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.pnlNoticia.Controls.Add(this.pnlNoticia1);
             this.pnlNoticia.Location = new System.Drawing.Point(418, 297);
@@ -361,44 +369,22 @@
             this.pnlNoticia1.Controls.Add(this.linkNoticia);
             this.pnlNoticia1.Controls.Add(this.tableLayoutPanel3);
             this.pnlNoticia1.Controls.Add(this.pcbNoticia);
+            this.pnlNoticia1.Controls.Add(this.pnlNoticiaPremium);
             this.pnlNoticia1.Location = new System.Drawing.Point(10, 15);
             this.pnlNoticia1.Margin = new System.Windows.Forms.Padding(2);
             this.pnlNoticia1.Name = "pnlNoticia1";
             this.pnlNoticia1.Size = new System.Drawing.Size(508, 219);
             this.pnlNoticia1.TabIndex = 6;
             // 
-            // lblCuerpoNoticia
+            // linkNoticia
             // 
-            this.lblCuerpoNoticia.AutoSize = true;
-            this.lblCuerpoNoticia.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblCuerpoNoticia.Location = new System.Drawing.Point(3, 18);
-            this.lblCuerpoNoticia.Name = "lblCuerpoNoticia";
-            this.lblCuerpoNoticia.Size = new System.Drawing.Size(73, 149);
-            this.lblCuerpoNoticia.TabIndex = 8;
-            this.lblCuerpoNoticia.Text = "No Disponible";
-            // 
-            // lblTítuloNoticia
-            // 
-            this.lblTítuloNoticia.AutoSize = true;
-            this.lblTítuloNoticia.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblTítuloNoticia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTítuloNoticia.Location = new System.Drawing.Point(2, 0);
-            this.lblTítuloNoticia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTítuloNoticia.Name = "lblTítuloNoticia";
-            this.lblTítuloNoticia.Size = new System.Drawing.Size(61, 18);
-            this.lblTítuloNoticia.TabIndex = 7;
-            this.lblTítuloNoticia.Text = "Noticia";
-            // 
-            // pcbNoticia
-            // 
-            this.pcbNoticia.BackColor = System.Drawing.Color.Gainsboro;
-            this.pcbNoticia.Location = new System.Drawing.Point(24, 17);
-            this.pcbNoticia.Margin = new System.Windows.Forms.Padding(2);
-            this.pcbNoticia.Name = "pcbNoticia";
-            this.pcbNoticia.Size = new System.Drawing.Size(182, 188);
-            this.pcbNoticia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbNoticia.TabIndex = 5;
-            this.pcbNoticia.TabStop = false;
+            this.linkNoticia.AutoSize = true;
+            this.linkNoticia.Location = new System.Drawing.Point(222, 191);
+            this.linkNoticia.Name = "linkNoticia";
+            this.linkNoticia.Size = new System.Drawing.Size(81, 13);
+            this.linkNoticia.TabIndex = 10;
+            this.linkNoticia.TabStop = true;
+            this.linkNoticia.Text = "Link a la noticia";
             // 
             // tableLayoutPanel3
             // 
@@ -414,18 +400,77 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(259, 167);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
-            // linkNoticia
+            // lblTítuloNoticia
             // 
-            this.linkNoticia.AutoSize = true;
-            this.linkNoticia.Location = new System.Drawing.Point(222, 191);
-            this.linkNoticia.Name = "linkNoticia";
-            this.linkNoticia.Size = new System.Drawing.Size(81, 13);
-            this.linkNoticia.TabIndex = 10;
-            this.linkNoticia.TabStop = true;
-            this.linkNoticia.Text = "Link a la noticia";
+            this.lblTítuloNoticia.AutoSize = true;
+            this.lblTítuloNoticia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTítuloNoticia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTítuloNoticia.Location = new System.Drawing.Point(2, 0);
+            this.lblTítuloNoticia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTítuloNoticia.Name = "lblTítuloNoticia";
+            this.lblTítuloNoticia.Size = new System.Drawing.Size(61, 18);
+            this.lblTítuloNoticia.TabIndex = 7;
+            this.lblTítuloNoticia.Text = "Noticia";
+            // 
+            // lblCuerpoNoticia
+            // 
+            this.lblCuerpoNoticia.AutoSize = true;
+            this.lblCuerpoNoticia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblCuerpoNoticia.Location = new System.Drawing.Point(3, 18);
+            this.lblCuerpoNoticia.Name = "lblCuerpoNoticia";
+            this.lblCuerpoNoticia.Size = new System.Drawing.Size(73, 149);
+            this.lblCuerpoNoticia.TabIndex = 8;
+            this.lblCuerpoNoticia.Text = "No Disponible";
+            // 
+            // pcbNoticia
+            // 
+            this.pcbNoticia.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbNoticia.Image = global::pet4sitter.Properties.Resources.lgo;
+            this.pcbNoticia.Location = new System.Drawing.Point(24, 17);
+            this.pcbNoticia.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbNoticia.Name = "pcbNoticia";
+            this.pcbNoticia.Size = new System.Drawing.Size(182, 188);
+            this.pcbNoticia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbNoticia.TabIndex = 5;
+            this.pcbNoticia.TabStop = false;
+            // 
+            // pnlNoticiaPremium
+            // 
+            this.pnlNoticiaPremium.BackColor = System.Drawing.Color.White;
+            this.pnlNoticiaPremium.Controls.Add(this.lblPremium);
+            this.pnlNoticiaPremium.Controls.Add(this.pcbPremium);
+            this.pnlNoticiaPremium.Location = new System.Drawing.Point(0, 0);
+            this.pnlNoticiaPremium.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlNoticiaPremium.Name = "pnlNoticiaPremium";
+            this.pnlNoticiaPremium.Size = new System.Drawing.Size(508, 219);
+            this.pnlNoticiaPremium.TabIndex = 7;
+            // 
+            // lblPremium
+            // 
+            this.lblPremium.AutoSize = true;
+            this.lblPremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPremium.Location = new System.Drawing.Point(158, 132);
+            this.lblPremium.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPremium.Name = "lblPremium";
+            this.lblPremium.Size = new System.Drawing.Size(184, 18);
+            this.lblPremium.TabIndex = 7;
+            this.lblPremium.Text = "Funcionalidad Premium";
+            // 
+            // pcbPremium
+            // 
+            this.pcbPremium.BackColor = System.Drawing.Color.Transparent;
+            this.pcbPremium.Image = global::pet4sitter.Properties.Resources.corona;
+            this.pcbPremium.Location = new System.Drawing.Point(213, 35);
+            this.pcbPremium.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbPremium.Name = "pcbPremium";
+            this.pcbPremium.Size = new System.Drawing.Size(90, 85);
+            this.pcbPremium.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbPremium.TabIndex = 6;
+            this.pcbPremium.TabStop = false;
             // 
             // barraLateral1
             // 
+            this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(0, -4);
             this.barraLateral1.Name = "barraLateral1";
@@ -443,6 +488,7 @@
             this.Controls.Add(this.pnlProductosDestacados);
             this.Controls.Add(this.barraLateral1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInicio";
@@ -473,9 +519,12 @@
             this.pnlNoticia.ResumeLayout(false);
             this.pnlNoticia1.ResumeLayout(false);
             this.pnlNoticia1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia)).EndInit();
+            this.pnlNoticiaPremium.ResumeLayout(false);
+            this.pnlNoticiaPremium.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbPremium)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -513,5 +562,8 @@
         private System.Windows.Forms.Label lblCuerpoNoticia;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.LinkLabel linkNoticia;
+        private System.Windows.Forms.Panel pnlNoticiaPremium;
+        private System.Windows.Forms.PictureBox pcbPremium;
+        private System.Windows.Forms.Label lblPremium;
     }
 }

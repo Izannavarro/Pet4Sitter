@@ -233,5 +233,20 @@ namespace pet4sitter
             form.StartPosition = FormStartPosition.Manual; // Esto evita animaciones del sistema
             formActual.Dispose();
         }
+
+        private void pcbLogo_Click(object sender, EventArgs e)
+        {
+            FrmInicio form = new FrmInicio();
+            form.Show();
+            form.StartPosition = FormStartPosition.Manual; // Esto evita animaciones del sistema
+            formActual.Dispose();
+        }
+
+        private void pcbChat_Click(object sender, EventArgs e)
+        {
+            FrmChat form = new FrmChat();
+            form.Show();
+            formActual.Dispose();
+        }
     }
 }

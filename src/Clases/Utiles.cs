@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Windows.Forms;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,6 +42,16 @@ namespace pet4sitter.Clases
                 Console.WriteLine($"Error al cargar el token de noticias: {ex.Message}");
             }
             return "err";
+        }
+
+        public static int ObtenerAlturaTexto(Label lbl)
+        {
+            using (Graphics g = lbl.CreateGraphics())
+            {
+                SizeF size = g.MeasureString(lbl.Text, lbl.Font, lbl.Width);
+                int padding = 10; // Añadir margen para asegurar que el texto no se corte
+                return (int)Math.Ceiling(size.Height) + padding;
+            }
         }
     }
 }

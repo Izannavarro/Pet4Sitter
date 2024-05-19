@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,8 +30,17 @@ namespace pet4sitter
 
         private async void FrmInicio_Load(object sender, EventArgs e)
         {
+            if ((bool)Data.CurrentUser.Premium)
+            {
+                await MostrarNoticia();
+                pnlNoticiaPremium.Visible = false;
+            }
+            else
+            {
+                pnlNoticiaPremium.Visible = true;
+                pnlNoticiaPremium.BringToFront();
+            }
             CargarProductosDestacados();
-            await MostrarNoticia();
         }
         private void CargarProductosDestacados()
         {

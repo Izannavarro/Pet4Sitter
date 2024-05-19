@@ -48,9 +48,11 @@
             this.lblNombre5 = new System.Windows.Forms.Label();
             this.pcbImagen5 = new System.Windows.Forms.PictureBox();
             this.pnl6 = new System.Windows.Forms.Panel();
+            this.fLPanelChat = new System.Windows.Forms.FlowLayoutPanel();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtConsulta = new System.Windows.Forms.TextBox();
             this.btnIdioma = new System.Windows.Forms.Button();
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel3.SuspendLayout();
             this.pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen1)).BeginInit();
@@ -75,7 +77,7 @@
             this.panel3.Controls.Add(this.pnl4);
             this.panel3.Controls.Add(this.btnAnterior);
             this.panel3.Location = new System.Drawing.Point(143, 21);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(220, 512);
             this.panel3.TabIndex = 4;
@@ -86,7 +88,7 @@
             this.pnl1.Controls.Add(this.lblNombre1);
             this.pnl1.Controls.Add(this.pcbImagen1);
             this.pnl1.Location = new System.Drawing.Point(14, 14);
-            this.pnl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl1.Margin = new System.Windows.Forms.Padding(2);
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(192, 103);
             this.pnl1.TabIndex = 12;
@@ -106,7 +108,7 @@
             // 
             this.pcbImagen1.BackColor = System.Drawing.Color.Gainsboro;
             this.pcbImagen1.Location = new System.Drawing.Point(11, 20);
-            this.pcbImagen1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen1.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen1.Name = "pcbImagen1";
             this.pcbImagen1.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen1.TabIndex = 6;
@@ -118,7 +120,7 @@
             this.pnl2.Controls.Add(this.lblNombre2);
             this.pnl2.Controls.Add(this.pcbImagen2);
             this.pnl2.Location = new System.Drawing.Point(12, 129);
-            this.pnl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl2.Margin = new System.Windows.Forms.Padding(2);
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(194, 103);
             this.pnl2.TabIndex = 11;
@@ -138,7 +140,7 @@
             // 
             this.pcbImagen2.BackColor = System.Drawing.Color.Gainsboro;
             this.pcbImagen2.Location = new System.Drawing.Point(13, 20);
-            this.pcbImagen2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen2.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen2.Name = "pcbImagen2";
             this.pcbImagen2.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen2.TabIndex = 5;
@@ -150,7 +152,7 @@
             this.pnl3.Controls.Add(this.lblNombre3);
             this.pnl3.Controls.Add(this.pcbImagen3);
             this.pnl3.Location = new System.Drawing.Point(12, 245);
-            this.pnl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl3.Margin = new System.Windows.Forms.Padding(2);
             this.pnl3.Name = "pnl3";
             this.pnl3.Size = new System.Drawing.Size(194, 103);
             this.pnl3.TabIndex = 10;
@@ -170,7 +172,7 @@
             // 
             this.pcbImagen3.BackColor = System.Drawing.Color.Gainsboro;
             this.pcbImagen3.Location = new System.Drawing.Point(13, 20);
-            this.pcbImagen3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen3.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen3.Name = "pcbImagen3";
             this.pcbImagen3.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen3.TabIndex = 5;
@@ -178,10 +180,10 @@
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(107, 477);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSiguiente.Location = new System.Drawing.Point(106, 477);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(58, 25);
+            this.btnSiguiente.Size = new System.Drawing.Size(69, 25);
             this.btnSiguiente.TabIndex = 7;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
@@ -192,7 +194,7 @@
             this.pnl4.Controls.Add(this.lblNombre4);
             this.pnl4.Controls.Add(this.pcbImagen4);
             this.pnl4.Location = new System.Drawing.Point(12, 362);
-            this.pnl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl4.Margin = new System.Windows.Forms.Padding(2);
             this.pnl4.Name = "pnl4";
             this.pnl4.Size = new System.Drawing.Size(194, 103);
             this.pnl4.TabIndex = 9;
@@ -212,7 +214,7 @@
             // 
             this.pcbImagen4.BackColor = System.Drawing.Color.Gainsboro;
             this.pcbImagen4.Location = new System.Drawing.Point(13, 20);
-            this.pcbImagen4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen4.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen4.Name = "pcbImagen4";
             this.pcbImagen4.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen4.TabIndex = 5;
@@ -221,7 +223,7 @@
             // btnAnterior
             // 
             this.btnAnterior.Location = new System.Drawing.Point(44, 477);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(58, 25);
             this.btnAnterior.TabIndex = 6;
@@ -235,7 +237,7 @@
             this.pnl5.Controls.Add(this.lblNombre5);
             this.pnl5.Controls.Add(this.pcbImagen5);
             this.pnl5.Location = new System.Drawing.Point(381, 21);
-            this.pnl5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl5.Margin = new System.Windows.Forms.Padding(2);
             this.pnl5.Name = "pnl5";
             this.pnl5.Size = new System.Drawing.Size(546, 88);
             this.pnl5.TabIndex = 5;
@@ -243,7 +245,7 @@
             // btnOpciones
             // 
             this.btnOpciones.Location = new System.Drawing.Point(449, 20);
-            this.btnOpciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpciones.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpciones.Name = "btnOpciones";
             this.btnOpciones.Size = new System.Drawing.Size(69, 49);
             this.btnOpciones.TabIndex = 14;
@@ -265,7 +267,7 @@
             // 
             this.pcbImagen5.BackColor = System.Drawing.Color.Gainsboro;
             this.pcbImagen5.Location = new System.Drawing.Point(15, 14);
-            this.pcbImagen5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen5.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen5.Name = "pcbImagen5";
             this.pcbImagen5.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen5.TabIndex = 5;
@@ -274,18 +276,28 @@
             // pnl6
             // 
             this.pnl6.BackColor = System.Drawing.Color.White;
+            this.pnl6.Controls.Add(this.fLPanelChat);
             this.pnl6.Controls.Add(this.btnEnviar);
             this.pnl6.Controls.Add(this.txtConsulta);
             this.pnl6.Location = new System.Drawing.Point(381, 103);
-            this.pnl6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl6.Margin = new System.Windows.Forms.Padding(2);
             this.pnl6.Name = "pnl6";
             this.pnl6.Size = new System.Drawing.Size(546, 431);
             this.pnl6.TabIndex = 13;
             // 
+            // fLPanelChat
+            // 
+            this.fLPanelChat.AutoScroll = true;
+            this.fLPanelChat.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.fLPanelChat.Location = new System.Drawing.Point(3, 11);
+            this.fLPanelChat.Name = "fLPanelChat";
+            this.fLPanelChat.Size = new System.Drawing.Size(540, 351);
+            this.fLPanelChat.TabIndex = 14;
+            // 
             // btnEnviar
             // 
             this.btnEnviar.Location = new System.Drawing.Point(468, 375);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(58, 37);
             this.btnEnviar.TabIndex = 13;
@@ -296,21 +308,29 @@
             // 
             this.txtConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConsulta.Location = new System.Drawing.Point(23, 375);
-            this.txtConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtConsulta.Margin = new System.Windows.Forms.Padding(2);
             this.txtConsulta.Name = "txtConsulta";
             this.txtConsulta.Size = new System.Drawing.Size(434, 37);
             this.txtConsulta.TabIndex = 0;
             // 
             // btnIdioma
             // 
-            this.btnIdioma.Location = new System.Drawing.Point(20, 35);
-            this.btnIdioma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIdioma.Location = new System.Drawing.Point(964, 150);
+            this.btnIdioma.Margin = new System.Windows.Forms.Padding(2);
             this.btnIdioma.Name = "btnIdioma";
             this.btnIdioma.Size = new System.Drawing.Size(87, 62);
             this.btnIdioma.TabIndex = 14;
             this.btnIdioma.Text = "button1";
             this.btnIdioma.UseVisualStyleBackColor = true;
             this.btnIdioma.Click += new System.EventHandler(this.btnIdioma_Click);
+            // 
+            // barraLateral1
+            // 
+            this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
+            this.barraLateral1.Location = new System.Drawing.Point(-3, 0);
+            this.barraLateral1.Name = "barraLateral1";
+            this.barraLateral1.Size = new System.Drawing.Size(311, 599);
+            this.barraLateral1.TabIndex = 15;
             // 
             // FrmChat
             // 
@@ -322,7 +342,8 @@
             this.Controls.Add(this.pnl5);
             this.Controls.Add(this.pnl6);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.barraLateral1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmChat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChat";
@@ -375,5 +396,7 @@
         private System.Windows.Forms.TextBox txtConsulta;
         private System.Windows.Forms.Button btnOpciones;
         private System.Windows.Forms.Button btnIdioma;
+        private BarraLateral barraLateral1;
+        private System.Windows.Forms.FlowLayoutPanel fLPanelChat;
     }
 }
