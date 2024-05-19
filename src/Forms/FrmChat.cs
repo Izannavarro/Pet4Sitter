@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pet4sitter.Clases;
+using MySql.Data.MySqlClient;
+using pet4sitter.Forms;
 
 namespace pet4sitter
 {
@@ -23,6 +26,7 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            ChatMensajes();
         }
 
         private void AplicarIdioma()
@@ -49,5 +53,54 @@ namespace pet4sitter
         {
             Application.Exit();
         }
+
+        private void ChatMensajes()
+        {
+            if (ConBD.Conexion != null)
+            {
+                //ConBD.AbrirConexion();
+                string query = "SELECT * FROM chat WHERE id_receiver=1 OR id_sender = 1 AND id_receiver=2 OR id_sender = 2";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, ConBD.Conexion);
+                DataTable mensajes = new DataTable();
+                adapter.Fill(mensajes);
+                if(mensajes != null)
+                {
+                    MensajeEnviado[] mensajesEnviados = new MensajeEnviado[mensajes.Rows.Count];
+                    MensajeRecibido[] mensajesRecibidos = new MensajeRecibido[mensajes.Rows.Count];
+                    for(int i = 0; i< 1; i++)
+                    {
+                        foreach (DataRow row in mensajes.Rows)
+                        {
+                            //Aquí comprobaría si los usuarios son correctos en cuanto al res de la consulta(Próximamente)
+                            if (row["id_receiver"].ToString() == "1")
+                            {
+                                mensajesEnviados[i] = new MensajeEnviado();
+                                mensajesEnviados[i].Dock = DockStyle.Top;
+                                mensajesEnviados[i].BringToFront();
+                                mensajesEnviados[i].Title = row["messages"].ToString();
+                                fLPanelChat.Controls.Add(mensajesEnviados[i]);
+                                fLPanelChat.ScrollControlIntoView(mensajesEnviados[i]);
+                            }else if(row["id_sender"].ToString() == "1")
+                            {
+                                mensajesRecibidos[i] = new MensajeRecibido();
+                                mensajesRecibidos[i].Dock = DockStyle.Top;
+                                mensajesRecibidos[i].BringToFront();
+                                mensajesRecibidos[i].Title = row["messages"].ToString();
+                                fLPanelChat.Controls.Add(mensajesRecibidos[i]);
+                                fLPanelChat.ScrollControlIntoView(mensajesRecibidos[i]);
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }//Comprueba si la bd está disponible
+        }
+
+
     }
 }

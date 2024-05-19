@@ -227,6 +227,7 @@
             this.pcbChat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbChat.TabIndex = 4;
             this.pcbChat.TabStop = false;
+            this.pcbChat.Click += new System.EventHandler(this.pcbChat_Click);
             this.pcbChat.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
             this.pcbChat.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
             // 
@@ -270,7 +271,7 @@
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(93, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(167, 599);
             this.panel1.TabIndex = 16;
