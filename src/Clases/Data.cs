@@ -15,7 +15,8 @@ namespace pet4sitter
 
         
         public static User UserGoogle = null;
-        public static User CurrentUser = null;
+        //public static User CurrentUser = null;
+        public static User CurrentUser = new User(1,null,"Pepe","ad","p@p.p",null,null,null,true,false,false,null,0,0);
 
         public static string Ginfo { get { return ginfo; } set { ginfo = value; } }
         public static string tokenNoticias;
