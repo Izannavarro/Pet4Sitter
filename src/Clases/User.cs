@@ -79,6 +79,36 @@ namespace pet4sitter.Clases
             return user;
         }
 
+        public static User EncontrarUsuarioGoogle(string idGoogle)
+        {
+            User user = new User(null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+            string query = "SELECT * FROM users WHERE id_google = @idGoogle";
+            MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
+            com.Parameters.AddWithValue("@idGoogle", idGoogle);
+            MySqlDataReader reader = com.ExecuteReader();
+            
+            while (reader.Read())
+            {
+                user = new User(
+                                            reader.IsDBNull(reader.GetOrdinal("id_user")) ? (int?)null : reader.GetInt32("id_user"),
+                                            reader.IsDBNull(reader.GetOrdinal("id_google")) ? null : reader.GetString("id_google"),
+                                            reader.IsDBNull(reader.GetOrdinal("name")) ? null : reader.GetString("name"),
+                                            reader.IsDBNull(reader.GetOrdinal("surname")) ? null : reader.GetString("surname"),
+                                            reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString("email"),
+                                            reader.IsDBNull(reader.GetOrdinal("dni")) ? null : reader.GetString("dni"),
+                                            reader.IsDBNull(reader.GetOrdinal("password")) ? null : reader.GetString("password"),
+                                            reader.IsDBNull(reader.GetOrdinal("location")) ? null : reader.GetString("location"),
+                                            reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean("premium"),
+                                            reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean("sitter"),
+                                            reader.IsDBNull(reader.GetOrdinal("admin")) ? (bool?)null : reader.GetBoolean("admin"),
+                                            reader.IsDBNull(reader.GetOrdinal("image")) ? null : (byte[])reader["image"],
+                                            reader.IsDBNull(reader.GetOrdinal("latitud")) ? (double?)null : reader.GetDouble("latitud"),
+                                            reader.IsDBNull(reader.GetOrdinal("longitud")) ? (double?)null : reader.GetDouble("longitud")
+                                        );
+            }
+            return user;
+        }
+
         public static int RegistrarUsuario(User u)
         {
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(u.password);
