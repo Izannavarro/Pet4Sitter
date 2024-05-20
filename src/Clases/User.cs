@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data;
 
 namespace pet4sitter.Clases
 {
@@ -28,6 +30,7 @@ namespace pet4sitter.Clases
         public string IdGoogle { get { return this.idGoogle; } }
 
         public string Name { get { return this.name; } }
+        
         public bool? Premium { get { return this.premium; } }
         public string Image { get { return this.image; } } 
 
@@ -50,7 +53,16 @@ namespace pet4sitter.Clases
             this.latitud = latitud;
             this.longitud = longitud;
         }
-
+        public User (int? idUser,string name, string email,string dni, string password, bool? sitter,bool? admin)
+        {
+            this.idUser = idUser;
+            this.name = name;
+            this.email= email;
+            this.dni = dni;
+            this.password = password;
+            this.sitter = sitter;
+            this.admin = admin;
+        }
         public static List<User> ListarUsuarios(string query)
         {
             List<User> list = new List<User>();
@@ -240,7 +252,45 @@ namespace pet4sitter.Clases
             int res = int.Parse(com.ExecuteScalar().ToString());
             return res == 1;
         }
+        public static DataTable CargarUsuarios()
+        {
+            DataTable dataTable = new DataTable();
 
+            try
+            {
+                string consulta = "SELECT id_user, name, email, dni, password, sitter, admin FROM users";
+                using (MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion))
+                {
+                    using (MySqlDataReader reader = comando.ExecuteReader())
+                    {
+                        dataTable.Load(reader);
+                        reader.Close();
+                    }
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar los usuarios: " + ex.Message);
+            }
+
+            return dataTable;
+        }
+        public static void EliminarUsuarios(int id)
+        {
+            try {
+                string consulta = String.Format("DELETE from users WHERE id_user = '{0}';", id);
+                MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+                reader.Close();
+                }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al borrar usuario: " + ex.Message);
+            }
+        }
 
     }
+   
 }
