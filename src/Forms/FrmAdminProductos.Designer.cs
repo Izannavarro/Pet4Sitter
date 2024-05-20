@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -38,8 +37,10 @@
             this.btnAñadir = new System.Windows.Forms.Button();
             this.ptbImagen = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblId = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.nudCant = new System.Windows.Forms.NumericUpDown();
@@ -50,15 +51,9 @@
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.barraLateral2 = new pet4sitter.BarraLateral();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
             this.panel4.SuspendLayout();
@@ -74,7 +69,6 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnVolver);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnEditar);
@@ -87,17 +81,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(483, 586);
             this.panel1.TabIndex = 10;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(335, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 58);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnVolver
             // 
@@ -120,6 +103,7 @@
             this.btnEliminar.TabIndex = 50;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -131,6 +115,7 @@
             this.btnEditar.TabIndex = 49;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnFoto
             // 
@@ -168,6 +153,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.lblId);
             this.panel4.Controls.Add(this.tableLayoutPanel4);
             this.panel4.Controls.Add(this.tableLayoutPanel3);
             this.panel4.Controls.Add(this.tableLayoutPanel2);
@@ -179,6 +165,16 @@
             this.panel4.Size = new System.Drawing.Size(436, 327);
             this.panel4.TabIndex = 45;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(197, 9);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(31, 25);
+            this.lblId.TabIndex = 40;
+            this.lblId.Text = "ID";
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
@@ -186,7 +182,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtPrecio, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(231, 72);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(222, 94);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -205,6 +201,13 @@
             this.label3.Text = "Precio:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(82, 3);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(109, 22);
+            this.txtPrecio.TabIndex = 13;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -212,12 +215,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.lblCantidad, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.nudCant, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(25, 72);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(7, 94);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 33);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(206, 33);
             this.tableLayoutPanel3.TabIndex = 38;
             // 
             // lblCantidad
@@ -235,7 +238,7 @@
             this.nudCant.Location = new System.Drawing.Point(105, 2);
             this.nudCant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudCant.Name = "nudCant";
-            this.nudCant.Size = new System.Drawing.Size(99, 22);
+            this.nudCant.Size = new System.Drawing.Size(86, 22);
             this.nudCant.TabIndex = 16;
             // 
             // tableLayoutPanel2
@@ -245,12 +248,12 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.Controls.Add(this.lblNombre, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtNombre, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 23);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(7, 45);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(385, 33);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(412, 33);
             this.tableLayoutPanel2.TabIndex = 37;
             // 
             // lblNombre
@@ -269,15 +272,15 @@
             this.txtNombre.Location = new System.Drawing.Point(94, 2);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(292, 22);
+            this.txtNombre.Size = new System.Drawing.Size(309, 22);
             this.txtNombre.TabIndex = 15;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(25, 171);
+            this.txtDescripcion.Location = new System.Drawing.Point(25, 169);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(383, 134);
+            this.txtDescripcion.Size = new System.Drawing.Size(383, 141);
             this.txtDescripcion.TabIndex = 35;
             this.txtDescripcion.Text = "";
             // 
@@ -285,7 +288,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(24, 129);
+            this.lblDescripcion.Location = new System.Drawing.Point(21, 137);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(121, 22);
             this.lblDescripcion.TabIndex = 13;
@@ -305,12 +308,6 @@
             // dgvProductos
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Cantidad,
-            this.Precio,
-            this.Descripcion,
-            this.Valoracion});
             this.dgvProductos.Location = new System.Drawing.Point(36, 20);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvProductos.Name = "dgvProductos";
@@ -318,41 +315,7 @@
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(605, 545);
             this.dgvProductos.TabIndex = 0;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 50;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.Width = 50;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.Width = 250;
-            // 
-            // Valoracion
-            // 
-            this.Valoracion.HeaderText = "Valoracion";
-            this.Valoracion.MinimumWidth = 6;
-            this.Valoracion.Name = "Valoracion";
-            this.Valoracion.Width = 75;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // contextMenuStrip1
             // 
@@ -374,13 +337,6 @@
             this.barraLateral2.Name = "barraLateral2";
             this.barraLateral2.Size = new System.Drawing.Size(415, 737);
             this.barraLateral2.TabIndex = 1;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(82, 3);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(109, 22);
-            this.txtPrecio.TabIndex = 13;
             // 
             // FrmAdminProductos
             // 
@@ -420,11 +376,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valoracion;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnEliminar;
@@ -441,8 +392,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button1;
         private BarraLateral barraLateral2;
         private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label lblId;
     }
 }
