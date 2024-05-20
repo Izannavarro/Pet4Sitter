@@ -120,6 +120,38 @@
             alert('Downloading the version for Windows...');
         }
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const os = urlParams.get('os');
+            if (os) {
+                showMessage(os);
+            }
+        });
+    
+        function showMessage(type) {
+            const messageBox = document.getElementById('message-box');
+            const messageText = document.getElementById('message-text');
+            const downloadBtn = document.getElementById('download-btn');
+    
+            // Resaltar la imagen seleccionada
+            document.getElementById('windows-img').style.border = 'none';
+            document.getElementById('mac-img').style.border = 'none';
+            document.getElementById('linux-img').style.border = 'none';
+    
+            if (type === 'windows') {
+                messageText.textContent = 'Puedes descargar la versión para Windows.';
+                downloadBtn.style.display = 'block';
+                document.getElementById('windows-img').style.border = '2px solid #000';
+            } else {
+                messageText.textContent = 'La descarga para esta plataforma estará disponible próximamente...';
+                downloadBtn.style.display = 'none';
+                document.getElementById(type + '-img').style.border = '2px solid #000';
+            }
+    
+            messageBox.classList.remove('hidden');
+        }
+    </script>
 
 </body>
 </html>
