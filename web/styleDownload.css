@@ -1,0 +1,331 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #bb8562; /* Marrón clarito */
+    font-size: 14px;
+}
+
+
+.container img:hover {
+    filter: brightness(200%) invert(40%); /* Aplicar filtro para cambiar a blanco */
+}
+header {
+    background-color: rgb(170, 217, 190); /* Verde clarito */
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: relative; /* Añadido */
+}
+header p{
+    font-size: 2em; /* Ajusta este valor según lo grande que quieras que sea el texto */
+    font-weight: bold;
+    line-height: 1; /* Ajuste del espacio entre líneas */
+    margin-top: -75px;
+}
+p {
+    text-align: center; /* Centrar el texto */
+    font-size: 2em; /* Tamaño de fuente más grande */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+nav {
+    text-align: right; /* Alineación a la derecha */
+    position: absolute; /* Añadido */
+    top: 1em; /* Añadido */
+    right: 1em; /* Añadido */
+}
+nav a {
+    margin: 0 1em;
+    color: #4b3d33; /* Marrón clarito */
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-wrap: wrap; /* Para que las imágenes se ajusten automáticamente si no caben en una fila */
+    padding: 2em;
+}
+
+.container img {
+    max-height: 150px; /* Reducción del tamaño de las imágenes */
+    margin: 0 10px; /* Ajuste del margen entre las imágenes */
+    transition: filter 0.3s ease;
+}
+.intro, .services, .about, .contact {
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: 1px solid rgb(170, 217, 190); /* Borde verde clarito */
+    border-radius: 5px;
+}
+.download-button {
+    background-color: rgb(170, 217, 190); /* Verde clarito */
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1em;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    font-size: 11px; /* Cambiar el tamaño del div */
+}
+
+.logo-container img {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Asegúrate de que la imagen mantenga su proporción */
+    margin-right: 10px; /* Espacio entre la imagen y el título */
+    
+}
+
+#theme-image1,
+#theme-image2,
+.logo-container img {
+    width: 40px; /* Establece el mismo tamaño para todas las imágenes */
+    height: auto;
+}
+
+.download-button:hover {
+    background-color: rgb(170, 217, 190); /* Verde clarito más oscuro */
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #bb8562;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+footer p {
+    color: white; /* Color blanco para el texto del pie de página */
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid rgb(170, 217, 190); /* Borde verde clarito */
+    border-radius: 5px;
+}
+textarea {
+    resize: none; /* Evitar que el textarea sea redimensionable */
+    height: 150px; /* Altura fija */
+}
+input[type="submit"] {
+    background-color: rgb(170, 217, 190); /* Verde clarito */
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: rgb(170, 217, 190); /* Verde clarito más oscuro */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color:#2e2e2e;
+    color: #bb8562;
+}
+
+header.dark-mode, nav.dark-mode, .download-button.dark-mode, input[type="submit"].dark-mode {
+    background-color: #4e762d; /* Verde oscuro */
+    color: black;
+}
+
+.intro.dark-mode, .services.dark-mode, .about.dark-mode, .contact.dark-mode, input[type="text"].dark-mode, input[type="email"].dark-mode, textarea.dark-mode {
+    background-color: #3b3b3b;
+    border-color: #4e762d; /* Borde verde oscuro */
+}
+
+nav a.dark-mode {
+    color: #bb8562; /* Marrón clarito */
+}
+
+footer.dark-mode {
+    background-color: rgb(83, 63, 17) /* Marrón oscuro */
+}
+.hidden {
+    display: none;
+}
+
+footer p.dark-mode {
+    color: black; /* Marrón clarito */
+}
+
+#changemode {
+    position: absolute; 
+    top: 20px; 
+    right: 10px; 
+    width: 35px;
+    height: auto;
+    cursor: pointer;
+    z-index: 9999; 
+    margin-right: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+#theme-image1 {
+    width: 100%;
+    height: auto;
+}
+
+#opciones {
+    text-align: center; /* Alineación a la derecha */
+    margin-top: 50px; /* Espacio entre el título y los botones */
+    position: absolute; /* Posicionamiento absoluto para ubicar en la esquina */
+    top: 0; /* Coloca en la parte superior */
+    right: 0; /* Coloca en el extremo derecho */
+    margin-top: 20px;
+    margin-right: 120px;
+}
+
+.opcion {
+    display: block;
+    margin: 0px 5px auto;
+    padding: 10px 30px;
+    background-color: #bb8562;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 75px;
+}
+
+#changemode, #opciones {
+    display: flex;
+    align-items: center;
+}
+body.dark-mode .opcion {
+    background-color: #bb8562; /* Color de fondo en modo oscuro */
+    color: #000; /* Color del texto en modo oscuro */
+}
+#message-box {
+    position: relative;
+    margin-top: 20px; /* Reducción del espacio entre el contenido y el mensaje */
+    text-align: center;
+}
+
+#message-container {
+    padding: 15px;
+        border: 2px solid #000;
+        border-radius: 8px;
+        display: inline-block; /* Para que el tamaño se ajuste al contenido */
+        width: 70%; /* Ancho del contenedor */
+        max-width: 400px; /* Ancho máximo */
+        margin: 0 auto; /* Centrado horizontal */
+}
+
+#message-text {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#download-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block; /* Convertir el botón en un bloque para aplicar márgenes automáticos */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+.switch {
+    width: 60px;
+    height: 34px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #000000;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #AAD9BE;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: #AAD9BE; /* Rojo */  
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.ventana {
+    position: relative;
+    background-color: #005904; /* Cambiado a verde más oscuro */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    text-align: center;
+    max-width: 560px;
+    width: 100%;
+}
+.sol-luna {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    font-size: 24px;
+    color: #FFD700; /* Amarillo */
+    transform: translateY(-50%);
+    /* Alinea verticalmente */
+}

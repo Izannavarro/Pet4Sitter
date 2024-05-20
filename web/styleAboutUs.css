@@ -6,15 +6,21 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    color: #cdb355; /* Marrón clarito */
+    color: #bb8562; /* Marrón clarito */
 }
 
 header {
-    background-color: #DFF2BF; /* Verde clarito */
+    background-color: rgb(170, 217, 190); /* Verde clarito */
     color: white;
     padding: 1em;
     text-align: center;
     position: relative; /* Añadido */
+}
+
+#switch-container {
+    position: absolute;
+    top: 00px;
+    right: 00px;
 }
 
 nav {
@@ -69,7 +75,7 @@ nav a:hover {
 }
 
 footer {
-    background-color: #cdb355;
+    background-color: #bb8562;
     color: white;
     text-align: center;
     padding: 1em;
@@ -113,14 +119,22 @@ input[type="submit"]:hover {
 }
 
 .logo-container img {
-    width: auto; /* Asegúrate de que la imagen mantenga su proporción */
-    height: 50px; /* Establecer la altura de la imagen */
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Asegúrate de que la imagen mantenga su proporción */
+    margin-right: 10px; /* Espacio entre la imagen y el título */
+}
+
+#theme-image1,
+#theme-image2,
+.logo-container img {
+    width: 40px; /* Establece el mismo tamaño para todas las imágenes */
+    height: auto;
 }
 
 /* Estilos para el modo oscuro */
 body.dark-mode {
     background-color: #2e2e2e;
-    color: #cdb355;
+    color: #bb8562;
 }
 
 header.dark-mode, nav.dark-mode, .download-button.dark-mode, input[type="submit"].dark-mode {
@@ -129,19 +143,29 @@ header.dark-mode, nav.dark-mode, .download-button.dark-mode, input[type="submit"
 
 .intro.dark-mode, .services.dark-mode, .about.dark-mode, .contact.dark-mode, input[type="text"].dark-mode, input[type="email"].dark-mode, textarea.dark-mode, .member-card.dark-mode {
     background-color: #3b3b3b;
-    border-color: #4e762d; /* Borde verde oscuro */
 }
 
 nav a.dark-mode {
-    color: #cdb355; /* Marrón clarito */
+    color: #bb8562; /* Marrón clarito */
 }
 
 footer.dark-mode {
     background-color: #4b3d33; /* Marrón oscuro */
 }
-
+ 
 footer p.dark-mode {
-    color: #cdb355; /* Marrón clarito */
+    color: black; /* Marrón clarito */
+}
+
+.about p {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 18px;
+}
+.about h2, .about h3 {
+    text-align: center;
+    font-size: 35px;
 }
 
 #changemode {
@@ -152,11 +176,13 @@ footer p.dark-mode {
     height: auto;
     cursor: pointer;
     z-index: 9999; 
-    margin-right: 10px;
+    margin-right: 30px;
     margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
-
-#theme-image {
+#theme-image1 {
     width: 100%;
     height: auto;
 }
@@ -168,24 +194,24 @@ footer p.dark-mode {
     top: 0; /* Coloca en la parte superior */
     right: 0; /* Coloca en el extremo derecho */
     margin-top: 20px;
-    margin-right: 80px;
+    margin-right: 120px;
 }
 
 .opcion {
-    display: block; /* Cambio a display block */
-    margin: 0px 5px auto; /* Ajuste de margen */
-    padding: 10px 30px; /* Ajuste de padding */
-    background-color:  #cdb355; /* Color de fondo por defecto */
+    display: block;
+    margin: 0px 5px auto;
+    padding: 10px 30px;
+    background-color: #bb8562;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-size: 15px;
-    width: 75px; /* Ancho del botón */
+    width: 75px;
 }
 
-#changemode, #opciones {
-    display: flex; /* Cambio a flexbox para alinear elementos */
-    align-items: center; /* Alinea verticalmente los elementos */
+#switch, #opciones {
+    display: flex;
+    align-items: center;
 }
 
 .team-members {
@@ -197,7 +223,7 @@ footer p.dark-mode {
 .member-card {
     position: relative;
     display: inline-block;
-    width: 240px; /* Aumenta el ancho de cada tarjeta */
+    width: 200px; /* Aumenta el ancho de cada tarjeta */
     margin-right: 20px;
     border: 1px solid #DFF2BF;
     border-radius: 5px;
@@ -236,4 +262,89 @@ footer p.dark-mode {
     transform: translateX(-50%);
     max-width: 50px; /* Ajusta el ancho máximo según sea necesario */
     height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+.switch {
+    width: 60px;
+    height: 34px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #000000;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #AAD9BE;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: #AAD9BE; /* Rojo */  
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.ventana {
+    position: relative;
+    background-color: #005904; /* Cambiado a verde más oscuro */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    text-align: center;
+    max-width: 560px;
+    width: 100%;
+}
+.sol-luna {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    font-size: 24px;
+    color: #FFD700; /* Amarillo */
+    transform: translateY(-50%);
+    /* Alinea verticalmente */
+}
+body.dark-mode .opcion {
+    background-color: #bb8562; /* Color de fondo en modo oscuro */
+    color: #000; /* Color del texto en modo oscuro */
 }
