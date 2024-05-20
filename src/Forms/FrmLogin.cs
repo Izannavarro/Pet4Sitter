@@ -110,6 +110,28 @@ namespace pet4sitter
         private async void btnIniciarSesionGoogle_Click(object sender, EventArgs e)
         {
             await GoogleAuthenticator.exchangeCode();
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                Data.CurrentUser = User.EncontrarUsuarioGoogle(Data.UserGoogle.IdGoogle);
+                if (Data.CurrentUser.IdGoogle != null)
+                {
+
+                    ConBD.CerrarConexion();
+                    FrmInicio frmInicio = new FrmInicio();
+                    frmInicio.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no está registrado con google, regístralo desde el formulario de registro.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }//Comprueba si la bd está disponible
+            ConBD.CerrarConexion();
         }
 
 
@@ -186,7 +208,7 @@ namespace pet4sitter
                 ConBD.AbrirConexion();
                 if (User.CompruebaUsuarioExistente(txtMail.Text))
                 {
-                    if(User.CompruebaCredencialesUsuario(txtMail.Text,txtPass.Text))
+                    if (User.CompruebaCredencialesUsuario(txtMail.Text, txtPass.Text))
                     {
                         MessageBox.Show("Si");
                         Data.CurrentUser = User.EncontrarUsuario(txtMail.Text);
