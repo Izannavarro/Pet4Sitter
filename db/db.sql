@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS users (
     maxpets INT,
     price DOUBLE,
     location VARCHAR(50) CHARACTER SET utf8mb4,
-    premium TINYINT,
+    premium TINYINT DEFAULT 0,
     sitter TINYINT,
     admin TINYINT,
     image VARCHAR(255),
