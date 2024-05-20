@@ -54,7 +54,7 @@ namespace pet4sitter
                 {
                     lblProductoDestacado1.Text = lprod[0].NombreProducto;
                     lblPrecioProductoDestacado1.Text = lprod[0].Precio.ToString();
-                    if(lprod[0].UrlImagen != "")
+                    if (lprod[0].UrlImagen != "")
                     {
                         pcbProductoDestacado1.Load(lprod[0].UrlImagen);
                     }
@@ -112,24 +112,32 @@ namespace pet4sitter
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                string query = "SELECT * FROM chat c INNER JOIN users u ON c.id_receiver = u.id_user WHERE id_receiver = 1 GROUP BY id_receiver LIMIT 3;";
+                string query = $"SELECT * FROM chat c INNER JOIN users u ON c.id_sender = u.id_user WHERE id_receiver = {Data.CurrentUser.IdUser} GROUP BY id_sender LIMIT 3;";
                 List<User> users = User.ListarUsuarios(query);
                 if (users.Count > 0)
                 {
                     lblNombreChat1.Text = users[0].Name;
-                    if (users[0].Image != "")
+                    if (users[0].Image != null)
                     {
                         pcbChat1.Load(users[0].Image);
                     }
 
+                }
+
+                if (users.Count > 1)
+                {
                     if (users[1] != null)
                     {
                         lblNombreChat2.Text = users[1].Name;
-                        if (users[1].Image != "")
+                        if (users[1].Image != null)
                         {
                             pcbChat2.Load(users[1].Image);
                         }
                     }
+                }
+
+                if (users.Count > 2)
+                {
 
                     if (users[2] != null)
                     {
@@ -139,7 +147,6 @@ namespace pet4sitter
                             pcbChat1.Load(users[2].Image);
                         }
                     }
-
                 }
                 ConBD.CerrarConexion();
             }

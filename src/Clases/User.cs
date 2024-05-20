@@ -30,6 +30,7 @@ namespace pet4sitter.Clases
         public string Name { get { return this.name; } }
         public bool? Premium { get { return this.premium; } }
         public string Image { get { return this.image; } } 
+        public int? IdUser { get {return this.idUser;} }
 
         // Constructor
         public User() { }

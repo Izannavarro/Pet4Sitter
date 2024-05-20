@@ -153,7 +153,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\BufferedLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Clases\Busqueda.cs" />
+    <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\ConfiguracionIdioma.cs" />
     <Compile Include="Clases\ConBD.cs" />
     <Compile Include="Clases\GeoLocalizacion.cs" />
