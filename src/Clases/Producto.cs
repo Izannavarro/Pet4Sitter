@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,17 +20,17 @@ namespace pet4sitter.Clases
         private int cantidad;
         private double precio;
         private string descripcion;
-        private string urlImagen;
+        private Image urlImagen;
 
         public int? Id { get { return id; } }
         public string NombreProducto { get { return nombreProducto; } }
         public int Cantidad { get { return cantidad; } }
         public double Precio { get { return precio; } }
         public string Descripcion { get { return descripcion; } }
-        public string UrlImagen { get { return urlImagen; } }
+        public Image UrlImagen { get { return urlImagen; } }
 
 
-        public Producto( int? id, string nom, int cant,double pre, string descr, string img)
+        public Producto( int? id, string nom, int cant,double pre, string descr, Image img)
         {
             this.id = id;
             nombreProducto = nom;
@@ -41,10 +42,14 @@ namespace pet4sitter.Clases
 
         public static void AnyadirProducto(Producto p)
         {
+            
             try
             {
-                string consulta = string.Format("INSERT INTO products (name, price, quantity, description,image) VALUES ('{0}', '{1}', '{2}','{3}','{4}')", p.NombreProducto, p.Precio, p.Cantidad, p.Descripcion,p.UrlImagen);
+                byte[] imgArr = Utiles.ImageToByteArray(p.UrlImagen);
+
+                string consulta = string.Format("INSERT INTO products (name, price, quantity, description,image) VALUES ('{0}', '{1}', '{2}','{3}',@imagen)", p.NombreProducto, p.Precio, p.Cantidad, p.Descripcion);
                 MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+                comando.Parameters.AddWithValue("@imagen", imgArr);
                 MySqlDataReader reader = comando.ExecuteReader();
                 reader.Close();
             }
@@ -73,7 +78,22 @@ namespace pet4sitter.Clases
                         double precio = reader.GetDouble(2);
                         int cantidad = reader.GetInt32(3);
                         string descripcion = reader.GetString(4);
-                        productos.Add(new Producto(i,nombre, cantidad, precio, descripcion, null));
+
+                        byte[] array = null;
+                        if (!reader.IsDBNull(5))
+                        {
+                            long length = reader.GetBytes(5, 0, null, 0, 0); // Obtener la longitud del campo
+                            array = new byte[length];
+                            reader.GetBytes(5, 0, array, 0, (int)length);
+                        }
+
+                        Image img = null;
+                        if (array != null)
+                        {
+                            img = Utiles.ByteArrayToImage(array);
+                        }
+
+                        productos.Add(new Producto(i, nombre, cantidad, precio, descripcion, img));
                     }
                     reader.Close();
                     return productos;
@@ -94,7 +114,10 @@ namespace pet4sitter.Clases
             MySqlDataReader reader = com.ExecuteReader();
             while (reader.Read())
             {
-                Producto p = new Producto(int.Parse(reader["id_product"].ToString()),reader["name"].ToString(), int.Parse(reader["quantity"].ToString()), double.Parse(reader["price"].ToString()), reader["description"].ToString(), reader["image"].ToString());
+                byte[] imgArr = reader["image"] as byte[];
+                Image img = Utiles.ByteArrayToImage(imgArr);
+
+                Producto p = new Producto(int.Parse(reader["id_product"].ToString()),reader["name"].ToString(), int.Parse(reader["quantity"].ToString()), double.Parse(reader["price"].ToString()), reader["description"].ToString(), img);
                 lProd.Add(p);
             }
             return lProd;

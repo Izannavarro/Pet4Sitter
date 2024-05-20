@@ -53,14 +53,14 @@ namespace pet4sitter
                 {
                     lblProductoDestacado1.Text = lprod[0].NombreProducto;
                     lblPrecioProductoDestacado1.Text = lprod[0].Precio.ToString();
-                    pcbProductoDestacado1.Load(lprod[0].UrlImagen);
+                    pcbProductoDestacado1.Load(lprod[0].UrlImagen.ToString());
                 }
 
                 if (lprod.Count > 1)
                 {
                     lblProductoDestacado2.Text = lprod[1].NombreProducto;
                     lblPrecioProductoDestacado2.Text = lprod[1].Precio.ToString();
-                    pcbProductoDestacado2.Load(lprod[1].UrlImagen);
+                    pcbProductoDestacado2.Load(lprod[1].UrlImagen.ToString());
                 }
                 ConBD.CerrarConexion();
             }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -106,6 +107,8 @@ namespace pet4sitter
             return true;
         }
 
+        
+
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             if (ValidarDatos())
@@ -114,9 +117,9 @@ namespace pet4sitter
                 int cant = Convert.ToInt32(nudCant.Value);
                 double precio = Convert.ToDouble(txtPrecio.Text);
                 string descrip = txtDescripcion.Text;
-                Image img = ptbImagen.Image;
+                Image image = ptbImagen.Image;
 
-                Producto p1 = new Producto(null, nombre, cant, precio, descrip, null);
+                Producto p1 = new Producto(null, nombre, cant, precio, descrip, image);
 
                 if (ConBD.Conexion != null)
                 {
@@ -164,15 +167,15 @@ namespace pet4sitter
         {
 
             DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
-
-            
             lblId.Text = fila.Cells[0].Value.ToString();
-            txtNombre.Text = fila.Cells[1].Value.ToString();
-            txtPrecio.Text = fila.Cells[2].Value.ToString();
-            nudCant.Value = Convert.ToUInt32(fila.Cells[3].Value.ToString());
-            txtDescripcion.Text = fila.Cells[4].Value.ToString();
-            ptbImagen.Image = null;
 
+                txtNombre.Text = fila.Cells[1].Value.ToString();
+                txtPrecio.Text = fila.Cells[2].Value.ToString();
+                nudCant.Value = Convert.ToUInt32(fila.Cells[3].Value.ToString());
+                txtDescripcion.Text = fila.Cells[4].Value.ToString();
+                
+                
+                ptbImagen.Image = (Image)fila.Cells[5].Value;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)

@@ -147,6 +147,7 @@
             this.ptbImagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ptbImagen.Name = "ptbImagen";
             this.ptbImagen.Size = new System.Drawing.Size(235, 174);
+            this.ptbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbImagen.TabIndex = 46;
             this.ptbImagen.TabStop = false;
             // 
