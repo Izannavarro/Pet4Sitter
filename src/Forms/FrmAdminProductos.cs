@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -34,18 +35,18 @@ namespace pet4sitter
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show();
-        }
-
         private void FrmAdminProductos_Load(object sender, EventArgs e)
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
-            dgvProductos.DataSource = Producto.CantidadProductos();
+
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                LimpiarTablaProductos();
+                ConBD.CerrarConexion();
+                
+            }
         }
 
         private void AplicarIdioma()
@@ -59,7 +60,6 @@ namespace pet4sitter
             label3.Text = Resources.Recursos_Localizable.FrmAdminProductos.label3_Text;
             lblCantidad.Text = Resources.Recursos_Localizable.FrmAdminProductos.lblCantidad_Text;
             lblNombre.Text = Resources.Recursos_Localizable.FrmAdminProductos.lblNombre_Text;
-            button1.Text = Resources.Recursos_Localizable.FrmAdminProductos.button1_Text;
         }
 
         private void btnFoto_Click(object sender, EventArgs e)
@@ -85,34 +85,119 @@ namespace pet4sitter
             }
         }
 
+        private bool ValidarDatos()
+        {
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("Ingresa Nombre!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Ingresa una Descripcion del producto!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (txtPrecio.Text == "")
+            {
+                MessageBox.Show("Ingresa un Precio al producto!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
+        }
+
         private void btnAñadir_Click(object sender, EventArgs e)
+        {
+            if (ValidarDatos())
+            {
+                string nombre = txtNombre.Text;
+                int cant = Convert.ToInt32(nudCant.Value);
+                double precio = Convert.ToDouble(txtPrecio.Text);
+                string descrip = txtDescripcion.Text;
+                Image img = ptbImagen.Image;
+
+                Producto p1 = new Producto(null, nombre, cant, precio, descrip, null);
+
+                if (ConBD.Conexion != null)
+                {
+                    ConBD.AbrirConexion();
+                    Producto.AnyadirProducto(p1);
+                    LimpiarTablaProductos();
+                    ConBD.CerrarConexion();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo conectar a la base de datos!");
+                }
+            }
+        }
+
+        private void LimpiarTablaProductos()
+        {
+            dgvProductos.DataSource = null;
+            // Limpia las filas
+            dgvProductos.Rows.Clear();
+
+            // Asigna el nuevo DataSource
+            dgvProductos.DataSource = Producto.CantidadProductos();
+        }
+
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                int id = Convert.ToInt32(lblId.Text);
+                Producto.EliminarProducto(id);
+                LimpiarTablaProductos();
+                ConBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No se pudo conectar a la base de datos!");
+            }
+        }
+
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
+
+            
+            lblId.Text = fila.Cells[0].Value.ToString();
+            txtNombre.Text = fila.Cells[1].Value.ToString();
+            txtPrecio.Text = fila.Cells[2].Value.ToString();
+            nudCant.Value = Convert.ToUInt32(fila.Cells[3].Value.ToString());
+            txtDescripcion.Text = fila.Cells[4].Value.ToString();
+            ptbImagen.Image = null;
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
             int cant = Convert.ToInt32(nudCant.Value);
             double precio = Convert.ToDouble(txtPrecio.Text);
             string descrip = txtDescripcion.Text;
             Image img = ptbImagen.Image;
+            int id = int.Parse(lblId.Text);
 
-            Producto p1 = new Producto(nombre, cant, precio, descrip, null);
+            Producto p1 = new Producto(id, nombre, cant, precio, descrip, null);
+
 
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                Producto.AnyadirProducto(p1);
+                Producto.ActualizarProducto(p1);
                 LimpiarTablaProductos();
                 ConBD.CerrarConexion();
-                //Producto.
-                //ConBD.CerrarConexion();
             }
-        }
-
-        private void LimpiarTablaProductos()
-        {
-            if (dgvProductos.Rows.Count > 0)
+            else
             {
-                dgvProductos.Rows.Clear(); 
+                MessageBox.Show("No se pudo conectar a la base de datos!");
             }
-            dgvProductos.DataSource = Producto.CantidadProductos();
         }
     }
 }
