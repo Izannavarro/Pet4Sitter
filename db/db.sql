@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS products (
 ) CHARACTER SET utf8mb4;
 
 CREATE TABLE IF NOT EXISTS chat (
+    id int auto_INcrement primary key,
     id_receiver INT NOT NULL,
     id_sender INT NOT NULL,
     `date` DATETIME DEFAULT NOW() NOT NULL,
