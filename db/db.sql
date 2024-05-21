@@ -4,13 +4,12 @@ USE pet4sitter;
 
 CREATE TABLE IF NOT EXISTS users (
     id_user INT AUTO_INCREMENT,
+    id_google VARCHAR(255) UNIQUE,
     name VARCHAR(30) CHARACTER SET utf8mb4 NOT NULL,
     surname VARCHAR(60) CHARACTER SET utf8mb4,
-    email VARCHAR(60) CHARACTER SET utf8mb4 NOT NULL,
+    email VARCHAR(60) CHARACTER SET utf8mb4 NOT NULL unique,
     dni VARCHAR(9) CHARACTER SET utf8mb4,
     password VARCHAR(30) CHARACTER SET utf8mb4 NOT NULL,
-    maxpets INT,
-    price DOUBLE,
     location VARCHAR(50) CHARACTER SET utf8mb4,
     premium TINYINT,
     sitter TINYINT,
@@ -43,4 +42,4 @@ CREATE TABLE IF NOT EXISTS chat (
     messages VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL,
     FOREIGN KEY (id_receiver) REFERENCES users(id_user),
     FOREIGN KEY (id_sender) REFERENCES users(id_user)
-) CHARACTER SET utf8mb4;
+) CHARACTER SET utf8mb4;pet4sitter

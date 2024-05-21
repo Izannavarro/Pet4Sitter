@@ -29,31 +29,32 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblUltimasValoraciones = new System.Windows.Forms.Label();
+            this.lblUltimaCompra = new System.Windows.Forms.Label();
+            this.btnEditarPerfil = new System.Windows.Forms.Button();
+            this.btnDarAlta = new System.Windows.Forms.Button();
+            this.ptbImagen = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -61,28 +62,63 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Location = new System.Drawing.Point(203, 326);
+            this.panel3.Location = new System.Drawing.Point(152, 265);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(637, 337);
+            this.panel3.Size = new System.Drawing.Size(478, 274);
             this.panel3.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Location = new System.Drawing.Point(14, 149);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(448, 115);
+            this.panel2.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(170, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 18);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Valoración1";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 20);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(139, 82);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(18, 16);
+            this.panel1.Location = new System.Drawing.Point(14, 13);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(598, 147);
+            this.panel1.Size = new System.Drawing.Size(448, 119);
             this.panel1.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(227, 25);
+            this.label1.Location = new System.Drawing.Point(170, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 22);
+            this.label1.Size = new System.Drawing.Size(97, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "Valoración1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -90,48 +126,21 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 101);
+            this.pictureBox1.Size = new System.Drawing.Size(139, 82);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(227, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 22);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Valoración1";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(185, 101);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(19, 183);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(598, 142);
-            this.panel2.TabIndex = 8;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox3.Location = new System.Drawing.Point(21, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(298, 187);
+            this.pictureBox3.Size = new System.Drawing.Size(224, 152);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
@@ -139,9 +148,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(864, 326);
+            this.panel4.Location = new System.Drawing.Point(648, 265);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(384, 334);
+            this.panel4.Size = new System.Drawing.Size(288, 271);
             this.panel4.TabIndex = 5;
             // 
             // panel6
@@ -149,111 +159,133 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Location = new System.Drawing.Point(18, 21);
+            this.panel6.Location = new System.Drawing.Point(14, 17);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(349, 304);
+            this.panel6.Size = new System.Drawing.Size(262, 247);
             this.panel6.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 223);
+            this.label5.Location = new System.Drawing.Point(20, 181);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 22);
+            this.label5.Size = new System.Drawing.Size(77, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "Producto";
             // 
-            // label3
+            // lblUltimasValoraciones
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(199, 288);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(311, 32);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Ultimas Valoraciones:";
+            this.lblUltimasValoraciones.AutoSize = true;
+            this.lblUltimasValoraciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimasValoraciones.Location = new System.Drawing.Point(149, 234);
+            this.lblUltimasValoraciones.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUltimasValoraciones.Name = "lblUltimasValoraciones";
+            this.lblUltimasValoraciones.Size = new System.Drawing.Size(245, 26);
+            this.lblUltimasValoraciones.TabIndex = 8;
+            this.lblUltimasValoraciones.Text = "Ultimas Valoraciones:";
             // 
-            // label4
+            // lblUltimaCompra
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(858, 288);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(224, 32);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Ultima Compra:";
+            this.lblUltimaCompra.AutoSize = true;
+            this.lblUltimaCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimaCompra.Location = new System.Drawing.Point(644, 234);
+            this.lblUltimaCompra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUltimaCompra.Name = "lblUltimaCompra";
+            this.lblUltimaCompra.Size = new System.Drawing.Size(179, 26);
+            this.lblUltimaCompra.TabIndex = 9;
+            this.lblUltimaCompra.Text = "Ultima Compra:";
             // 
-            // button1
+            // btnEditarPerfil
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1089, 28);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 50);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Editar Perfil";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEditarPerfil.BackColor = System.Drawing.Color.White;
+            this.btnEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarPerfil.Location = new System.Drawing.Point(817, 23);
+            this.btnEditarPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarPerfil.Name = "btnEditarPerfil";
+            this.btnEditarPerfil.Size = new System.Drawing.Size(119, 41);
+            this.btnEditarPerfil.TabIndex = 10;
+            this.btnEditarPerfil.Text = "Editar Perfil";
+            this.btnEditarPerfil.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnDarAlta
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1089, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 50);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Dar de Alta";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDarAlta.BackColor = System.Drawing.Color.White;
+            this.btnDarAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarAlta.Location = new System.Drawing.Point(817, 80);
+            this.btnDarAlta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDarAlta.Name = "btnDarAlta";
+            this.btnDarAlta.Size = new System.Drawing.Size(119, 41);
+            this.btnDarAlta.TabIndex = 11;
+            this.btnDarAlta.Text = "Dar de Alta";
+            this.btnDarAlta.UseVisualStyleBackColor = false;
             // 
-            // pictureBox4
+            // ptbImagen
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox4.Location = new System.Drawing.Point(221, 28);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(289, 227);
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
+            this.ptbImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ptbImagen.Location = new System.Drawing.Point(166, 23);
+            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbImagen.Name = "ptbImagen";
+            this.ptbImagen.Size = new System.Drawing.Size(217, 184);
+            this.ptbImagen.TabIndex = 12;
+            this.ptbImagen.TabStop = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(529, 36);
+            this.label6.Location = new System.Drawing.Point(397, 29);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(336, 32);
+            this.label6.Size = new System.Drawing.Size(265, 26);
             this.label6.TabIndex = 13;
             this.label6.Text = "Información del Usuario";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(33, 45);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 38);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmPerfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1277, 675);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1109, 596);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.ptbImagen);
+            this.Controls.Add(this.btnDarAlta);
+            this.Controls.Add(this.btnEditarPerfil);
+            this.Controls.Add(this.lblUltimaCompra);
+            this.Controls.Add(this.lblUltimasValoraciones);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmPerfil";
             this.Text = "FrmPerfil";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPerfil_FormClosed);
             this.Load += new System.EventHandler(this.FrmPerfil_Load);
             this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,11 +304,12 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblUltimasValoraciones;
+        private System.Windows.Forms.Label lblUltimaCompra;
+        private System.Windows.Forms.Button btnEditarPerfil;
+        private System.Windows.Forms.Button btnDarAlta;
+        private System.Windows.Forms.PictureBox ptbImagen;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }

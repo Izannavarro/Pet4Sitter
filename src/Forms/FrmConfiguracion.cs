@@ -37,8 +37,9 @@ namespace piTest
 
         private void FrmConfiguracion_Load(object sender, EventArgs e)
         {
-            cmbIdioma.Text = "Español";
             AplicarIdioma();
+            cmbIdioma.Text = ConfiguracionIdioma.Cultura.DisplayName;
+
         }
 
         private void cmbIdioma_SelectedIndexChanged(object sender, EventArgs e)
@@ -54,12 +55,23 @@ namespace piTest
 
                 case "Ingles":
                     {
-                        idioma = "EN-US";
+                        idioma = "en-US";
                     }
                     break;
             }
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(idioma);
+            ConfiguracionIdioma.CambiarIdioma(new CultureInfo(idioma));
             AplicarIdioma();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close(); // Cierra completamente el formulario actual
+        }
+
+        private void FrmConfiguracion_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FrmAdminProductos f = new FrmAdminProductos(); // Crea una nueva instancia de FrmChat
+            f.Show(); // Muestra el formulario FrmChat
         }
     }
 }

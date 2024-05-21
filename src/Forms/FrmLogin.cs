@@ -17,12 +17,13 @@ using System.Reflection;
 using static System.Net.WebRequestMethods;
 using System.Net.Mail;
 using System.Globalization;
+using piTest.Clases;
 
 namespace piTest
 {
-    public partial class LoginForm : Form
+    public partial class FrmLogin : Form
     {
-        public LoginForm()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -106,9 +107,9 @@ namespace piTest
             }
         }
 
-        private void btnIniciarSesionGoogle_Click(object sender, EventArgs e)
+        private async void btnIniciarSesionGoogle_Click(object sender, EventArgs e)
         {
-            GoogleAuthenticator.exchangeCode(this);
+            await GoogleAuthenticator.exchangeCode();
         }
 
 
@@ -133,13 +134,12 @@ namespace piTest
         private void btnRegister_Click(object sender, EventArgs e)
         {
             // Crear una instancia del formulario RegisterForm
-            RegisterForm registerForm = new RegisterForm();
+            FrmRegister registerForm = new FrmRegister();
 
+            this.Hide();
             // Mostrar el formulario RegisterForm
             registerForm.Show();
 
-            // Opcionalmente, puedes ocultar el formulario actual (LoginForm) si lo deseas
-            this.Hide();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -168,7 +168,29 @@ namespace piTest
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                if (User.CompruebaUsuarioExistente(txtMail.Text))
+                {
+                    if(User.CompruebaCredencialesUsuario(txtMail.Text,txtPass.Text))
+                    {
+                        MessageBox.Show("Si");
+                        FrmInicio frmInicio = new FrmInicio();
+                        frmInicio.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no existe, Regístrate", "Usuario no Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                ConBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }//Comprueba si la bd está disponible
         }
     }
 }

@@ -61,7 +61,7 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Deactivate.
+        ///   Busca una cadena traducida similar a Desactivar.
         /// </summary>
         internal static string btnDesactivar_Text {
             get {
@@ -70,7 +70,7 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Delete.
+        ///   Busca una cadena traducida similar a Eliminar.
         /// </summary>
         internal static string btnEliminar_Text {
             get {
@@ -79,7 +79,7 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Two-Step Verification:.
+        ///   Busca una cadena traducida similar a Verificación en dos pasos:.
         /// </summary>
         internal static string lbl2pasos_Text {
             get {
@@ -88,7 +88,7 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Advanced Settings:.
+        ///   Busca una cadena traducida similar a Configuraciones Avanzadas:.
         /// </summary>
         internal static string lblConfiguracionAvanzada_Text {
             get {
@@ -97,7 +97,7 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Deactivate My Account:.
+        ///   Busca una cadena traducida similar a Desactivar mi cuenta:.
         /// </summary>
         internal static string lblDesactivar_Text {
             get {
@@ -106,7 +106,7 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Delete My Account:.
+        ///   Busca una cadena traducida similar a Eliminar mi cuenta:.
         /// </summary>
         internal static string lblEliminar_Text {
             get {
@@ -115,7 +115,7 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Language:.
+        ///   Busca una cadena traducida similar a Idioma:.
         /// </summary>
         internal static string lblIdioma_Text {
             get {
@@ -124,7 +124,7 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Data Privacy Policy....
+        ///   Busca una cadena traducida similar a Política de Privacidad de Datos.
         /// </summary>
         internal static string lblPrivacidad_Text {
             get {
@@ -133,7 +133,7 @@ namespace piTest.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Theme:.
+        ///   Busca una cadena traducida similar a Tema:.
         /// </summary>
         internal static string lblTema_Text {
             get {

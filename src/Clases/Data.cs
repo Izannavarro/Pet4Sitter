@@ -4,13 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Win32;
+using piTest.Clases;
 
 namespace piTest
 {
     public class Data
     {
 
+        static string ginfo;
+
+        
+        public static User UserGoogle = null;
+
+        public static string Ginfo { get { return ginfo; } set { ginfo = value; } }
 
         public static bool IsDarkModeEnabled()
         {

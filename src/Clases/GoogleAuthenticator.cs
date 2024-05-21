@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using piTest;
+using piTest.Clases;
 
 public class GoogleAuthenticator
 {
@@ -187,8 +188,8 @@ public class GoogleAuthenticator
                 output(userinfoResponseText);
 
                 // Mostrar la información del usuario en el formulario
-                ShowUserInfo(userinfoResponseText);
-                googleData.Ginfo = userinfoResponseText;
+                //ShowUserInfo(userinfoResponseText);
+                Data.Ginfo = userinfoResponseText;
             }
         }
         catch (Exception ex)
@@ -258,7 +259,7 @@ public class GoogleAuthenticator
     }
     // Recursos de utilidad para la autenticación de Google permanecen aquí...
 
-    public async static void exchangeCode(Form f)
+    public async static Task exchangeCode()
     {
         HttpListener httpListener = new HttpListener();
         //Ocultación de tokens:
@@ -373,9 +374,13 @@ public class GoogleAuthenticator
             }
 
             // Parsear la cadena JSON
-            JObject userInfoObject = JObject.Parse(googleData.Ginfo);
+            JObject userInfoObject = JObject.Parse(Data.Ginfo);
+            Console.WriteLine(userInfoObject);
 
+            string googleId = (string)userInfoObject["sub"];
             string name = (string)userInfoObject["name"];
+
+            Data.UserGoogle = new User(null, googleId,name,null,null,null,null,null,null,null,null,null);
 
             responseString = string.Format($"<html><head><meta http-equiv='refresh' content='0;url=https://oauth-redirect-phi.vercel.app/?gn={name}'></head><body>Redirecting...</body></html>");
             var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
@@ -390,14 +395,12 @@ public class GoogleAuthenticator
             // Cerrar la ventana del navegador
             context.Response.Close();
 
-            f.Hide();
             //Fin del if del puerto
         }
         else if (selectedPort == -1)
         {
             Console.WriteLine("No hay puertos disponibles");
         }
-
     }
 
 

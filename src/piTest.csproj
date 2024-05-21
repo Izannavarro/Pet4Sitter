@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.Net.0.1.0\lib\net35\BCrypt.Net.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
@@ -117,7 +120,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ConfiguracionIdioma.cs" />
     <Compile Include="Clases\ConBD.cs" />
+    <Compile Include="Clases\User.cs" />
+    <Compile Include="BarraLateral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BarraLateral.Designer.cs">
+      <DependentUpon>BarraLateral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,25 +241,69 @@
       <DependentUpon>FrmTienda.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\GoogleAuthenticator.cs" />
-    <Compile Include="Clases\googleData.cs" />
     <Compile Include="Clases\MasterMailServer.cs" />
-    <Compile Include="Forms\RegisterForm.cs">
+    <Compile Include="Forms\FrmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RegisterForm.Designer.cs">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
+    <Compile Include="Forms\FrmRegister.Designer.cs">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginForm.cs">
+    <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="Forms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\PortManager.cs" />
     <Compile Include="Clases\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\Recursos Localizable\FrmConf.EN-US.Designer.cs">
-      <DependentUpon>FrmConf.EN-US.resx</DependentUpon>
+    <Compile Include="Resources\Recursos Localizable\FrmAdminProductos.en-US.Designer.cs">
+      <DependentUpon>FrmAdminProductos.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmAdminProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmAdminProductos.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmAdminUsuarios.en-US.Designer.cs">
+      <DependentUpon>FrmAdminUsuarios.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmAlta.en-US.Designer.cs">
+      <DependentUpon>FrmAlta.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmAlta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmAlta.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmCarrito.en-US.Designer.cs">
+      <DependentUpon>FrmCarrito.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmCarrito.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmCarrito.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmChat.en-US.Designer.cs">
+      <DependentUpon>FrmChat.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmChat.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmChat.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmConf.en-US.Designer.cs">
+      <DependentUpon>FrmConf.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -257,6 +312,74 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmConf.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmEditarDireccion.en-US.Designer.cs">
+      <DependentUpon>FrmEditarDireccion.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmEditarDireccion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmEditarDireccion.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmInicioAdmin.en-US.Designer.cs">
+      <DependentUpon>FrmInicioAdmin.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmInicioAdmin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmInicioAdmin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmNoticias.en-US.Designer.cs">
+      <DependentUpon>FrmNoticias.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmNoticias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmNoticias.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmPerfil.en-US.Designer.cs">
+      <DependentUpon>FrmPerfil.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmPerfil.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmPerfil.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmResultadoFiltrado.en-US.Designer.cs">
+      <DependentUpon>FrmResultadoFiltrado.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmResultadoFiltrado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmResultadoFiltrado.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmTienda.en-US.Designer.cs">
+      <DependentUpon>FrmTienda.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmTienda.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmTienda.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmAdminUsuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmAdminUsuarios.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BarraLateral.resx">
+      <DependentUpon>BarraLateral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,12 +434,12 @@
     <EmbeddedResource Include="Forms\FrmTienda.resx">
       <DependentUpon>FrmTienda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegisterForm.resx">
-      <DependentUpon>RegisterForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmRegister.resx">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -329,13 +452,124 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Resources\Recursos Localizable\FrmConf.EN-US.resx">
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAdminProductos.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>FrmConf.EN-US.Designer.cs</LastGenOutput>
+      <LastGenOutput>FrmAdminProductos.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAdminProductos.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAdminProductos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAdminUsuarios.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAdminUsuarios.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAlta.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAlta.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAlta.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAlta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmCarrito.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmCarrito.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmCarrito.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmCarrito.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmChat.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmChat.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmChat.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>FrmChat.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmConf.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmConf.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmConf.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FrmConf.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmEditarDireccion.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmEditarDireccion.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmEditarDireccion.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmEditarDireccion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmInicioAdmin.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmInicioAdmin.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmInicioAdmin.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmInicioAdmin.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmNoticias.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmNoticias.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmNoticias.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmNoticias.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmPerfil.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmPerfil.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmPerfil.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmPerfil.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmResultadoFiltrado.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmResultadoFiltrado.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmResultadoFiltrado.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>FrmResultadoFiltrado.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmTienda.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmTienda.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmTienda.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>FrmTienda.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAdminUsuarios.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAdminUsuarios.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
