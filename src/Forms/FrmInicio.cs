@@ -54,7 +54,6 @@ namespace pet4sitter
                 {
                     lblProductoDestacado1.Text = lprod[0].NombreProducto;
                     lblPrecioProductoDestacado1.Text = lprod[0].Precio.ToString();
-                    
                 }
 
                 if (lprod.Count > 1)

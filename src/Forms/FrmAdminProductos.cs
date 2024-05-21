@@ -165,16 +165,12 @@ namespace pet4sitter
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
-            lblId.Text = fila.Cells[0].Value.ToString();
-
+                DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
+                lblId.Text = fila.Cells[0].Value.ToString();
                 txtNombre.Text = fila.Cells[1].Value.ToString();
                 txtPrecio.Text = fila.Cells[2].Value.ToString();
                 nudCant.Value = Convert.ToUInt32(fila.Cells[3].Value.ToString());
-                txtDescripcion.Text = fila.Cells[4].Value.ToString();
-                
-                
+                txtDescripcion.Text = fila.Cells[4].Value.ToString();             
                 ptbImagen.Image = (Image)fila.Cells[5].Value;
         }
 

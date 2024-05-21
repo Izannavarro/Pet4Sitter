@@ -15,7 +15,6 @@ namespace pet4sitter.Clases
      class Producto
     {
         private int? id;
-        private static int sumatorio = 1;
         private string nombreProducto;
         private int cantidad;
         private double precio;
