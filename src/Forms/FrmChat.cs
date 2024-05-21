@@ -22,11 +22,11 @@ namespace pet4sitter
             InitializeComponent();
         }
 
-        private void FrmChat_Load(object sender, EventArgs e)
+        private async void FrmChat_Load(object sender, EventArgs e)
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
-            ChatMensajes();
+            await ChatMensajes();
         }
 
         private void AplicarIdioma()
@@ -54,49 +54,102 @@ namespace pet4sitter
             Application.Exit();
         }
 
-        private void ChatMensajes()
+        private List<string> mensajesCargados = new List<string>();
+
+        private async Task ChatMensajes()
         {
             if (ConBD.Conexion != null)
             {
-                //ConBD.AbrirConexion();
-                string query = "SELECT * FROM chat WHERE id_receiver=1 OR id_sender = 1 AND id_receiver=2 OR id_sender = 2";
-                MySqlDataAdapter adapter = new MySqlDataAdapter(query, ConBD.Conexion);
-                DataTable mensajes = new DataTable();
-                adapter.Fill(mensajes);
-                if(mensajes != null)
+                try
                 {
+                    string query = $"SELECT * FROM chat WHERE (id_receiver={Data.CurrentUser.IdUser} OR id_sender={Data.CurrentUser.IdUser}) AND (id_receiver=2 OR id_sender=2) order by date";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, ConBD.Conexion);
+                    DataTable mensajes = new DataTable();
+                    await Task.Run(() => adapter.Fill(mensajes)); // Asíncrono
+
+                    if (mensajes != null)
+                    {
+                        SuspendLayout(); // Suspender el diseño del formulario
+                        fLPanelChat.SuspendLayout(); // Suspender el diseño del panel
+
+                        bool nuevosMensajes = false; // Bandera para saber si se agregaron nuevos mensajes
+
                         foreach (DataRow row in mensajes.Rows)
                         {
-                            //Aquí comprobaría si los usuarios son correctos en cuanto al res de la consulta(Próximamente)
-                            if (row["id_receiver"].ToString() == "1")
+                            string mensajeId = row["id"].ToString();
+                            if (!mensajesCargados.Contains(mensajeId))
                             {
-                            MensajeEnviado mensajeEnviado = new MensajeEnviado();
-                            mensajeEnviado.Dock = DockStyle.Top;
-                            mensajeEnviado.BringToFront();
-                            mensajeEnviado.Title = row["messages"].ToString();
-                            fLPanelChat.Controls.Add(mensajeEnviado);
-                            fLPanelChat.ScrollControlIntoView(mensajeEnviado); // Asegura que el mensaje esté visible
+                                mensajesCargados.Add(mensajeId);
+                                nuevosMensajes = true;
+
+                                if (row["id_receiver"].ToString() == Data.CurrentUser.IdUser.ToString())
+                                {
+                                    MensajeEnviado mensajeEnviado = new MensajeEnviado();
+                                    mensajeEnviado.Dock = DockStyle.Top;
+                                    mensajeEnviado.BringToFront();
+                                    mensajeEnviado.Title = row["messages"].ToString();
+                                    fLPanelChat.Controls.Add(mensajeEnviado);
+                                }
+                                else if (row["id_sender"].ToString() == Data.CurrentUser.IdUser.ToString())
+                                {
+                                    MensajeRecibido mensajeRecibido = new MensajeRecibido();
+                                    mensajeRecibido.Dock = DockStyle.Top;
+                                    mensajeRecibido.BringToFront();
+                                    mensajeRecibido.Title = row["messages"].ToString();
+                                    fLPanelChat.Controls.Add(mensajeRecibido);
+                                }
+                            }
                         }
-                        else if(row["id_sender"].ToString() == "1")
-                            {
-                            MensajeRecibido mensajeRecibido = new MensajeRecibido();
-                            mensajeRecibido.Dock = DockStyle.Top;
-                            mensajeRecibido.BringToFront();
-                            mensajeRecibido.Title = row["messages"].ToString();
-                            fLPanelChat.Controls.Add(mensajeRecibido);
-                            fLPanelChat.ScrollControlIntoView(mensajeRecibido); // Asegura que el mensaje esté visible
+
+                        fLPanelChat.ResumeLayout(true); // Reanudar el diseño del panel
+                        ResumeLayout(true); // Reanudar el diseño del formulario
+
+                        if (nuevosMensajes)
+                        {
+                            ScrollToBottom(); // Desplazar al fondo si hay nuevos mensajes
                         }
                     }
-
                 }
-
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
             }
             else
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
-            }//Comprueba si la bd está disponible
+            }
         }
 
 
+        private void ScrollToBottom()
+        {
+            if (fLPanelChat.Controls.Count > 0)
+            {
+                var lastControl = fLPanelChat.Controls[fLPanelChat.Controls.Count - 1];
+                fLPanelChat.ScrollControlIntoView(lastControl);
+            }
+        }
+
+
+        private async void tmr_Tick(object sender, EventArgs e)
+        {
+            await ChatMensajes();
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                Mensaje m = new Mensaje((int)Data.CurrentUser.IdUser, 2, txtMensaje.Text);
+                Mensaje.EnviarMensaje(m);
+                ConBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }
+        }
     }
 }
