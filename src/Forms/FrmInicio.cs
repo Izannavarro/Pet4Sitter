@@ -54,10 +54,6 @@ namespace pet4sitter
                 {
                     lblProductoDestacado1.Text = lprod[0].NombreProducto;
                     lblPrecioProductoDestacado1.Text = lprod[0].Precio.ToString();
-                    //if (lprod[0].UrlImagen != "")
-                    //{
-                    //    pcbProductoDestacado1.Load(lprod[0].UrlImagen);
-                    //}
                 }
 
                 if (lprod.Count > 1)

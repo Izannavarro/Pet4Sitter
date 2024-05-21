@@ -30,7 +30,6 @@ namespace pet4sitter.Clases
         private double? longitud;
 
         public string IdGoogle { get { return this.idGoogle; } }
-
         public string Name { get { return this.name; } }
         public string Surname { get { return surname; } }
         public string Password { get { return password; } }
@@ -61,6 +60,7 @@ namespace pet4sitter.Clases
             this.latitud = latitud;
             this.longitud = longitud;
         }
+      
         public User(int? idUser, string name, string email, string dni, string password, bool? sitter, bool? admin, byte[] img)
         {
             this.idUser = idUser;
@@ -322,7 +322,7 @@ namespace pet4sitter.Clases
 
             try
             {
-                using (MySqlCommand command = new MySqlCommand(query, ConBD.Conexion))
+                using (MySqlCommand command = new MySqlCommand(query,ConBD.Conexion))
                 {
                     // Parámetros de la consulta
                     command.Parameters.AddWithValue("@LatitudReferencia", latitudReferencia);
@@ -358,7 +358,6 @@ namespace pet4sitter.Clases
                         }
                     }
                 }
-
             }
             catch (Exception ex)
             {
@@ -374,9 +373,9 @@ namespace pet4sitter.Clases
 
             // Consulta SQL para contar el número de usuarios
             string query = @"
-                            SELECT COUNT(*)
-                            FROM users
-                            WHERE price >= @PrecioDesde AND price <= @PrecioHasta";
+    SELECT COUNT(*)
+    FROM users
+    WHERE price >= @PrecioDesde AND price <= @PrecioHasta";
 
             try
             {
@@ -416,4 +415,14 @@ namespace pet4sitter.Clases
 
     }
     
+
+            return totalUsuarios;
+        }
+
+
+
+    }
+
+
+
 }
