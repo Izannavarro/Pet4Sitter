@@ -248,5 +248,12 @@ namespace pet4sitter
             form.Show();
             formActual.Dispose();
         }
+
+        private void pcbIaYuda_Click(object sender, EventArgs e)
+        {
+            FrmIAyuda form = new FrmIAyuda();
+            form.Show();
+            formActual.Dispose();
+        }
     }
 }

@@ -119,7 +119,7 @@ namespace pet4sitter
             try
             {
                 // Create an instance of the APIAuthentication class with your API key
-                var authentication = new APIAuthentication("");
+                var authentication = new APIAuthentication(Data.tokenGPT);
 
                 // Create an instance of the OpenAIAPI class with the APIAuthentication object
                 var api = new OpenAIAPI(authentication);
@@ -149,7 +149,7 @@ namespace pet4sitter
             try
             {   
                 using (var client = new WebClient())
-                using (var stream = client.OpenRead("ahttp://www.google.com"))
+                using (var stream = client.OpenRead("http://www.google.com"))
                 {
                     return true; // Se obtuvo una respuesta exitosa
                 }

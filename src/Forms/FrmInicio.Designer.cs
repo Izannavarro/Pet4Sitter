@@ -61,7 +61,7 @@
             this.pnlNoticiaPremium = new System.Windows.Forms.Panel();
             this.lblPremium = new System.Windows.Forms.Label();
             this.pcbPremium = new System.Windows.Forms.PictureBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbChat1)).BeginInit();

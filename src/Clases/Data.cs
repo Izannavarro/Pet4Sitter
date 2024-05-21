@@ -20,9 +20,11 @@ namespace pet4sitter
 
         public static string Ginfo { get { return ginfo; } set { ginfo = value; } }
         public static string tokenNoticias;
+        public static string tokenGPT;
         static Data()
         {
             tokenNoticias = Utiles.CargarTokenNoticias();
+            tokenGPT = Utiles.CargarTokenGpt();
         }
 
         public static bool IsDarkModeEnabled()
