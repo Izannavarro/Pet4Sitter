@@ -115,7 +115,7 @@ namespace pet4sitter
                     lblNombreChat1.Text = users[0].Name;
                     if (users[0].Image != null)
                     {
-                        pcbChat1.Load(users[0].Image);
+                        pcbChat1.Image = Utiles.ByteArrayToImage(users[0].Image); // ??
                     }
 
                 }
@@ -127,7 +127,7 @@ namespace pet4sitter
                         lblNombreChat2.Text = users[1].Name;
                         if (users[1].Image != null)
                         {
-                            pcbChat2.Load(users[1].Image);
+                            pcbChat2.Image = Utiles.ByteArrayToImage(users[1].Image); // ??
                         }
                     }
                 }
@@ -135,13 +135,14 @@ namespace pet4sitter
                 if (users.Count > 2)
                 {
 
-                    if (users[2] != null)
-                    {
+                    if (users[2] != null) { 
+
                         lblNombreChat3.Text = users[2].Name;
-                        if (users[2].Image != "")
+                        if (users[2].Image != null)
                         {
-                            pcbChat1.Load(users[2].Image);
+                            pcbChat3.Image = Utiles.ByteArrayToImage(users[2].Image); // ??
                         }
+                    
                     }
                 }
                 ConBD.CerrarConexion();
