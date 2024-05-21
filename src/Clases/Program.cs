@@ -18,7 +18,7 @@ namespace pet4sitter
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new FrmChat());
+            Application.Run(new FrmNoticias());
             //Application.Run(new FrmAdminProductos());
         }
     }

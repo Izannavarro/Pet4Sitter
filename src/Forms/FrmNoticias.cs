@@ -8,70 +8,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pet4sitter.Clases;
 
 namespace pet4sitter
 {
     public partial class FrmNoticias : Form
     {
+        List<Noticia> lNoticias = new List<Noticia>();
         public FrmNoticias()
         {
             InitializeComponent();
         }
 
-        private void FrmNoticias_Load(object sender, EventArgs e)
+        private async void FrmNoticias_Load(object sender, EventArgs e)
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            try
+            {
+                await CargarNoticiasAsync();
+                // Aquí puedes hacer algo con lNoticias, como actualizar la UI
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                Console.WriteLine($"Error al cargar noticias: {ex.Message}");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,6 +41,28 @@ namespace pet4sitter
             this.Hide();
             FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
             frm.Show();
+        }
+
+        private async Task CargarNoticiasAsync()
+        {
+            NewsFetcher nFetcher = new NewsFetcher(Data.tokenNoticias);
+            lNoticias = await nFetcher.FetchAnimalNewsList();
+            if (lNoticias.Count > 0)
+            {
+                lblTituloNoticia1.Text = lNoticias[0].Titulo;
+                pcbNoticia1.Load(lNoticias[0].UrlImagen);
+                lblCuerpoNoticia.Text = lNoticias[0].Descripcion;
+            }
+
+            if(lNoticias.Count > 1)
+            {
+
+            }
+
+            if (lNoticias.Count > 2)
+            {
+
+            }
         }
 
         private void AplicarIdioma()
