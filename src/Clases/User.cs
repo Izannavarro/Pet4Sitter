@@ -124,6 +124,7 @@ namespace pet4sitter.Clases
             return user;
         }
 
+
         public static User EncontrarUsuarioGoogle(string idGoogle)
         {
             User user = new User(null, null, null, null, null, null, null, null, null, null, null, null, null, null);
@@ -305,7 +306,7 @@ namespace pet4sitter.Clases
             SELECT *
             FROM users
             WHERE price >= @PrecioDesde AND price <= @PrecioHasta
-            ORDER BY SQRT(POW(latitud - @LatitudReferencia, 2) + POW(longitud - @LongitudReferencia, 2)) @Limit OFFSET @Offset";
+            ORDER BY SQRT(POW(latitud - @LatitudReferencia, 2) + POW(longitud - @LongitudReferencia, 2)) Limit @Limit OFFSET @Offset";
 
             try
             {
@@ -354,6 +355,41 @@ namespace pet4sitter.Clases
             return usuariosCercanos;
         }
 
+        public static int ContarUsuariosCercanos(double? latitudReferencia, double? longitudReferencia, double precioDesde, double precioHasta)
+        {
+            int totalUsuarios = 0;
+
+            // Consulta SQL para contar el número de usuarios
+            string query = @"
+    SELECT COUNT(*)
+    FROM users
+    WHERE price >= @PrecioDesde AND price <= @PrecioHasta";
+
+            try
+            {
+                using (MySqlCommand command = new MySqlCommand(query, ConBD.Conexion))
+                {
+                    // Parámetros de la consulta
+                    command.Parameters.AddWithValue("@PrecioDesde", precioDesde);
+                    command.Parameters.AddWithValue("@PrecioHasta", precioHasta);
+                    command.Parameters.AddWithValue("@LatitudReferencia", latitudReferencia);
+                    command.Parameters.AddWithValue("@LongitudReferencia", longitudReferencia);
+
+                    totalUsuarios = Convert.ToInt32(command.ExecuteScalar());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al contar usuarios cercanos: " + ex.Message);
+            }
+
+            return totalUsuarios;
+        }
+
+
+
     }
-   
+
+
+
 }

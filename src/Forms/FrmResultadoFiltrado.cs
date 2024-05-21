@@ -15,6 +15,9 @@ namespace pet4sitter
     public partial class FrmResultadoFiltrado : Form
     {
         List<User> users = new List<User>();
+        private int paginaActual = 0;
+        private int elementosPorPagina = 3;
+        private int totalUsuarios = 0;
         public FrmResultadoFiltrado()
         {
             InitializeComponent();
@@ -31,7 +34,20 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                double? latitudReferencia = Data.CurrentUser.Latitud;  // Obtén la latitud de referencia
+                double? longitudReferencia = Data.CurrentUser.Longitud;  // Obtén la longitud de referencia
+                double precioDesde = 0;  // Obtén el precio mínimo
+                double precioHasta = 1000;  // Obtén el precio máximo
+                totalUsuarios = User.ContarUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta);
+                ConBD.CerrarConexion();
+            }
+
             CargarResultados();
+
         }
 
         private void CargarResultados()
@@ -83,7 +99,46 @@ namespace pet4sitter
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-
+            if ((paginaActual + 1) * elementosPorPagina >= totalUsuarios)
+            {
+                MessageBox.Show("Has llegado a la última página de resultados.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                paginaActual++;
+                if (ConBD.Conexion != null)
+                {
+                    ConBD.AbrirConexion();
+                    CargarPagina();
+                    ConBD.CerrarConexion();
+                }
+            }
         }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (paginaActual > 0)
+            {
+                paginaActual--;
+                if (ConBD.Conexion != null)
+                {
+                    ConBD.AbrirConexion();
+                    CargarPagina();
+                }
+                ConBD.CerrarConexion();
+            }
+        }
+
+        private void CargarPagina()
+        {
+            double? latitudReferencia = Data.CurrentUser.Latitud;  // Obtén la latitud de referencia
+            double? longitudReferencia = Data.CurrentUser.Longitud;  // Obtén la longitud de referencia
+            double precioDesde = 0;  // Obtén el precio mínimo
+            double precioHasta = 1000;  // Obtén el precio máximo
+
+            users = User.ObtenerUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta, paginaActual * elementosPorPagina, elementosPorPagina);
+            CargarResultados();
+        }
+
     }
 }

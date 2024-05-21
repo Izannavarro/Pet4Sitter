@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace pet4sitter.Clases
 {
@@ -55,6 +56,30 @@ namespace pet4sitter.Clases
 
             return mensajes;
         }
+
+        public static int ContarTotalChats()
+        {
+            int res = 0;
+            try
+            {
+                string query = @"
+        SELECT COUNT(DISTINCT IF(id_sender = @CurrentUserId, id_receiver, id_sender)) AS total_chats
+        FROM chat
+        WHERE id_receiver = @CurrentUserId OR id_sender = @CurrentUserId";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, ConBD.Conexion))
+                {
+                    cmd.Parameters.AddWithValue("@CurrentUserId", Data.CurrentUser.IdUser);
+                    return Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al contar los chats: {ex.Message}");
+            }
+            return res;
+        }
+
 
     }
 }
