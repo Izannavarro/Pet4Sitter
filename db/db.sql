@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS users (
     premium TINYINT DEFAULT 0,
     sitter TINYINT,
     admin TINYINT,
-    image VARCHAR(255),
+    image LONGBLOB NOT NULL,
     latitud float,
     longitud float,
     PRIMARY KEY (id_user)
