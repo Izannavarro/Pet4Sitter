@@ -41,6 +41,7 @@ namespace pet4sitter
                 pnlNoticiaPremium.BringToFront();
             }
             CargarProductosDestacados();
+            CargarUltimosChats();
         }
         private void CargarProductosDestacados()
         {
@@ -53,14 +54,17 @@ namespace pet4sitter
                 {
                     lblProductoDestacado1.Text = lprod[0].NombreProducto;
                     lblPrecioProductoDestacado1.Text = lprod[0].Precio.ToString();
-                    pcbProductoDestacado1.Load(lprod[0].UrlImagen);
+                    if (lprod[0].UrlImagen != "")
+                    {
+                        pcbProductoDestacado1.Load(lprod[0].UrlImagen);
+                    }
                 }
 
                 if (lprod.Count > 1)
                 {
                     lblProductoDestacado2.Text = lprod[1].NombreProducto;
                     lblPrecioProductoDestacado2.Text = lprod[1].Precio.ToString();
-                    pcbProductoDestacado2.Load(lprod[1].UrlImagen);
+                    pcbProductoDestacado2.Load(lprod[1].UrlImagen.ToString());
                 }
                 ConBD.CerrarConexion();
             }
@@ -102,5 +106,55 @@ namespace pet4sitter
             }
 
         }
+
+        private void CargarUltimosChats()
+        {
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                string query = $"SELECT * FROM chat c INNER JOIN users u ON c.id_sender = u.id_user WHERE id_receiver = {Data.CurrentUser.IdUser} GROUP BY id_sender LIMIT 3;";
+                List<User> users = User.ListarUsuarios(query);
+                if (users.Count > 0)
+                {
+                    lblNombreChat1.Text = users[0].Name;
+                    if (users[0].Image != null)
+                    {
+                        pcbChat1.Load(users[0].Image);
+                    }
+
+                }
+
+                if (users.Count > 1)
+                {
+                    if (users[1] != null)
+                    {
+                        lblNombreChat2.Text = users[1].Name;
+                        if (users[1].Image != null)
+                        {
+                            pcbChat2.Load(users[1].Image);
+                        }
+                    }
+                }
+
+                if (users.Count > 2)
+                {
+
+                    if (users[2] != null)
+                    {
+                        lblNombreChat3.Text = users[2].Name;
+                        if (users[2].Image != "")
+                        {
+                            pcbChat1.Load(users[2].Image);
+                        }
+                    }
+                }
+                ConBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }//Comprueba si la bd está disponible
+        }
+
     }
 }
