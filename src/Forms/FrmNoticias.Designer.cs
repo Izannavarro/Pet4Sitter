@@ -51,6 +51,8 @@
             this.lblFuncPre = new System.Windows.Forms.Label();
             this.pcbGifCarga = new System.Windows.Forms.PictureBox();
             this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.lblTituloNoticias = new System.Windows.Forms.Label();
+            this.lblInfoPulsar = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -73,8 +75,7 @@
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.pnlPremium);
-            this.panel3.Location = new System.Drawing.Point(246, 128);
+            this.panel3.Location = new System.Drawing.Point(250, 109);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(779, 410);
@@ -266,7 +267,7 @@
             // 
             this.pnlPremium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.pnlPremium.Controls.Add(this.panel5);
-            this.pnlPremium.Location = new System.Drawing.Point(0, 0);
+            this.pnlPremium.Location = new System.Drawing.Point(250, 109);
             this.pnlPremium.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPremium.Name = "pnlPremium";
             this.pnlPremium.Size = new System.Drawing.Size(779, 410);
@@ -307,7 +308,7 @@
             // 
             this.pcbGifCarga.BackColor = System.Drawing.Color.White;
             this.pcbGifCarga.Image = global::pet4sitter.Properties.Resources.loading;
-            this.pcbGifCarga.Location = new System.Drawing.Point(508, 195);
+            this.pcbGifCarga.Location = new System.Drawing.Point(625, 197);
             this.pcbGifCarga.Name = "pcbGifCarga";
             this.pcbGifCarga.Size = new System.Drawing.Size(211, 181);
             this.pcbGifCarga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -322,15 +323,38 @@
             this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 4;
             // 
+            // lblTituloNoticias
+            // 
+            this.lblTituloNoticias.AutoSize = true;
+            this.lblTituloNoticias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloNoticias.Location = new System.Drawing.Point(347, 25);
+            this.lblTituloNoticias.Name = "lblTituloNoticias";
+            this.lblTituloNoticias.Size = new System.Drawing.Size(520, 24);
+            this.lblTituloNoticias.TabIndex = 12;
+            this.lblTituloNoticias.Text = "NOTICIAS SOBRE NUESTROS QUERIDOS ANIMALES";
+            // 
+            // lblInfoPulsar
+            // 
+            this.lblInfoPulsar.AutoSize = true;
+            this.lblInfoPulsar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoPulsar.Location = new System.Drawing.Point(418, 91);
+            this.lblInfoPulsar.Name = "lblInfoPulsar";
+            this.lblInfoPulsar.Size = new System.Drawing.Size(412, 16);
+            this.lblInfoPulsar.TabIndex = 13;
+            this.lblInfoPulsar.Text = "Pulsa en el titulo de cualquier noticia para redirijirte a la noticia oficial";
+            // 
             // FrmNoticias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1109, 596);
+            this.Controls.Add(this.lblInfoPulsar);
+            this.Controls.Add(this.lblTituloNoticias);
+            this.Controls.Add(this.pnlPremium);
             this.Controls.Add(this.pcbGifCarga);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.barraLateral1);
+            this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmNoticias";
             this.Text = "FrmNoticias";
@@ -352,6 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbGifCarga)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -379,5 +404,7 @@
         private System.Windows.Forms.Label lblFuncPre;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pcbGifCarga;
+        private System.Windows.Forms.Label lblTituloNoticias;
+        private System.Windows.Forms.Label lblInfoPulsar;
     }
 }

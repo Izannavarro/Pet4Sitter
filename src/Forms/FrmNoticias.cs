@@ -45,6 +45,8 @@ namespace pet4sitter
             else
             {
                 pnlPremium.Visible = true;
+                pcbGifCarga.Visible = false;
+                lblInfoPulsar.Visible = false;
             }
         }
 
