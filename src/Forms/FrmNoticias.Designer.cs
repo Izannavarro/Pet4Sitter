@@ -68,7 +68,7 @@
             this.panel3.Location = new System.Drawing.Point(149, 28);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(779, 471);
+            this.panel3.Size = new System.Drawing.Size(1039, 580);
             this.panel3.TabIndex = 3;
             // 
             // panel2
@@ -79,7 +79,7 @@
             this.panel2.Location = new System.Drawing.Point(14, 327);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(752, 128);
+            this.panel2.Size = new System.Drawing.Size(1003, 158);
             this.panel2.TabIndex = 8;
             // 
             // pcbNoticia3
@@ -101,7 +101,7 @@
             this.panel1.Location = new System.Drawing.Point(14, 171);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(752, 134);
+            this.panel1.Size = new System.Drawing.Size(1003, 165);
             this.panel1.TabIndex = 7;
             // 
             // pcbNoticia2
@@ -123,7 +123,7 @@
             this.panel9.Location = new System.Drawing.Point(14, 19);
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(748, 128);
+            this.panel9.Size = new System.Drawing.Size(997, 158);
             this.panel9.TabIndex = 6;
             // 
             // lblTituloNoticia1
@@ -152,7 +152,7 @@
             this.btnAnterior.Location = new System.Drawing.Point(428, 505);
             this.btnAnterior.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(95, 25);
+            this.btnAnterior.Size = new System.Drawing.Size(127, 31);
             this.btnAnterior.TabIndex = 4;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
@@ -162,7 +162,7 @@
             this.btnSiguiente.Location = new System.Drawing.Point(540, 505);
             this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(95, 25);
+            this.btnSiguiente.Size = new System.Drawing.Size(127, 31);
             this.btnSiguiente.TabIndex = 5;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
@@ -272,11 +272,10 @@
             // 
             // FrmNoticias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1109, 596);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1479, 734);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.panel3);

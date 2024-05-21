@@ -59,6 +59,7 @@ namespace pet4sitter
             this.fLPanelChat = new pet4sitter.Clases.BufferedFlowLayoutPanel();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.btnIdioma = new System.Windows.Forms.Button();
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.barraLateral1 = new pet4sitter.BarraLateral();
@@ -415,7 +416,6 @@ namespace pet4sitter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1479, 734);
-            this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.pnl5);
             this.Controls.Add(this.pnl6);
             this.Controls.Add(this.panel3);
@@ -472,7 +472,6 @@ namespace pet4sitter
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txtMensaje;
         private System.Windows.Forms.Button btnOpciones;
-        private System.Windows.Forms.Button btnIdioma;
         private BarraLateral barraLateral1;
         private System.Windows.Forms.Timer tmr;
         private BufferedFlowLayoutPanel fLPanelChat;

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet4Sitter - Cuidadores de Animales</title>
-    <link rel="stylesheet" href="styleMenu.css">
+    <title>Acerca de nosotros - Pet4Sitter</title>
+    <link rel="stylesheet" href="styleContactUs.css">
 </head>
-
 <body>
-
     <header>
         <div class="logo-container">
             <img src="logo.png" alt="Logo de Pet4Sitter">
@@ -23,76 +20,37 @@
                 </span>
             </label>
         </div>
-        <!-- Mueve la imagen española.jpg dentro del div de opciones -->
         <div id="opciones">
             <a href="menuES.html" class="opcion home" id="home-link">Menú</a>
             <a href="downloadES.html" class="opcion download">Descargar</a>
             <a href="aboutUsES.html" id="about-us-link" class="opcion aboutus">Conocenos</a>
             <a href="contactUsES.html" class="opcion contactus">Contactanos</a>
-            <a href="menuEN.html">EN</a>
+            <a href="contactUsEn.html">EN</a>
             <a>&nbsp;&nbsp;</a>
-            <a href="menuES.html">ES</a>
+            <a href="contactUsEs.html">ES</a>
         </div>
     </header>
+    <div class="container" id="contact">
+        <h2>Contáctanos</h2>
+        <form action="https://formspree.io/f/xjvndvlw"  method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-    <div class="container">
-        <div class="background-image">
-        <h1>Pet4Sitter</h1>
-        <p>La mejor aplicacion para apoyarte con tu mascota</p>
-        <div class="descargar">
-            <a href="downloadES.html?os=windows" class="descar windows">Windows</a>
-            <a href="downloadES.html?os=mac" class="descar macos">macOS</a>
-            <a href="downloadES.html?os=linux" class="descar linux">Linux</a>
-        </div>
-        <p>Descarga nuestra APP y disfruta de todas sus ayudas</p>
-        <p>Unete a nuestra gran comunidad y disfruta</p>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="asunto">Asunto:</label>
+            <input type="text" id="asunto" name="asunto" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <input type="submit" name="enviar" value="Enviar">
+        </form>
     </div>
-        <hr>
-        <div class="brown-bg">
-        <div class="image-section">
-            <div class="image-group">
-                <div class="image-container">
-                    <img src="inicio.jpg" alt="Imagen 1">
-                    <p>Un menu de inicio interactivo y facil de usar para los nuevos usuarios</p>
-                </div>
-                <div class="image-container">
-                    <img src="busqueda.jpg" alt="Imagen 2">
-                    <p>Un Buscador con multitud de opciones para filtrar y poder encontrar a tu cuidador ideal en
-                        nuestra app</p>
-                </div>
-            </div>
-            <div class="image-group">
-                <div class="image-container">
-                    <img src="noticias.jpg" alt="Imagen 5">
-                    <p>Un apartado de noticias y eventos exclusivo para los usuarios que desen apoyarnos con una
-                        subscripcion mensual</p>
-                </div>
-                <div class="image-container">
-                    <img src="IAyuda.jpg" alt="Imagen 6">
-                    <p>Una novedosa IA de ayuda agregada en nuestra aplicacion que te respondera con todas las preguntas
-                        que puedas teners sobre mascotas desde nuestra aplicacion</p>
-                </div>
-            </div>
-            <div class="image-group">
-                <div class="image-container">
-                    <img src="chat.jpg" alt="Imagen 3">
-                    <p>Un apartado de chat simple pero efectivo donde podras comunicarte con los otros usuarios para
-                        interactuar y llegar a acuerdos</p>
-                </div>
-                <div class="image-container">
-                    <img src="tienda.jpg" alt="Imagen 4">
-                    <p>Una tienda con los productos que disponemos a nuestra disposicion que tenemos para ofrecerte</p>
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </div>
-
     <footer>
         <p>&copy; 2024 Pet4Sitter. Todos los derechos reservados.</p>
     </footer>
-
     <script>
         const checkbox = document.getElementById('cambiarColor');
         var solLuna = document.querySelector(".sol-luna");
@@ -131,7 +89,5 @@
             }
         });
     </script>
-
 </body>
-
 </html>

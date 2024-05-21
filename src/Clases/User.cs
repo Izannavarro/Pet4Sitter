@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace pet4sitter.Clases
 {
@@ -24,23 +25,25 @@ namespace pet4sitter.Clases
         private bool? premium;
         private bool? sitter;
         private bool? admin;
-        private string image;
+        private byte[] image;
         private double? latitud;
         private double? longitud;
 
         public string IdGoogle { get { return this.idGoogle; } }
-
         public string Name { get { return this.name; } }
-
+        public string Surname { get { return surname; } }
+        public string Password { get { return password; } }
+        public string Email { get { return email; } }
+        public string Location { get { return location; } }
         public bool? Premium { get { return this.premium; } }
-        public string Image { get { return this.image; } }
+        public byte[] Image { get { return this.image; } }
         public int? IdUser { get { return this.idUser; } }
         public double? Latitud { get { return this.latitud; } }
         public double? Longitud { get { return this.longitud; } }
 
         // Constructor
         public User() { }
-        public User(int? idUser, string idGoogle, string name, string surname, string email, string dni, string password, string location, bool? premium, bool? sitter, bool? admin, string image, double? latitud, double? longitud)
+        public User(int? idUser, string idGoogle, string name, string surname, string email, string dni, string password, string location, bool? premium, bool? sitter, bool? admin, byte[] image, double? latitud, double? longitud)
         {
             this.idUser = idUser;
             this.idGoogle = idGoogle;
@@ -57,7 +60,8 @@ namespace pet4sitter.Clases
             this.latitud = latitud;
             this.longitud = longitud;
         }
-        public User(int? idUser, string name, string email, string dni, string password, bool? sitter, bool? admin)
+      
+        public User(int? idUser, string name, string email, string dni, string password, bool? sitter, bool? admin, byte[] img)
         {
             this.idUser = idUser;
             this.name = name;
@@ -66,7 +70,9 @@ namespace pet4sitter.Clases
             this.password = password;
             this.sitter = sitter;
             this.admin = admin;
+            this.image = img;
         }
+
         public static List<User> ListarUsuarios(string query)
         {
             List<User> list = new List<User>();
@@ -74,6 +80,8 @@ namespace pet4sitter.Clases
             MySqlDataReader reader = com.ExecuteReader();
             while (reader.Read())
             {
+                byte[] ArrImg = reader.IsDBNull(reader.GetOrdinal("image")) ? null : (byte[])reader["image"];
+
                 list.Add(new User(
                                             reader.IsDBNull(reader.GetOrdinal("id_user")) ? (int?)null : reader.GetInt32("id_user"),
                                             reader.IsDBNull(reader.GetOrdinal("id_google")) ? null : reader.GetString("id_google"),
@@ -86,7 +94,7 @@ namespace pet4sitter.Clases
                                             reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean("premium"),
                                             reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean("sitter"),
                                             reader.IsDBNull(reader.GetOrdinal("admin")) ? (bool?)null : reader.GetBoolean("admin"),
-                                            reader.IsDBNull(reader.GetOrdinal("image")) ? null : (string)reader["image"],
+                                            reader.IsDBNull(reader.GetOrdinal("image")) ? null : ArrImg,
                                             reader.IsDBNull(reader.GetOrdinal("latitud")) ? (double?)null : reader.GetDouble("latitud"),
                                             reader.IsDBNull(reader.GetOrdinal("longitud")) ? (double?)null : reader.GetDouble("longitud")
                                         ));
@@ -104,6 +112,8 @@ namespace pet4sitter.Clases
             MySqlDataReader reader = com.ExecuteReader();
             while (reader.Read())
             {
+                byte[] ArrImg = reader.IsDBNull(reader.GetOrdinal("image")) ? null : (byte[])reader["image"];
+
                 user = new User(
                                             reader.IsDBNull(reader.GetOrdinal("id_user")) ? (int?)null : reader.GetInt32("id_user"),
                                             reader.IsDBNull(reader.GetOrdinal("id_google")) ? null : reader.GetString("id_google"),
@@ -116,7 +126,7 @@ namespace pet4sitter.Clases
                                             reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean("premium"),
                                             reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean("sitter"),
                                             reader.IsDBNull(reader.GetOrdinal("admin")) ? (bool?)null : reader.GetBoolean("admin"),
-                                            reader.IsDBNull(reader.GetOrdinal("image")) ? null : (string)reader["image"],
+                                            reader.IsDBNull(reader.GetOrdinal("image")) ? null : ArrImg,
                                             reader.IsDBNull(reader.GetOrdinal("latitud")) ? (double?)null : reader.GetDouble("latitud"),
                                             reader.IsDBNull(reader.GetOrdinal("longitud")) ? (double?)null : reader.GetDouble("longitud")
                                         );
@@ -135,6 +145,8 @@ namespace pet4sitter.Clases
 
             while (reader.Read())
             {
+                byte[] ArrImg = reader.IsDBNull(reader.GetOrdinal("image")) ? null : (byte[])reader["image"];
+
                 user = new User(
                                             reader.IsDBNull(reader.GetOrdinal("id_user")) ? (int?)null : reader.GetInt32("id_user"),
                                             reader.IsDBNull(reader.GetOrdinal("id_google")) ? null : reader.GetString("id_google"),
@@ -147,7 +159,7 @@ namespace pet4sitter.Clases
                                             reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean("premium"),
                                             reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean("sitter"),
                                             reader.IsDBNull(reader.GetOrdinal("admin")) ? (bool?)null : reader.GetBoolean("admin"),
-                                            reader.IsDBNull(reader.GetOrdinal("image")) ? null : (string)reader["image"],
+                                            reader.IsDBNull(reader.GetOrdinal("image")) ? null : ArrImg,
                                             reader.IsDBNull(reader.GetOrdinal("latitud")) ? (double?)null : reader.GetDouble("latitud"),
                                             reader.IsDBNull(reader.GetOrdinal("longitud")) ? (double?)null : reader.GetDouble("longitud")
                                         );
@@ -158,7 +170,7 @@ namespace pet4sitter.Clases
         public static int RegistrarUsuario(User u)
         {
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(u.password);
-            string query = "INSERT INTO users (name, surname, email, dni, password, location, sitter";
+            string query = "INSERT INTO users (name, surname, email, dni, password, location, sitter)";
             MySqlCommand comando = new MySqlCommand(query, ConBD.Conexion);
             comando.Parameters.AddWithValue("@name", u.name);
             comando.Parameters.AddWithValue("@surname", u.surname);
@@ -263,7 +275,7 @@ namespace pet4sitter.Clases
 
             try
             {
-                string consulta = "SELECT id_user, name, email, dni, password, sitter, admin FROM users";
+                string consulta = "SELECT id_user, name, email, dni, password, sitter, admin, image FROM users";
                 using (MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion))
                 {
                     using (MySqlDataReader reader = comando.ExecuteReader())
@@ -324,6 +336,7 @@ namespace pet4sitter.Clases
                     {
                         while (reader.Read())
                         {
+                            byte[] ArrImg = reader.IsDBNull(reader.GetOrdinal("image")) ? null : (byte[])reader["image"];
                             User user = new User(
                                     reader.IsDBNull(reader.GetOrdinal("id_user")) ? (int?)null : reader.GetInt32(reader.GetOrdinal("id_user")),
                                     reader.IsDBNull(reader.GetOrdinal("id_google")) ? null : reader.GetString(reader.GetOrdinal("id_google")),
@@ -336,7 +349,7 @@ namespace pet4sitter.Clases
                                     reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean(reader.GetOrdinal("premium")),
                                     reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean(reader.GetOrdinal("sitter")),
                                     reader.IsDBNull(reader.GetOrdinal("admin")) ? (bool?)null : reader.GetBoolean(reader.GetOrdinal("admin")),
-                                    reader.IsDBNull(reader.GetOrdinal("image")) ? null : reader.GetString(reader.GetOrdinal("image")),
+                                    reader.IsDBNull(reader.GetOrdinal("image")) ? null : ArrImg,
                                     reader.IsDBNull(reader.GetOrdinal("latitud")) ? (double?)null : reader.GetDouble(reader.GetOrdinal("latitud")),
                                     reader.IsDBNull(reader.GetOrdinal("longitud")) ? (double?)null : reader.GetDouble(reader.GetOrdinal("longitud"))
                                     );
@@ -345,7 +358,6 @@ namespace pet4sitter.Clases
                         }
                     }
                 }
-            
             }
             catch (Exception ex)
             {
@@ -382,6 +394,27 @@ namespace pet4sitter.Clases
             {
                 Console.WriteLine("Error al contar usuarios cercanos: " + ex.Message);
             }
+            return totalUsuarios;
+        }
+        public static void ActualizarUsuario(User u)
+        {
+            try
+            {
+                string consulta = String.Format("UPDATE users SET name = '{0}',surname = '{1}',location = '{2}', email = '{3}', password = '{4}', image = '{5} WHERE id_user = '{6}'", u.Name, u.Surname, u.Location, u.Email, u.Password, u.Image, u.IdUser);
+                MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo actualizar tu Perfil", ex.Message);
+            }
+        }
+
+
+
+    }
+    
 
             return totalUsuarios;
         }
