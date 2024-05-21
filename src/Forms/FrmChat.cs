@@ -226,18 +226,23 @@ namespace pet4sitter
                 // Limpiar los labels antes de asignar nuevos valores
                 lblIdChat1.Text = "";
                 lblNombre1.Text = "";
+                pcbImagen1.Image = null;
                 lblIdChat2.Text = "";
                 lblNombre2.Text = "";
+                pcbImagen2.Image = null;
                 lblIdChat3.Text = "";
                 lblNombre3.Text = "";
+                pcbImagen3.Image = null;
                 lblIdChat4.Text = "";
                 lblNombre4.Text = "";
+                pcbImagen4.Image = null;
 
                 // Verificar y asignar los valores a los labels
                 if (d.Rows.Count > 0)
                 {
                     lblIdChat1.Text = d.Rows[0]["id_user"].ToString();
                     lblNombre1.Text = d.Rows[0]["name"].ToString();
+                    //pcbImagen1.Image = (Image)d.Rows[0]["image"];
                 }
 
                 if (d.Rows.Count > 1)

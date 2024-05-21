@@ -113,10 +113,6 @@ namespace pet4sitter
                 if (users.Count > 0)
                 {
                     lblNombreChat1.Text = users[0].Name;
-                    if (users[0].Image != null)
-                    {
-                        pcbChat1.Load(users[0].Image);
-                    }
 
                 }
 
@@ -125,10 +121,6 @@ namespace pet4sitter
                     if (users[1] != null)
                     {
                         lblNombreChat2.Text = users[1].Name;
-                        if (users[1].Image != null)
-                        {
-                            pcbChat2.Load(users[1].Image);
-                        }
                     }
                 }
 
@@ -138,10 +130,6 @@ namespace pet4sitter
                     if (users[2] != null)
                     {
                         lblNombreChat3.Text = users[2].Name;
-                        if (users[2].Image != "")
-                        {
-                            pcbChat1.Load(users[2].Image);
-                        }
                     }
                 }
                 ConBD.CerrarConexion();
