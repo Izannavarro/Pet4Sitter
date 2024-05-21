@@ -51,12 +51,17 @@ namespace pet4sitter
             this.lblNombre5 = new System.Windows.Forms.Label();
             this.pcbImagen5 = new System.Windows.Forms.PictureBox();
             this.pnl6 = new System.Windows.Forms.Panel();
-            this.fLPanelChat = new pet4sitter.Clases.BufferedFlowLayoutPanel();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
             this.btnIdioma = new System.Windows.Forms.Button();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.tmr = new System.Windows.Forms.Timer(this.components);
+            this.lblIdChat1 = new System.Windows.Forms.Label();
+            this.lblIdChat2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblIdChat4 = new System.Windows.Forms.Label();
+            this.lblIdChat3 = new System.Windows.Forms.Label();
+            this.fLPanelChat = new pet4sitter.Clases.BufferedFlowLayoutPanel();
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel3.SuspendLayout();
             this.pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen1)).BeginInit();
@@ -89,6 +94,8 @@ namespace pet4sitter
             // pnl1
             // 
             this.pnl1.BackColor = System.Drawing.Color.White;
+            this.pnl1.Controls.Add(this.lblIdChat2);
+            this.pnl1.Controls.Add(this.lblIdChat1);
             this.pnl1.Controls.Add(this.lblNombre1);
             this.pnl1.Controls.Add(this.pcbImagen1);
             this.pnl1.Location = new System.Drawing.Point(19, 17);
@@ -96,6 +103,10 @@ namespace pet4sitter
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(256, 127);
             this.pnl1.TabIndex = 12;
+            this.pnl1.Click += new System.EventHandler(this.pnl1_Click);
+            this.pnl1.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl1_Paint);
+            this.pnl1.MouseLeave += new System.EventHandler(this.pnl1_MouseLeave);
+            this.pnl1.MouseHover += new System.EventHandler(this.pnl1_MouseHover);
             // 
             // lblNombre1
             // 
@@ -127,6 +138,7 @@ namespace pet4sitter
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(259, 127);
             this.pnl2.TabIndex = 11;
+            this.pnl2.Click += new System.EventHandler(this.pnl2_Click);
             // 
             // lblNombre2
             // 
@@ -151,6 +163,8 @@ namespace pet4sitter
             // pnl3
             // 
             this.pnl3.BackColor = System.Drawing.Color.White;
+            this.pnl3.Controls.Add(this.lblIdChat3);
+            this.pnl3.Controls.Add(this.label1);
             this.pnl3.Controls.Add(this.lblNombre3);
             this.pnl3.Controls.Add(this.pcbImagen3);
             this.pnl3.Location = new System.Drawing.Point(16, 302);
@@ -192,6 +206,7 @@ namespace pet4sitter
             // pnl4
             // 
             this.pnl4.BackColor = System.Drawing.Color.White;
+            this.pnl4.Controls.Add(this.lblIdChat4);
             this.pnl4.Controls.Add(this.lblNombre4);
             this.pnl4.Controls.Add(this.pcbImagen4);
             this.pnl4.Location = new System.Drawing.Point(16, 446);
@@ -284,16 +299,6 @@ namespace pet4sitter
             this.pnl6.Size = new System.Drawing.Size(728, 530);
             this.pnl6.TabIndex = 13;
             // 
-            // fLPanelChat
-            // 
-            this.fLPanelChat.AutoScroll = true;
-            this.fLPanelChat.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.fLPanelChat.Location = new System.Drawing.Point(4, 14);
-            this.fLPanelChat.Margin = new System.Windows.Forms.Padding(4);
-            this.fLPanelChat.Name = "fLPanelChat";
-            this.fLPanelChat.Size = new System.Drawing.Size(720, 432);
-            this.fLPanelChat.TabIndex = 14;
-            // 
             // btnEnviar
             // 
             this.btnEnviar.Location = new System.Drawing.Point(624, 462);
@@ -325,6 +330,72 @@ namespace pet4sitter
             this.btnIdioma.UseVisualStyleBackColor = true;
             this.btnIdioma.Click += new System.EventHandler(this.btnIdioma_Click);
             // 
+            // tmr
+            // 
+            this.tmr.Enabled = true;
+            this.tmr.Interval = 1000;
+            this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
+            // 
+            // lblIdChat1
+            // 
+            this.lblIdChat1.AutoSize = true;
+            this.lblIdChat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdChat1.Location = new System.Drawing.Point(120, 69);
+            this.lblIdChat1.Name = "lblIdChat1";
+            this.lblIdChat1.Size = new System.Drawing.Size(0, 22);
+            this.lblIdChat1.TabIndex = 10;
+            this.lblIdChat1.Visible = false;
+            // 
+            // lblIdChat2
+            // 
+            this.lblIdChat2.AutoSize = true;
+            this.lblIdChat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdChat2.Location = new System.Drawing.Point(128, 214);
+            this.lblIdChat2.Name = "lblIdChat2";
+            this.lblIdChat2.Size = new System.Drawing.Size(0, 22);
+            this.lblIdChat2.TabIndex = 11;
+            this.lblIdChat2.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(131, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 22);
+            this.label1.TabIndex = 12;
+            this.label1.Visible = false;
+            // 
+            // lblIdChat4
+            // 
+            this.lblIdChat4.AutoSize = true;
+            this.lblIdChat4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdChat4.Location = new System.Drawing.Point(131, 79);
+            this.lblIdChat4.Name = "lblIdChat4";
+            this.lblIdChat4.Size = new System.Drawing.Size(0, 22);
+            this.lblIdChat4.TabIndex = 13;
+            this.lblIdChat4.Visible = false;
+            // 
+            // lblIdChat3
+            // 
+            this.lblIdChat3.AutoSize = true;
+            this.lblIdChat3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdChat3.Location = new System.Drawing.Point(131, 79);
+            this.lblIdChat3.Name = "lblIdChat3";
+            this.lblIdChat3.Size = new System.Drawing.Size(0, 22);
+            this.lblIdChat3.TabIndex = 12;
+            this.lblIdChat3.Visible = false;
+            // 
+            // fLPanelChat
+            // 
+            this.fLPanelChat.AutoScroll = true;
+            this.fLPanelChat.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.fLPanelChat.Location = new System.Drawing.Point(4, 14);
+            this.fLPanelChat.Margin = new System.Windows.Forms.Padding(4);
+            this.fLPanelChat.Name = "fLPanelChat";
+            this.fLPanelChat.Size = new System.Drawing.Size(720, 432);
+            this.fLPanelChat.TabIndex = 14;
+            // 
             // barraLateral1
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
@@ -333,12 +404,6 @@ namespace pet4sitter
             this.barraLateral1.Name = "barraLateral1";
             this.barraLateral1.Size = new System.Drawing.Size(415, 737);
             this.barraLateral1.TabIndex = 15;
-            // 
-            // tmr
-            // 
-            this.tmr.Enabled = true;
-            this.tmr.Interval = 1000;
-            this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
             // 
             // FrmChat
             // 
@@ -407,5 +472,10 @@ namespace pet4sitter
         private BarraLateral barraLateral1;
         private System.Windows.Forms.Timer tmr;
         private BufferedFlowLayoutPanel fLPanelChat;
+        private System.Windows.Forms.Label lblIdChat2;
+        private System.Windows.Forms.Label lblIdChat1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblIdChat4;
+        private System.Windows.Forms.Label lblIdChat3;
     }
 }

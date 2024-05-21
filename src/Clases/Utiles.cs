@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Imaging;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace pet4sitter.Clases
 {
@@ -71,5 +73,57 @@ namespace pet4sitter.Clases
                 return returnImage;
             }
         }
+
+
+        public static DataTable ExecuteQuery(string query)
+        {
+            // Create a new DataTable to hold the query results
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                // Create a new MySqlCommand with the provided query and connection
+                MySqlCommand command = new MySqlCommand(query, ConBD.Conexion);
+
+                // Create a new MySqlDataAdapter to execute the query and fill the DataTable
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                // Fill the DataTable with the query results
+                adapter.Fill(dataTable);
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (e.g., log the error)
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+
+            // Return the filled DataTable
+            return dataTable;
+        }
+
+        public static DataTable ExecuteQuery(string query, params MySqlParameter[] parameters)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                    using (MySqlCommand cmd = new MySqlCommand(query, ConBD.Conexion))
+                    {
+                        if (parameters != null)
+                        {
+                            cmd.Parameters.AddRange(parameters);
+                        }
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dt);
+                        }
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error ejecutando la consulta: {ex.Message}");
+            }
+            return dt;
+        }
+
     }
 }
