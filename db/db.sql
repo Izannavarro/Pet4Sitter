@@ -48,3 +48,10 @@ CREATE TABLE IF NOT EXISTS delivery (
     delivery_date DATETIME not null,
     FOREIGN KEY (id_receiver) REFERENCES users(id_user)
 ) CHARACTER SET utf8mb4;
+CREATE TABLE IF NOT EXISTS delivery_products (
+    id_delivery INT NOT NULL,
+    id_product INT NOT NULL,
+    PRIMARY KEY (id_delivery, id_product),
+    FOREIGN KEY (id_delivery) REFERENCES delivery(id_delivery),
+    FOREIGN KEY (id_product) REFERENCES products(id_product)
+) CHARACTER SET utf8mb4;
