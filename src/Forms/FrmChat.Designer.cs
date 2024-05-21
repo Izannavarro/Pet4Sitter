@@ -60,9 +60,7 @@ namespace pet4sitter
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
             this.barraLateral1 = new pet4sitter.BarraLateral();
-            this.btnIdioma = new System.Windows.Forms.Button();
             this.tmr = new System.Windows.Forms.Timer(this.components);
-            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel3.SuspendLayout();
             this.pnl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen1)).BeginInit();
@@ -383,17 +381,6 @@ namespace pet4sitter
             this.txtMensaje.Name = "txtMensaje";
             this.txtMensaje.Size = new System.Drawing.Size(577, 45);
             this.txtMensaje.TabIndex = 0;
-            // 
-            // btnIdioma
-            // 
-            this.btnIdioma.Location = new System.Drawing.Point(1285, 185);
-            this.btnIdioma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIdioma.Name = "btnIdioma";
-            this.btnIdioma.Size = new System.Drawing.Size(116, 76);
-            this.btnIdioma.TabIndex = 14;
-            this.btnIdioma.Text = "button1";
-            this.btnIdioma.UseVisualStyleBackColor = true;
-            this.btnIdioma.Click += new System.EventHandler(this.btnIdioma_Click);
             // 
             // tmr
             // 
