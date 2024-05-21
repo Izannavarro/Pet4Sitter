@@ -60,7 +60,7 @@ namespace pet4sitter.Clases
             this.latitud = latitud;
             this.longitud = longitud;
         }
-      
+
         public User(int? idUser, string name, string email, string dni, string password, bool? sitter, bool? admin, byte[] img)
         {
             this.idUser = idUser;
@@ -322,7 +322,7 @@ namespace pet4sitter.Clases
 
             try
             {
-                using (MySqlCommand command = new MySqlCommand(query,ConBD.Conexion))
+                using (MySqlCommand command = new MySqlCommand(query, ConBD.Conexion))
                 {
                     // Parámetros de la consulta
                     command.Parameters.AddWithValue("@LatitudReferencia", latitudReferencia);
@@ -410,16 +410,6 @@ namespace pet4sitter.Clases
                 MessageBox.Show("No se pudo actualizar tu Perfil", ex.Message);
             }
         }
-
-
-
-    }
-    
-
-            return totalUsuarios;
-        }
-
-
 
     }
 
