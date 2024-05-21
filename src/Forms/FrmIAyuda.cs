@@ -149,7 +149,7 @@ namespace pet4sitter
             try
             {   
                 using (var client = new WebClient())
-                using (var stream = client.OpenRead("http://www.google.com"))
+                using (var stream = client.OpenRead("ahttp://www.google.com"))
                 {
                     return true; // Se obtuvo una respuesta exitosa
                 }
