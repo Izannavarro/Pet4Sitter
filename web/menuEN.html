@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet4Sitter - Animal Caretakers</title>
+    <link rel="stylesheet" href="styleMenu.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Pet4Sitter Logo">
+            <h1>Pet4Sitter</h1>
+        </div>
+        <div id="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="cambiarColor">
+                <span class="slider round">
+                    <span class="sol-luna">&#9728;</span>
+                </span>
+            </label>
+        </div>
+        <div id="opciones">
+            <a href="menuEN.html" class="opcion home" id="home-link">Menu</a>
+            <a href="downloadEN.html" class="opcion download">Download</a>
+            <a href="aboutUsEN.html" id="about-us-link" class="opcion aboutus">About us</a>
+            <a href="#contact" class="opcion contactus">Contact us</a>
+            <a href="menuEN.html">EN</a>
+            <a>&nbsp;&nbsp;</a>
+            <a href="menuES.html">ES</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="background-image">
+            <h1>Pet4Sitter</h1>
+            <p>The best application to support you with your pet</p>
+            <div class="descargar">
+                <a href="" class="descar windows">Windows</a>
+                <a href="" class="descar maCos">MacOS</a>
+                <a href="" class="descar Linus">Linux</a>
+            </div>
+            <p>Additional smaller text line</p>
+            <p>Another additional smaller text line</p>
+        </div>
+        <hr>
+        <div class="brown-bg">
+            <div class="image-section">
+                <div class="image-group">
+                    <div class="image-container">
+                        <img src="inicio.jpg" alt="Image 1">
+                        <p>An interactive and easy-to-use start menu for new users</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="busqueda.jpg" alt="Image 2">
+                        <p>A Search with a multitude of filtering options to find your ideal caretaker in our app</p>
+                    </div>
+                </div>
+                <div class="image-group">
+                    <div class="image-container">
+                        <img src="noticias.jpg" alt="Image 5">
+                        <p>A news and events section exclusive for users who wish to support us with a monthly
+                            subscription</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="IAyuda.jpg" alt="Image 6">
+                        <p>A novel Help AI added in our application that will answer all the questions you may have
+                            about pets from our application</p>
+                    </div>
+                </div>
+                <div class="image-group">
+                    <div class="image-container">
+                        <img src="chat.jpg" alt="Image 3">
+                        <p>A simple but effective chat section where you can communicate with other users to interact
+                            and reach agreements</p>
+                    </div>
+                    <div class="image-container">
+                        <img src="tienda.jpg" alt="Image 4">
+                        <p>A store with the products we have available to offer you</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pet4Sitter. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const checkbox = document.getElementById('cambiarColor');
+        var solLuna = document.querySelector(".sol-luna");
+        checkbox.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+            const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
+
+            elementsToToggle.forEach(element => {
+                element.classList.toggle('dark-mode');
+
+            });
+
+            if (checkbox.checked) {
+                solLuna.innerHTML = "&#127769;";
+            } else {
+                solLuna.innerHTML = "&#9728;";
+            }
+
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('isDarkMode', isDarkMode);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const isDarkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                checkbox.checked = true;
+                const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
+                elementsToToggle.forEach(element => {
+                    element.classList.add('dark-mode');
+
+                });
+                solLuna.innerHTML = "&#127769;";
+            } else {
+                solLuna.innerHTML = "&#9728;";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
