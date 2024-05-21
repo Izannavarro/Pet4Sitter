@@ -33,13 +33,6 @@ namespace pet4sitter
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show();
-        }
         private void AplicarIdioma()
         {
             lblDireccion.Text = Resources.Recursos_Localizable.FrmEditarDireccion.lblDireccion_Text;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing.Imaging;
 
 namespace pet4sitter.Clases
 {
@@ -51,6 +52,23 @@ namespace pet4sitter.Clases
                 SizeF size = g.MeasureString(lbl.Text, lbl.Font, lbl.Width);
                 int padding = 10; // Añadir margen para asegurar que el texto no se corte
                 return (int)Math.Ceiling(size.Height) + padding;
+            }
+        }
+
+        public static byte[] ImageToByteArray(Image imageIn)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                imageIn.Save(ms, ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+        }
+        public static Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            using (MemoryStream ms = new MemoryStream(byteArrayIn))
+            {
+                Image returnImage = Image.FromStream(ms);
+                return returnImage;
             }
         }
     }

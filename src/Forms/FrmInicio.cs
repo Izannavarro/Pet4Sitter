@@ -64,7 +64,7 @@ namespace pet4sitter
                 {
                     lblProductoDestacado2.Text = lprod[1].NombreProducto;
                     lblPrecioProductoDestacado2.Text = lprod[1].Precio.ToString();
-                    pcbProductoDestacado2.Load(lprod[1].UrlImagen);
+                    pcbProductoDestacado2.Load(lprod[1].UrlImagen.ToString());
                 }
                 ConBD.CerrarConexion();
             }

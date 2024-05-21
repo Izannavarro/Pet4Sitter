@@ -42,7 +42,6 @@
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblCVC = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -184,23 +183,12 @@
             this.lblCVC.TabIndex = 72;
             this.lblCVC.Text = "CVC:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 49);
-            this.button1.TabIndex = 73;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FrmEditarTarjeta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(613, 477);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblCVC);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblNumero);
@@ -216,7 +204,7 @@
             this.Controls.Add(this.lblTarjeta);
             this.Controls.Add(this.lblConfiguracionAvanzada);
             this.Name = "FrmEditarTarjeta";
-            this.Text = "FrmEditarTarjeta";
+            this.Text = " ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmEditarTarjeta_FormClosed);
             this.Load += new System.EventHandler(this.FrmEditarTarjeta_Load);
             this.ResumeLayout(false);
@@ -240,6 +228,5 @@
         private System.Windows.Forms.Label lblNumero;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblCVC;
-        private System.Windows.Forms.Button button1;
     }
 }
