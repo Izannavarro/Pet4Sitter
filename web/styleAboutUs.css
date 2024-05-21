@@ -118,11 +118,6 @@ input[type="submit"]:hover {
     font-size: 11px; /* Cambiar el tamaño del div */
 }
 
-.logo-container img {
-    width: 150px; /* Ajusta el tamaño según sea necesario */
-    height: auto; /* Asegúrate de que la imagen mantenga su proporción */
-    margin-right: 10px; /* Espacio entre la imagen y el título */
-}
 
 #theme-image1,
 #theme-image2,
@@ -152,7 +147,7 @@ nav a.dark-mode {
 footer.dark-mode {
     background-color: #4b3d33; /* Marrón oscuro */
 }
- 
+
 footer p.dark-mode {
     color: black; /* Marrón clarito */
 }
@@ -168,20 +163,6 @@ footer p.dark-mode {
     font-size: 35px;
 }
 
-#changemode {
-    position: absolute; 
-    top: 20px; 
-    right: 10px; 
-    width: 35px;
-    height: auto;
-    cursor: pointer;
-    z-index: 9999; 
-    margin-right: 30px;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-}
 #theme-image1 {
     width: 100%;
     height: auto;
