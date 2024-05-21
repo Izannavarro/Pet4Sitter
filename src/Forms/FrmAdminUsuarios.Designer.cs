@@ -285,17 +285,6 @@ namespace pet4sitter
             this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 50;
             this.label1.Text = "iduser";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(29, 105);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 66);
-            this.button2.TabIndex = 56;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // FrmAdminUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

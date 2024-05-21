@@ -54,7 +54,6 @@ namespace pet4sitter
             this.fLPanelChat = new pet4sitter.Clases.BufferedFlowLayoutPanel();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
-            this.btnIdioma = new System.Windows.Forms.Button();
             this.barraLateral1 = new pet4sitter.BarraLateral();
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
@@ -314,17 +313,6 @@ namespace pet4sitter
             this.txtMensaje.Size = new System.Drawing.Size(577, 45);
             this.txtMensaje.TabIndex = 0;
             // 
-            // btnIdioma
-            // 
-            this.btnIdioma.Location = new System.Drawing.Point(1285, 185);
-            this.btnIdioma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIdioma.Name = "btnIdioma";
-            this.btnIdioma.Size = new System.Drawing.Size(116, 76);
-            this.btnIdioma.TabIndex = 14;
-            this.btnIdioma.Text = "button1";
-            this.btnIdioma.UseVisualStyleBackColor = true;
-            this.btnIdioma.Click += new System.EventHandler(this.btnIdioma_Click);
-            // 
             // barraLateral1
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
@@ -346,7 +334,6 @@ namespace pet4sitter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1479, 734);
-            this.Controls.Add(this.btnIdioma);
             this.Controls.Add(this.pnl5);
             this.Controls.Add(this.pnl6);
             this.Controls.Add(this.panel3);
@@ -403,7 +390,6 @@ namespace pet4sitter
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txtMensaje;
         private System.Windows.Forms.Button btnOpciones;
-        private System.Windows.Forms.Button btnIdioma;
         private BarraLateral barraLateral1;
         private System.Windows.Forms.Timer tmr;
         private BufferedFlowLayoutPanel fLPanelChat;

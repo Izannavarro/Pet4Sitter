@@ -42,5 +42,10 @@ namespace pet4sitter
         {
             Application.Exit();
         }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

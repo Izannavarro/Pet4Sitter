@@ -42,13 +42,6 @@ namespace pet4sitter
             btnEnviar.Text = Resources.Recursos_Localizable.FrmChat.btnEnviar_Text;
         }
 
-        private void btnIdioma_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show(); // Muestra el formulario FrmConfiguracion
-        }
-
         private void FrmChat_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

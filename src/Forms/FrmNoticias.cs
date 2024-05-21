@@ -74,13 +74,6 @@ namespace pet4sitter
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show();
-        }
-
         private void AplicarIdioma()
         {
             btnAnterior.Text = Resources.Recursos_Localizable.FrmNoticias.btnAnterior_Text;
