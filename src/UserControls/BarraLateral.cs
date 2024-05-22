@@ -248,5 +248,32 @@ namespace pet4sitter
             form.Show();
             formActual.Dispose();
         }
+
+        private void pcbIaYuda_Click(object sender, EventArgs e)
+        {
+            FrmIAyuda form = new FrmIAyuda();
+            form.Show();
+            formActual.Dispose();
+        }
+
+        private void pcbEditarPerfil_Click(object sender, EventArgs e)
+        {
+            FrmPerfil form = new FrmPerfil();
+            form.Show();
+            formActual.Dispose();
+        }
+
+        private void pcbNoticias_Click(object sender, EventArgs e)
+        {
+            FrmNoticias frmNoticias = new FrmNoticias();
+            frmNoticias.Show();
+            formActual.Dispose();
+        }
+
+        private void pcbAjustes_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracion frm = new FrmConfiguracion();
+            frm.ShowDialog();
+        }
     }
 }

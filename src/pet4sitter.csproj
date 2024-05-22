@@ -209,6 +209,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmAlta.en-US.Designer.cs">
+      <DependentUpon>FrmAlta.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmEditarPerfil.en-US1.Designer.cs">
+      <DependentUpon>FrmEditarPerfil.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmEditarPerfil.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmEditarPerfil.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\BarraLateral.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -223,7 +238,6 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Data.cs" />
-    <Compile Include="Clases\DB.cs" />
     <Compile Include="Clases\ForgotPasswordMail.cs" />
     <Compile Include="Forms\FrmAdminProductos.cs">
       <SubType>Form</SubType>
@@ -391,11 +405,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Resources\Recursos Localizable\FrmAlta.en-US.Designer.cs">
-      <DependentUpon>FrmAlta.en-US.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Resources\Recursos Localizable\FrmAlta.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -539,6 +548,22 @@
     <EmbeddedResource Include="Forms\FrmIAyuda.resx">
       <DependentUpon>FrmIAyuda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FrmEditarPerfil.en-US.resx" />
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAlta.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmAlta.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmEditarPerfil.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmEditarPerfil.en-US1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmEditarPerfil.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmEditarPerfil.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BarraLateral.resx">
       <DependentUpon>BarraLateral.cs</DependentUpon>
     </EmbeddedResource>
@@ -643,11 +668,6 @@
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmAdminUsuarios.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FrmAdminUsuarios.en-US.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Recursos Localizable\FrmAlta.en-US.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>FrmAlta.en-US.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmAlta.resx">

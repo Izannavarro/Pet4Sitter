@@ -28,30 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.lblFiltros = new System.Windows.Forms.Label();
             this.lblRango = new System.Windows.Forms.Label();
-            this.lblUbicacion = new System.Windows.Forms.Label();
             this.nudDesde = new System.Windows.Forms.NumericUpDown();
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblHasta = new System.Windows.Forms.Label();
             this.nudHasta = new System.Windows.Forms.NumericUpDown();
-            this.txtUbi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).BeginInit();
             this.SuspendLayout();
-            // 
-            // barraLateral1
-            // 
-            this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
-            this.barraLateral1.Location = new System.Drawing.Point(0, 0);
-            this.barraLateral1.Name = "barraLateral1";
-            this.barraLateral1.Size = new System.Drawing.Size(311, 599);
-            this.barraLateral1.TabIndex = 0;
             // 
             // lblFiltros
             // 
@@ -70,7 +60,7 @@
             this.lblRango.AutoSize = true;
             this.lblRango.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRango.ForeColor = System.Drawing.Color.White;
-            this.lblRango.Location = new System.Drawing.Point(207, 187);
+            this.lblRango.Location = new System.Drawing.Point(418, 145);
             this.lblRango.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRango.Name = "lblRango";
             this.lblRango.Size = new System.Drawing.Size(229, 29);
@@ -78,23 +68,10 @@
             this.lblRango.Text = "Rango de Precios:";
             this.lblRango.Click += new System.EventHandler(this.label4_Click);
             // 
-            // lblUbicacion
-            // 
-            this.lblUbicacion.AutoSize = true;
-            this.lblUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUbicacion.ForeColor = System.Drawing.Color.White;
-            this.lblUbicacion.Location = new System.Drawing.Point(587, 187);
-            this.lblUbicacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUbicacion.Name = "lblUbicacion";
-            this.lblUbicacion.Size = new System.Drawing.Size(136, 29);
-            this.lblUbicacion.TabIndex = 7;
-            this.lblUbicacion.Text = "Ubicación:";
-            this.lblUbicacion.Click += new System.EventHandler(this.label5_Click);
-            // 
             // nudDesde
             // 
             this.nudDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudDesde.Location = new System.Drawing.Point(238, 233);
+            this.nudDesde.Location = new System.Drawing.Point(455, 230);
             this.nudDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudDesde.Name = "nudDesde";
             this.nudDesde.Size = new System.Drawing.Size(56, 28);
@@ -106,7 +83,7 @@
             this.lblDesde.AutoSize = true;
             this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesde.ForeColor = System.Drawing.Color.White;
-            this.lblDesde.Location = new System.Drawing.Point(155, 234);
+            this.lblDesde.Location = new System.Drawing.Point(373, 231);
             this.lblDesde.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(76, 24);
@@ -119,7 +96,7 @@
             this.lblHasta.AutoSize = true;
             this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHasta.ForeColor = System.Drawing.Color.White;
-            this.lblHasta.Location = new System.Drawing.Point(339, 235);
+            this.lblHasta.Location = new System.Drawing.Point(556, 232);
             this.lblHasta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(68, 24);
@@ -130,21 +107,17 @@
             // nudHasta
             // 
             this.nudHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudHasta.Location = new System.Drawing.Point(408, 232);
+            this.nudHasta.Location = new System.Drawing.Point(626, 229);
             this.nudHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nudHasta.Name = "nudHasta";
             this.nudHasta.Size = new System.Drawing.Size(56, 28);
             this.nudHasta.TabIndex = 11;
+            this.nudHasta.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.nudHasta.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
-            // 
-            // txtUbi
-            // 
-            this.txtUbi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUbi.Location = new System.Drawing.Point(592, 232);
-            this.txtUbi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtUbi.Name = "txtUbi";
-            this.txtUbi.Size = new System.Drawing.Size(242, 28);
-            this.txtUbi.TabIndex = 12;
             // 
             // label9
             // 
@@ -169,6 +142,7 @@
             this.btnBuscar.TabIndex = 22;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnBorrar
             // 
@@ -194,6 +168,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // barraLateral1
+            // 
+            this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
+            this.barraLateral1.Location = new System.Drawing.Point(0, 0);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLateral1.Name = "barraLateral1";
+            this.barraLateral1.Size = new System.Drawing.Size(311, 599);
+            this.barraLateral1.TabIndex = 0;
+            // 
             // FrmFiltrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,12 +187,10 @@
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtUbi);
             this.Controls.Add(this.nudHasta);
             this.Controls.Add(this.lblHasta);
             this.Controls.Add(this.lblDesde);
             this.Controls.Add(this.lblRango);
-            this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.nudDesde);
             this.Controls.Add(this.lblFiltros);
             this.Controls.Add(this.barraLateral1);
@@ -230,12 +211,10 @@
 
         private System.Windows.Forms.Label lblFiltros;
         private System.Windows.Forms.Label lblRango;
-        private System.Windows.Forms.Label lblUbicacion;
         private System.Windows.Forms.NumericUpDown nudDesde;
         private System.Windows.Forms.Label lblDesde;
         private System.Windows.Forms.Label lblHasta;
         private System.Windows.Forms.NumericUpDown nudHasta;
-        private System.Windows.Forms.TextBox txtUbi;
         private System.Windows.Forms.Label label9;
         private BarraLateral barraLateral1;
         private System.Windows.Forms.Button btnBuscar;

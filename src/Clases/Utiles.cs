@@ -8,11 +8,27 @@ using System.Windows.Forms;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Imaging;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace pet4sitter.Clases
 {
     public class Utiles
     {
+        public static string BuscarToken(string nombre)
+        {
+            if(ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                string query = "SELECT token_value FROM tokens WHERE token_name=@name;";
+                MySqlCommand com = new MySqlCommand(query,ConBD.Conexion);
+                com.Parameters.AddWithValue("name", nombre);
+                string tokenValue = com.ExecuteScalar()?.ToString(); // Ejecuta el comando y obtén el valor del token
+                ConBD.CerrarConexion();
+                return tokenValue ?? "none"; // Si el tokenValue es null, devuelve "none"
+            }
+            return "none";
+        }
         public static string CargarTokenNoticias()
         {
             try
@@ -45,6 +61,38 @@ namespace pet4sitter.Clases
             return "err";
         }
 
+        public static string CargarTokenGpt()
+        {
+            try
+            {
+                // Ruta del archivo token.json
+                string rutaArchivo = "token.json";
+
+                // Verifica si el archivo existe
+                if (File.Exists(rutaArchivo))
+                {
+                    // Lee el contenido del archivo JSON
+                    string contenidoJson = File.ReadAllText(rutaArchivo);
+
+                    // Convierte el contenido a un objeto JSON
+                    JObject tokenJson = JObject.Parse(contenidoJson);
+
+                    // Obtén el valor del atributo 'news' y asígnalo a ApiNoticias
+                    return tokenJson["GPT"].ToString();
+                }
+                else
+                {
+                    throw new FileNotFoundException("El archivo token.json no fue encontrado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Maneja cualquier excepción que ocurra al cargar el token de noticias
+                Console.WriteLine($"Error al cargar el token de noticias: {ex.Message}");
+            }
+            return "err";
+        }
+
         public static int ObtenerAlturaTexto(Label lbl)
         {
             using (Graphics g = lbl.CreateGraphics())
@@ -63,6 +111,7 @@ namespace pet4sitter.Clases
                 return ms.ToArray();
             }
         }
+
         public static Image ByteArrayToImage(byte[] byteArrayIn)
         {
             using (MemoryStream ms = new MemoryStream(byteArrayIn))
@@ -71,5 +120,57 @@ namespace pet4sitter.Clases
                 return returnImage;
             }
         }
+
+
+        public static DataTable ExecuteQuery(string query)
+        {
+            // Create a new DataTable to hold the query results
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                // Create a new MySqlCommand with the provided query and connection
+                MySqlCommand command = new MySqlCommand(query, ConBD.Conexion);
+
+                // Create a new MySqlDataAdapter to execute the query and fill the DataTable
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+                // Fill the DataTable with the query results
+                adapter.Fill(dataTable);
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions (e.g., log the error)
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+
+            // Return the filled DataTable
+            return dataTable;
+        }
+
+        public static DataTable ExecuteQuery(string query, params MySqlParameter[] parameters)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                    using (MySqlCommand cmd = new MySqlCommand(query, ConBD.Conexion))
+                    {
+                        if (parameters != null)
+                        {
+                            cmd.Parameters.AddRange(parameters);
+                        }
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dt);
+                        }
+                    }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error ejecutando la consulta: {ex.Message}");
+            }
+            return dt;
+        }
+
     }
 }

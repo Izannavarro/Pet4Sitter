@@ -58,20 +58,18 @@ namespace pet4sitter
             this.lblTitlepet4sitter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitlepet4sitter.AutoSize = true;
             this.lblTitlepet4sitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.4F, System.Drawing.FontStyle.Bold);
-            this.lblTitlepet4sitter.Location = new System.Drawing.Point(631, 116);
-            this.lblTitlepet4sitter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitlepet4sitter.Location = new System.Drawing.Point(473, 94);
             this.lblTitlepet4sitter.Name = "lblTitlepet4sitter";
-            this.lblTitlepet4sitter.Size = new System.Drawing.Size(128, 30);
+            this.lblTitlepet4sitter.Size = new System.Drawing.Size(111, 25);
             this.lblTitlepet4sitter.TabIndex = 3;
             this.lblTitlepet4sitter.Text = "pet4sitter";
             // 
             // lblInfo
             // 
             this.lblInfo.AutoSize = true;
-            this.lblInfo.Location = new System.Drawing.Point(117, 337);
-            this.lblInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInfo.Location = new System.Drawing.Point(88, 274);
             this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(683, 16);
+            this.lblInfo.Size = new System.Drawing.Size(543, 13);
             this.lblInfo.TabIndex = 4;
             this.lblInfo.Text = "pet4sitter es un apartado de ayuda con IA y puede cometer errores, si quiere más " +
     "informacion puede ver nuestras ";
@@ -93,20 +91,18 @@ namespace pet4sitter
             this.panel1.Controls.Add(this.btnSend);
             this.panel1.Controls.Add(this.txtPrompt);
             this.panel1.Controls.Add(this.lblInfo);
-            this.panel1.Location = new System.Drawing.Point(187, 194);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(140, 158);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 401);
+            this.panel1.Size = new System.Drawing.Size(738, 326);
             this.panel1.TabIndex = 5;
             // 
             // pcbLoading
             // 
             this.pcbLoading.BackColor = System.Drawing.Color.Transparent;
             this.pcbLoading.Image = global::pet4sitter.Properties.Resources.loading;
-            this.pcbLoading.Location = new System.Drawing.Point(471, 145);
-            this.pcbLoading.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbLoading.Location = new System.Drawing.Point(353, 118);
             this.pcbLoading.Name = "pcbLoading";
-            this.pcbLoading.Size = new System.Drawing.Size(71, 60);
+            this.pcbLoading.Size = new System.Drawing.Size(53, 49);
             this.pcbLoading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbLoading.TabIndex = 16;
             this.pcbLoading.TabStop = false;
@@ -117,10 +113,9 @@ namespace pet4sitter
             this.lblErrorWifi.AutoSize = true;
             this.lblErrorWifi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.lblErrorWifi.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorWifi.Location = new System.Drawing.Point(245, 298);
-            this.lblErrorWifi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblErrorWifi.Location = new System.Drawing.Point(184, 242);
             this.lblErrorWifi.Name = "lblErrorWifi";
-            this.lblErrorWifi.Size = new System.Drawing.Size(513, 24);
+            this.lblErrorWifi.Size = new System.Drawing.Size(404, 18);
             this.lblErrorWifi.TabIndex = 15;
             this.lblErrorWifi.Text = "No tienes conexión a internet, revísalo o inténtalo más tarde.";
             this.lblErrorWifi.Visible = false;
@@ -129,10 +124,9 @@ namespace pet4sitter
             // pcbNoWifi
             // 
             this.pcbNoWifi.Image = global::pet4sitter.Properties.Resources.no_wifi_red;
-            this.pcbNoWifi.Location = new System.Drawing.Point(347, -13);
-            this.pcbNoWifi.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbNoWifi.Location = new System.Drawing.Point(260, -11);
             this.pcbNoWifi.Name = "pcbNoWifi";
-            this.pcbNoWifi.Size = new System.Drawing.Size(327, 298);
+            this.pcbNoWifi.Size = new System.Drawing.Size(245, 242);
             this.pcbNoWifi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbNoWifi.TabIndex = 14;
             this.pcbNoWifi.TabStop = false;
@@ -141,20 +135,18 @@ namespace pet4sitter
             // lblIA
             // 
             this.lblIA.AutoSize = true;
-            this.lblIA.Location = new System.Drawing.Point(57, 185);
-            this.lblIA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIA.Location = new System.Drawing.Point(43, 150);
             this.lblIA.Name = "lblIA";
-            this.lblIA.Size = new System.Drawing.Size(22, 16);
+            this.lblIA.Size = new System.Drawing.Size(20, 13);
             this.lblIA.TabIndex = 13;
             this.lblIA.Text = "IA:";
             // 
             // pcbAI
             // 
             this.pcbAI.Image = global::pet4sitter.Properties.Resources.roboy;
-            this.pcbAI.Location = new System.Drawing.Point(9, 171);
-            this.pcbAI.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbAI.Location = new System.Drawing.Point(7, 139);
             this.pcbAI.Name = "pcbAI";
-            this.pcbAI.Size = new System.Drawing.Size(45, 34);
+            this.pcbAI.Size = new System.Drawing.Size(34, 28);
             this.pcbAI.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbAI.TabIndex = 12;
             this.pcbAI.TabStop = false;
@@ -162,50 +154,45 @@ namespace pet4sitter
             // lblYou
             // 
             this.lblYou.AutoSize = true;
-            this.lblYou.Location = new System.Drawing.Point(57, 54);
-            this.lblYou.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblYou.Location = new System.Drawing.Point(43, 44);
             this.lblYou.Name = "lblYou";
-            this.lblYou.Size = new System.Drawing.Size(26, 16);
+            this.lblYou.Size = new System.Drawing.Size(23, 13);
             this.lblYou.TabIndex = 10;
             this.lblYou.Text = "Tu:";
             // 
             // pcbUser
             // 
             this.pcbUser.Image = global::pet4sitter.Properties.Resources.piTestLogo;
-            this.pcbUser.Location = new System.Drawing.Point(4, 34);
-            this.pcbUser.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbUser.Location = new System.Drawing.Point(3, 28);
             this.pcbUser.Name = "pcbUser";
-            this.pcbUser.Size = new System.Drawing.Size(68, 57);
+            this.pcbUser.Size = new System.Drawing.Size(51, 46);
             this.pcbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbUser.TabIndex = 11;
             this.pcbUser.TabStop = false;
             // 
             // lblAnswer
             // 
-            this.lblAnswer.Location = new System.Drawing.Point(96, 185);
-            this.lblAnswer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAnswer.Location = new System.Drawing.Point(72, 150);
             this.lblAnswer.Name = "lblAnswer";
-            this.lblAnswer.Size = new System.Drawing.Size(865, 113);
+            this.lblAnswer.Size = new System.Drawing.Size(649, 92);
             this.lblAnswer.TabIndex = 9;
             this.lblAnswer.Text = "test";
             // 
             // lblQuestion
             // 
             this.lblQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblQuestion.Location = new System.Drawing.Point(96, 54);
-            this.lblQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuestion.Location = new System.Drawing.Point(72, 44);
             this.lblQuestion.Name = "lblQuestion";
-            this.lblQuestion.Size = new System.Drawing.Size(865, 113);
+            this.lblQuestion.Size = new System.Drawing.Size(649, 92);
             this.lblQuestion.TabIndex = 8;
             this.lblQuestion.Text = "test";
             // 
             // linklabFAQ
             // 
             this.linklabFAQ.AutoSize = true;
-            this.linklabFAQ.Location = new System.Drawing.Point(821, 337);
-            this.linklabFAQ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linklabFAQ.Location = new System.Drawing.Point(616, 274);
             this.linklabFAQ.Name = "linklabFAQ";
-            this.linklabFAQ.Size = new System.Drawing.Size(34, 16);
+            this.linklabFAQ.Size = new System.Drawing.Size(28, 13);
             this.linklabFAQ.TabIndex = 7;
             this.linklabFAQ.TabStop = true;
             this.linklabFAQ.Text = "FAQ";
@@ -213,10 +200,9 @@ namespace pet4sitter
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(792, 357);
-            this.btnSend.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSend.Location = new System.Drawing.Point(594, 290);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(188, 41);
+            this.btnSend.Size = new System.Drawing.Size(141, 33);
             this.btnSend.TabIndex = 6;
             this.btnSend.Text = "Enviar";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -225,11 +211,10 @@ namespace pet4sitter
             // txtPrompt
             // 
             this.txtPrompt.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F);
-            this.txtPrompt.Location = new System.Drawing.Point(4, 357);
-            this.txtPrompt.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrompt.Location = new System.Drawing.Point(3, 290);
             this.txtPrompt.Multiline = true;
             this.txtPrompt.Name = "txtPrompt";
-            this.txtPrompt.Size = new System.Drawing.Size(779, 40);
+            this.txtPrompt.Size = new System.Drawing.Size(585, 33);
             this.txtPrompt.TabIndex = 5;
             // 
             // cmbPrompts
@@ -237,38 +222,36 @@ namespace pet4sitter
             this.cmbPrompts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbPrompts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPrompts.FormattingEnabled = true;
-            this.cmbPrompts.Location = new System.Drawing.Point(187, 166);
-            this.cmbPrompts.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbPrompts.Location = new System.Drawing.Point(140, 135);
             this.cmbPrompts.Name = "cmbPrompts";
-            this.cmbPrompts.Size = new System.Drawing.Size(983, 24);
+            this.cmbPrompts.Size = new System.Drawing.Size(738, 21);
             this.cmbPrompts.TabIndex = 14;
             this.cmbPrompts.SelectedIndexChanged += new System.EventHandler(this.cmbPrompts_SelectedIndexChanged);
             // 
             // barraLateral1
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
-            this.barraLateral1.Location = new System.Drawing.Point(-7, -3);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(5);
+            this.barraLateral1.Location = new System.Drawing.Point(-5, -2);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.barraLateral1.Name = "barraLateral1";
-            this.barraLateral1.Size = new System.Drawing.Size(415, 737);
+            this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 16;
             this.barraLateral1.Load += new System.EventHandler(this.barraLateral1_Load);
             // 
             // FrmIAyuda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1241, 738);
-            this.Controls.Add(this.barraLateral1);
+            this.ClientSize = new System.Drawing.Size(931, 600);
             this.Controls.Add(this.cmbPrompts);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitlepet4sitter);
+            this.Controls.Add(this.barraLateral1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1257, 579);
+            this.MinimumSize = new System.Drawing.Size(947, 478);
             this.Name = "FrmIAyuda";
             this.Text = "Pet4sitter";
             this.Load += new System.EventHandler(this.Form1_Load);

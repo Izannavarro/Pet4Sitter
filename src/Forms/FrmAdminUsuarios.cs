@@ -73,11 +73,6 @@ namespace pet4sitter
             }
         }
 
-        private void FrmAdminUsuarios_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void dgvUsers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) {
@@ -126,6 +121,11 @@ namespace pet4sitter
                     ConBD.CerrarConexion();
                 }
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

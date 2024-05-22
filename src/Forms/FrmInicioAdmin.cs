@@ -33,7 +33,7 @@ namespace pet4sitter
         private void AplicarIdioma()
         {
             btnProductos.Text = Resources.Recursos_Localizable.FrmInicioAdmin.btnProductos_Text;
-            btnNoticias.Text = Resources.Recursos_Localizable.FrmInicioAdmin.btnNoticias_Text;
+            btnInicio.Text = Resources.Recursos_Localizable.FrmInicioAdmin.btnNoticias_Text;
             btnCerrarSesion.Text = Resources.Recursos_Localizable.FrmInicioAdmin.btnCerrarSesion_Text;
             btnUsuarios.Text = Resources.Recursos_Localizable.FrmInicioAdmin.btnUsuarios_Text;
         }
@@ -45,7 +45,28 @@ namespace pet4sitter
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
+            FrmAdminProductos frm = new FrmAdminProductos();
+            frm.ShowDialog();
+        }
 
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            FrmInicio frm = new FrmInicio();
+            frm.Show();
+            this.Dispose();
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            FrmAdminUsuarios frm = new FrmAdminUsuarios();
+            frm.ShowDialog();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            FrmLogin frm = new FrmLogin();
+            frm.Show();
+            this.Close();
         }
     }
 }

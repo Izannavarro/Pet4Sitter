@@ -115,7 +115,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Descripcion Cuidador.
+        ///   Busca una cadena traducida similar a Sin Resultados.
         /// </summary>
         internal static string lblDescripcion1_Text {
             get {
@@ -124,7 +124,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Descripcion Cuidador.
+        ///   Busca una cadena traducida similar a Sin Resultados.
         /// </summary>
         internal static string lblDescripcion2_Text {
             get {
@@ -133,7 +133,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Descripcion Cuidador.
+        ///   Busca una cadena traducida similar a Sin Resultados.
         /// </summary>
         internal static string lblDescripcion3_Text {
             get {
@@ -142,7 +142,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Descripcion Extensa.
+        ///   Busca una cadena traducida similar a Sin Resultados.
         /// </summary>
         internal static string lblDescripcion4_Text {
             get {

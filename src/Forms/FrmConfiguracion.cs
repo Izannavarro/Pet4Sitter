@@ -62,5 +62,17 @@ namespace pet4sitter
             ConfiguracionIdioma.CambiarIdioma(new CultureInfo(idioma));
             AplicarIdioma();
         }
+
+        private void cmbTema_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbTema.SelectedIndex == 0)
+            {
+                Data.DarkMode = false;
+            }
+            else
+            {
+                Data.DarkMode = true;
+            }
+        }
     }
 }

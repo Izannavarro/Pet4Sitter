@@ -22,14 +22,14 @@ namespace pet4sitter.Resources.Recursos_Localizable {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class FrmInicioAdmin {
+    internal class FrmEditarPerfil {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal FrmInicioAdmin() {
+        internal FrmEditarPerfil() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("pet4sitter.Resources.Recursos_Localizable.FrmInicioAdmin", typeof(FrmInicioAdmin).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("pet4sitter.Resources.Recursos_Localizable.FrmEditarPerfil", typeof(FrmEditarPerfil).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,74 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Cerrar sesión.
+        ///   Busca una cadena traducida similar a Cambiar foto.
         /// </summary>
-        internal static string btnCerrarSesion_Text {
+        internal static string btnFoto {
             get {
-                return ResourceManager.GetString("btnCerrarSesion_Text", resourceCulture);
+                return ResourceManager.GetString("btnFoto", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Inicio.
+        ///   Busca una cadena traducida similar a Guardar.
         /// </summary>
-        internal static string btnNoticias_Text {
+        internal static string btnGuardar {
             get {
-                return ResourceManager.GetString("btnNoticias_Text", resourceCulture);
+                return ResourceManager.GetString("btnGuardar", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Productos.
+        ///   Busca una cadena traducida similar a Volver.
         /// </summary>
-        internal static string btnProductos_Text {
+        internal static string btnVolver {
             get {
-                return ResourceManager.GetString("btnProductos_Text", resourceCulture);
+                return ResourceManager.GetString("btnVolver", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Usuarios.
+        ///   Busca una cadena traducida similar a Contraseña:.
         /// </summary>
-        internal static string btnUsuarios_Text {
+        internal static string label7 {
             get {
-                return ResourceManager.GetString("btnUsuarios_Text", resourceCulture);
+                return ResourceManager.GetString("label7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Apellido:.
+        /// </summary>
+        internal static string lblApellido {
+            get {
+                return ResourceManager.GetString("lblApellido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Email:.
+        /// </summary>
+        internal static string lblEmail {
+            get {
+                return ResourceManager.GetString("lblEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Localización:.
+        /// </summary>
+        internal static string lblLocalizacion {
+            get {
+                return ResourceManager.GetString("lblLocalizacion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre:.
+        /// </summary>
+        internal static string lblNombre {
+            get {
+                return ResourceManager.GetString("lblNombre", resourceCulture);
             }
         }
     }

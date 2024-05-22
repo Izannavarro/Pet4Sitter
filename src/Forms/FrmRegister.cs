@@ -67,8 +67,6 @@ namespace pet4sitter
             }
         }
 
-
-
         private void lblClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -155,17 +153,63 @@ namespace pet4sitter
 
                     if (coordenadas.Latitude.HasValue && coordenadas.Longitude.HasValue)
                     {
-                        MessageBox.Show("Si");
-                        User u = null;
-                        if (Data.UserGoogle != null)
+                        // Pregunta al usuario si desea validar la ubicación
+                        if (MessageBox.Show(
+                            "Deseas validar la ubicación?",
+                            "Confirmar Ubicación",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question
+                        ) == DialogResult.Yes)
                         {
-                            u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null,coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                            // Abre el navegador web predeterminado con Google Maps
+                            System.Diagnostics.Process.Start($"https://maps.google.com/?q={coordenadas.Latitude.ToString().Replace(',','.')},{coordenadas.Longitude.ToString().Replace(',', '.')}");
+
+                            // Muestra otro MessageBox para solicitar la confirmación del usuario
+                            if (MessageBox.Show(
+                                "¿La dirección es correcta?",
+                                "Confirmar Dirección",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question
+                            ) == DialogResult.Yes)
+                            {
+                                // Si el usuario confirma la dirección, procede con el registro
+                                // del usuario aquí
+                                User u = null;
+                                if (Data.UserGoogle != null)
+                                {
+                                    u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, null, txtDireccion.Text, null, false, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                                }
+                                else
+                                {
+                                    u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, null, txtDireccion.Text, null, false, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                                }
+                                User.RegistrarUsuario(u);
+                                MessageBox.Show("Usuario: " + u.Name + " Registrado con éxito!");
+                            }
+                            else
+                            {
+                                // Si el usuario no confirma la dirección, puedes realizar alguna
+                                // acción adicional aquí, como mostrar un mensaje o volver a solicitar
+                                // la dirección.
+                                MessageBox.Show("Por favor, revise la dirección e intente nuevamente.", "Dirección Incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
                         else
                         {
-                            u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                            // Si el usuario no desea validar la ubicación, procede con el registro
+                            // del usuario directamente aquí
+                            User u = null;
+                            if (Data.UserGoogle != null)
+                            {
+                                u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, null, txtDireccion.Text, null, false, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                            }
+                            else
+                            {
+                                u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, null, txtDireccion.Text, null, false, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                            }
+                            User.RegistrarUsuario(u);
+                            MessageBox.Show("Usuario: " + u.Name + " Registrado con éxito!");
                         }
-                        User.RegistrarUsuario(u);
                     }
                     else
                     {
@@ -183,6 +227,7 @@ namespace pet4sitter
                 MessageBox.Show("No existe conexión a la Base de datos");
             }//Comprueba si la bd está disponible
         }
+
 
 
         private void txtNombre_Enter(object sender, EventArgs e)
@@ -211,13 +256,6 @@ namespace pet4sitter
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show();
-        }
-
         private void FrmRegister_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -227,6 +265,18 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            AplicarModoOscuro();
+        }
+        private void AplicarModoOscuro()
+        {
+            lblWelcomeLogin.ForeColor = Color.Black;
+            this.BackColor = Color.DarkGreen;
+            txtNombre.BackColor = Color.DarkGreen;
+            txtApellido.BackColor = Color.DarkGreen;
+            txtDni.BackColor = Color.DarkGreen;
+            txtMail.BackColor = Color.DarkGreen;
+            txtPass.BackColor = Color.DarkGreen;
+            txtDireccion.BackColor = Color.DarkGreen;
         }
         private void AplicarIdioma()
         {
@@ -245,9 +295,61 @@ namespace pet4sitter
             txtDni.Text = Resources.Recursos_Localizable.FrmRegister.txtDni_Text;
             lblDireccion.Text = Resources.Recursos_Localizable.FrmRegister.lblDireccion_Text;
             txtDireccion.Text = Resources.Recursos_Localizable.FrmRegister.txtDireccion_Text;
-            chkCuidador.Text = Resources.Recursos_Localizable.FrmRegister.chkCuidador_Text;
             btnRegistro.Text = Resources.Recursos_Localizable.FrmRegister.btnRegistro_Text;
         }
 
+        private void txtApellido_Enter(object sender, EventArgs e)
+        {
+            if (txtApellido.Text == "Apellido:")
+            {
+                txtApellido.Text = "";
+                txtApellido.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
+        }
+
+        private void txtApellido_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtApellido.Text))
+            {
+                txtApellido.Text = "Apellido:";
+                txtApellido.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
+            }
+        }
+
+        private void txtDni_Enter(object sender, EventArgs e)
+        {
+            if (txtDni.Text == "DNI:")
+            {
+                txtDni.Text = "";
+                txtDni.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
+        }
+
+        private void txtDni_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtDni.Text))
+            {
+                txtDni.Text = "DNI:";
+                txtDni.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
+            }
+        }
+
+        private void txtDireccion_Enter(object sender, EventArgs e)
+        {
+            if (txtDireccion.Text == "Introduce dirección")
+            {
+                txtDireccion.Text = "";
+                txtDireccion.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
+        }
+
+        private void txtDireccion_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtDireccion.Text))
+            {
+                txtDireccion.Text = "Introduce dirección";
+                txtDireccion.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
+            }
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using pet4sitter.Clases;
 
 namespace pet4sitter
 {
@@ -58,7 +59,6 @@ namespace pet4sitter
         {
             lblFiltros.Text = Resources.Recursos_Localizable.FrmFiltrador.lblFiltros_Text;
             lblRango.Text = Resources.Recursos_Localizable.FrmFiltrador.lblRango_Text;
-            lblUbicacion.Text = Resources.Recursos_Localizable.FrmFiltrador.lblUbicacion_Text;
             lblDesde.Text = Resources.Recursos_Localizable.FrmFiltrador.lblDesde_Text;
             lblHasta.Text = Resources.Recursos_Localizable.FrmFiltrador.lblHasta_Text;
             btnBuscar.Text = Resources.Recursos_Localizable.FrmFiltrador.btnBuscar_Text;
@@ -110,6 +110,19 @@ namespace pet4sitter
             this.Hide();
             FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
             frm.Show();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                List<User> lUser = User.ObtenerUsuariosCercanos(Data.CurrentUser.Latitud, Data.CurrentUser.Longitud, (double)nudDesde.Value, (double)nudHasta.Value,0,3);
+                ConBD.CerrarConexion();
+                FrmResultadoFiltrado frmResultadoFiltrado = new FrmResultadoFiltrado(lUser);
+                frmResultadoFiltrado.Show();
+                this.Dispose();
+            }
         }
     }
 }
