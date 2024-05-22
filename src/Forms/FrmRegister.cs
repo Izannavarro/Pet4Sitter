@@ -240,5 +240,58 @@ namespace pet4sitter
             btnRegistro.Text = Resources.Recursos_Localizable.FrmRegister.btnRegistro_Text;
         }
 
+        private void txtApellido_Enter(object sender, EventArgs e)
+        {
+            if (txtApellido.Text == "Apellido:")
+            {
+                txtApellido.Text = "";
+                txtApellido.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
+        }
+
+        private void txtApellido_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtApellido.Text))
+            {
+                txtApellido.Text = "Apellido:";
+                txtApellido.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
+            }
+        }
+
+        private void txtDni_Enter(object sender, EventArgs e)
+        {
+            if (txtDni.Text == "DNI:")
+            {
+                txtDni.Text = "";
+                txtDni.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
+        }
+
+        private void txtDni_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtDni.Text))
+            {
+                txtDni.Text = "DNI:";
+                txtDni.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
+            }
+        }
+
+        private void txtDireccion_Enter(object sender, EventArgs e)
+        {
+            if (txtDireccion.Text == "Introduce dirección")
+            {
+                txtDireccion.Text = "";
+                txtDireccion.ForeColor = Color.White; // Cambiar el color del texto al color normal
+            }
+        }
+
+        private void txtDireccion_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtDireccion.Text))
+            {
+                txtDireccion.Text = "Introduce dirección";
+                txtDireccion.ForeColor = Color.Gray; // Cambiar el color del texto al color del marcador de posición
+            }
+        }
     }
 }

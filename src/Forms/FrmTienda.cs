@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.Ocsp;
+using pet4sitter.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,13 +21,6 @@ namespace pet4sitter
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show(); // Muestra el formulario FrmConfiguracion
-        }
-
         private void FrmTienda_Load(object sender, EventArgs e)
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
@@ -34,13 +29,26 @@ namespace pet4sitter
 
         private void AplicarIdioma()
         {
-            lblDescripcion.Text = Resources.Recursos_Localizable.FrmTienda.lblDescripcion_Text;
             btnAñadir.Text = Resources.Recursos_Localizable.FrmTienda.btnAñadir_Text;
         }
 
-        private void FrmTienda_FormClosed(object sender, FormClosedEventArgs e)
+        private void LimpiarTablaProductos()
         {
-            Application.Exit();
+            dgvProductos.DataSource = null;
+            // Limpia las filas
+            dgvProductos.Rows.Clear();
+
+            // Asigna el nuevo DataSource
+            dgvProductos.DataSource = Producto.CantidadProductos();
+        }
+
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow fila = dgvProductos.Rows[e.RowIndex]; 
+            lblNombre.Text = fila.Cells[1].Value.ToString();
+            lblPrecio.Text = fila.Cells[2].Value.ToString();
+            txtDescripcion.Text = fila.Cells[4].Value.ToString();
+            ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
         }
     }
 }

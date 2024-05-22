@@ -239,6 +239,8 @@ namespace pet4sitter
             this.txtApellido.Size = new System.Drawing.Size(301, 33);
             this.txtApellido.TabIndex = 17;
             this.txtApellido.Text = "Apellido:";
+            this.txtApellido.Enter += new System.EventHandler(this.txtApellido_Enter);
+            this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
             // 
             // lblApellido
             // 
@@ -273,6 +275,8 @@ namespace pet4sitter
             this.txtDni.Size = new System.Drawing.Size(301, 33);
             this.txtDni.TabIndex = 21;
             this.txtDni.Text = "DNI:";
+            this.txtDni.Enter += new System.EventHandler(this.txtDni_Enter);
+            this.txtDni.Leave += new System.EventHandler(this.txtDni_Leave);
             // 
             // lblDni
             // 
@@ -307,6 +311,8 @@ namespace pet4sitter
             this.txtDireccion.Size = new System.Drawing.Size(576, 33);
             this.txtDireccion.TabIndex = 24;
             this.txtDireccion.Text = "Introduce dirección";
+            this.txtDireccion.Enter += new System.EventHandler(this.txtDireccion_Enter);
+            this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
             // 
             // lblDireccion
             // 
