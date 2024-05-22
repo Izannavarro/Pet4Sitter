@@ -66,7 +66,10 @@ namespace pet4sitter
         {
             FrmEditarPerfil frm = new FrmEditarPerfil();
             frm.ShowDialog();
-            pcbImagen.Image = Utiles.ByteArrayToImage(Data.CurrentUser.Image);
+            if (Data.CurrentUser.Image != null)
+            {
+                pcbImagen.Image = Utiles.ByteArrayToImage(Data.CurrentUser.Image);
+            }
         }
 
         private void btnDarAlta_Click(object sender, EventArgs e)
