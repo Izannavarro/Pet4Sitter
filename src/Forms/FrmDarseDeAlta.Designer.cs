@@ -33,16 +33,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.lblLocalizacion = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblPrecioDia = new System.Windows.Forms.Label();
             this.lblDarseAlta = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.chkTerminos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,26 +94,6 @@
             this.label1.Size = new System.Drawing.Size(0, 36);
             this.label1.TabIndex = 49;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(163, 235);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(433, 30);
-            this.textBox2.TabIndex = 48;
-            // 
-            // lblLocalizacion
-            // 
-            this.lblLocalizacion.AutoSize = true;
-            this.lblLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalizacion.ForeColor = System.Drawing.Color.White;
-            this.lblLocalizacion.Location = new System.Drawing.Point(156, 185);
-            this.lblLocalizacion.Name = "lblLocalizacion";
-            this.lblLocalizacion.Size = new System.Drawing.Size(202, 36);
-            this.lblLocalizacion.TabIndex = 47;
-            this.lblLocalizacion.Text = "Localización:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -131,11 +107,11 @@
             // lblPrecioDia
             // 
             this.lblPrecioDia.AutoSize = true;
-            this.lblPrecioDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecioDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioDia.ForeColor = System.Drawing.Color.White;
-            this.lblPrecioDia.Location = new System.Drawing.Point(548, 324);
+            this.lblPrecioDia.Location = new System.Drawing.Point(511, 211);
             this.lblPrecioDia.Name = "lblPrecioDia";
-            this.lblPrecioDia.Size = new System.Drawing.Size(227, 36);
+            this.lblPrecioDia.Size = new System.Drawing.Size(279, 42);
             this.lblPrecioDia.TabIndex = 44;
             this.lblPrecioDia.Text = "Precio por Dia:";
             // 
@@ -144,7 +120,7 @@
             this.lblDarseAlta.AutoSize = true;
             this.lblDarseAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDarseAlta.ForeColor = System.Drawing.Color.White;
-            this.lblDarseAlta.Location = new System.Drawing.Point(469, 60);
+            this.lblDarseAlta.Location = new System.Drawing.Point(510, 91);
             this.lblDarseAlta.Name = "lblDarseAlta";
             this.lblDarseAlta.Size = new System.Drawing.Size(274, 46);
             this.lblDarseAlta.TabIndex = 63;
@@ -160,45 +136,26 @@
             this.label3.Size = new System.Drawing.Size(0, 36);
             this.label3.TabIndex = 66;
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(692, 233);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(433, 30);
-            this.textBox3.TabIndex = 65;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(685, 185);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(135, 36);
-            this.lblNombre.TabIndex = 64;
-            this.lblNombre.Text = "Nombre:";
-            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(609, 382);
+            this.numericUpDown1.Location = new System.Drawing.Point(593, 285);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(97, 45);
             this.numericUpDown1.TabIndex = 67;
             // 
-            // button1
+            // chkTerminos
             // 
-            this.button1.Location = new System.Drawing.Point(56, 60);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 46);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "btnConf";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.chkTerminos.AutoSize = true;
+            this.chkTerminos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTerminos.ForeColor = System.Drawing.SystemColors.Window;
+            this.chkTerminos.Location = new System.Drawing.Point(443, 383);
+            this.chkTerminos.Name = "chkTerminos";
+            this.chkTerminos.Size = new System.Drawing.Size(414, 33);
+            this.chkTerminos.TabIndex = 69;
+            this.chkTerminos.Text = "Acepta los Terminos y Condiciones";
+            this.chkTerminos.UseVisualStyleBackColor = true;
             // 
             // FrmDarseDeAlta
             // 
@@ -206,19 +163,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1479, 734);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.chkTerminos);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblDarseAlta);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.lblLocalizacion);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblPrecioDia);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -239,15 +192,11 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblLocalizacion;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblPrecioDia;
         private System.Windows.Forms.Label lblDarseAlta;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox chkTerminos;
     }
 }

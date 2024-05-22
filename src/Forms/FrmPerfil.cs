@@ -51,7 +51,6 @@ namespace pet4sitter
 
         private void AplicarIdioma()
         {
-            lblUltimasValoraciones.Text = Resources.Recursos_Localizable.FrmPerfil.lblUltimasValoraciones_Text;
             lblUltimaCompra.Text = Resources.Recursos_Localizable.FrmPerfil.lblUltimaCompra_Text;
             btnEditarPerfil.Text = Resources.Recursos_Localizable.FrmPerfil.btnEditarPerfil_Text;
             btnDarAlta.Text = Resources.Recursos_Localizable.FrmPerfil.btnDarAlta_Text;

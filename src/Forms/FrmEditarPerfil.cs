@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,9 @@ namespace pet4sitter
             {
                 ptbImagen.Image = Utiles.ByteArrayToImage(Data.CurrentUser.Image);
             }
+
+            CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
+            AplicarIdioma();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -49,6 +53,18 @@ namespace pet4sitter
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AplicarIdioma()
+        {
+            lblNombre.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblNombre;
+            lblApellido.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblApellido;
+            lblLocalizacion.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblLocalizacion;
+            lblEmail.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblEmail;
+            label7.Text = Resources.Recursos_Localizable.FrmEditarPerfil.label7;
+            btnFoto.Text = Resources.Recursos_Localizable.FrmEditarPerfil.btnFoto;
+            btnVolver.Text = Resources.Recursos_Localizable.FrmEditarPerfil.btnVolver;
+            btnGuardar.Text = Resources.Recursos_Localizable.FrmEditarPerfil.btnGuardar;
         }
 
         private void btnFoto_Click(object sender, EventArgs e)
@@ -110,7 +126,6 @@ namespace pet4sitter
                     {
                         longi = oldLong;
                     }
-                    
                 }
                 else
                 {

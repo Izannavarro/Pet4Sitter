@@ -227,7 +227,14 @@ namespace pet4sitter
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            
+            FrmInicioAdmin admin = new FrmInicioAdmin();
+            admin.Show();
+            this.Hide();
+        }
+
+        private void FrmInicio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

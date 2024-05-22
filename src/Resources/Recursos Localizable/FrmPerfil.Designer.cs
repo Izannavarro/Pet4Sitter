@@ -79,7 +79,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Última Compra:.
+        ///   Busca una cadena traducida similar a Últimas Compras:.
         /// </summary>
         internal static string lblUltimaCompra_Text {
             get {
@@ -88,7 +88,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Últimas Valoraciones:.
+        ///   Busca una cadena traducida similar a .
         /// </summary>
         internal static string lblUltimasValoraciones_Text {
             get {
