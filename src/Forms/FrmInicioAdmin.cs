@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class FrmInicioAdmin : Form
     {
@@ -41,6 +41,11 @@ namespace piTest
         private void FrmInicioAdmin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

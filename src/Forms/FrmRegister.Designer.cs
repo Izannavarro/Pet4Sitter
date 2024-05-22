@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace piTest
+namespace pet4sitter
 {
     partial class FrmRegister
     {
@@ -173,7 +173,7 @@ namespace piTest
             // pictureBoxContinueGoogle
             // 
             this.pictureBoxContinueGoogle.BackColor = System.Drawing.Color.White;
-            this.pictureBoxContinueGoogle.Image = global::piTest.Properties.Resources.google_icon_icons_com_62736;
+            this.pictureBoxContinueGoogle.Image = global::pet4sitter.Properties.Resources.google_icon_icons_com_62736;
             this.pictureBoxContinueGoogle.Location = new System.Drawing.Point(453, 527);
             this.pictureBoxContinueGoogle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxContinueGoogle.Name = "pictureBoxContinueGoogle";

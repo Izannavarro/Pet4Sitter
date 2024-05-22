@@ -7,7 +7,7 @@ using System.Net.Mail;
 using System.Net;
 using System.Windows.Forms;
 
-namespace piTest
+namespace pet4sitter
 {
     public abstract class MasterMailServer
     {

@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS users (
     premium TINYINT DEFAULT 0,
     sitter TINYINT DEFAULT 0,
     admin TINYINT DEFAULT 0,
-    image LONGBLOB NOT NULL,
+    image longblob default null,
     latitud float,
     longitud float,
     PRIMARY KEY (id_user)

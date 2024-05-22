@@ -17,11 +17,11 @@ using System.Reflection;
 using static System.Net.WebRequestMethods;
 using static Google.Apis.Requests.BatchRequest;
 using System.Runtime.Remoting.Contexts;
-using piTest.Clases;
+using pet4sitter.Clases;
 using Mysqlx;
 using System.Globalization;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class FrmRegister : Form
     {
@@ -143,24 +143,34 @@ namespace piTest
             l.Show();
         }
 
-        private void btnRegistro_Click(object sender, EventArgs e)
+        private async void btnRegistro_Click(object sender, EventArgs e)
         {
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
                 if (!User.CompruebaUsuarioExistente(txtMail.Text))
                 {
-                    MessageBox.Show("Si");
-                    User u = null;
-                    if (Data.UserGoogle != null)
+                    // Validar la dirección ingresada
+                    var coordenadas = await GeoLocalizacion.ObtenerCoordenadasAsync(txtDireccion.Text);
+
+                    if (coordenadas.Latitude.HasValue && coordenadas.Longitude.HasValue)
                     {
-                        u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
+                        MessageBox.Show("Si");
+                        User u = null;
+                        if (Data.UserGoogle != null)
+                        {
+                            u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null,coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                        }
+                        else
+                        {
+                            u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                        }
+                        User.RegistrarUsuario(u);
                     }
                     else
                     {
-                        u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null);
+                        MessageBox.Show("La dirección ingresada no es válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    User.RegistrarUsuario(u);
                 }
                 else
                 {

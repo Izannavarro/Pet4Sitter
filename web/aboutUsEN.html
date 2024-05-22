@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pet4Sitter</title>
+    <link rel="stylesheet" href="styleAboutUs.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Pet4Sitter Logo">
+            <h1>Pet4Sitter</h1>
+        </div>
+        <div id="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="cambiarColor">
+                <span class="slider round">
+                    <span class="sol-luna">&#9728;</span>
+                </span>
+            </label>
+        </div>
+        <div id="opciones">
+            <a href="menuEN.html" class="opcion home" id="home-link">Menu</a>
+            <a href="downloadEN.html" class="opcion download">Download</a>
+            <a href="aboutUsEN.html" class="opcion aboutus">About Us</a>
+            <a href="contactUsEn.html" class="opcion contactus">Contact Us</a>
+            <a href="aboutUsEN.html">EN</a>
+            <a>&nbsp;&nbsp;</a>
+            <a href="aboutUsES.html">ES</a>
+        </div>
+    </header>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Pet4Sitter is a platform created by students of Florida Universitaria as their final project, dedicated to connecting pet owners with reliable caretakers.
+            <br>
+            They offer high-quality services for dog walking, cat sitting, and fish feeding, among other needs. We have designed a secure and user-friendly platform to ensure a worry-free experience when finding passionate and trustworthy caretakers.
+            <br>
+            Pet4Sitter focuses on providing personalized service for each pet and owner, ensuring peace of mind knowing that pets are well cared for. Join Pet4Sitter to ensure the best care for your beloved furry or scaly friends.</p>
+        <h3>Team Members</h3>
+        <div class="team-members">
+            <div class="member-card">
+                <div class="member">
+                    <img src="rafa.jpg" alt="Rafa Navarrete" class="avatar">
+                    <h4>Rafa Navarrete</h4>
+                    <p>Email: rafa@example.com</p>
+                    <a href="https://github.com/rxvlc" target="_blank">
+                        <img src="github.png" alt="Rafa Navarrete's GitHub" class="github-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member">
+                    <img src="aaron.jpg" alt="Aaron Aparisi" class="avatar">
+                    <h4>Aaron Aparisi</h4>
+                    <p>Email: aaron@example.com</p>
+                    <a href="https://github.com/AaronAparisiMiralles" target="_blank">
+                        <img src="github.png" alt="Aaron Aparisi's GitHub" class="github-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member">
+                    <img src="dani.jpg" alt="Dani Hernandez" class="avatar">
+                    <h4>Dani Hernandez</h4>
+                    <p>Email: dani@example.com</p>
+                    <a href="https://github.com/Dani858585" target="_blank">
+                        <img src="github.png" alt="Dani Hernandez's GitHub" class="github-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member">
+                    <img src="izan.jpg" alt="Izan Navarro" class="avatar">
+                    <h4>Izan Navarro</h4>
+                    <p>Email: izan@example.com</p>
+                    <a href="https://github.com/Izannavarro" target="_blank">
+                        <img src="github.png" alt="Izan Navarro's GitHub" class="github-logo">
+                    </a>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="member">
+                    <img src="hugo.jpg" alt="Hugo Miquel" class="avatar">
+                    <h4>Hugo Miquel</h4>
+                    <p>Email: hugo@example.com</p>
+                    <a href="https://github.com/Hugo2313" target="_blank">
+                        <img src="github.png" alt="Hugo Miquel's GitHub" class="github-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Pet4Sitter. All rights reserved.</p>
+    </footer>
+    <script>
+        const checkbox = document.getElementById('cambiarColor');
+        var solLuna = document.querySelector(".sol-luna");
+        checkbox.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+            const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
+    
+            elementsToToggle.forEach(element => {
+                element.classList.toggle('dark-mode');
+                
+            });
+    
+            if (checkbox.checked) {
+                solLuna.innerHTML = "&#127769;";
+            } else {
+                solLuna.innerHTML = "&#9728;";
+            }
+    
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('isDarkMode', isDarkMode);
+        });
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const isDarkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                checkbox.checked = true;
+                const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
+                elementsToToggle.forEach(element => {
+                    element.classList.add('dark-mode');
+                    
+                });
+                solLuna.innerHTML = "&#127769;";
+            }else{
+                solLuna.innerHTML = "&#9728;";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class FrmEditarTarjeta : Form
     {
@@ -40,13 +40,6 @@ namespace piTest
             lblFecha.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.lblFecha_Text;
             lblCVC.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.lblCVC_Text;
             btnGuardar.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.btnGuardar_Text;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show();
         }
 
         private void FrmEditarTarjeta_FormClosed(object sender, FormClosedEventArgs e)

@@ -1,4 +1,4 @@
-﻿namespace piTest
+﻿namespace pet4sitter
 {
     partial class BarraLateral
     {
@@ -44,8 +44,8 @@
             this.LblBúsqueda = new System.Windows.Forms.Label();
             this.pcbBuscar = new System.Windows.Forms.PictureBox();
             this.lblNombreApp = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.pnlBarraLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAjustes)).BeginInit();
@@ -54,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoticias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbChat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBarraLateral
@@ -76,9 +76,9 @@
             this.pnlBarraLateral.Controls.Add(this.pcbBuscar);
             this.pnlBarraLateral.Controls.Add(this.lblNombreApp);
             this.pnlBarraLateral.Controls.Add(this.panel1);
-            this.pnlBarraLateral.Controls.Add(this.pictureBox1);
+            this.pnlBarraLateral.Controls.Add(this.pcbLogo);
             this.pnlBarraLateral.Location = new System.Drawing.Point(0, 1);
-            this.pnlBarraLateral.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlBarraLateral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlBarraLateral.Name = "pnlBarraLateral";
             this.pnlBarraLateral.Size = new System.Drawing.Size(347, 736);
             this.pnlBarraLateral.TabIndex = 0;
@@ -90,7 +90,7 @@
             // 
             this.lblPerfil.AutoSize = true;
             this.lblPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfil.Location = new System.Drawing.Point(148, 648);
+            this.lblPerfil.Location = new System.Drawing.Point(148, 647);
             this.lblPerfil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPerfil.Name = "lblPerfil";
             this.lblPerfil.Size = new System.Drawing.Size(95, 39);
@@ -101,9 +101,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::piTest.Properties.Resources.usuario;
+            this.pictureBox2.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pictureBox2.Location = new System.Drawing.Point(23, 631);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(84, 75);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,9 +127,9 @@
             // 
             // pcbAjustes
             // 
-            this.pcbAjustes.Image = global::piTest.Properties.Resources.ajuste;
+            this.pcbAjustes.Image = global::pet4sitter.Properties.Resources.ajuste;
             this.pcbAjustes.Location = new System.Drawing.Point(23, 548);
-            this.pcbAjustes.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbAjustes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbAjustes.Name = "pcbAjustes";
             this.pcbAjustes.Size = new System.Drawing.Size(84, 75);
             this.pcbAjustes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,9 +153,9 @@
             // 
             // pcbIaYuda
             // 
-            this.pcbIaYuda.Image = global::piTest.Properties.Resources.ayuda;
+            this.pcbIaYuda.Image = global::pet4sitter.Properties.Resources.ayuda;
             this.pcbIaYuda.Location = new System.Drawing.Point(23, 462);
-            this.pcbIaYuda.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbIaYuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbIaYuda.Name = "pcbIaYuda";
             this.pcbIaYuda.Size = new System.Drawing.Size(84, 75);
             this.pcbIaYuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -168,7 +168,7 @@
             // 
             this.lblTienda.AutoSize = true;
             this.lblTienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTienda.Location = new System.Drawing.Point(148, 392);
+            this.lblTienda.Location = new System.Drawing.Point(148, 391);
             this.lblTienda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTienda.Name = "lblTienda";
             this.lblTienda.Size = new System.Drawing.Size(122, 39);
@@ -179,9 +179,9 @@
             // 
             // pcbTienda
             // 
-            this.pcbTienda.Image = global::piTest.Properties.Resources.carro;
+            this.pcbTienda.Image = global::pet4sitter.Properties.Resources.carro;
             this.pcbTienda.Location = new System.Drawing.Point(23, 375);
-            this.pcbTienda.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbTienda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbTienda.Name = "pcbTienda";
             this.pcbTienda.Size = new System.Drawing.Size(84, 75);
             this.pcbTienda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -205,9 +205,9 @@
             // 
             // pcbNoticias
             // 
-            this.pcbNoticias.Image = global::piTest.Properties.Resources.noticias;
+            this.pcbNoticias.Image = global::pet4sitter.Properties.Resources.noticias;
             this.pcbNoticias.Location = new System.Drawing.Point(23, 289);
-            this.pcbNoticias.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbNoticias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbNoticias.Name = "pcbNoticias";
             this.pcbNoticias.Size = new System.Drawing.Size(84, 75);
             this.pcbNoticias.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,14 +232,15 @@
             // 
             // pcbChat
             // 
-            this.pcbChat.Image = global::piTest.Properties.Resources.chat1;
-            this.pcbChat.Location = new System.Drawing.Point(23, 200);
-            this.pcbChat.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbChat.Image = global::pet4sitter.Properties.Resources.chat;
+            this.pcbChat.Location = new System.Drawing.Point(23, 199);
+            this.pcbChat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbChat.Name = "pcbChat";
             this.pcbChat.Size = new System.Drawing.Size(84, 75);
             this.pcbChat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbChat.TabIndex = 4;
             this.pcbChat.TabStop = false;
+            this.pcbChat.Click += new System.EventHandler(this.pcbChat_Click);
             this.pcbChat.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
             this.pcbChat.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
             // 
@@ -260,9 +261,9 @@
             // pcbBuscar
             // 
             this.pcbBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.pcbBuscar.Image = global::piTest.Properties.Resources.busqueda;
+            this.pcbBuscar.Image = global::pet4sitter.Properties.Resources.busqueda;
             this.pcbBuscar.Location = new System.Drawing.Point(23, 113);
-            this.pcbBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.pcbBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pcbBuscar.Name = "pcbBuscar";
             this.pcbBuscar.Size = new System.Drawing.Size(84, 75);
             this.pcbBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -283,27 +284,29 @@
             this.lblNombreApp.TabIndex = 1;
             this.lblNombreApp.Text = "Pet4Sitter";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::piTest.Properties.Resources.piTestLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 97);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
-            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-            // 
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(124, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(223, 737);
             this.panel1.TabIndex = 16;
             this.panel1.MouseLeave += new System.EventHandler(this.panel1_MouseLeave);
             this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // pcbLogo
+            // 
+            this.pcbLogo.Image = global::pet4sitter.Properties.Resources.pet4sitterLogo;
+            this.pcbLogo.Location = new System.Drawing.Point(5, 20);
+            this.pcbLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pcbLogo.Name = "pcbLogo";
+            this.pcbLogo.Size = new System.Drawing.Size(124, 97);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLogo.TabIndex = 0;
+            this.pcbLogo.TabStop = false;
+            this.pcbLogo.Click += new System.EventHandler(this.pcbLogo_Click);
+            this.pcbLogo.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pcbLogo.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // BarraLateral
             // 
@@ -311,7 +314,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pnlBarraLateral);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BarraLateral";
             this.Size = new System.Drawing.Size(415, 737);
             this.Load += new System.EventHandler(this.BarraLateral_Load);
@@ -326,7 +329,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoticias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbChat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,7 +337,7 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlBarraLateral;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbLogo;
         private System.Windows.Forms.Label LblBúsqueda;
         private System.Windows.Forms.PictureBox pcbBuscar;
         private System.Windows.Forms.Label lblNombreApp;

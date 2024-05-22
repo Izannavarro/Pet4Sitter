@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace piTest.Resources.Recursos_Localizable {
+namespace pet4sitter.Resources.Recursos_Localizable {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace piTest.Resources.Recursos_Localizable {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("piTest.Resources.Recursos_Localizable.FrmResultadoFiltrado", typeof(FrmResultadoFiltrado).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("pet4sitter.Resources.Recursos_Localizable.FrmResultadoFiltrado", typeof(FrmResultadoFiltrado).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

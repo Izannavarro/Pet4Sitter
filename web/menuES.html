@@ -1,103 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet4Sitter - Cuidadores de Animales</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleMenu.css">
 </head>
+
 <body>
 
-<header>
-    <div class="logo-container">
-        <img src="logo.png" alt="Logo de Pet4Sitter">
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo de Pet4Sitter">
+            <h1>Pet4Sitter</h1>
+        </div>
+        <div id="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="cambiarColor">
+                <span class="slider round">
+                    <span class="sol-luna">&#9728;</span>
+                </span>
+            </label>
+        </div>
+        <!-- Mueve la imagen española.jpg dentro del div de opciones -->
+        <div id="opciones">
+            <a href="menuES.html" class="opcion home" id="home-link">Menú</a>
+            <a href="downloadES.html" class="opcion download">Descargar</a>
+            <a href="aboutUsES.html" id="about-us-link" class="opcion aboutus">Conocenos</a>
+            <a href="contactUsES.html" class="opcion contactus">Contactanos</a>
+            <a href="menuEN.html">EN</a>
+            <a>&nbsp;&nbsp;</a>
+            <a href="menuES.html">ES</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="background-image">
         <h1>Pet4Sitter</h1>
+        <p>La mejor aplicacion para apoyarte con tu mascota</p>
+        <div class="descargar">
+            <a href="downloadES.html?os=windows" class="descar windows">Windows</a>
+            <a href="downloadES.html?os=mac" class="descar macos">macOS</a>
+            <a href="downloadES.html?os=linux" class="descar linux">Linux</a>
+        </div>
+        <p>Descarga nuestra APP y disfruta de todas sus ayudas</p>
+        <p>Unete a nuestra gran comunidad y disfruta</p>
     </div>
-    <div id="changemode" onclick="toggleTheme()">
-        <img id="theme-image" src="sol.jpg" alt="Modo Claro">
+        <hr>
+        <div class="brown-bg">
+        <div class="image-section">
+            <div class="image-group">
+                <div class="image-container">
+                    <img src="inicio.jpg" alt="Imagen 1">
+                    <p>Un menu de inicio interactivo y facil de usar para los nuevos usuarios</p>
+                </div>
+                <div class="image-container">
+                    <img src="busqueda.jpg" alt="Imagen 2">
+                    <p>Un Buscador con multitud de opciones para filtrar y poder encontrar a tu cuidador ideal en
+                        nuestra app</p>
+                </div>
+            </div>
+            <div class="image-group">
+                <div class="image-container">
+                    <img src="noticias.jpg" alt="Imagen 5">
+                    <p>Un apartado de noticias y eventos exclusivo para los usuarios que desen apoyarnos con una
+                        subscripcion mensual</p>
+                </div>
+                <div class="image-container">
+                    <img src="IAyuda.jpg" alt="Imagen 6">
+                    <p>Una novedosa IA de ayuda agregada en nuestra aplicacion que te respondera con todas las preguntas
+                        que puedas teners sobre mascotas desde nuestra aplicacion</p>
+                </div>
+            </div>
+            <div class="image-group">
+                <div class="image-container">
+                    <img src="chat.jpg" alt="Imagen 3">
+                    <p>Un apartado de chat simple pero efectivo donde podras comunicarte con los otros usuarios para
+                        interactuar y llegar a acuerdos</p>
+                </div>
+                <div class="image-container">
+                    <img src="tienda.jpg" alt="Imagen 4">
+                    <p>Una tienda con los productos que disponemos a nuestra disposicion que tenemos para ofrecerte</p>
+                </div>
+            </div>
+
+        </div>
+        </div>
     </div>
-    <div id="opciones">
-        <a href="#home" class ="opcion home">Home</a>
-        <a href="#services" class ="opcion download">Download</a> <!-- Cambio de texto -->
-        <a href="#about" class ="opcion aboutus">About us</a> <!-- Cambio de texto -->
-        <a href="#contact" class ="opcion contactus">Contact us</a> <!-- Cambio de texto -->
-    </div>
-</header>
 
+    <footer>
+        <p>&copy; 2024 Pet4Sitter. Todos los derechos reservados.</p>
+    </footer>
 
+    <script>
+        const checkbox = document.getElementById('cambiarColor');
+        var solLuna = document.querySelector(".sol-luna");
+        checkbox.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+            const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
 
+            elementsToToggle.forEach(element => {
+                element.classList.toggle('dark-mode');
 
-<div class="container">
-    <section class="intro">
-        <h2>Bienvenido a Pet4Sitter</h2>
-        <p>En Pet4Sitter, nos dedicamos a proporcionar los mejores cuidadores para tus animales de compañía. Ya sea que necesites alguien que pasee a tu perro, cuide de tu gato o alimente a tus peces, ¡estamos aquí para ayudarte!</p>
-        <a href="url-de-descarga-de-la-app" class="download-button">Descargar la aplicación</a>
-    </section>
+            });
 
-    <section id="services" class="services">
-        <h2>Download</h2> <!-- Cambio de texto -->
-        <ul>
-            <li>Cuidado de mascotas</li>
-            <li>Paseo de perros</li>
-            <li>Alojamiento para mascotas</li>
-            <li>Cuidado de animales exóticos</li>
-        </ul>
-    </section>
+            if (checkbox.checked) {
+                solLuna.innerHTML = "&#127769;";
+            } else {
+                solLuna.innerHTML = "&#9728;";
+            }
 
-    <section id="about" class="about">
-        <h2>About us</h2> <!-- Cambio de texto -->
-        <p>Pet4Sitter está compuesto por un equipo de amantes de los animales con años de experiencia en el cuidado de mascotas. Nos apasiona asegurarnos de que tus amigos peludos reciban el mejor cuidado posible cuando no puedes estar con ellos.</p>
-    </section>
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('isDarkMode', isDarkMode);
+        });
 
-    <section id="contact" class="contact">
-        <h2>Contact us</h2> ¿Quieres reservar uno de nuestros servicios? ¡Contáctanos!</p>
-        <form>
-            <label for="name">Nombre:</label><br>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Correo Electrónico:</label><br>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="message">Mensaje:</label><br>
-            <textarea id="message" name="message"></textarea><br><br>
-            <input type="submit" value="Enviar">
-        </form>
-    </section>
-</div>
+        document.addEventListener('DOMContentLoaded', () => {
+            const isDarkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                checkbox.checked = true;
+                const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
+                elementsToToggle.forEach(element => {
+                    element.classList.add('dark-mode');
 
-<footer>
-    <p>&copy; 2024 Pet4Sitter. Todos los derechos reservados.</p>
-</footer>
-
-<script>
-function toggleTheme() {
-    const body = document.body;
-    const themeImage = document.getElementById('theme-image');
-
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode');
-        themeImage.src = 'sol.jpg';
-        themeImage.alt = 'Modo Claro';
-        toggleElementStyles('light');
-    } else {
-        body.classList.add('dark-mode');
-        themeImage.src = 'luna.jpg';
-        themeImage.alt = 'Modo Oscuro';
-        toggleElementStyles('dark');
-    }
-}
-
-function toggleElementStyles(theme) {
-    const elements = document.querySelectorAll('*');
-
-    elements.forEach(el => {
-        if (theme === 'dark') {
-            el.classList.add('dark-mode');
-        } else {
-            el.classList.remove('dark-mode');
-        }
-    });
-}
-
-</script>
+                });
+                solLuna.innerHTML = "&#127769;";
+            } else {
+                solLuna.innerHTML = "&#9728;";
+            }
+        });
+    </script>
 
 </body>
+
 </html>

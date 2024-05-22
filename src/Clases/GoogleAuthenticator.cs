@@ -12,8 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using piTest;
-using piTest.Clases;
+using pet4sitter;
+using pet4sitter.Clases;
 
 public class GoogleAuthenticator
 {
@@ -380,7 +380,7 @@ public class GoogleAuthenticator
             string googleId = (string)userInfoObject["sub"];
             string name = (string)userInfoObject["name"];
 
-            Data.UserGoogle = new User(null, googleId,name,null,null,null,null,null,null,null,null,null);
+            Data.UserGoogle = new User(null, googleId,name,null,null,null,null,null,null,null,null,null,null,null);
 
             responseString = string.Format($"<html><head><meta http-equiv='refresh' content='0;url=https://oauth-redirect-phi.vercel.app/?gn={name}'></head><body>Redirecting...</body></html>");
             var buffer = System.Text.Encoding.UTF8.GetBytes(responseString);

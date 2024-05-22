@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class FrmNoticias : Form
     {
@@ -72,13 +72,6 @@ namespace piTest
         private void label2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show();
         }
 
         private void AplicarIdioma()

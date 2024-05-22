@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Globalization;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class Dashboard : Form
     {

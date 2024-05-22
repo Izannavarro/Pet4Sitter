@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace piTest
+namespace pet4sitter
 {
     public partial class BarraLateral : UserControl
     {
@@ -231,6 +231,21 @@ namespace piTest
             FrmFiltrador form = new FrmFiltrador();
             form.Show();
             form.StartPosition = FormStartPosition.Manual; // Esto evita animaciones del sistema
+            formActual.Dispose();
+        }
+
+        private void pcbLogo_Click(object sender, EventArgs e)
+        {
+            FrmInicio form = new FrmInicio();
+            form.Show();
+            form.StartPosition = FormStartPosition.Manual; // Esto evita animaciones del sistema
+            formActual.Dispose();
+        }
+
+        private void pcbChat_Click(object sender, EventArgs e)
+        {
+            FrmChat form = new FrmChat();
+            form.Show();
             formActual.Dispose();
         }
     }

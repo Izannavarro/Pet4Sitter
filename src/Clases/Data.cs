@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using piTest.Clases;
+using pet4sitter.Clases;
 
-namespace piTest
+namespace pet4sitter
 {
     public class Data
     {
@@ -15,8 +15,15 @@ namespace piTest
 
         
         public static User UserGoogle = null;
+        //public static User CurrentUser = null;
+        public static User CurrentUser = new User(1,null,"Pepe","ad","p@p.p",null,null,null,true,false,false,null,0,0);
 
         public static string Ginfo { get { return ginfo; } set { ginfo = value; } }
+        public static string tokenNoticias;
+        static Data()
+        {
+            tokenNoticias = Utiles.CargarTokenNoticias();
+        }
 
         public static bool IsDarkModeEnabled()
         {
@@ -28,6 +35,8 @@ namespace piTest
             // Si lightThemeValue es 1, significa que está activado el tema claro; si es 0, está activado el tema oscuro
             return lightThemeValue == 0;
         }
+
+
 
     }
 }
