@@ -35,6 +35,10 @@ namespace pet4sitter
             txtContrasenya.Clear();
             txtEmail.Text = Data.CurrentUser.Email;
             txtLocalizacion.Text = Data.CurrentUser.Location;
+            if (Data.CurrentUser.Image != null)
+            {
+                ptbImagen.Image = Utiles.ByteArrayToImage(Data.CurrentUser.Image);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -66,36 +70,90 @@ namespace pet4sitter
                 {
                     MessageBox.Show("Error al cargar la imagen: " + ex.Message);
                 }
+                ptbImagen.Enabled = true;
             }
         }
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private async void btnGuardar_Click(object sender, EventArgs e)
         {
             string oldPass = Data.CurrentUser.Password;
-            string nombre = txtNombre.Text;
-            string apellidos = txtApellido.Text;
+            double oldLat = (double)Data.CurrentUser.Latitud;
+            double oldLong = (double)Data.CurrentUser.Longitud;
             string localizacion = txtLocalizacion.Text;
             string email = txtEmail.Text;
             string contra;
-            if(txtContrasenya.Text != "")
+            string nombre = txtNombre.Text;
+            string apellidos = txtApellido.Text;
+            double? lat = Data.CurrentUser.Latitud;
+            double? longi = Data.CurrentUser.Longitud;
+
+            if (txtLocalizacion.Text != Data.CurrentUser.Location)
             {
-                contra = txtContrasenya.Text;
+                var coordenadas = await GeoLocalizacion.ObtenerCoordenadasAsync(txtLocalizacion.Text);
+
+                if (coordenadas.Latitude.HasValue && coordenadas.Longitude.HasValue)
+                {
+                    MessageBox.Show("Si");
+                    if (coordenadas.Latitude.Value != oldLat)
+                    {
+                        lat = coordenadas.Latitude.Value;
+                    }
+                    else
+                    {
+                        lat = oldLat;
+                    }
+
+                    if (coordenadas.Longitude.Value != oldLong)
+                    {
+                        longi = coordenadas.Longitude.Value;
+                    }
+                    else
+                    {
+                        longi = oldLong;
+                    }
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Direccion INCORRECTA");
+                }
+
+                
+
+            }
+            if (txtContrasenya.Text != "")
+            {
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(txtContrasenya.Text);
+                contra = hashedPassword;
             }
             else
             {
                 contra = oldPass;
             }
-            byte[] imgArr = Utiles.ImageToByteArray(ptbImagen.Image);
+
+
+            byte[] imgFinal = Data.CurrentUser.Image;
+            if (ptbImagen.Enabled)
+            {
+                imgFinal = Utiles.ImageToByteArray(ptbImagen.Image);
+            }
+
             int id = Data.CurrentUser.IdUser.Value;
 
-            User u = new User(id, null, nombre, apellidos, email, null, contra, localizacion, null, null, null, imgArr, null, null);
+            User u = new User(id, null, nombre, apellidos, email, null, contra, localizacion, null, null, null, imgFinal, lat, longi);
 
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
                 User.ActualizarUsuario(u);
                 ConBD.CerrarConexion();
+                MessageBox.Show("Tu usuario: " + u.Name + " ha sido actualizado con éxito!");
             }
         }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+        }
     }
 }

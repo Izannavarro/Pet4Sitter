@@ -67,8 +67,6 @@ namespace pet4sitter
             }
         }
 
-
-
         private void lblClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -166,6 +164,7 @@ namespace pet4sitter
                             u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
                         }
                         User.RegistrarUsuario(u);
+                        MessageBox.Show("Usuario: " + u.Name + " Registrado con éxito!");
                     }
                     else
                     {
@@ -211,13 +210,6 @@ namespace pet4sitter
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show();
-        }
-
         private void FrmRegister_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -245,7 +237,6 @@ namespace pet4sitter
             txtDni.Text = Resources.Recursos_Localizable.FrmRegister.txtDni_Text;
             lblDireccion.Text = Resources.Recursos_Localizable.FrmRegister.lblDireccion_Text;
             txtDireccion.Text = Resources.Recursos_Localizable.FrmRegister.txtDireccion_Text;
-            chkCuidador.Text = Resources.Recursos_Localizable.FrmRegister.chkCuidador_Text;
             btnRegistro.Text = Resources.Recursos_Localizable.FrmRegister.btnRegistro_Text;
         }
 
