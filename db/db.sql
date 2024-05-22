@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS users (
     premium TINYINT,
     sitter TINYINT,
     admin TINYINT,
-    image longblob,
+    image longblob default null,
     latitud float,
     longitud float,
     PRIMARY KEY (id_user)
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS products (
     price DOUBLE NOT NULL,	
     quantity INT NOT NULL,
     description VARCHAR(99) CHARACTER SET utf8mb4,
-    image varchar(255) NOT NULL
+    image longblob
 ) CHARACTER SET utf8mb4;
 
 CREATE TABLE IF NOT EXISTS chat (
