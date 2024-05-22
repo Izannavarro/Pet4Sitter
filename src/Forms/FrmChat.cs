@@ -26,6 +26,11 @@ namespace pet4sitter
         {
             InitializeComponent();
         }
+        public FrmChat(int idChat)
+        {
+            InitializeComponent();
+            idChatSeleccionado = idChat;
+        }
 
         private async void FrmChat_Load(object sender, EventArgs e)
         {
@@ -37,6 +42,12 @@ namespace pet4sitter
                 ConBD.AbrirConexion();
                 totalChats = Mensaje.ContarTotalChats();
                 CargarUltimosChats();
+                if(idChatSeleccionado != null)
+                {
+                    User usu = User.EncontrarUsuario((int)idChatSeleccionado);
+                    lblNombreChatActivo.Text = usu.Name;
+                    ChatMensajes();
+                }
                 ConBD.CerrarConexion();
             }
             else
@@ -277,6 +288,7 @@ namespace pet4sitter
             lblNombreChatActivo.Text = lblNombre1.Text;
             await ChatMensajes();
         }
+
 
         private void pnl1_MouseLeave(object sender, EventArgs e)
         {

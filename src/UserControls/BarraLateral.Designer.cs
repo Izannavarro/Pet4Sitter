@@ -30,7 +30,7 @@
         {
             this.pnlBarraLateral = new System.Windows.Forms.Panel();
             this.lblPerfil = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pcbEditarPerfil = new System.Windows.Forms.PictureBox();
             this.lblAjustes = new System.Windows.Forms.Label();
             this.pcbAjustes = new System.Windows.Forms.PictureBox();
             this.lblIaYuda = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.pnlBarraLateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbEditarPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAjustes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIaYuda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbTienda)).BeginInit();
@@ -61,7 +61,7 @@
             // 
             this.pnlBarraLateral.BackColor = System.Drawing.Color.White;
             this.pnlBarraLateral.Controls.Add(this.lblPerfil);
-            this.pnlBarraLateral.Controls.Add(this.pictureBox2);
+            this.pnlBarraLateral.Controls.Add(this.pcbEditarPerfil);
             this.pnlBarraLateral.Controls.Add(this.lblAjustes);
             this.pnlBarraLateral.Controls.Add(this.pcbAjustes);
             this.pnlBarraLateral.Controls.Add(this.lblIaYuda);
@@ -97,17 +97,18 @@
             this.lblPerfil.MouseLeave += new System.EventHandler(this.lblPerfil_MouseLeave);
             this.lblPerfil.MouseHover += new System.EventHandler(this.lblPerfil_MouseHover);
             // 
-            // pictureBox2
+            // pcbEditarPerfil
             // 
-            this.pictureBox2.Image = global::pet4sitter.Properties.Resources.usuario;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 513);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 61);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave_1);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover_1);
+            this.pcbEditarPerfil.Image = global::pet4sitter.Properties.Resources.usuario;
+            this.pcbEditarPerfil.Location = new System.Drawing.Point(17, 513);
+            this.pcbEditarPerfil.Name = "pcbEditarPerfil";
+            this.pcbEditarPerfil.Size = new System.Drawing.Size(63, 61);
+            this.pcbEditarPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbEditarPerfil.TabIndex = 14;
+            this.pcbEditarPerfil.TabStop = false;
+            this.pcbEditarPerfil.Click += new System.EventHandler(this.pcbEditarPerfil_Click);
+            this.pcbEditarPerfil.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave_1);
+            this.pcbEditarPerfil.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover_1);
             // 
             // lblAjustes
             // 
@@ -272,7 +273,7 @@
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(93, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(167, 599);
             this.panel1.TabIndex = 16;
@@ -305,7 +306,7 @@
             this.MouseHover += new System.EventHandler(this.BarraLateral_MouseHover);
             this.pnlBarraLateral.ResumeLayout(false);
             this.pnlBarraLateral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbEditarPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbAjustes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbIaYuda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbTienda)).EndInit();
@@ -335,7 +336,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pcbChat;
         private System.Windows.Forms.Label lblPerfil;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pcbEditarPerfil;
         private System.Windows.Forms.Panel panel1;
     }
 }

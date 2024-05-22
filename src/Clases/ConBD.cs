@@ -52,9 +52,10 @@ namespace pet4sitter.Clases
         public static void AbrirConexion()
         {
             if (instancia != null)
+            {
                 instancia.Open();
+            }
         }
-
         // Método público para cerrar la conexión
         public static void CerrarConexion()
         {

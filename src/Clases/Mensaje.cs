@@ -21,6 +21,8 @@ namespace pet4sitter.Clases
             this.message = message;
         }
 
+        public string Message { get { return message; } }
+
         public static void EnviarMensaje(Mensaje chat)
         {
             string query = "INSERT INTO `pet4sitter`.`chat` (`id_receiver`, `id_sender`, `messages`) VALUES (@id_receiver, @id_sender, @mensaje);";
@@ -36,7 +38,7 @@ namespace pet4sitter.Clases
             List<Mensaje> mensajes = new List<Mensaje>();
 
             string query = @"
-        SELECT c.id_sender, MAX(c.date) AS date
+        SELECT c.id_sender, MAX(c.date) AS date,messages
         FROM chat c
         WHERE c.id_receiver = 1
         GROUP BY c.id_sender
@@ -49,10 +51,13 @@ namespace pet4sitter.Clases
                 while (reader.Read())
                 {
                     int? id_sender = reader.IsDBNull(0) ? (int?)null : reader.GetInt32(0);
-                    Mensaje mensaje = new Mensaje(null, id_sender, null);
+                    string message = reader.GetString(2);
+                    Mensaje mensaje = new Mensaje(null, id_sender, message);
                     mensajes.Add(mensaje);
                 }
+                reader.Close();
             }
+            
 
             return mensajes;
         }

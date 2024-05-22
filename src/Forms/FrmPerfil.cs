@@ -53,5 +53,11 @@ namespace pet4sitter
         {
             Application.Exit();
         }
+
+        private void btnEditarPerfil_Click(object sender, EventArgs e)
+        {
+            FrmEditarPerfil frm = new FrmEditarPerfil();
+            frm.ShowDialog();
+        }
     }
 }

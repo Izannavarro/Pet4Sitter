@@ -119,6 +119,7 @@ namespace pet4sitter.Clases
                 Producto p = new Producto(int.Parse(reader["id_product"].ToString()),reader["name"].ToString(), int.Parse(reader["quantity"].ToString()), double.Parse(reader["price"].ToString()), reader["description"].ToString(), img);
                 lProd.Add(p);
             }
+            reader.Close();
             return lProd;
         }
 

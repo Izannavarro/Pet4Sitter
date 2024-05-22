@@ -127,5 +127,10 @@ namespace pet4sitter
                 }
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

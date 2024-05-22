@@ -100,6 +100,7 @@ namespace pet4sitter.Clases
                                         ));
 
             }
+            reader.Close();
             return list;
         }
 
@@ -131,6 +132,38 @@ namespace pet4sitter.Clases
                                             reader.IsDBNull(reader.GetOrdinal("longitud")) ? (double?)null : reader.GetDouble("longitud")
                                         );
             }
+            return user;
+        }
+
+        public static User EncontrarUsuario(int id)
+        {
+            User user = null;
+            string query = "SELECT * FROM users WHERE id_user = @id";
+            MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
+            com.Parameters.AddWithValue("@id", id);
+            MySqlDataReader reader = com.ExecuteReader();
+            while (reader.Read())
+            {
+                byte[] ArrImg = reader.IsDBNull(reader.GetOrdinal("image")) ? null : (byte[])reader["image"];
+
+                user = new User(
+                                            reader.IsDBNull(reader.GetOrdinal("id_user")) ? (int?)null : reader.GetInt32("id_user"),
+                                            reader.IsDBNull(reader.GetOrdinal("id_google")) ? null : reader.GetString("id_google"),
+                                            reader.IsDBNull(reader.GetOrdinal("name")) ? null : reader.GetString("name"),
+                                            reader.IsDBNull(reader.GetOrdinal("surname")) ? null : reader.GetString("surname"),
+                                            reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString("email"),
+                                            reader.IsDBNull(reader.GetOrdinal("dni")) ? null : reader.GetString("dni"),
+                                            reader.IsDBNull(reader.GetOrdinal("password")) ? null : reader.GetString("password"),
+                                            reader.IsDBNull(reader.GetOrdinal("location")) ? null : reader.GetString("location"),
+                                            reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean("premium"),
+                                            reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean("sitter"),
+                                            reader.IsDBNull(reader.GetOrdinal("admin")) ? (bool?)null : reader.GetBoolean("admin"),
+                                            reader.IsDBNull(reader.GetOrdinal("image")) ? null : ArrImg,
+                                            reader.IsDBNull(reader.GetOrdinal("latitud")) ? (double?)null : reader.GetDouble("latitud"),
+                                            reader.IsDBNull(reader.GetOrdinal("longitud")) ? (double?)null : reader.GetDouble("longitud")
+                                        );
+            }
+            reader.Close();
             return user;
         }
 

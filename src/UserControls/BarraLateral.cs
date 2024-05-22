@@ -255,5 +255,10 @@ namespace pet4sitter
             form.Show();
             formActual.Dispose();
         }
+
+        private void pcbEditarPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

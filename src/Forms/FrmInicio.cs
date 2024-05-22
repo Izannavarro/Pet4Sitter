@@ -109,16 +109,20 @@ namespace pet4sitter
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                string query = $"SELECT * FROM chat c INNER JOIN users u ON c.id_sender = u.id_user WHERE id_receiver = {Data.CurrentUser.IdUser} GROUP BY id_sender LIMIT 3;";
+                string query = $"SELECT * FROM chat c INNER JOIN users u ON c.id_sender = u.id_user WHERE id_receiver = {Data.CurrentUser.IdUser} GROUP BY id_sender order by c.date desc LIMIT 3 ;";
                 List<User> users = User.ListarUsuarios(query);
+                List<Mensaje> lMens = Mensaje.ObtenerUltimosChats();
                 if (users.Count > 0)
                 {
                     lblNombreChat1.Text = users[0].Name;
+
                     if (users[0].Image != null)
                     {
                         pcbChat1.Image = Utiles.ByteArrayToImage(users[0].Image); // ??
                     }
-
+                    lblMensaje1.Text =  lMens[0].Message;
+                    lblIdChat1.Text = users[0].IdUser.ToString();
+                    
                 }
 
                 if (users.Count > 1)
@@ -131,6 +135,8 @@ namespace pet4sitter
                             pcbChat2.Image = Utiles.ByteArrayToImage(users[1].Image); // ??
                         }
                     }
+                    lblMensaje2.Text = lMens[1].Message;
+                    lblIdChat2.Text = users[1].IdUser.ToString();
                 }
 
                 if (users.Count > 2)
@@ -145,6 +151,8 @@ namespace pet4sitter
                         }
                     
                     }
+                    lblMensaje3.Text = lMens[2].Message;
+                    lblIdChat3.Text = users[2].IdUser.ToString();
                 }
                 ConBD.CerrarConexion();
             }
@@ -154,5 +162,63 @@ namespace pet4sitter
             }//Comprueba si la bd está disponible
         }
 
+        private void pnlChat1_MouseHover(object sender, EventArgs e)
+        {
+            pnlChat1.BackColor = Color.LightGreen;
+        }
+
+        private void pnlChat1_MouseLeave(object sender, EventArgs e)
+        {
+            pnlChat1.BackColor = Color.White;
+        }
+
+
+        private void pnlChat3_MouseHover(object sender, EventArgs e)
+        {
+            pnlChat3.BackColor = Color.LightGreen;
+        }
+
+        private void pnlChat2_MouseHover(object sender, EventArgs e)
+        {
+            pnlChat2.BackColor = Color.LightGreen;
+        }
+
+        private void pnlChat2_MouseLeave(object sender, EventArgs e)
+        {
+            pnlChat2.BackColor = Color.White;
+        }
+
+        private void pnlChat3_MouseLeave(object sender, EventArgs e)
+        {
+            pnlChat3.BackColor = Color.White;
+        }
+
+        private void pnlChat1_Click(object sender, EventArgs e)
+        {
+            if (lblIdChat1.Text != "")
+            {
+                FrmChat frmChat = new FrmChat(int.Parse(lblIdChat1.Text));
+                frmChat.Show();
+            }
+
+        }
+
+        private void pnlChat2_Click(object sender, EventArgs e)
+        {
+            if(lblIdChat2.Text != "")
+            {
+                FrmChat frmChat = new FrmChat(int.Parse(lblIdChat2.Text));
+                frmChat.Show();
+            }
+        }
+
+        private void pnlChat3_Click(object sender, EventArgs e)
+        {
+            if (lblIdChat3.Text != "")
+            {
+                FrmChat frmChat = new FrmChat(int.Parse(lblIdChat3.Text));
+                frmChat.Show();
+            }
+        }
     }
 }
