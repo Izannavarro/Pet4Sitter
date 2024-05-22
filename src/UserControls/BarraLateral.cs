@@ -262,5 +262,12 @@ namespace pet4sitter
             form.Show();
             formActual.Dispose();
         }
+
+        private void pcbNoticias_Click(object sender, EventArgs e)
+        {
+            FrmNoticias frmNoticias = new FrmNoticias();
+            frmNoticias.Show();
+            formActual.Dispose();
+        }
     }
 }

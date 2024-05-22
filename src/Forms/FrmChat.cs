@@ -46,6 +46,7 @@ namespace pet4sitter
                 {
                     User usu = User.EncontrarUsuario((int)idChatSeleccionado);
                     lblNombreChatActivo.Text = usu.Name;
+                    pcbImagen5.Image = Utiles.ByteArrayToImage(usu.Image);
                     await ChatMensajes();
                 }
                 ConBD.CerrarConexion();
@@ -261,18 +262,21 @@ namespace pet4sitter
                 {
                     lblIdChat2.Text = d.Rows[1]["id_user"].ToString();
                     lblNombre2.Text = d.Rows[1]["name"].ToString();
+                    pcbImagen2.Image = Utiles.ByteArrayToImage(d.Rows[1]["image"] as byte[]);
                 }
 
                 if (d.Rows.Count > 2)
                 {
                     lblIdChat3.Text = d.Rows[2]["id_user"].ToString();
                     lblNombre3.Text = d.Rows[2]["name"].ToString();
+                    pcbImagen3.Image = Utiles.ByteArrayToImage(d.Rows[2]["image"] as byte[]);
                 }
 
                 if (d.Rows.Count > 3)
                 {
                     lblIdChat4.Text = d.Rows[3]["id_user"].ToString();
                     lblNombre4.Text = d.Rows[3]["name"].ToString();
+                    pcbImagen4.Image = Utiles.ByteArrayToImage(d.Rows[3]["image"] as byte[]);
                 }
             }
             catch (Exception ex)
@@ -287,6 +291,7 @@ namespace pet4sitter
             mensajesCargados.Clear();
             idChatSeleccionado = int.Parse(lblIdChat1.Text.ToString());
             lblNombreChatActivo.Text = lblNombre1.Text;
+            pcbImagen5.Image = pcbImagen1.Image;
             await ChatMensajes();
         }
 
@@ -302,6 +307,7 @@ namespace pet4sitter
             mensajesCargados.Clear();
             idChatSeleccionado = int.Parse(lblIdChat2.Text.ToString());
             lblNombreChatActivo.Text = lblNombre2.Text;
+            pcbImagen5.Image = pcbImagen2.Image;
             await ChatMensajes();
         }
 
@@ -334,6 +340,7 @@ namespace pet4sitter
             mensajesCargados.Clear();
             idChatSeleccionado = int.Parse(lblIdChat3.Text.ToString());
             lblNombreChatActivo.Text = lblNombre3.Text;
+            pcbImagen5.Image = pcbImagen3.Image;
             await ChatMensajes();
         }
 
@@ -343,6 +350,7 @@ namespace pet4sitter
             mensajesCargados.Clear();
             idChatSeleccionado = int.Parse(lblIdChat4.Text.ToString());
             lblNombreChatActivo.Text = lblNombre4.Text;
+            pcbImagen5.Image = pcbImagen4.Image;
             await ChatMensajes();
         }
     }

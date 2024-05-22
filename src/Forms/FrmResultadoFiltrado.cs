@@ -93,12 +93,9 @@ namespace pet4sitter
             lblNombreCuidador1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion1_Text;
             btnSiguiente.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnSiguiente_Text;
             btnAnterior.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnAnterior_Text;
-            lblValoracion.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblValoracion_Text;
             lblHasta.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblHasta_Text;
             lblDesde.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDesde_Text;
             button1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.button1_Text;
-            button3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.button3_Text;
-            btnConf.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnConf_Text;
         }
 
         private void FrmResultadoFiltrado_FormClosed(object sender, FormClosedEventArgs e)
