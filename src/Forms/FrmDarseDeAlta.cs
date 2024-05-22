@@ -34,7 +34,6 @@ namespace pet4sitter
 
         private void AplicarIdioma()
         {
-            lblDescripcion.Text = Resources.Recursos_Localizable.FrmAlta.lblDescripcion_Text;
             lblLocalizacion.Text = Resources.Recursos_Localizable.FrmAlta.lblLocalizacion_Text;
             lblPrecioDia.Text = Resources.Recursos_Localizable.FrmAlta.lblPrecioDia_Text;
             btnGuardar.Text = Resources.Recursos_Localizable.FrmAlta.btnGuardar_Text;
