@@ -32,7 +32,7 @@ namespace pet4sitter
         {
             txtNombre.Text = Data.CurrentUser.Name;
             txtApellido.Text = Data.CurrentUser.Surname;
-            txtContrasenya.Text = Data.CurrentUser.Password;
+            txtContrasenya.Clear();
             txtEmail.Text = Data.CurrentUser.Email;
             txtLocalizacion.Text = Data.CurrentUser.Location;
         }
@@ -70,11 +70,20 @@ namespace pet4sitter
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            string oldPass = Data.CurrentUser.Password;
             string nombre = txtNombre.Text;
             string apellidos = txtApellido.Text;
             string localizacion = txtLocalizacion.Text;
             string email = txtEmail.Text;
-            string contra = txtContrasenya.Text;
+            string contra;
+            if(txtContrasenya.Text != "")
+            {
+                contra = txtContrasenya.Text;
+            }
+            else
+            {
+                contra = oldPass;
+            }
             byte[] imgArr = Utiles.ImageToByteArray(ptbImagen.Image);
             int id = Data.CurrentUser.IdUser.Value;
 

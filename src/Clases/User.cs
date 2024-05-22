@@ -433,10 +433,17 @@ namespace pet4sitter.Clases
         {
             try
             {
-                string consulta = String.Format("UPDATE users SET name = '{0}',surname = '{1}',location = '{2}', email = '{3}', password = '{4}', image = '{5} WHERE id_user = '{6}'", u.Name, u.Surname, u.Location, u.Email, u.Password, u.Image, u.IdUser);
+                string consulta = "UPDATE users SET name = @name, surname = @surname, location = @location, email = @Email, password = @password, image = @image WHERE id_user = @id_user";
                 MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
-                MySqlDataReader reader = comando.ExecuteReader();
-                reader.Close();
+                comando.Parameters.AddWithValue("@name", u.Name);
+                comando.Parameters.AddWithValue("@surname", u.Surname);
+                comando.Parameters.AddWithValue("@location", u.Location);
+                comando.Parameters.AddWithValue("@Email", u.Email);
+                comando.Parameters.AddWithValue("@password", u.Password);
+                comando.Parameters.AddWithValue("@image", u.Image);
+                comando.Parameters.AddWithValue("@id_user", u.IdUser);
+                comando.ExecuteNonQuery();
+                Data.CurrentUser = User.EncontrarUsuario((int)u.idUser);
             }
             catch (Exception ex)
             {
