@@ -46,18 +46,14 @@
             this.pcbCuidador1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.lblValoracion = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblHasta = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.lblDesde = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.btnConf = new System.Windows.Forms.Button();
             this.lblIdUser1 = new System.Windows.Forms.Label();
             this.lblIdUser2 = new System.Windows.Forms.Label();
             this.lblIdUser3 = new System.Windows.Forms.Label();
@@ -270,42 +266,16 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.lblValoracion);
             this.panel5.Controls.Add(this.textBox3);
             this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.lblHasta);
             this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.lblDesde);
             this.panel5.Location = new System.Drawing.Point(13, 9);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(933, 42);
             this.panel5.TabIndex = 44;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(873, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 42);
-            this.button2.TabIndex = 60;
-            this.button2.Text = "Val";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // lblValoracion
-            // 
-            this.lblValoracion.AutoSize = true;
-            this.lblValoracion.BackColor = System.Drawing.Color.White;
-            this.lblValoracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValoracion.ForeColor = System.Drawing.Color.Black;
-            this.lblValoracion.Location = new System.Drawing.Point(745, 7);
-            this.lblValoracion.Name = "lblValoracion";
-            this.lblValoracion.Size = new System.Drawing.Size(122, 25);
-            this.lblValoracion.TabIndex = 59;
-            this.lblValoracion.Text = "Valoración:";
             // 
             // textBox3
             // 
@@ -340,24 +310,13 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(309, 0);
+            this.button1.Location = new System.Drawing.Point(345, 1);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(48, 42);
             this.button1.TabIndex = 42;
             this.button1.Text = "Precio";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(693, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(45, 42);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "Distancia";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // lblDesde
             // 
@@ -402,17 +361,6 @@
             this.txtBuscar.Size = new System.Drawing.Size(559, 41);
             this.txtBuscar.TabIndex = 18;
             // 
-            // btnConf
-            // 
-            this.btnConf.Location = new System.Drawing.Point(27, 34);
-            this.btnConf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConf.Name = "btnConf";
-            this.btnConf.Size = new System.Drawing.Size(117, 53);
-            this.btnConf.TabIndex = 54;
-            this.btnConf.Text = "button4";
-            this.btnConf.UseVisualStyleBackColor = true;
-            this.btnConf.Click += new System.EventHandler(this.btnConf_Click);
-            // 
             // lblIdUser1
             // 
             this.lblIdUser1.AutoSize = true;
@@ -449,7 +397,6 @@
             this.Controls.Add(this.lblIdUser3);
             this.Controls.Add(this.lblIdUser2);
             this.Controls.Add(this.lblIdUser1);
-            this.Controls.Add(this.btnConf);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panel3);
@@ -485,7 +432,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pnlRes1;
         private System.Windows.Forms.Label lblNombreCuidador1;
@@ -505,9 +451,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label lblValoracion;
-        private System.Windows.Forms.Button btnConf;
         private System.Windows.Forms.Button btnEnviarMensajeChat1;
         private System.Windows.Forms.Label lblIdUser1;
         private System.Windows.Forms.Label lblIdUser2;

@@ -353,7 +353,7 @@ namespace pet4sitter.Clases
             string query = @"
             SELECT *
             FROM users
-            WHERE price >= @PrecioDesde AND price <= @PrecioHasta
+            WHERE price >= @PrecioDesde AND price <= @PrecioHasta and id_user != @idUsuario
             ORDER BY SQRT(POW(latitud - @LatitudReferencia, 2) + POW(longitud - @LongitudReferencia, 2)) Limit @Limit OFFSET @Offset";
 
             try
@@ -367,8 +367,9 @@ namespace pet4sitter.Clases
                     command.Parameters.AddWithValue("@PrecioHasta", precioHasta);
                     command.Parameters.AddWithValue("@Limit", limit);
                     command.Parameters.AddWithValue("@Offset", offset);
+                    command.Parameters.AddWithValue("idUsuario", Data.CurrentUser.idUser);
 
-                    using (MySqlDataReader reader = command.ExecuteReader())
+                   using (MySqlDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {

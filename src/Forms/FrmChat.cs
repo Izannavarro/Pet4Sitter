@@ -213,7 +213,7 @@ namespace pet4sitter
             try
             {
                 string query = @"
-            SELECT DISTINCT u.id_user, u.name, c.date
+            SELECT DISTINCT u.id_user, u.name, c.date,u.image
             FROM (
                 SELECT 
                     IF(id_sender = @CurrentUserId, id_receiver, id_sender) AS chat_partner,
@@ -253,6 +253,7 @@ namespace pet4sitter
                 {
                     lblIdChat1.Text = d.Rows[0]["id_user"].ToString();
                     lblNombre1.Text = d.Rows[0]["name"].ToString();
+                    pcbImagen1.Image = Utiles.ByteArrayToImage(d.Rows[0]["image"] as byte[]);
                     //pcbImagen1.Image = (Image)d.Rows[0]["image"];
                 }
 

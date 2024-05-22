@@ -38,20 +38,20 @@ namespace pet4sitter.Clases
             List<Mensaje> mensajes = new List<Mensaje>();
 
             string query = @"
-        SELECT distinct c.id_sender, MAX(c.date) AS date,messages
+        SELECT distinct c.id_sender ,messages
         FROM chat c
-        WHERE c.id_receiver = 1
-        GROUP BY c.id_sender
+        WHERE c.id_receiver = @idUsuActual
         ORDER BY date DESC;
     ";
 
             MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
+            com.Parameters.AddWithValue("idUsuActual", Data.CurrentUser.IdUser);
             using (MySqlDataReader reader = com.ExecuteReader())
             {
                 while (reader.Read())
                 {
                     int? id_sender = reader.IsDBNull(0) ? (int?)null : reader.GetInt32(0);
-                    string message = reader.GetString(2);
+                    string message = reader.GetString(1);
                     Mensaje mensaje = new Mensaje(null, id_sender, message);
                     mensajes.Add(mensaje);
                 }
