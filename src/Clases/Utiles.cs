@@ -97,6 +97,7 @@ namespace pet4sitter.Clases
                 return ms.ToArray();
             }
         }
+
         public static Image ByteArrayToImage(byte[] byteArrayIn)
         {
             using (MemoryStream ms = new MemoryStream(byteArrayIn))

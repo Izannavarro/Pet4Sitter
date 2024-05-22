@@ -47,13 +47,6 @@ namespace pet4sitter
             btnDarAlta.Text = Resources.Recursos_Localizable.FrmPerfil.btnDarAlta_Text;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show(); // Muestra el formulario FrmConfiguracion
-        }
-
         private void FrmPerfil_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -62,6 +55,13 @@ namespace pet4sitter
         private void btnEditarPerfil_Click(object sender, EventArgs e)
         {
             FrmEditarPerfil frm = new FrmEditarPerfil();
+            frm.ShowDialog();
+            pcbImagen.Image = Utiles.ByteArrayToImage(Data.CurrentUser.Image);
+        }
+
+        private void btnDarAlta_Click(object sender, EventArgs e)
+        {
+            FrmDarseDeAlta frm = new FrmDarseDeAlta();
             frm.ShowDialog();
         }
     }

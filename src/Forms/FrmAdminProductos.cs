@@ -198,5 +198,10 @@ namespace pet4sitter
                 MessageBox.Show("No se pudo conectar a la base de datos!");
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
