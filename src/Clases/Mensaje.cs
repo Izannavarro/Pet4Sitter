@@ -38,7 +38,7 @@ namespace pet4sitter.Clases
             List<Mensaje> mensajes = new List<Mensaje>();
 
             string query = @"
-        SELECT c.id_sender, MAX(c.date) AS date,messages
+        SELECT distinct c.id_sender, MAX(c.date) AS date,messages
         FROM chat c
         WHERE c.id_receiver = 1
         GROUP BY c.id_sender

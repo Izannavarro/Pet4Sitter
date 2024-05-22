@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pet4sitter.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,7 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            pcbImagen.Image = Utiles.ByteArrayToImage(Data.CurrentUser.Image);
         }
 
         private void AplicarIdioma()

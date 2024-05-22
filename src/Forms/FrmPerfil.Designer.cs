@@ -43,7 +43,7 @@
             this.lblUltimaCompra = new System.Windows.Forms.Label();
             this.btnEditarPerfil = new System.Windows.Forms.Button();
             this.btnDarAlta = new System.Windows.Forms.Button();
-            this.ptbImagen = new System.Windows.Forms.PictureBox();
+            this.pcbImagen = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel3.SuspendLayout();
@@ -54,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -223,15 +223,16 @@
             this.btnDarAlta.Text = "Ser Cuidador";
             this.btnDarAlta.UseVisualStyleBackColor = false;
             // 
-            // ptbImagen
+            // pcbImagen
             // 
-            this.ptbImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ptbImagen.Location = new System.Drawing.Point(166, 23);
-            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2);
-            this.ptbImagen.Name = "ptbImagen";
-            this.ptbImagen.Size = new System.Drawing.Size(217, 184);
-            this.ptbImagen.TabIndex = 12;
-            this.ptbImagen.TabStop = false;
+            this.pcbImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pcbImagen.Location = new System.Drawing.Point(166, 23);
+            this.pcbImagen.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbImagen.Name = "pcbImagen";
+            this.pcbImagen.Size = new System.Drawing.Size(217, 184);
+            this.pcbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbImagen.TabIndex = 12;
+            this.pcbImagen.TabStop = false;
             // 
             // label6
             // 
@@ -259,7 +260,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1109, 596);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.ptbImagen);
+            this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.btnDarAlta);
             this.Controls.Add(this.btnEditarPerfil);
             this.Controls.Add(this.lblUltimaCompra);
@@ -283,7 +284,7 @@
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +307,7 @@
         private System.Windows.Forms.Label lblUltimaCompra;
         private System.Windows.Forms.Button btnEditarPerfil;
         private System.Windows.Forms.Button btnDarAlta;
-        private System.Windows.Forms.PictureBox ptbImagen;
+        private System.Windows.Forms.PictureBox pcbImagen;
         private System.Windows.Forms.Label label6;
         private BarraLateral barraLateral1;
     }

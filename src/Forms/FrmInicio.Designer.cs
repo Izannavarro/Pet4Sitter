@@ -145,7 +145,8 @@
             // 
             // pcbChat1
             // 
-            this.pcbChat1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbChat1.BackColor = System.Drawing.Color.Transparent;
+            this.pcbChat1.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbChat1.Location = new System.Drawing.Point(14, 37);
             this.pcbChat1.Margin = new System.Windows.Forms.Padding(2);
             this.pcbChat1.Name = "pcbChat1";
@@ -193,7 +194,8 @@
             // 
             // pcbChat2
             // 
-            this.pcbChat2.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbChat2.BackColor = System.Drawing.Color.Transparent;
+            this.pcbChat2.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbChat2.Location = new System.Drawing.Point(14, 36);
             this.pcbChat2.Margin = new System.Windows.Forms.Padding(2);
             this.pcbChat2.Name = "pcbChat2";
@@ -241,7 +243,8 @@
             // 
             // pcbChat3
             // 
-            this.pcbChat3.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbChat3.BackColor = System.Drawing.Color.Transparent;
+            this.pcbChat3.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbChat3.Location = new System.Drawing.Point(14, 33);
             this.pcbChat3.Margin = new System.Windows.Forms.Padding(2);
             this.pcbChat3.Name = "pcbChat3";

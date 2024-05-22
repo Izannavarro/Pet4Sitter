@@ -55,12 +55,13 @@
             // btnFoto
             // 
             this.btnFoto.Location = new System.Drawing.Point(586, 153);
-            this.btnFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFoto.Margin = new System.Windows.Forms.Padding(2);
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.Size = new System.Drawing.Size(69, 46);
             this.btnFoto.TabIndex = 1;
             this.btnFoto.Text = "Cambiar foto";
             this.btnFoto.UseVisualStyleBackColor = true;
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
             // 
             // label9
             // 
@@ -77,7 +78,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(140, 261);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(326, 26);
             this.txtNombre.TabIndex = 17;
@@ -111,7 +112,7 @@
             // 
             this.txtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(140, 338);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(326, 26);
             this.txtApellido.TabIndex = 20;
@@ -201,7 +202,7 @@
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(280, 459);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(224, 31);
             this.btnVolver.TabIndex = 40;
@@ -212,7 +213,7 @@
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(509, 459);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(224, 31);
             this.btnGuardar.TabIndex = 41;
@@ -235,7 +236,7 @@
             // 
             this.txtLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocalizacion.Location = new System.Drawing.Point(140, 414);
-            this.txtLocalizacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLocalizacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtLocalizacion.Name = "txtLocalizacion";
             this.txtLocalizacion.Size = new System.Drawing.Size(326, 26);
             this.txtLocalizacion.TabIndex = 43;
@@ -257,7 +258,7 @@
             this.ptbImagen.BackColor = System.Drawing.Color.Transparent;
             this.ptbImagen.Image = global::pet4sitter.Properties.Resources.usuario;
             this.ptbImagen.Location = new System.Drawing.Point(404, 33);
-            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2);
             this.ptbImagen.Name = "ptbImagen";
             this.ptbImagen.Size = new System.Drawing.Size(177, 166);
             this.ptbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -268,7 +269,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(619, 301);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(204, 26);
             this.txtEmail.TabIndex = 45;
@@ -277,7 +278,7 @@
             // 
             this.txtContrasenya.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasenya.Location = new System.Drawing.Point(682, 377);
-            this.txtContrasenya.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContrasenya.Margin = new System.Windows.Forms.Padding(2);
             this.txtContrasenya.Name = "txtContrasenya";
             this.txtContrasenya.Size = new System.Drawing.Size(188, 26);
             this.txtContrasenya.TabIndex = 46;
@@ -309,7 +310,7 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.ptbImagen);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmEditarPerfil";
             this.Text = "FrmEditarPerfil";
             this.Load += new System.EventHandler(this.FrmEditarPerfil_Load);
