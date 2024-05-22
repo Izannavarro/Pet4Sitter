@@ -57,17 +57,17 @@ namespace pet4sitter
 
         private void AplicarIdioma()
         {
-            //    lblNombre.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblNombre;
-            //    lblApellido.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblApellido;
-            //    lblLocalizacion.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblLocalizacion;
-            //    lblEmail.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblEmail;
-            //    label7.Text = Resources.Recursos_Localizable.FrmEditarPerfil.label7;
-            //    btnFoto.Text = Resources.Recursos_Localizable.FrmEditarPerfil.btnFoto;
-            //    btnVolver.Text = Resources.Recursos_Localizable.FrmEditarPerfil.btnVolver;
-            //    btnGuardar.Text = Resources.Recursos_Localizable.FrmEditarPerfil.btnGuardar;
+            lblNombre.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblNombre;
+            lblApellido.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblApellido;
+            lblLocalizacion.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblLocalizacion;
+            lblEmail.Text = Resources.Recursos_Localizable.FrmEditarPerfil.lblEmail;
+            label7.Text = Resources.Recursos_Localizable.FrmEditarPerfil.label7;
+            btnFoto.Text = Resources.Recursos_Localizable.FrmEditarPerfil.btnFoto;
+            btnVolver.Text = Resources.Recursos_Localizable.FrmEditarPerfil.btnVolver;
+            btnGuardar.Text = Resources.Recursos_Localizable.FrmEditarPerfil.btnGuardar;
         }
 
-    private void btnFoto_Click(object sender, EventArgs e)
+        private void btnFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;";
