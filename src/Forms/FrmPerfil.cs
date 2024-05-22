@@ -33,7 +33,10 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
-            pcbImagen.Image = Utiles.ByteArrayToImage(Data.CurrentUser.Image);
+            if (Data.CurrentUser.Image != null)
+            {
+                pcbImagen.Image = Utiles.ByteArrayToImage(Data.CurrentUser.Image);
+            }
         }
 
         private void AplicarIdioma()

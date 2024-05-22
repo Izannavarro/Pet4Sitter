@@ -225,7 +225,8 @@
             // 
             // pcbImagen
             // 
-            this.pcbImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pcbImagen.BackColor = System.Drawing.Color.Transparent;
+            this.pcbImagen.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbImagen.Location = new System.Drawing.Point(166, 23);
             this.pcbImagen.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen.Name = "pcbImagen";
