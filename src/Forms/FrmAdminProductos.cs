@@ -183,7 +183,7 @@ namespace pet4sitter
             Image img = ptbImagen.Image;
             int id = int.Parse(lblId.Text);
 
-            Producto p1 = new Producto(id, nombre, cant, precio, descrip, null);
+            Producto p1 = new Producto(id, nombre, cant, precio, descrip, img);
 
 
             if (ConBD.Conexion != null)
