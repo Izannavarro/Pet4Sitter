@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblDescripcion_Text" xml:space="preserve">
-    <value>Descripción:</value>
-  </data>
-  <data name="lblLocalizacion_Text" xml:space="preserve">
-    <value>Localización:</value>
-  </data>
   <data name="lblPrecioDia_Text" xml:space="preserve">
     <value>Precio por Día:</value>
   </data>
@@ -132,13 +126,11 @@
   <data name="btnVolver_Text" xml:space="preserve">
     <value>Volver</value>
   </data>
-  <data name="btnButton1_Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblNombre_Text" xml:space="preserve">
-    <value>Nombre:</value>
-  </data>
   <data name="lblTittle_Text" xml:space="preserve">
     <value>Darse de Alta como Cuidador:</value>
   </data>
+	<data name="chkPolitica" xml:space="preserve">
+    <value>Acepta los Terminos y Condiciones</value>
+  </data>
+	
 </root>

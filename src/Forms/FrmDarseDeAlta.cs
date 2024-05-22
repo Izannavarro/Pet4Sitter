@@ -32,17 +32,12 @@ namespace pet4sitter
             btnGuardar.Text = Resources.Recursos_Localizable.FrmAlta.btnGuardar_Text;
             btnVolver.Text = Resources.Recursos_Localizable.FrmAlta.btnVolver_Text;
             lblDarseAlta.Text = Resources.Recursos_Localizable.FrmAlta.lblTittle_Text;
-        }
-
-        private void FrmDarseDeAlta_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            chkTerminos.Text = Resources.Recursos_Localizable.FrmAlta.chkPolitica;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            FrmPerfil frm = new FrmPerfil();
-            frm.Show();
+            this.Close();
             this.Dispose();
         }
 

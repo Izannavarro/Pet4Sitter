@@ -61,15 +61,6 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
-        /// </summary>
-        internal static string btnButton1_Text {
-            get {
-                return ResourceManager.GetString("btnButton1_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Darse de Alta.
         /// </summary>
         internal static string btnGuardar_Text {
@@ -88,29 +79,11 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Descripción:.
+        ///   Busca una cadena traducida similar a Acepta los Terminos y Condiciones.
         /// </summary>
-        internal static string lblDescripcion_Text {
+        internal static string chkPolitica {
             get {
-                return ResourceManager.GetString("lblDescripcion_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Localización:.
-        /// </summary>
-        internal static string lblLocalizacion_Text {
-            get {
-                return ResourceManager.GetString("lblLocalizacion_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Nombre:.
-        /// </summary>
-        internal static string lblNombre_Text {
-            get {
-                return ResourceManager.GetString("lblNombre_Text", resourceCulture);
+                return ResourceManager.GetString("chkPolitica", resourceCulture);
             }
         }
         
