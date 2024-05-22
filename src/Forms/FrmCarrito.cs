@@ -38,13 +38,6 @@ namespace pet4sitter
             btnRealizar.Text = Resources.Recursos_Localizable.FrmCarrito.btnRealizar_Text;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show(); // Muestra el formulario FrmConfiguracion
-        }
-
         private void FrmCarrito_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
