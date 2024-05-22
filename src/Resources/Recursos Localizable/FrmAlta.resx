@@ -127,13 +127,13 @@
     <value>Precio por Día:</value>
   </data>
   <data name="btnGuardar_Text" xml:space="preserve">
-    <value>Guardar</value>
+    <value>Darse de Alta</value>
   </data>
   <data name="btnVolver_Text" xml:space="preserve">
     <value>Volver</value>
   </data>
   <data name="btnButton1_Text" xml:space="preserve">
-    <value>button1</value>
+    <value />
   </data>
   <data name="lblNombre_Text" xml:space="preserve">
     <value>Nombre:</value>
