@@ -60,6 +60,7 @@ namespace pet4sitter
                 lblNombreCuidador1.Text = users[0].Name;
                 lblIdUser1.Visible = false;
                 lblIdUser1.Text =  users[0].IdUser.ToString();
+                btnEnviarMensajeChat1.Visible = true;
             }
 
             if (users.Count > 1)
@@ -67,6 +68,7 @@ namespace pet4sitter
                 lblNombreCuidador2.Text = users[1].Name;
                 lblIdUser2.Visible = false;
                 lblIdUser2.Text = users[1].IdUser.ToString();
+                btnEnviarMensajeChat2.Visible = true;
             }
 
             if (users.Count > 2)
@@ -74,6 +76,7 @@ namespace pet4sitter
                 lblNombreCuidador3.Text = users[2].Name;
                 lblIdUser3.Visible = false;
                 lblIdUser2.Text = users[2].IdUser.ToString();
+                btnEnviarMensajeChat2.Visible = true;
             }
         }
 
@@ -149,7 +152,8 @@ namespace pet4sitter
         private void btnEnviarMensajeChat1_Click(object sender, EventArgs e)
         {
             FrmChat chat = new FrmChat(int.Parse(lblIdUser1.Text));
-            chat.ShowDialog();
+            chat.Show();
+            this.Dispose();
         }
     }
 }

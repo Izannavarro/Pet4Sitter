@@ -46,7 +46,7 @@ namespace pet4sitter
                 {
                     User usu = User.EncontrarUsuario((int)idChatSeleccionado);
                     lblNombreChatActivo.Text = usu.Name;
-                    ChatMensajes();
+                    await ChatMensajes();
                 }
                 ConBD.CerrarConexion();
             }
