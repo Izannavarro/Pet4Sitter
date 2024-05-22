@@ -42,6 +42,11 @@ namespace pet4sitter
             }
             CargarProductosDestacados();
             CargarUltimosChats();
+
+            if ((bool)Data.CurrentUser.Admin)
+            {
+                btnAdmin.Visible = true;
+            }
         }
         private void CargarProductosDestacados()
         {
@@ -218,6 +223,11 @@ namespace pet4sitter
                 FrmChat frmChat = new FrmChat(int.Parse(lblIdChat3.Text));
                 frmChat.Show();
             }
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

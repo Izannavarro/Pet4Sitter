@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnProductos = new System.Windows.Forms.Button();
-            this.btnNoticias = new System.Windows.Forms.Button();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,16 +46,17 @@
             this.btnProductos.UseVisualStyleBackColor = true;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // btnNoticias
+            // btnInicio
             // 
-            this.btnNoticias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNoticias.Location = new System.Drawing.Point(676, 46);
-            this.btnNoticias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNoticias.Name = "btnNoticias";
-            this.btnNoticias.Size = new System.Drawing.Size(277, 254);
-            this.btnNoticias.TabIndex = 49;
-            this.btnNoticias.Text = "Noticias";
-            this.btnNoticias.UseVisualStyleBackColor = true;
+            this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.Location = new System.Drawing.Point(377, 327);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(277, 254);
+            this.btnInicio.TabIndex = 49;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // btnCerrarSesion
             // 
@@ -67,17 +68,19 @@
             this.btnCerrarSesion.TabIndex = 51;
             this.btnCerrarSesion.Text = "Cerrar sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // btnUsuarios
             // 
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Location = new System.Drawing.Point(377, 327);
+            this.btnUsuarios.Location = new System.Drawing.Point(676, 46);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(277, 254);
             this.btnUsuarios.TabIndex = 50;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // FrmInicioAdmin
             // 
@@ -87,7 +90,7 @@
             this.ClientSize = new System.Drawing.Size(1479, 734);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnUsuarios);
-            this.Controls.Add(this.btnNoticias);
+            this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.btnProductos);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmInicioAdmin";
@@ -101,7 +104,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnNoticias;
+        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnUsuarios;
     }
