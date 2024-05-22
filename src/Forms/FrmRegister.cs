@@ -157,11 +157,11 @@ namespace pet4sitter
                         User u = null;
                         if (Data.UserGoogle != null)
                         {
-                            u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null,coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                            u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, false, null, null,coordenadas.Latitude.Value, coordenadas.Longitude.Value);
                         }
                         else
                         {
-                            u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, chkCuidador.Checked, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                            u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, txtDireccion.Text, null, false, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
                         }
                         User.RegistrarUsuario(u);
                         MessageBox.Show("Usuario: " + u.Name + " Registrado con éxito!");
