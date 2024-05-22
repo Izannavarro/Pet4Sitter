@@ -59,7 +59,7 @@ namespace pet4sitter
             this.fLPanelChat = new pet4sitter.Clases.BufferedFlowLayoutPanel();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.pnl1.SuspendLayout();
