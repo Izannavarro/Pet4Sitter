@@ -155,5 +155,19 @@ namespace pet4sitter
             chat.Show();
             this.Dispose();
         }
+
+        private void btnEnviarMensajeChat2_Click(object sender, EventArgs e)
+        {
+            FrmChat chat = new FrmChat(int.Parse(lblIdUser2.Text));
+            chat.Show();
+            this.Dispose();
+        }
+
+        private void btnEnviarMensajeChat3_Click(object sender, EventArgs e)
+        {
+            FrmChat chat = new FrmChat(int.Parse(lblIdUser3.Text));
+            chat.Show();
+            this.Dispose();
+        }
     }
 }

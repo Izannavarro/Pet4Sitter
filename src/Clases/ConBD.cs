@@ -35,11 +35,16 @@ namespace pet4sitter.Clases
                     if (instancia == null)
                     {
                         instancia = new MySqlConnection();
-                        // Se define la cadena de conexión para la conexión.
+                        Se define la cadena de conexión para la conexión.
                         string server = "server=127.0.0.1;";
                         string database = "database=pet4sitter;";
                         string usuario = "uid=root;";
                         string password = "pwd=;";
+
+                        //string server = "server=dbpet4sitter.ccrfh6nvwah2.us-east-1.rds.amazonaws.com;";
+                        //string database = "database=pet4sitter;";
+                        //string usuario = "uid=root;";
+
                         instancia.ConnectionString = server + database + usuario + password;
                     }
                     // Se devuelve la instancia de conexión a la base de datos.

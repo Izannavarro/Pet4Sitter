@@ -67,8 +67,8 @@
             this.lblIdChat1 = new System.Windows.Forms.Label();
             this.lblIdChat2 = new System.Windows.Forms.Label();
             this.lblIdChat3 = new System.Windows.Forms.Label();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.btnAdmin = new System.Windows.Forms.Button();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel1.SuspendLayout();
             this.pnlChat1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbChat1)).BeginInit();
