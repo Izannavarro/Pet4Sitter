@@ -18,6 +18,9 @@ namespace pet4sitter
         private int paginaActual = 0;
         private int elementosPorPagina = 3;
         private int totalUsuarios = 0;
+
+        double precioDesde;
+        double precioHasta;
         public FrmResultadoFiltrado()
         {
             InitializeComponent();
@@ -55,16 +58,22 @@ namespace pet4sitter
             if (users.Count > 0)
             {
                 lblNombreCuidador1.Text = users[0].Name;
+                lblIdUser1.Visible = false;
+                lblIdUser1.Text =  users[0].IdUser.ToString();
             }
 
             if (users.Count > 1)
             {
                 lblNombreCuidador2.Text = users[1].Name;
+                lblIdUser2.Visible = false;
+                lblIdUser2.Text = users[1].IdUser.ToString();
             }
 
             if (users.Count > 2)
             {
                 lblNombreCuidador3.Text = users[2].Name;
+                lblIdUser3.Visible = false;
+                lblIdUser2.Text = users[2].IdUser.ToString();
             }
         }
 
@@ -76,20 +85,17 @@ namespace pet4sitter
         }
         private void AplicarIdioma()
         {
-            lblDescripcion4.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion4_Text;
             lblNombreCuidador3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion3_Text;
             lblNombreCuidador2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion2_Text;
             lblNombreCuidador1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion1_Text;
             btnSiguiente.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnSiguiente_Text;
             btnAnterior.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnAnterior_Text;
             lblValoracion.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblValoracion_Text;
-            lblDireccion.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDireccion_Text;
             lblHasta.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblHasta_Text;
             lblDesde.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDesde_Text;
             button1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.button1_Text;
             button3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.button3_Text;
             btnConf.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnConf_Text;
-            btnAñadir.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnAñadir_Text;
         }
 
         private void FrmResultadoFiltrado_FormClosed(object sender, FormClosedEventArgs e)
@@ -140,5 +146,10 @@ namespace pet4sitter
             CargarResultados();
         }
 
+        private void btnEnviarMensajeChat1_Click(object sender, EventArgs e)
+        {
+            FrmChat chat = new FrmChat(int.Parse(lblIdUser1.Text));
+            chat.ShowDialog();
+        }
     }
 }

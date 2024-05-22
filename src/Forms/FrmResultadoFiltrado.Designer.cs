@@ -28,12 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAñadir = new System.Windows.Forms.Button();
-            this.ptbImagen = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblDescripcion4 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.pnl3 = new System.Windows.Forms.Panel();
@@ -50,8 +45,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.lblValoracion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblDireccion = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lblHasta = new System.Windows.Forms.Label();
@@ -62,9 +55,10 @@
             this.button9 = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnConf = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.btnEnviarMensajeChat1 = new System.Windows.Forms.Button();
+            this.lblIdUser1 = new System.Windows.Forms.Label();
+            this.lblIdUser2 = new System.Windows.Forms.Label();
+            this.lblIdUser3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.pnl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCuidador3)).BeginInit();
@@ -77,69 +71,15 @@
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button5
+            // btnBuscar
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(866, 20);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(68, 51);
-            this.button5.TabIndex = 52;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
-            this.panel1.Controls.Add(this.btnAñadir);
-            this.panel1.Controls.Add(this.ptbImagen);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(680, 86);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(254, 436);
-            this.panel1.TabIndex = 50;
-            // 
-            // btnAñadir
-            // 
-            this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Location = new System.Drawing.Point(90, 407);
-            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(102, 26);
-            this.btnAñadir.TabIndex = 47;
-            this.btnAñadir.Text = "Añadir Carrito";
-            this.btnAñadir.UseVisualStyleBackColor = true;
-            // 
-            // ptbImagen
-            // 
-            this.ptbImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ptbImagen.Location = new System.Drawing.Point(24, 25);
-            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ptbImagen.Name = "ptbImagen";
-            this.ptbImagen.Size = new System.Drawing.Size(208, 122);
-            this.ptbImagen.TabIndex = 46;
-            this.ptbImagen.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.lblDescripcion4);
-            this.panel4.Location = new System.Drawing.Point(24, 163);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(208, 239);
-            this.panel4.TabIndex = 45;
-            // 
-            // lblDescripcion4
-            // 
-            this.lblDescripcion4.AutoSize = true;
-            this.lblDescripcion4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion4.Location = new System.Drawing.Point(40, 25);
-            this.lblDescripcion4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDescripcion4.Name = "lblDescripcion4";
-            this.lblDescripcion4.Size = new System.Drawing.Size(163, 18);
-            this.lblDescripcion4.TabIndex = 9;
-            this.lblDescripcion4.Text = "Descripcion Extensa";
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(866, 20);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(148, 51);
+            this.btnBuscar.TabIndex = 52;
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -152,7 +92,7 @@
             this.panel3.Location = new System.Drawing.Point(142, 152);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(506, 370);
+            this.panel3.Size = new System.Drawing.Size(720, 370);
             this.panel3.TabIndex = 49;
             // 
             // btnSiguiente
@@ -174,7 +114,7 @@
             this.pnl3.Location = new System.Drawing.Point(27, 231);
             this.pnl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl3.Name = "pnl3";
-            this.pnl3.Size = new System.Drawing.Size(458, 103);
+            this.pnl3.Size = new System.Drawing.Size(641, 103);
             this.pnl3.TabIndex = 55;
             // 
             // lblNombreCuidador3
@@ -184,13 +124,13 @@
             this.lblNombreCuidador3.Location = new System.Drawing.Point(136, 14);
             this.lblNombreCuidador3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCuidador3.Name = "lblNombreCuidador3";
-            this.lblNombreCuidador3.Size = new System.Drawing.Size(171, 18);
+            this.lblNombreCuidador3.Size = new System.Drawing.Size(116, 18);
             this.lblNombreCuidador3.TabIndex = 7;
-            this.lblNombreCuidador3.Text = "Descripcion Cuidador";
+            this.lblNombreCuidador3.Text = "Sin resultados";
             // 
             // pcbCuidador3
             // 
-            this.pcbCuidador3.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbCuidador3.BackColor = System.Drawing.Color.Transparent;
             this.pcbCuidador3.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbCuidador3.Location = new System.Drawing.Point(13, 12);
             this.pcbCuidador3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -219,7 +159,7 @@
             this.pnlRes2.Location = new System.Drawing.Point(27, 123);
             this.pnlRes2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlRes2.Name = "pnlRes2";
-            this.pnlRes2.Size = new System.Drawing.Size(458, 103);
+            this.pnlRes2.Size = new System.Drawing.Size(641, 103);
             this.pnlRes2.TabIndex = 54;
             // 
             // lblNombreCuidador2
@@ -229,13 +169,13 @@
             this.lblNombreCuidador2.Location = new System.Drawing.Point(136, 14);
             this.lblNombreCuidador2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCuidador2.Name = "lblNombreCuidador2";
-            this.lblNombreCuidador2.Size = new System.Drawing.Size(171, 18);
+            this.lblNombreCuidador2.Size = new System.Drawing.Size(116, 18);
             this.lblNombreCuidador2.TabIndex = 7;
-            this.lblNombreCuidador2.Text = "Descripcion Cuidador";
+            this.lblNombreCuidador2.Text = "Sin resultados";
             // 
             // pcbCuidador2
             // 
-            this.pcbCuidador2.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbCuidador2.BackColor = System.Drawing.Color.Transparent;
             this.pcbCuidador2.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbCuidador2.Location = new System.Drawing.Point(13, 13);
             this.pcbCuidador2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -248,12 +188,13 @@
             // pnlRes1
             // 
             this.pnlRes1.BackColor = System.Drawing.Color.White;
+            this.pnlRes1.Controls.Add(this.btnEnviarMensajeChat1);
             this.pnlRes1.Controls.Add(this.lblNombreCuidador1);
             this.pnlRes1.Controls.Add(this.pcbCuidador1);
             this.pnlRes1.Location = new System.Drawing.Point(27, 15);
             this.pnlRes1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlRes1.Name = "pnlRes1";
-            this.pnlRes1.Size = new System.Drawing.Size(458, 103);
+            this.pnlRes1.Size = new System.Drawing.Size(641, 103);
             this.pnlRes1.TabIndex = 53;
             // 
             // lblNombreCuidador1
@@ -263,13 +204,13 @@
             this.lblNombreCuidador1.Location = new System.Drawing.Point(136, 14);
             this.lblNombreCuidador1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCuidador1.Name = "lblNombreCuidador1";
-            this.lblNombreCuidador1.Size = new System.Drawing.Size(171, 18);
+            this.lblNombreCuidador1.Size = new System.Drawing.Size(116, 18);
             this.lblNombreCuidador1.TabIndex = 7;
-            this.lblNombreCuidador1.Text = "Descripcion Cuidador";
+            this.lblNombreCuidador1.Text = "Sin resultados";
             // 
             // pcbCuidador1
             // 
-            this.pcbCuidador1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbCuidador1.BackColor = System.Drawing.Color.Transparent;
             this.pcbCuidador1.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbCuidador1.Location = new System.Drawing.Point(13, 12);
             this.pcbCuidador1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -294,8 +235,6 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.lblValoracion);
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.lblDireccion);
             this.panel5.Controls.Add(this.textBox3);
             this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.lblHasta);
@@ -331,28 +270,6 @@
             this.lblValoracion.Size = new System.Drawing.Size(99, 20);
             this.lblValoracion.TabIndex = 59;
             this.lblValoracion.Text = "Valoración:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(351, 1);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 35);
-            this.textBox1.TabIndex = 58;
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.BackColor = System.Drawing.Color.White;
-            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.ForeColor = System.Drawing.Color.Black;
-            this.lblDireccion.Location = new System.Drawing.Point(272, 6);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(89, 20);
-            this.lblDireccion.TabIndex = 57;
-            this.lblDireccion.Text = "Direccion:";
             // 
             // textBox3
             // 
@@ -462,16 +379,58 @@
             this.btnConf.UseVisualStyleBackColor = true;
             this.btnConf.Click += new System.EventHandler(this.btnConf_Click);
             // 
+            // btnEnviarMensajeChat1
+            // 
+            this.btnEnviarMensajeChat1.Location = new System.Drawing.Point(514, 25);
+            this.btnEnviarMensajeChat1.Name = "btnEnviarMensajeChat1";
+            this.btnEnviarMensajeChat1.Size = new System.Drawing.Size(114, 53);
+            this.btnEnviarMensajeChat1.TabIndex = 8;
+            this.btnEnviarMensajeChat1.Text = "Enviar Mensaje";
+            this.btnEnviarMensajeChat1.UseVisualStyleBackColor = true;
+            this.btnEnviarMensajeChat1.Click += new System.EventHandler(this.btnEnviarMensajeChat1_Click);
+            // 
+            // lblIdUser1
+            // 
+            this.lblIdUser1.AutoSize = true;
+            this.lblIdUser1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdUser1.Location = new System.Drawing.Point(898, 152);
+            this.lblIdUser1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIdUser1.Name = "lblIdUser1";
+            this.lblIdUser1.Size = new System.Drawing.Size(0, 18);
+            this.lblIdUser1.TabIndex = 9;
+            // 
+            // lblIdUser2
+            // 
+            this.lblIdUser2.AutoSize = true;
+            this.lblIdUser2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdUser2.Location = new System.Drawing.Point(934, 252);
+            this.lblIdUser2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIdUser2.Name = "lblIdUser2";
+            this.lblIdUser2.Size = new System.Drawing.Size(0, 18);
+            this.lblIdUser2.TabIndex = 55;
+            // 
+            // lblIdUser3
+            // 
+            this.lblIdUser3.AutoSize = true;
+            this.lblIdUser3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdUser3.Location = new System.Drawing.Point(1014, 227);
+            this.lblIdUser3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIdUser3.Name = "lblIdUser3";
+            this.lblIdUser3.Size = new System.Drawing.Size(0, 18);
+            this.lblIdUser3.TabIndex = 56;
+            // 
             // FrmResultadoFiltrado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1109, 596);
+            this.Controls.Add(this.lblIdUser3);
+            this.Controls.Add(this.lblIdUser2);
+            this.Controls.Add(this.lblIdUser1);
             this.Controls.Add(this.btnConf);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -479,10 +438,6 @@
             this.Text = "FrmResultadoFiltrado";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmResultadoFiltrado_FormClosed);
             this.Load += new System.EventHandler(this.FrmResultadoFiltrado_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.pnl3.ResumeLayout(false);
             this.pnl3.PerformLayout();
@@ -499,17 +454,13 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnAñadir;
-        private System.Windows.Forms.PictureBox ptbImagen;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lblDescripcion4;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
@@ -530,13 +481,15 @@
         private System.Windows.Forms.Label lblDesde;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblValoracion;
         private System.Windows.Forms.Button btnConf;
+        private System.Windows.Forms.Button btnEnviarMensajeChat1;
+        private System.Windows.Forms.Label lblIdUser1;
+        private System.Windows.Forms.Label lblIdUser2;
+        private System.Windows.Forms.Label lblIdUser3;
     }
 }
