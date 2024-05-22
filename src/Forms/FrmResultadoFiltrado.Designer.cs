@@ -32,10 +32,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.pnl3 = new System.Windows.Forms.Panel();
+            this.btnEnviarMensajeChat3 = new System.Windows.Forms.Button();
             this.lblNombreCuidador3 = new System.Windows.Forms.Label();
             this.pcbCuidador3 = new System.Windows.Forms.PictureBox();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.pnlRes2 = new System.Windows.Forms.Panel();
+            this.btnEnviarMensajeChat2 = new System.Windows.Forms.Button();
             this.lblNombreCuidador2 = new System.Windows.Forms.Label();
             this.pcbCuidador2 = new System.Windows.Forms.PictureBox();
             this.pnlRes1 = new System.Windows.Forms.Panel();
@@ -59,8 +61,6 @@
             this.lblIdUser1 = new System.Windows.Forms.Label();
             this.lblIdUser2 = new System.Windows.Forms.Label();
             this.lblIdUser3 = new System.Windows.Forms.Label();
-            this.btnEnviarMensajeChat2 = new System.Windows.Forms.Button();
-            this.btnEnviarMensajeChat3 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.pnl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCuidador3)).BeginInit();
@@ -120,6 +120,18 @@
             this.pnl3.Size = new System.Drawing.Size(855, 127);
             this.pnl3.TabIndex = 55;
             // 
+            // btnEnviarMensajeChat3
+            // 
+            this.btnEnviarMensajeChat3.Location = new System.Drawing.Point(685, 28);
+            this.btnEnviarMensajeChat3.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEnviarMensajeChat3.Name = "btnEnviarMensajeChat3";
+            this.btnEnviarMensajeChat3.Size = new System.Drawing.Size(152, 65);
+            this.btnEnviarMensajeChat3.TabIndex = 56;
+            this.btnEnviarMensajeChat3.Text = "Enviar Mensaje";
+            this.btnEnviarMensajeChat3.UseVisualStyleBackColor = true;
+            this.btnEnviarMensajeChat3.Visible = false;
+            this.btnEnviarMensajeChat3.Click += new System.EventHandler(this.btnEnviarMensajeChat3_Click);
+            // 
             // lblNombreCuidador3
             // 
             this.lblNombreCuidador3.AutoSize = true;
@@ -165,6 +177,18 @@
             this.pnlRes2.Size = new System.Drawing.Size(855, 127);
             this.pnlRes2.TabIndex = 54;
             // 
+            // btnEnviarMensajeChat2
+            // 
+            this.btnEnviarMensajeChat2.Location = new System.Drawing.Point(685, 29);
+            this.btnEnviarMensajeChat2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEnviarMensajeChat2.Name = "btnEnviarMensajeChat2";
+            this.btnEnviarMensajeChat2.Size = new System.Drawing.Size(152, 65);
+            this.btnEnviarMensajeChat2.TabIndex = 9;
+            this.btnEnviarMensajeChat2.Text = "Enviar Mensaje";
+            this.btnEnviarMensajeChat2.UseVisualStyleBackColor = true;
+            this.btnEnviarMensajeChat2.Visible = false;
+            this.btnEnviarMensajeChat2.Click += new System.EventHandler(this.btnEnviarMensajeChat2_Click);
+            // 
             // lblNombreCuidador2
             // 
             this.lblNombreCuidador2.AutoSize = true;
@@ -202,7 +226,7 @@
             // btnEnviarMensajeChat1
             // 
             this.btnEnviarMensajeChat1.Location = new System.Drawing.Point(685, 31);
-            this.btnEnviarMensajeChat1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnviarMensajeChat1.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviarMensajeChat1.Name = "btnEnviarMensajeChat1";
             this.btnEnviarMensajeChat1.Size = new System.Drawing.Size(152, 65);
             this.btnEnviarMensajeChat1.TabIndex = 8;
@@ -415,28 +439,6 @@
             this.lblIdUser3.Name = "lblIdUser3";
             this.lblIdUser3.Size = new System.Drawing.Size(0, 22);
             this.lblIdUser3.TabIndex = 56;
-            // 
-            // btnEnviarMensajeChat2
-            // 
-            this.btnEnviarMensajeChat2.Location = new System.Drawing.Point(685, 29);
-            this.btnEnviarMensajeChat2.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEnviarMensajeChat2.Name = "btnEnviarMensajeChat2";
-            this.btnEnviarMensajeChat2.Size = new System.Drawing.Size(152, 65);
-            this.btnEnviarMensajeChat2.TabIndex = 9;
-            this.btnEnviarMensajeChat2.Text = "Enviar Mensaje";
-            this.btnEnviarMensajeChat2.UseVisualStyleBackColor = true;
-            this.btnEnviarMensajeChat2.Visible = false;
-            // 
-            // btnEnviarMensajeChat3
-            // 
-            this.btnEnviarMensajeChat3.Location = new System.Drawing.Point(685, 28);
-            this.btnEnviarMensajeChat3.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEnviarMensajeChat3.Name = "btnEnviarMensajeChat3";
-            this.btnEnviarMensajeChat3.Size = new System.Drawing.Size(152, 65);
-            this.btnEnviarMensajeChat3.TabIndex = 56;
-            this.btnEnviarMensajeChat3.Text = "Enviar Mensaje";
-            this.btnEnviarMensajeChat3.UseVisualStyleBackColor = true;
-            this.btnEnviarMensajeChat3.Visible = false;
             // 
             // FrmResultadoFiltrado
             // 
