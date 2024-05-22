@@ -37,6 +37,16 @@ namespace pet4sitter
             {
                 pcbImagen.Image = Utiles.ByteArrayToImage(Data.CurrentUser.Image);
             }
+            lblNombre.Text = Data.CurrentUser.Name.ToUpper();
+            lblLocalizacion.Text = Data.CurrentUser.Location;
+            if (Data.CurrentUser.Sitter == true)
+            {
+                lblPrecio.Text = Data.CurrentUser.Sitter.ToString();
+            }
+            else
+            {
+                lblPrecio.Text = "Este Usuario NO es Cuidador";
+            }
         }
 
         private void AplicarIdioma()

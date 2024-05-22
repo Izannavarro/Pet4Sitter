@@ -44,7 +44,9 @@
             this.btnEditarPerfil = new System.Windows.Forms.Button();
             this.btnDarAlta = new System.Windows.Forms.Button();
             this.pcbImagen = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblLocalizacion = new System.Windows.Forms.Label();
             this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -200,7 +202,7 @@
             this.btnEditarPerfil.Location = new System.Drawing.Point(1089, 28);
             this.btnEditarPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditarPerfil.Name = "btnEditarPerfil";
-            this.btnEditarPerfil.Size = new System.Drawing.Size(159, 50);
+            this.btnEditarPerfil.Size = new System.Drawing.Size(221, 54);
             this.btnEditarPerfil.TabIndex = 10;
             this.btnEditarPerfil.Text = "Editar Perfil";
             this.btnEditarPerfil.UseVisualStyleBackColor = false;
@@ -213,7 +215,7 @@
             this.btnDarAlta.Location = new System.Drawing.Point(1089, 95);
             this.btnDarAlta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDarAlta.Name = "btnDarAlta";
-            this.btnDarAlta.Size = new System.Drawing.Size(221, 53);
+            this.btnDarAlta.Size = new System.Drawing.Size(221, 56);
             this.btnDarAlta.TabIndex = 11;
             this.btnDarAlta.Text = "Ser Cuidador";
             this.btnDarAlta.UseVisualStyleBackColor = false;
@@ -223,29 +225,49 @@
             // 
             this.pcbImagen.BackColor = System.Drawing.Color.Transparent;
             this.pcbImagen.Image = global::pet4sitter.Properties.Resources.usuario;
-            this.pcbImagen.Location = new System.Drawing.Point(221, 28);
+            this.pcbImagen.Location = new System.Drawing.Point(231, 28);
             this.pcbImagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbImagen.Name = "pcbImagen";
-            this.pcbImagen.Size = new System.Drawing.Size(289, 226);
+            this.pcbImagen.Size = new System.Drawing.Size(270, 226);
             this.pcbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbImagen.TabIndex = 12;
             this.pcbImagen.TabStop = false;
             // 
-            // label6
+            // lblNombre
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(529, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(336, 32);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Información del Usuario";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(537, 39);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(336, 32);
+            this.lblNombre.TabIndex = 13;
+            this.lblNombre.Text = "Información del Usuario";
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(537, 119);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(336, 32);
+            this.lblPrecio.TabIndex = 15;
+            this.lblPrecio.Text = "Información del Usuario";
+            // 
+            // lblLocalizacion
+            // 
+            this.lblLocalizacion.AutoSize = true;
+            this.lblLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalizacion.Location = new System.Drawing.Point(537, 198);
+            this.lblLocalizacion.Name = "lblLocalizacion";
+            this.lblLocalizacion.Size = new System.Drawing.Size(336, 32);
+            this.lblLocalizacion.TabIndex = 16;
+            this.lblLocalizacion.Text = "Información del Usuario";
             // 
             // barraLateral1
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(0, -2);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(5);
             this.barraLateral1.Name = "barraLateral1";
             this.barraLateral1.Size = new System.Drawing.Size(415, 737);
             this.barraLateral1.TabIndex = 14;
@@ -256,7 +278,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1479, 734);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblLocalizacion);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.btnDarAlta);
             this.Controls.Add(this.btnEditarPerfil);
@@ -305,7 +329,9 @@
         private System.Windows.Forms.Button btnEditarPerfil;
         private System.Windows.Forms.Button btnDarAlta;
         private System.Windows.Forms.PictureBox pcbImagen;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblNombre;
         private BarraLateral barraLateral1;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Label lblLocalizacion;
     }
 }

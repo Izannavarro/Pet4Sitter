@@ -40,6 +40,7 @@ namespace pet4sitter.Clases
         public int? IdUser { get { return this.idUser; } }
         public double? Latitud { get { return this.latitud; } }
         public double? Longitud { get { return this.longitud; } }
+        public bool? Sitter { get { return sitter; } }
 
         // Constructor
         public User() { }
