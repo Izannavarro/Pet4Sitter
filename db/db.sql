@@ -10,25 +10,15 @@ CREATE TABLE IF NOT EXISTS users (
     email VARCHAR(60) CHARACTER SET utf8mb4 NOT NULL unique,
     dni VARCHAR(9) CHARACTER SET utf8mb4,
     password VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL,
-    maxpets INT,
     price DOUBLE,
     location VARCHAR(50) CHARACTER SET utf8mb4,
-    premium TINYINT,
-    sitter TINYINT,
-    admin TINYINT,
+    premium TINYINT DEFAULT 0,
+    sitter TINYINT DEFAULT 0,
+    admin TINYINT DEFAULT 0,
     image longblob default null,
     latitud float,
     longitud float,
     PRIMARY KEY (id_user)
-) CHARACTER SET utf8mb4;
-
-CREATE TABLE IF NOT EXISTS reviews (
-    id_review INT AUTO_INCREMENT PRIMARY KEY,
-    valuation INT NOT NULL,
-    id_reviewed INT NOT NULL,
-    id_reviewer INT NOT NULL,
-    FOREIGN KEY (id_reviewed) REFERENCES users(id_user),
-    FOREIGN KEY (id_reviewer) REFERENCES users(id_user)
 ) CHARACTER SET utf8mb4;
 
 CREATE TABLE IF NOT EXISTS products (
@@ -37,14 +27,30 @@ CREATE TABLE IF NOT EXISTS products (
     price DOUBLE NOT NULL,	
     quantity INT NOT NULL,
     description VARCHAR(99) CHARACTER SET utf8mb4,
-    image longblob
+    image LONGBLOB NOT NULL
 ) CHARACTER SET utf8mb4;
 
 CREATE TABLE IF NOT EXISTS chat (
+    id int auto_increment primary key,
     id_receiver INT NOT NULL,
     id_sender INT NOT NULL,
     `date` DATETIME DEFAULT NOW() NOT NULL,
     messages VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL,
-    FOREIGN KEY (id_receiver) REFERENCES users(id_user),
-    FOREIGN KEY (id_sender) REFERENCES users(id_user)
+    FOREIGN KEY (id_receiver) REFERENCES users(id_user) on delete cascade,
+    FOREIGN KEY (id_sender) REFERENCES users(id_user)on delete cascade
+) CHARACTER SET utf8mb4;
+
+CREATE TABLE IF NOT EXISTS delivery (
+    id_delivery int auto_increment primary key,
+    id_receiver INT NOT NULL,
+    cant_product int not null,
+    delivery_date DATETIME not null,
+    FOREIGN KEY (id_receiver) REFERENCES users(id_user)on delete cascade
+) CHARACTER SET utf8mb4;
+CREATE TABLE IF NOT EXISTS delivery_products (
+    id_delivery INT NOT NULL,
+    id_product INT NOT NULL,
+    PRIMARY KEY (id_delivery, id_product),
+    FOREIGN KEY (id_delivery) REFERENCES delivery(id_delivery)on delete cascade,
+    FOREIGN KEY (id_product) REFERENCES products(id_product)on delete cascade
 ) CHARACTER SET utf8mb4;
