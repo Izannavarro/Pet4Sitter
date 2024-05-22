@@ -144,8 +144,11 @@ namespace pet4sitter.Clases
         {
             try
             {
-                string consulta = string.Format("UPDATE products set name = '{0}' ,quantity = '{1}', price = '{2}', description = '{3}', image = '{4}' WHERE id_product = '{5}'", p1.NombreProducto, p1.Cantidad, p1.Precio, p1.Descripcion, p1.UrlImagen, p1.Id);
+                byte[] imgArr = Utiles.ImageToByteArray(p1.UrlImagen);
+
+                string consulta = string.Format("UPDATE products set name = '{0}' ,quantity = '{1}', price = '{2}', description = '{3}', image = @imagen WHERE id_product = '{5}'", p1.NombreProducto, p1.Cantidad, p1.Precio, p1.Descripcion, p1.UrlImagen, p1.Id);
                 MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+                comando.Parameters.AddWithValue("@imagen", imgArr);
                 MySqlDataReader reader = comando.ExecuteReader();
                 reader.Close();
             }

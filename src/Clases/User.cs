@@ -41,6 +41,7 @@ namespace pet4sitter.Clases
         public double? Latitud { get { return this.latitud; } }
         public double? Longitud { get { return this.longitud; } }
         public bool? Sitter { get { return sitter; } }
+        public bool? Admin { get { return admin; } }
 
         // Constructor
         public User() { }
