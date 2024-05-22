@@ -122,7 +122,6 @@ namespace pet4sitter
                     }
                     lblMensaje1.Text =  lMens[0].Message;
                     lblIdChat1.Text = users[0].IdUser.ToString();
-                    
                 }
 
                 if (users.Count > 1)

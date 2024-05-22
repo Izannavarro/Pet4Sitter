@@ -113,7 +113,8 @@ namespace pet4sitter.Clases
             MySqlDataReader reader = com.ExecuteReader();
             while (reader.Read())
             {
-                byte[] ArrImg = reader.IsDBNull(reader.GetOrdinal("image")) ? null : (byte[])reader["image"];
+                
+                byte[] ArrImg = reader.IsDBNull(reader.GetOrdinal("image")) ? null : reader["image"] as byte [];
 
                 user = new User(
                                             reader.IsDBNull(reader.GetOrdinal("id_user")) ? (int?)null : reader.GetInt32("id_user"),
@@ -203,7 +204,7 @@ namespace pet4sitter.Clases
         public static int RegistrarUsuario(User u)
         {
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(u.password);
-            string query = "INSERT INTO users (name, surname, email, dni, password, location, sitter)";
+            string query = "INSERT INTO users (name, surname, email, dni, password, location, sitter";
             MySqlCommand comando = new MySqlCommand(query, ConBD.Conexion);
             comando.Parameters.AddWithValue("@name", u.name);
             comando.Parameters.AddWithValue("@surname", u.surname);
