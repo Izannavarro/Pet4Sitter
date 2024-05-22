@@ -10,12 +10,11 @@ CREATE TABLE IF NOT EXISTS users (
     email VARCHAR(60) CHARACTER SET utf8mb4 NOT NULL unique,
     dni VARCHAR(9) CHARACTER SET utf8mb4,
     password VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL,
-    maxpets INT,
     price DOUBLE,
     location VARCHAR(50) CHARACTER SET utf8mb4,
     premium TINYINT DEFAULT 0,
-    sitter TINYINT,
-    admin TINYINT,
+    sitter TINYINT DEFAULT 0,
+    admin TINYINT DEFAULT 0,
     image LONGBLOB NOT NULL,
     latitud float,
     longitud float,
@@ -37,8 +36,8 @@ CREATE TABLE IF NOT EXISTS chat (
     id_sender INT NOT NULL,
     `date` DATETIME DEFAULT NOW() NOT NULL,
     messages VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL,
-    FOREIGN KEY (id_receiver) REFERENCES users(id_user),
-    FOREIGN KEY (id_sender) REFERENCES users(id_user)
+    FOREIGN KEY (id_receiver) REFERENCES users(id_user) on delete cascade,
+    FOREIGN KEY (id_sender) REFERENCES users(id_user)on delete cascade
 ) CHARACTER SET utf8mb4;
 
 CREATE TABLE IF NOT EXISTS delivery (
@@ -46,12 +45,12 @@ CREATE TABLE IF NOT EXISTS delivery (
     id_receiver INT NOT NULL,
     cant_product int not null,
     delivery_date DATETIME not null,
-    FOREIGN KEY (id_receiver) REFERENCES users(id_user)
+    FOREIGN KEY (id_receiver) REFERENCES users(id_user)on delete cascade
 ) CHARACTER SET utf8mb4;
 CREATE TABLE IF NOT EXISTS delivery_products (
     id_delivery INT NOT NULL,
     id_product INT NOT NULL,
     PRIMARY KEY (id_delivery, id_product),
-    FOREIGN KEY (id_delivery) REFERENCES delivery(id_delivery),
-    FOREIGN KEY (id_product) REFERENCES products(id_product)
+    FOREIGN KEY (id_delivery) REFERENCES delivery(id_delivery)on delete cascade,
+    FOREIGN KEY (id_product) REFERENCES products(id_product)on delete cascade
 ) CHARACTER SET utf8mb4;
