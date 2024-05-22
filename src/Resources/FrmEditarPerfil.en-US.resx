@@ -104,21 +104,27 @@
 	<data name="lblNombre">
 		<value>First Name:</value>
 	</data>
+
 	<data name="lblApellido">
 		<value>Last Name:</value>
 	</data>
+
 	<data name="lblLocalizacion">
 		<value>Location:</value>
 	</data>
+
 	<data name="lblEmail">
 		<value>Email:</value>
 	</data>
+
 	<data name="label7">
 		<value>Password:</value>
 	</data>
+
 	<data name="btnVolver">
 		<value>Back</value>
 	</data>
+
 	<data name="btnGuardar">
 		<value>Save</value>
 	</data>
