@@ -52,7 +52,8 @@ namespace pet4sitter
         private void btnInicio_Click(object sender, EventArgs e)
         {
             FrmInicio frm = new FrmInicio();
-            frm.ShowDialog();
+            frm.Show();
+            this.Dispose();
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)

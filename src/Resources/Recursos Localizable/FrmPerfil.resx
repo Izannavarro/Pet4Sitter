@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblUltimasValoraciones_Text" xml:space="preserve">
-    <value>Últimas Valoraciones:</value>
+    <value />
   </data>
   <data name="lblUltimaCompra_Text" xml:space="preserve">
-    <value>Última Compra:</value>
+    <value>Últimas Compras:</value>
   </data>
   <data name="btnEditarPerfil_Text" xml:space="preserve">
     <value>Editar Perfil</value>

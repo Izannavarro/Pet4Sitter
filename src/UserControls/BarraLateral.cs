@@ -259,7 +259,8 @@ namespace pet4sitter
         private void pcbEditarPerfil_Click(object sender, EventArgs e)
         {
             FrmPerfil form = new FrmPerfil();
-            form.ShowDialog();
+            form.Show();
+            formActual.Dispose();
         }
     }
 }

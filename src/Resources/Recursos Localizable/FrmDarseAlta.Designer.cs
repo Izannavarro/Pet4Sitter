@@ -22,14 +22,14 @@ namespace pet4sitter.Resources.Recursos_Localizable {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class FrmInicioAdmin {
+    internal class FrmDarseAlta {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal FrmInicioAdmin() {
+        internal FrmDarseAlta() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("pet4sitter.Resources.Recursos_Localizable.FrmInicioAdmin", typeof(FrmInicioAdmin).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("pet4sitter.Resources.Recursos_Localizable.FrmDarseAlta", typeof(FrmDarseAlta).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,42 +57,6 @@ namespace pet4sitter.Resources.Recursos_Localizable {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Cerrar sesión.
-        /// </summary>
-        internal static string btnCerrarSesion_Text {
-            get {
-                return ResourceManager.GetString("btnCerrarSesion_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Inicio.
-        /// </summary>
-        internal static string btnNoticias_Text {
-            get {
-                return ResourceManager.GetString("btnNoticias_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Productos.
-        /// </summary>
-        internal static string btnProductos_Text {
-            get {
-                return ResourceManager.GetString("btnProductos_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Usuarios.
-        /// </summary>
-        internal static string btnUsuarios_Text {
-            get {
-                return ResourceManager.GetString("btnUsuarios_Text", resourceCulture);
             }
         }
     }

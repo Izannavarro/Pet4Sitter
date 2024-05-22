@@ -67,8 +67,8 @@
             this.lblIdChat1 = new System.Windows.Forms.Label();
             this.lblIdChat2 = new System.Windows.Forms.Label();
             this.lblIdChat3 = new System.Windows.Forms.Label();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel1.SuspendLayout();
             this.pnlChat1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbChat1)).BeginInit();
@@ -278,7 +278,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.lblPrecioProductoDestacado1, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(72, 245);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -303,7 +303,7 @@
             this.tLPNombreProducto.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tLPNombreProducto.Controls.Add(this.lblProductoDestacado1, 0, 0);
             this.tLPNombreProducto.Location = new System.Drawing.Point(25, 212);
-            this.tLPNombreProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tLPNombreProducto.Margin = new System.Windows.Forms.Padding(4);
             this.tLPNombreProducto.Name = "tLPNombreProducto";
             this.tLPNombreProducto.RowCount = 1;
             this.tLPNombreProducto.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -352,7 +352,7 @@
             this.TLPPrecioProductoDestacado.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TLPPrecioProductoDestacado.Controls.Add(this.lblPrecioProductoDestacado2, 0, 0);
             this.TLPPrecioProductoDestacado.Location = new System.Drawing.Point(81, 245);
-            this.TLPPrecioProductoDestacado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TLPPrecioProductoDestacado.Margin = new System.Windows.Forms.Padding(4);
             this.TLPPrecioProductoDestacado.Name = "TLPPrecioProductoDestacado";
             this.TLPPrecioProductoDestacado.RowCount = 1;
             this.TLPPrecioProductoDestacado.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -378,7 +378,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.lblProductoDestacado2, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 212);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -450,7 +450,7 @@
             this.tableLayoutPanel3.Controls.Add(this.lblTítuloNoticia, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblCuerpoNoticia, 0, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(296, 25);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -555,19 +555,9 @@
             this.lblIdChat3.TabIndex = 8;
             this.lblIdChat3.Visible = false;
             // 
-            // barraLateral1
-            // 
-            this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
-            this.barraLateral1.Location = new System.Drawing.Point(0, -5);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.barraLateral1.Name = "barraLateral1";
-            this.barraLateral1.Size = new System.Drawing.Size(415, 737);
-            this.barraLateral1.TabIndex = 5;
-            // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(1363, 659);
+            this.btnAdmin.Location = new System.Drawing.Point(1293, 325);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(104, 49);
             this.btnAdmin.TabIndex = 9;
@@ -575,6 +565,16 @@
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Visible = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
+            // barraLateral1
+            // 
+            this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
+            this.barraLateral1.Location = new System.Drawing.Point(0, -5);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(5);
+            this.barraLateral1.Name = "barraLateral1";
+            this.barraLateral1.Size = new System.Drawing.Size(415, 737);
+            this.barraLateral1.TabIndex = 5;
             // 
             // FrmInicio
             // 
@@ -595,6 +595,7 @@
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInicio";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmInicio_FormClosed);
             this.Load += new System.EventHandler(this.FrmInicio_Load);
             this.panel1.ResumeLayout(false);
             this.pnlChat1.ResumeLayout(false);
