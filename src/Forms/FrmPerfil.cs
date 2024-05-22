@@ -19,16 +19,6 @@ namespace pet4sitter
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmPerfil_Load(object sender, EventArgs e)
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;

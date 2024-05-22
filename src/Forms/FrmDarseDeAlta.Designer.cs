@@ -142,10 +142,10 @@
             // 
             this.nudPrecio.DecimalPlaces = 2;
             this.nudPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudPrecio.Location = new System.Drawing.Point(593, 285);
+            this.nudPrecio.Location = new System.Drawing.Point(585, 285);
             this.nudPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nudPrecio.Name = "nudPrecio";
-            this.nudPrecio.Size = new System.Drawing.Size(97, 45);
+            this.nudPrecio.Size = new System.Drawing.Size(170, 45);
             this.nudPrecio.TabIndex = 67;
             // 
             // chkTerminos
@@ -180,7 +180,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmDarseDeAlta";
             this.Text = "FrmDarseDeAlta";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmDarseDeAlta_FormClosed);
             this.Load += new System.EventHandler(this.FrmDarseDeAlta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
             this.ResumeLayout(false);

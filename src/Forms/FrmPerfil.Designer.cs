@@ -39,7 +39,8 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblLocalizacion = new System.Windows.Forms.Label();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
@@ -94,7 +95,7 @@
             this.lblUltimaCompra.Name = "lblUltimaCompra";
             this.lblUltimaCompra.Size = new System.Drawing.Size(433, 32);
             this.lblUltimaCompra.TabIndex = 9;
-            this.lblUltimaCompra.Text = "Ultimos Productos Comprados:";
+            this.lblUltimaCompra.Text = "Últimos Productos Comprados:";
             // 
             // btnEditarPerfil
             // 
