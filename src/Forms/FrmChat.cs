@@ -22,6 +22,8 @@ namespace pet4sitter
         private int elementosPorPagina = 4; // Cantidad de chats que se muestran por página
         private int totalChats = 0;
 
+        private string[] currentChatIds = new string[4];
+
         public FrmChat()
         {
             InitializeComponent();
@@ -42,14 +44,15 @@ namespace pet4sitter
                 ConBD.AbrirConexion();
                 totalChats = Mensaje.ContarTotalChats();
                 CargarUltimosChats();
-                if(idChatSeleccionado != null)
+                if (idChatSeleccionado != null)
                 {
                     User usu = User.EncontrarUsuario((int)idChatSeleccionado);
                     lblNombreChatActivo.Text = usu.Name;
-                    if(usu.Image != null)
+                    if (usu.Image != null)
                     {
                         pcbImagen5.Image = Utiles.ByteArrayToImage(usu.Image);
                     }
+                    MostrarPanelesChat();
                     await ChatMensajes();
                 }
                 ConBD.CerrarConexion();
@@ -79,7 +82,11 @@ namespace pet4sitter
         }
 
         private List<string> mensajesCargados = new List<string>();
-
+        private void MostrarPanelesChat()
+        {
+            pnlInfoChat.Visible = true;
+            pnlChat.Visible = true;
+        }
         private async Task ChatMensajes()
         {
             if (ConBD.Conexion != null)
@@ -193,7 +200,7 @@ namespace pet4sitter
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                Mensaje m = new Mensaje((int)Data.CurrentUser.IdUser, idChatSeleccionado , txtMensaje.Text);
+                Mensaje m = new Mensaje((int)Data.CurrentUser.IdUser, idChatSeleccionado, txtMensaje.Text);
                 Mensaje.EnviarMensaje(m);
                 ConBD.CerrarConexion();
             }
@@ -217,20 +224,20 @@ namespace pet4sitter
             try
             {
                 string query = @"
-            SELECT DISTINCT u.id_user, u.name, c.date,u.image
-            FROM (
-                SELECT 
-                    IF(id_sender = @CurrentUserId, id_receiver, id_sender) AS chat_partner,
-                    MAX(date) AS max_date
-                FROM chat
-                WHERE id_receiver = @CurrentUserId OR id_sender = @CurrentUserId
-                GROUP BY chat_partner
-            ) AS latest_chats
-            INNER JOIN chat c ON c.date = latest_chats.max_date AND 
-                (c.id_sender = latest_chats.chat_partner OR c.id_receiver = latest_chats.chat_partner)
-            INNER JOIN users u ON u.id_user = latest_chats.chat_partner
-            ORDER BY c.date DESC
-            LIMIT @Limit OFFSET @Offset";
+        SELECT DISTINCT u.id_user, u.name, c.date, u.image
+        FROM (
+            SELECT 
+                IF(id_sender = @CurrentUserId, id_receiver, id_sender) AS chat_partner,
+                MAX(date) AS max_date
+            FROM chat
+            WHERE id_receiver = @CurrentUserId OR id_sender = @CurrentUserId
+            GROUP BY chat_partner
+        ) AS latest_chats
+        INNER JOIN chat c ON c.date = latest_chats.max_date AND 
+            (c.id_sender = latest_chats.chat_partner OR c.id_receiver = latest_chats.chat_partner)
+        INNER JOIN users u ON u.id_user = latest_chats.chat_partner
+        ORDER BY c.date DESC
+        LIMIT @Limit OFFSET @Offset";
 
                 // Ejecutar la consulta con parámetros
                 DataTable d = Utiles.ExecuteQuery(query,
@@ -238,48 +245,57 @@ namespace pet4sitter
                     new MySqlParameter("@Offset", paginaActual * elementosPorPagina),
                     new MySqlParameter("@Limit", elementosPorPagina));
 
-                // Limpiar los labels antes de asignar nuevos valores
-                lblIdChat1.Text = "";
-                lblNombre1.Text = "";
-                pcbImagen1.Image = null;
-                lblIdChat2.Text = "";
-                lblNombre2.Text = "";
-                pcbImagen2.Image = null;
-                lblIdChat3.Text = "";
-                lblNombre3.Text = "";
-                pcbImagen3.Image = null;
-                lblIdChat4.Text = "";
-                lblNombre4.Text = "";
-                pcbImagen4.Image = null;
+                // Crear una lista de controles para actualizar
+                var labelsIdChat = new[] { lblIdChat1, lblIdChat2, lblIdChat3, lblIdChat4 };
+                var labelsNombre = new[] { lblNombre1, lblNombre2, lblNombre3, lblNombre4 };
+                var pictureBoxes = new[] { pcbImagen1, pcbImagen2, pcbImagen3, pcbImagen4 };
 
-                // Verificar y asignar los valores a los labels
-                if (d.Rows.Count > 0)
+                bool anyChange = false;
+
+                for (int i = 0; i < 4; i++)
                 {
-                    lblIdChat1.Text = d.Rows[0]["id_user"].ToString();
-                    lblNombre1.Text = d.Rows[0]["name"].ToString();
-                    pcbImagen1.Image = Utiles.ByteArrayToImage(d.Rows[0]["image"] as byte[]);
-                    //pcbImagen1.Image = (Image)d.Rows[0]["image"];
+                    if (i < d.Rows.Count)
+                    {
+                        var row = d.Rows[i];
+                        string newId = row["id_user"].ToString();
+                        if (currentChatIds[i] != newId)
+                        {
+                            currentChatIds[i] = newId;
+                            anyChange = true;
+                        }
+                    }
+                    else
+                    {
+                        if (currentChatIds[i] != null)
+                        {
+                            currentChatIds[i] = null;
+                            anyChange = true;
+                        }
+                    }
                 }
 
-                if (d.Rows.Count > 1)
+                if (anyChange)
                 {
-                    lblIdChat2.Text = d.Rows[1]["id_user"].ToString();
-                    lblNombre2.Text = d.Rows[1]["name"].ToString();
-                    pcbImagen2.Image = Utiles.ByteArrayToImage(d.Rows[1]["image"] as byte[]);
-                }
+                    for (int i = 0; i < 4; i++)
+                    {
+                        if (i < d.Rows.Count)
+                        {
+                            var row = d.Rows[i];
+                            string newId = row["id_user"].ToString();
+                            string newName = row["name"].ToString();
+                            var newImage = Utiles.ByteArrayToImage(row["image"] as byte[]);
 
-                if (d.Rows.Count > 2)
-                {
-                    lblIdChat3.Text = d.Rows[2]["id_user"].ToString();
-                    lblNombre3.Text = d.Rows[2]["name"].ToString();
-                    pcbImagen3.Image = Utiles.ByteArrayToImage(d.Rows[2]["image"] as byte[]);
-                }
-
-                if (d.Rows.Count > 3)
-                {
-                    lblIdChat4.Text = d.Rows[3]["id_user"].ToString();
-                    lblNombre4.Text = d.Rows[3]["name"].ToString();
-                    pcbImagen4.Image = Utiles.ByteArrayToImage(d.Rows[3]["image"] as byte[]);
+                            labelsIdChat[i].Text = newId;
+                            labelsNombre[i].Text = newName;
+                            pictureBoxes[i].Image = newImage;
+                        }
+                        else
+                        {
+                            labelsIdChat[i].Text = "";
+                            labelsNombre[i].Text = "";
+                            pictureBoxes[i].Image = null;
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -288,14 +304,19 @@ namespace pet4sitter
             }
         }
 
+
         private async void pnl1_Click(object sender, EventArgs e)
         {
-            fLPanelChat.Controls.Clear();
-            mensajesCargados.Clear();
-            idChatSeleccionado = int.Parse(lblIdChat1.Text.ToString());
-            lblNombreChatActivo.Text = lblNombre1.Text;
-            pcbImagen5.Image = pcbImagen1.Image;
-            await ChatMensajes();
+            if (lblIdChat1.Text != "")
+            {
+                MostrarPanelesChat();
+                fLPanelChat.Controls.Clear();
+                mensajesCargados.Clear();
+                idChatSeleccionado = int.Parse(lblIdChat1.Text.ToString());
+                lblNombreChatActivo.Text = lblNombre1.Text;
+                pcbImagen5.Image = pcbImagen1.Image;
+                await ChatMensajes();
+            }
         }
 
 
@@ -306,12 +327,16 @@ namespace pet4sitter
 
         private async void pnl2_Click(object sender, EventArgs e)
         {
-            fLPanelChat.Controls.Clear();
-            mensajesCargados.Clear();
-            idChatSeleccionado = int.Parse(lblIdChat2.Text.ToString());
-            lblNombreChatActivo.Text = lblNombre2.Text;
-            pcbImagen5.Image = pcbImagen2.Image;
-            await ChatMensajes();
+            if (lblIdChat2.Text != "")
+            {
+                MostrarPanelesChat();
+                fLPanelChat.Controls.Clear();
+                mensajesCargados.Clear();
+                idChatSeleccionado = int.Parse(lblIdChat2.Text.ToString());
+                lblNombreChatActivo.Text = lblNombre2.Text;
+                pcbImagen5.Image = pcbImagen2.Image;
+                await ChatMensajes();
+            }
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
@@ -339,22 +364,30 @@ namespace pet4sitter
 
         private async void pnl3_Click(object sender, EventArgs e)
         {
-            fLPanelChat.Controls.Clear();
-            mensajesCargados.Clear();
-            idChatSeleccionado = int.Parse(lblIdChat3.Text.ToString());
-            lblNombreChatActivo.Text = lblNombre3.Text;
-            pcbImagen5.Image = pcbImagen3.Image;
-            await ChatMensajes();
+            if (lblIdChat3.Text != "")
+            {
+                MostrarPanelesChat();
+                fLPanelChat.Controls.Clear();
+                mensajesCargados.Clear();
+                idChatSeleccionado = int.Parse(lblIdChat3.Text.ToString());
+                lblNombreChatActivo.Text = lblNombre3.Text;
+                pcbImagen5.Image = pcbImagen3.Image;
+                await ChatMensajes();
+            }
         }
 
         private async void pnl4_Click(object sender, EventArgs e)
         {
-            fLPanelChat.Controls.Clear();
-            mensajesCargados.Clear();
-            idChatSeleccionado = int.Parse(lblIdChat4.Text.ToString());
-            lblNombreChatActivo.Text = lblNombre4.Text;
-            pcbImagen5.Image = pcbImagen4.Image;
-            await ChatMensajes();
+            if (lblIdChat4.Text != "")
+            {
+                MostrarPanelesChat();
+                fLPanelChat.Controls.Clear();
+                mensajesCargados.Clear();
+                idChatSeleccionado = int.Parse(lblIdChat4.Text.ToString());
+                lblNombreChatActivo.Text = lblNombre4.Text;
+                pcbImagen5.Image = pcbImagen4.Image;
+                await ChatMensajes();
+            }
         }
     }
 }

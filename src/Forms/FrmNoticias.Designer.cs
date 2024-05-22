@@ -34,21 +34,21 @@
             this.lblTituloNoticia3 = new System.Windows.Forms.Label();
             this.lblCuerpoNoticia3 = new System.Windows.Forms.Label();
             this.pcbNoticia3 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTituloNoticia2 = new System.Windows.Forms.Label();
-            this.lblCuerpoNoticia2 = new System.Windows.Forms.Label();
-            this.pcbNoticia2 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTituloNoticia1 = new System.Windows.Forms.Label();
             this.lblCuerpoNoticia = new System.Windows.Forms.Label();
             this.pcbNoticia1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCuerpoNoticia2 = new System.Windows.Forms.Label();
+            this.lblTituloNoticia2 = new System.Windows.Forms.Label();
+            this.pcbNoticia2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pnlPremium = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFuncPre = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pcbGifCarga = new System.Windows.Forms.PictureBox();
             this.barraLateral1 = new pet4sitter.BarraLateral();
             this.lblTituloNoticias = new System.Windows.Forms.Label();
@@ -57,12 +57,12 @@
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia3)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia2)).BeginInit();
             this.panel9.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia1)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia2)).BeginInit();
             this.pnlPremium.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -138,63 +138,6 @@
             this.pcbNoticia3.TabIndex = 5;
             this.pcbNoticia3.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.tableLayoutPanel2);
-            this.panel1.Controls.Add(this.pcbNoticia2);
-            this.panel1.Location = new System.Drawing.Point(10, 139);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 134);
-            this.panel1.TabIndex = 7;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.Controls.Add(this.lblCuerpoNoticia2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblTituloNoticia2, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(161, 12);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(570, 81);
-            this.tableLayoutPanel2.TabIndex = 10;
-            // 
-            // lblTituloNoticia2
-            // 
-            this.lblTituloNoticia2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloNoticia2.Location = new System.Drawing.Point(2, 0);
-            this.lblTituloNoticia2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTituloNoticia2.Name = "lblTituloNoticia2";
-            this.lblTituloNoticia2.Size = new System.Drawing.Size(568, 20);
-            this.lblTituloNoticia2.TabIndex = 7;
-            this.lblTituloNoticia2.Text = "Noticia";
-            // 
-            // lblCuerpoNoticia2
-            // 
-            this.lblCuerpoNoticia2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuerpoNoticia2.Location = new System.Drawing.Point(2, 20);
-            this.lblCuerpoNoticia2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblCuerpoNoticia2.Name = "lblCuerpoNoticia2";
-            this.lblCuerpoNoticia2.Size = new System.Drawing.Size(568, 62);
-            this.lblCuerpoNoticia2.TabIndex = 8;
-            this.lblCuerpoNoticia2.Text = "Noticia";
-            // 
-            // pcbNoticia2
-            // 
-            this.pcbNoticia2.BackColor = System.Drawing.Color.Gainsboro;
-            this.pcbNoticia2.Location = new System.Drawing.Point(10, 12);
-            this.pcbNoticia2.Margin = new System.Windows.Forms.Padding(2);
-            this.pcbNoticia2.Name = "pcbNoticia2";
-            this.pcbNoticia2.Size = new System.Drawing.Size(133, 84);
-            this.pcbNoticia2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcbNoticia2.TabIndex = 5;
-            this.pcbNoticia2.TabStop = false;
-            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
@@ -252,6 +195,63 @@
             this.pcbNoticia1.TabIndex = 5;
             this.pcbNoticia1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
+            this.panel1.Controls.Add(this.pcbNoticia2);
+            this.panel1.Location = new System.Drawing.Point(10, 139);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(748, 134);
+            this.panel1.TabIndex = 7;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.Controls.Add(this.lblCuerpoNoticia2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblTituloNoticia2, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(161, 12);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(570, 81);
+            this.tableLayoutPanel2.TabIndex = 10;
+            // 
+            // lblCuerpoNoticia2
+            // 
+            this.lblCuerpoNoticia2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuerpoNoticia2.Location = new System.Drawing.Point(2, 20);
+            this.lblCuerpoNoticia2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCuerpoNoticia2.Name = "lblCuerpoNoticia2";
+            this.lblCuerpoNoticia2.Size = new System.Drawing.Size(568, 62);
+            this.lblCuerpoNoticia2.TabIndex = 8;
+            this.lblCuerpoNoticia2.Text = "Noticia";
+            // 
+            // lblTituloNoticia2
+            // 
+            this.lblTituloNoticia2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloNoticia2.Location = new System.Drawing.Point(2, 0);
+            this.lblTituloNoticia2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTituloNoticia2.Name = "lblTituloNoticia2";
+            this.lblTituloNoticia2.Size = new System.Drawing.Size(568, 20);
+            this.lblTituloNoticia2.TabIndex = 7;
+            this.lblTituloNoticia2.Text = "Noticia";
+            // 
+            // pcbNoticia2
+            // 
+            this.pcbNoticia2.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbNoticia2.Location = new System.Drawing.Point(10, 12);
+            this.pcbNoticia2.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbNoticia2.Name = "pcbNoticia2";
+            this.pcbNoticia2.Size = new System.Drawing.Size(133, 84);
+            this.pcbNoticia2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbNoticia2.TabIndex = 5;
+            this.pcbNoticia2.TabStop = false;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(24, 37);
@@ -284,16 +284,6 @@
             this.panel5.Size = new System.Drawing.Size(753, 379);
             this.panel5.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::pet4sitter.Properties.Resources.corona;
-            this.pictureBox1.Location = new System.Drawing.Point(313, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 113);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblFuncPre
             // 
             this.lblFuncPre.AutoSize = true;
@@ -303,6 +293,16 @@
             this.lblFuncPre.Size = new System.Drawing.Size(318, 31);
             this.lblFuncPre.TabIndex = 1;
             this.lblFuncPre.Text = "Funcionalidad PREMIUM";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pet4sitter.Properties.Resources.corona;
+            this.pictureBox1.Location = new System.Drawing.Point(313, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 113);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // pcbGifCarga
             // 
@@ -357,6 +357,7 @@
             this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmNoticias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNoticias";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmNoticias_FormClosed);
             this.Load += new System.EventHandler(this.FrmNoticias_Load);
@@ -364,12 +365,12 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia2)).EndInit();
             this.panel9.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbNoticia2)).EndInit();
             this.pnlPremium.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();

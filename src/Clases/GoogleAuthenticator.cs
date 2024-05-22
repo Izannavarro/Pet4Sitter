@@ -262,15 +262,9 @@ public class GoogleAuthenticator
     public async static Task exchangeCode()
     {
         HttpListener httpListener = new HttpListener();
-        //Ocultación de tokens:
-        string jsonContent = System.IO.File.ReadAllText("token.JSON");
 
-        // Parsear el contenido JSON
-        JObject tokenData = JObject.Parse(jsonContent);
-
-        // Extraer las propiedades del objeto JSON
-        string clientId = (string)tokenData["ClientId"];
-        string clientSecret = (string)tokenData["ClientSecret"];
+        string clientId = Data.tokenClientId;
+        string clientSecret = Data.tokenClientSecret;
 
         // Generar valores de state y PKCE
         string state = GoogleAuthenticator.randomDataBase64url(32);

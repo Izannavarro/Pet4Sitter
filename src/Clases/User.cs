@@ -361,7 +361,7 @@ namespace pet4sitter.Clases
             string query = @"
             SELECT *
             FROM users
-            WHERE price >= @PrecioDesde AND price <= @PrecioHasta and id_user != @idUsuario
+            WHERE price >= @PrecioDesde AND price <= @PrecioHasta and id_user != @idUsuario and sitter = 1
             ORDER BY SQRT(POW(latitud - @LatitudReferencia, 2) + POW(longitud - @LongitudReferencia, 2)) Limit @Limit OFFSET @Offset";
 
             try

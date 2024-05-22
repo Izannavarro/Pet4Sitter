@@ -121,7 +121,7 @@ namespace pet4sitter
                 ConBD.CerrarConexion();
                 FrmResultadoFiltrado frmResultadoFiltrado = new FrmResultadoFiltrado(lUser);
                 frmResultadoFiltrado.Show();
-                //this.Close();
+                this.Dispose();
             }
         }
     }

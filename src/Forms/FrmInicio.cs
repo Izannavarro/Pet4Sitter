@@ -203,6 +203,7 @@ namespace pet4sitter
             {
                 FrmChat frmChat = new FrmChat(int.Parse(lblIdChat1.Text));
                 frmChat.Show();
+                this.Dispose();
             }
 
         }
@@ -213,6 +214,7 @@ namespace pet4sitter
             {
                 FrmChat frmChat = new FrmChat(int.Parse(lblIdChat2.Text));
                 frmChat.Show();
+                this.Dispose();
             }
         }
 
@@ -222,6 +224,7 @@ namespace pet4sitter
             {
                 FrmChat frmChat = new FrmChat(int.Parse(lblIdChat3.Text));
                 frmChat.Show();
+                this.Dispose();
             }
         }
 

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using pet4sitter.Clases;
+using System.Drawing.Imaging;
 
 namespace pet4sitter
 {
@@ -18,14 +19,20 @@ namespace pet4sitter
         public static User CurrentUser = null;
         //public static User CurrentUser = new User(1,null,"Pepe","ad","p@p.p",null,null,null,true,false,false,null, 39.493, -0.462143);
 
-
+        public static bool DarkMode;
         public static string Ginfo { get { return ginfo; } set { ginfo = value; } }
         public static string tokenNoticias;
         public static string tokenGPT;
+        public static string tokenClientId;
+        public static string tokenClientSecret;
+
         static Data()
         {
-            tokenNoticias = Utiles.CargarTokenNoticias();
-            tokenGPT = Utiles.CargarTokenGpt();
+            DarkMode = IsDarkModeEnabled();
+            tokenNoticias = Utiles.BuscarToken("News");
+            tokenGPT = Utiles.BuscarToken("ChatGPT");
+            tokenClientId = Utiles.BuscarToken("ClientID");
+            tokenClientSecret = Utiles.BuscarToken("ClientSecret");
         }
 
         public static bool IsDarkModeEnabled()

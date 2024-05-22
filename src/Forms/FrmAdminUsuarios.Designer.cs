@@ -308,7 +308,6 @@ namespace pet4sitter
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmAdminUsuarios";
             this.Text = "FrmAdminUsuarios";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminUsuarios_FormClosed);
             this.Load += new System.EventHandler(this.FrmAdminUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

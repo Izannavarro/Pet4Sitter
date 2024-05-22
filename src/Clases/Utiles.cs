@@ -15,6 +15,20 @@ namespace pet4sitter.Clases
 {
     public class Utiles
     {
+        public static string BuscarToken(string nombre)
+        {
+            if(ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                string query = "SELECT token_value FROM tokens WHERE token_name=@name;";
+                MySqlCommand com = new MySqlCommand(query,ConBD.Conexion);
+                com.Parameters.AddWithValue("name", nombre);
+                string tokenValue = com.ExecuteScalar()?.ToString(); // Ejecuta el comando y obtén el valor del token
+                ConBD.CerrarConexion();
+                return tokenValue ?? "none"; // Si el tokenValue es null, devuelve "none"
+            }
+            return "none";
+        }
         public static string CargarTokenNoticias()
         {
             try

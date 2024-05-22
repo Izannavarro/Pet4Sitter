@@ -32,6 +32,7 @@ namespace pet4sitter
             if (Data.CurrentUser.Sitter == true)
             {
                 lblPrecio.Text = Data.CurrentUser.Precio.ToString()+"€/Día";
+                btnDarAlta.Visible = false;
             }
             else
             {

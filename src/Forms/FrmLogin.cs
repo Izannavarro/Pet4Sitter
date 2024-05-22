@@ -120,6 +120,7 @@ namespace pet4sitter
                     ConBD.CerrarConexion();
                     FrmInicio frmInicio = new FrmInicio();
                     frmInicio.Show();
+                    frmInicio.Activate();
                     this.Hide();
                 }
                 else
@@ -191,7 +192,7 @@ namespace pet4sitter
 
         private void ChangeThemeMode()
         {
-            if (Data.IsDarkModeEnabled())
+            if (Data.DarkMode)
             {
                 // Configurar el tema oscuro
                 panel1.BackColor = Color.Black;
