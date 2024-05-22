@@ -46,7 +46,10 @@ namespace pet4sitter
                 {
                     User usu = User.EncontrarUsuario((int)idChatSeleccionado);
                     lblNombreChatActivo.Text = usu.Name;
-                    pcbImagen5.Image = Utiles.ByteArrayToImage(usu.Image);
+                    if(usu.Image != null)
+                    {
+                        pcbImagen5.Image = Utiles.ByteArrayToImage(usu.Image);
+                    }
                     await ChatMensajes();
                 }
                 ConBD.CerrarConexion();
