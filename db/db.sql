@@ -54,3 +54,8 @@ CREATE TABLE IF NOT EXISTS delivery_products (
     FOREIGN KEY (id_delivery) REFERENCES delivery(id_delivery)on delete cascade,
     FOREIGN KEY (id_product) REFERENCES products(id_product)on delete cascade
 ) CHARACTER SET utf8mb4;
+
+CREATE TABLE if NOT EXISTS tokens(
+id_token INT auto_increment PRIMARY KEY,
+token_name VARCHAR(50) NOT NULL,
+token_value VARCHAR(255) NOT NULL);
