@@ -154,7 +154,7 @@ namespace pet4sitter
 
             int id = Data.CurrentUser.IdUser.Value;
 
-            User u = new User(id, null, nombre, apellidos, email, null, contra, localizacion, null, null, null, imgFinal, lat, longi);
+            User u = new User(id, null, nombre, apellidos, email, null, contra,Data.CurrentUser.Precio, localizacion, null, null, null, imgFinal, lat, longi);
 
             if (ConBD.Conexion != null)
             {

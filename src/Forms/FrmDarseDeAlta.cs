@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pet4sitter.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,6 +37,40 @@ namespace pet4sitter
         private void FrmDarseDeAlta_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            FrmPerfil frm = new FrmPerfil();
+            frm.Show();
+            this.Dispose();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if(chkTerminos.Checked )
+            {
+                if(!Data.CurrentUser.Sitter == true)
+                {
+                    double precio = double.Parse(nudPrecio.Value.ToString());
+                    User u = new User(Data.CurrentUser.IdUser, Data.CurrentUser.IdGoogle, Data.CurrentUser.Name, Data.CurrentUser.Surname, Data.CurrentUser.Email, Data.CurrentUser.Dni, Data.CurrentUser.Password,precio, Data.CurrentUser.Location, Data.CurrentUser.Premium, true, Data.CurrentUser.Admin, Data.CurrentUser.Image, Data.CurrentUser.Latitud, Data.CurrentUser.Longitud);
+                    if (ConBD.Conexion != null)
+                    {
+                        ConBD.AbrirConexion();
+                        User.ActivarCuidador(u);
+                        ConBD.CerrarConexion();
+                    }
+                    MessageBox.Show("Has sido dado de Alta como Cuidador!");
+                }
+                else
+                {
+                    MessageBox.Show("Ya estás dado de Alta como Cuidador!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Tienes que aceptar nuestras políticas de privacidad!");
+            }
         }
     }
 }

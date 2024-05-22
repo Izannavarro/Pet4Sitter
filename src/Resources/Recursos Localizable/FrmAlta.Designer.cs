@@ -61,7 +61,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a button1.
+        ///   Busca una cadena traducida similar a .
         /// </summary>
         internal static string btnButton1_Text {
             get {
@@ -70,7 +70,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Guardar.
+        ///   Busca una cadena traducida similar a Darse de Alta.
         /// </summary>
         internal static string btnGuardar_Text {
             get {

@@ -41,7 +41,7 @@ namespace pet4sitter
             lblLocalizacion.Text = Data.CurrentUser.Location;
             if (Data.CurrentUser.Sitter == true)
             {
-                lblPrecio.Text = Data.CurrentUser.Sitter.ToString();
+                lblPrecio.Text = Data.CurrentUser.Precio.ToString()+"€/Día";
             }
             else
             {

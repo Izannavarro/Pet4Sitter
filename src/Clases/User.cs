@@ -21,6 +21,7 @@ namespace pet4sitter.Clases
         private string email;
         private string dni;
         private string password;
+        private double? precio;
         private string location;
         private bool? premium;
         private bool? sitter;
@@ -33,7 +34,9 @@ namespace pet4sitter.Clases
         public string Name { get { return this.name; } }
         public string Surname { get { return surname; } }
         public string Password { get { return password; } }
+        public double? Precio { get { return precio; } }
         public string Email { get { return email; } }
+        public string Dni { get { return dni; } }
         public string Location { get { return location; } }
         public bool? Premium { get { return this.premium; } }
         public byte[] Image { get { return this.image; } }
@@ -45,7 +48,7 @@ namespace pet4sitter.Clases
 
         // Constructor
         public User() { }
-        public User(int? idUser, string idGoogle, string name, string surname, string email, string dni, string password, string location, bool? premium, bool? sitter, bool? admin, byte[] image, double? latitud, double? longitud)
+        public User(int? idUser, string idGoogle, string name, string surname, string email, string dni, string password, double? precio, string location, bool? premium, bool? sitter, bool? admin, byte[] image, double? latitud, double? longitud)
         {
             this.idUser = idUser;
             this.idGoogle = idGoogle;
@@ -61,6 +64,7 @@ namespace pet4sitter.Clases
             this.image = image;
             this.latitud = latitud;
             this.longitud = longitud;
+            this.precio = precio;
         }
 
         public User(int? idUser, string name, string email, string dni, string password, bool? sitter, bool? admin, byte[] img)
@@ -92,6 +96,7 @@ namespace pet4sitter.Clases
                                             reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString("email"),
                                             reader.IsDBNull(reader.GetOrdinal("dni")) ? null : reader.GetString("dni"),
                                             reader.IsDBNull(reader.GetOrdinal("password")) ? null : reader.GetString("password"),
+                                            reader.IsDBNull(reader.GetOrdinal("price")) ? (double?)null : reader.GetDouble("price"),
                                             reader.IsDBNull(reader.GetOrdinal("location")) ? null : reader.GetString("location"),
                                             reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean("premium"),
                                             reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean("sitter"),
@@ -126,6 +131,7 @@ namespace pet4sitter.Clases
                                             reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString("email"),
                                             reader.IsDBNull(reader.GetOrdinal("dni")) ? null : reader.GetString("dni"),
                                             reader.IsDBNull(reader.GetOrdinal("password")) ? null : reader.GetString("password"),
+                                            reader.IsDBNull(reader.GetOrdinal("price")) ? (double?)null : reader.GetDouble("price"),
                                             reader.IsDBNull(reader.GetOrdinal("location")) ? null : reader.GetString("location"),
                                             reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean("premium"),
                                             reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean("sitter"),
@@ -157,6 +163,7 @@ namespace pet4sitter.Clases
                                             reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString("email"),
                                             reader.IsDBNull(reader.GetOrdinal("dni")) ? null : reader.GetString("dni"),
                                             reader.IsDBNull(reader.GetOrdinal("password")) ? null : reader.GetString("password"),
+                                            reader.IsDBNull(reader.GetOrdinal("price")) ? (double?)null : reader.GetDouble("price"),
                                             reader.IsDBNull(reader.GetOrdinal("location")) ? null : reader.GetString("location"),
                                             reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean("premium"),
                                             reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean("sitter"),
@@ -173,7 +180,7 @@ namespace pet4sitter.Clases
 
         public static User EncontrarUsuarioGoogle(string idGoogle)
         {
-            User user = new User(null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+            User user = new User(null, null, null, null, null, null, null, null,null, null, null, null, null, null, null);
             string query = "SELECT * FROM users WHERE id_google = @idGoogle";
             MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
             com.Parameters.AddWithValue("@idGoogle", idGoogle);
@@ -191,6 +198,7 @@ namespace pet4sitter.Clases
                                             reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString("email"),
                                             reader.IsDBNull(reader.GetOrdinal("dni")) ? null : reader.GetString("dni"),
                                             reader.IsDBNull(reader.GetOrdinal("password")) ? null : reader.GetString("password"),
+                                            reader.IsDBNull(reader.GetOrdinal("price")) ? (double?)null : reader.GetDouble("price"),
                                             reader.IsDBNull(reader.GetOrdinal("location")) ? null : reader.GetString("location"),
                                             reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean("premium"),
                                             reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean("sitter"),
@@ -381,6 +389,7 @@ namespace pet4sitter.Clases
                                     reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString(reader.GetOrdinal("email")),
                                     reader.IsDBNull(reader.GetOrdinal("dni")) ? null : reader.GetString(reader.GetOrdinal("dni")),
                                     reader.IsDBNull(reader.GetOrdinal("password")) ? null : reader.GetString(reader.GetOrdinal("password")),
+                                    reader.IsDBNull(reader.GetOrdinal("price")) ? (double?)null : reader.GetDouble("price"),
                                     reader.IsDBNull(reader.GetOrdinal("location")) ? null : reader.GetString(reader.GetOrdinal("location")),
                                     reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean(reader.GetOrdinal("premium")),
                                     reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean(reader.GetOrdinal("sitter")),
@@ -456,6 +465,21 @@ namespace pet4sitter.Clases
             }
         }
 
+        public static void ActivarCuidador(User u)
+        {
+            try
+            {
+                string consulta = "UPDATE users SET sitter = 1, price = @price WHERE id_user = @id_user";
+                MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+                comando.Parameters.AddWithValue("@id_user", u.IdUser);
+                comando.Parameters.AddWithValue("price", u.Precio);
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo convertir tu usuario a Cuidador", ex.Message);
+            }
+        }
     }
 
 

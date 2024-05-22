@@ -37,9 +37,9 @@
             this.lblPrecioDia = new System.Windows.Forms.Label();
             this.lblDarseAlta = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudPrecio = new System.Windows.Forms.NumericUpDown();
             this.chkTerminos = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGuardar
@@ -50,8 +50,9 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(299, 38);
             this.btnGuardar.TabIndex = 62;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Text = "Darse de Alta";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnVolver
             // 
@@ -63,6 +64,7 @@
             this.btnVolver.TabIndex = 61;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label8
             // 
@@ -136,14 +138,15 @@
             this.label3.Size = new System.Drawing.Size(0, 36);
             this.label3.TabIndex = 66;
             // 
-            // numericUpDown1
+            // nudPrecio
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(593, 285);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(97, 45);
-            this.numericUpDown1.TabIndex = 67;
+            this.nudPrecio.DecimalPlaces = 2;
+            this.nudPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudPrecio.Location = new System.Drawing.Point(593, 285);
+            this.nudPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudPrecio.Name = "nudPrecio";
+            this.nudPrecio.Size = new System.Drawing.Size(97, 45);
+            this.nudPrecio.TabIndex = 67;
             // 
             // chkTerminos
             // 
@@ -164,7 +167,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1479, 734);
             this.Controls.Add(this.chkTerminos);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nudPrecio);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblDarseAlta);
             this.Controls.Add(this.btnGuardar);
@@ -179,7 +182,7 @@
             this.Text = "FrmDarseDeAlta";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmDarseDeAlta_FormClosed);
             this.Load += new System.EventHandler(this.FrmDarseDeAlta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,7 +199,7 @@
         private System.Windows.Forms.Label lblPrecioDia;
         private System.Windows.Forms.Label lblDarseAlta;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudPrecio;
         private System.Windows.Forms.CheckBox chkTerminos;
     }
 }
