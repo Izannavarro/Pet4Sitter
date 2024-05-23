@@ -32,6 +32,27 @@ namespace pet4sitter.Clases
             com.Parameters.AddWithValue("mensaje", chat.message);
             com.ExecuteNonQuery();
         }
+        public static List<Mensaje> ListarMensajes(string query)
+        {
+            List<Mensaje> mensajes = new List<Mensaje>();
+
+            MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
+            com.Parameters.AddWithValue("idUsuActual", Data.CurrentUser.IdUser);
+            using (MySqlDataReader reader = com.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    int? idChat = reader.IsDBNull(reader.GetOrdinal("id")) ? (int?)null : reader.GetInt32(reader.GetOrdinal("id"));
+                    int? idSender = reader.IsDBNull(reader.GetOrdinal("id_sender")) ? (int?)null : reader.GetInt32(reader.GetOrdinal("id_sender"));
+                    string message = reader.GetString(reader.GetOrdinal("messages"));
+                    Mensaje mensaje = new Mensaje(idChat, idSender, message);
+                    mensajes.Add(mensaje);
+                }
+                reader.Close();
+            }
+
+            return mensajes;
+        }
 
         public static List<Mensaje> ObtenerUltimosChats()
         {

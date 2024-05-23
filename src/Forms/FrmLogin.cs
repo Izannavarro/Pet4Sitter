@@ -18,6 +18,8 @@ using static System.Net.WebRequestMethods;
 using System.Net.Mail;
 using System.Globalization;
 using pet4sitter.Clases;
+using pet4sitter.Forms;
+using System.Web;
 
 namespace pet4sitter
 {
@@ -96,10 +98,24 @@ namespace pet4sitter
             // Comprobar la respuesta del usuario
             if (result == DialogResult.Yes)
             {
-                // Código para recuperar la contraseña aquí
-                MessageBox.Show("Se ha enviado un enlace de recuperación a tu correo electrónico.", "Recuperar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                var mailService = new MailServices.ForgotPasswordMail();
-                mailService.sendMail("Recuperar Contraseña Proyecto Integrado", "Hola esto es un test desde mi app para el grupo del proyecto integrado\nTU nueva contraseña es xxxxxxxxxxxxxxxxx", txtMail.Text.ToString());
+                string newPassword = Utiles.GenerateRandomPassword(10); // Genera una contraseña aleatoria de longitud 10
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(newPassword); // Cifra la contraseña con BCrypt
+                if (ConBD.Conexion != null)
+                {
+                    ConBD.AbrirConexion();
+                    if(User.CompruebaUsuarioExistente(txtMail.Text))
+                    {
+                        User.ActualizarContraseña(txtMail.Text, hashedPassword);
+                        // Crea el mensaje de correo electrónico con la nueva contraseña
+                        string mensajeCorreo = $"Hola,\n\nTu nueva contraseña es: {newPassword}\n\nSi no solicitaste este cambio, por favor ignora este correo.\n\nSaludos,\nEquipo de Soporte";
+
+                        // Envía el correo electrónico al usuario
+                        var mailService = new MailServices.MailPet4Sitter();
+                        mailService.sendMail("Recuperar Contraseña Proyecto Integrado", mensajeCorreo, txtMail.Text.ToString());
+                        MessageBox.Show("Revisa tu bandeja de entrada,te hemos enviado tu nueva contraseña");
+                    }
+                    ConBD.CerrarConexion();
+                }
             }
             else
             {
@@ -234,6 +250,14 @@ namespace pet4sitter
         private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lblReportarBug_Click(object sender, EventArgs e)
+        {
+            FrmReportarBug frm = new FrmReportarBug();
+
+            this.Hide();
+            frm.Show();
         }
     }
 }

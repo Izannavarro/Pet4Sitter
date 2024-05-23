@@ -21,11 +21,12 @@ namespace pet4sitter.Forms
             set { _title = value; lblMensajeRecibido.Text = value; AddHeightText(); }
         }
 
-        private string _icon;
-        public string Icon
+        private Image _icon;
+        public Image Icon
         {
             get { return _icon; }
-            set { _icon = value; /* pcbIcon.Load(value); */ }
+            set { _icon = value; 
+                pcbIcon.Image = _icon; }
         }
 
         void AddHeightText()

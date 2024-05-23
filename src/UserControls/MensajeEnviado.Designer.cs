@@ -49,7 +49,7 @@
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.Controls.Add(this.lblMensajeEnviado);
             this.Name = "MensajeEnviado";
-            this.Size = new System.Drawing.Size(537, 65);
+            this.Size = new System.Drawing.Size(538, 65);
             this.ResumeLayout(false);
 
         }
