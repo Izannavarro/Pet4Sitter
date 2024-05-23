@@ -47,6 +47,7 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptbBusqueda = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -195,6 +196,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.ptbFlechaAbajo);
             this.panel5.Controls.Add(this.ptbFlechaArriba);
             this.panel5.Controls.Add(this.btnFlechaAbajo);
@@ -208,7 +210,7 @@
             // ptbFlechaAbajo
             // 
             this.ptbFlechaAbajo.Image = global::pet4sitter.Properties.Resources.flecha__1_;
-            this.ptbFlechaAbajo.Location = new System.Drawing.Point(255, 1);
+            this.ptbFlechaAbajo.Location = new System.Drawing.Point(208, 0);
             this.ptbFlechaAbajo.Name = "ptbFlechaAbajo";
             this.ptbFlechaAbajo.Size = new System.Drawing.Size(41, 39);
             this.ptbFlechaAbajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +231,7 @@
             // 
             this.btnFlechaAbajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.btnFlechaAbajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlechaAbajo.Location = new System.Drawing.Point(201, 0);
+            this.btnFlechaAbajo.Location = new System.Drawing.Point(148, 1);
             this.btnFlechaAbajo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFlechaAbajo.Name = "btnFlechaAbajo";
             this.btnFlechaAbajo.Size = new System.Drawing.Size(45, 42);
@@ -285,6 +287,16 @@
             this.ptbBusqueda.TabStop = false;
             this.ptbBusqueda.Click += new System.EventHandler(this.ptbBusqueda_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(256, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 42);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmTienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -335,5 +347,6 @@
         private System.Windows.Forms.PictureBox ptbFlechaArriba;
         private System.Windows.Forms.PictureBox ptbBusqueda;
         private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Button button1;
     }
 }
