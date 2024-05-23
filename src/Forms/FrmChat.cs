@@ -141,6 +141,7 @@ namespace pet4sitter
                                         mensajeRecibido.Dock = DockStyle.Top;
                                         mensajeRecibido.BringToFront();
                                         mensajeRecibido.Title = row["messages"].ToString();
+                                        mensajeRecibido.Icon = pcbImagen5.Image;
                                         fLPanelChat.Controls.Add(mensajeRecibido);
                                     }
                                 }

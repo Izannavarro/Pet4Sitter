@@ -141,6 +141,7 @@ namespace pet4sitter.Clases
                                             reader.IsDBNull(reader.GetOrdinal("longitud")) ? (double?)null : reader.GetDouble("longitud")
                                         );
             }
+            reader.Close();
             return user;
         }
 
@@ -290,6 +291,17 @@ namespace pet4sitter.Clases
             }
 
         }
+
+        public static void ActualizarContraseña(string email, string nuevaContraseña)
+        {
+                // Actualiza la contraseña en la base de datos
+                string query = "UPDATE users SET password = @nuevaContraseña WHERE email = @email";
+                MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
+                com.Parameters.AddWithValue("nuevaContraseña", nuevaContraseña);
+                com.Parameters.AddWithValue("email", email);
+                com.ExecuteNonQuery();
+        }
+
 
         public static bool CompruebaUsuarioConGoogle(string idGoogle)
         {

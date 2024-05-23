@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Drawing.Imaging;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace pet4sitter.Clases
 {
@@ -29,68 +30,12 @@ namespace pet4sitter.Clases
             }
             return "none";
         }
-        public static string CargarTokenNoticias()
+        public static string GenerateRandomPassword(int length)
         {
-            try
-            {
-                // Ruta del archivo token.json
-                string rutaArchivo = "token.json";
-
-                // Verifica si el archivo existe
-                if (File.Exists(rutaArchivo))
-                {
-                    // Lee el contenido del archivo JSON
-                    string contenidoJson = File.ReadAllText(rutaArchivo);
-
-                    // Convierte el contenido a un objeto JSON
-                    JObject tokenJson = JObject.Parse(contenidoJson);
-
-                    // Obtén el valor del atributo 'news' y asígnalo a ApiNoticias
-                    return tokenJson["News"].ToString();
-                }
-                else
-                {
-                    throw new FileNotFoundException("El archivo token.json no fue encontrado.");
-                }
-            }
-            catch (Exception ex)
-            {
-                // Maneja cualquier excepción que ocurra al cargar el token de noticias
-                Console.WriteLine($"Error al cargar el token de noticias: {ex.Message}");
-            }
-            return "err";
-        }
-
-        public static string CargarTokenGpt()
-        {
-            try
-            {
-                // Ruta del archivo token.json
-                string rutaArchivo = "token.json";
-
-                // Verifica si el archivo existe
-                if (File.Exists(rutaArchivo))
-                {
-                    // Lee el contenido del archivo JSON
-                    string contenidoJson = File.ReadAllText(rutaArchivo);
-
-                    // Convierte el contenido a un objeto JSON
-                    JObject tokenJson = JObject.Parse(contenidoJson);
-
-                    // Obtén el valor del atributo 'news' y asígnalo a ApiNoticias
-                    return tokenJson["GPT"].ToString();
-                }
-                else
-                {
-                    throw new FileNotFoundException("El archivo token.json no fue encontrado.");
-                }
-            }
-            catch (Exception ex)
-            {
-                // Maneja cualquier excepción que ocurra al cargar el token de noticias
-                Console.WriteLine($"Error al cargar el token de noticias: {ex.Message}");
-            }
-            return "err";
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var random = new Random();
+            return new string(Enumerable.Repeat(chars, length)
+                .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
         public static int ObtenerAlturaTexto(Label lbl)
