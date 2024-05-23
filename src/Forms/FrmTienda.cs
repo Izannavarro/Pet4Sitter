@@ -77,17 +77,18 @@ namespace pet4sitter
                     ConBD.CerrarConexion();
                     if (dgvProductos.RowCount == 0)
                     {
-                        ConBD.AbrirConexion();
                         MessageBox.Show("NO SE ENCONTRARON PRODUCTOS, VUELVA A BUSCAR!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtBusqueda.Text = "";
+                        txtBusqueda.Focus();
+                        ConBD.AbrirConexion();
                         LimpiarTablaProductos();
-                        ConBD.CerrarConexion();
                     }
                 }
                 else
                 {
                     LimpiarTablaProductos();
-                    ConBD.CerrarConexion();
                 }
+                ConBD.CerrarConexion();
             }
         }
 
@@ -139,6 +140,29 @@ namespace pet4sitter
             Producto p = new Producto(id, nombre, canti, precio, descrip, img);
 
             Carrito.Productos.Add(p);
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                if (txtBusqueda.Text != "")
+                {
+                    dgvProductos.DataSource = Producto.EncontrarNombreProducto(txtBusqueda.Text.ToUpper());
+                    ConBD.CerrarConexion();
+                }
+                else
+                {
+                    LimpiarTablaProductos();
+                    ConBD.CerrarConexion();
+                }
+            }
+        }
+
+        private void txtDescripcion_Enter(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
         }
     }
 }

@@ -165,7 +165,7 @@ namespace pet4sitter.Clases
             List<Producto> productos = new List<Producto>();
             try
             {
-                string consulta = string.Format("SELECT * FROM products where name = '{0}'",nombreProducto);
+                string consulta = string.Format("SELECT * FROM products where name LIKE '{0}%'",nombreProducto);
                 MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
                 if (reader.HasRows)
