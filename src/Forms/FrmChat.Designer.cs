@@ -60,7 +60,7 @@ namespace pet4sitter
             this.fLPanelChat = new pet4sitter.Clases.BufferedFlowLayoutPanel();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.pnl1.SuspendLayout();
@@ -335,7 +335,7 @@ namespace pet4sitter
             this.pnlInfoChat.Location = new System.Drawing.Point(381, 21);
             this.pnlInfoChat.Margin = new System.Windows.Forms.Padding(2);
             this.pnlInfoChat.Name = "pnlInfoChat";
-            this.pnlInfoChat.Size = new System.Drawing.Size(554, 88);
+            this.pnlInfoChat.Size = new System.Drawing.Size(568, 88);
             this.pnlInfoChat.TabIndex = 5;
             this.pnlInfoChat.Visible = false;
             // 
@@ -380,7 +380,7 @@ namespace pet4sitter
             this.pnlChat.Location = new System.Drawing.Point(381, 103);
             this.pnlChat.Margin = new System.Windows.Forms.Padding(2);
             this.pnlChat.Name = "pnlChat";
-            this.pnlChat.Size = new System.Drawing.Size(554, 445);
+            this.pnlChat.Size = new System.Drawing.Size(568, 445);
             this.pnlChat.TabIndex = 13;
             this.pnlChat.Visible = false;
             // 
@@ -390,12 +390,12 @@ namespace pet4sitter
             this.fLPanelChat.BackColor = System.Drawing.Color.DarkSlateGray;
             this.fLPanelChat.Location = new System.Drawing.Point(3, 11);
             this.fLPanelChat.Name = "fLPanelChat";
-            this.fLPanelChat.Size = new System.Drawing.Size(545, 351);
+            this.fLPanelChat.Size = new System.Drawing.Size(562, 351);
             this.fLPanelChat.TabIndex = 14;
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(468, 375);
+            this.btnEnviar.Location = new System.Drawing.Point(481, 383);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(58, 37);
@@ -407,7 +407,7 @@ namespace pet4sitter
             // txtMensaje
             // 
             this.txtMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMensaje.Location = new System.Drawing.Point(23, 375);
+            this.txtMensaje.Location = new System.Drawing.Point(36, 383);
             this.txtMensaje.Margin = new System.Windows.Forms.Padding(2);
             this.txtMensaje.Name = "txtMensaje";
             this.txtMensaje.Size = new System.Drawing.Size(434, 37);

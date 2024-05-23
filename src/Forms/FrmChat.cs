@@ -223,6 +223,7 @@ namespace pet4sitter
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
             }
+            txtMensaje.Clear();
         }
 
         private void pnl1_MouseHover(object sender, EventArgs e)
@@ -360,10 +361,10 @@ namespace pet4sitter
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            ActualizarPagina();
             if ((paginaActual + 1) * elementosPorPagina < totalChats)
             {
                 paginaActual++;
+                ActualizarPagina();
                 CargarUltimosChats();
             }
             else
@@ -374,10 +375,10 @@ namespace pet4sitter
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            ActualizarPagina();
             if (paginaActual > 0)
             {
                 paginaActual--;
+                ActualizarPagina();
                 CargarUltimosChats();
             }
 

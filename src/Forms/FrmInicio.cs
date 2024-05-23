@@ -114,9 +114,22 @@ namespace pet4sitter
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                string query = $"SELECT * FROM chat c INNER JOIN users u ON c.id_sender = u.id_user WHERE id_receiver = {Data.CurrentUser.IdUser} GROUP BY id_sender order by c.date desc LIMIT 3 ;";
+                string query = @"
+    SELECT *
+    FROM chat c
+    INNER JOIN (
+        SELECT id_sender, MAX(date) AS max_date
+        FROM chat
+        WHERE id_receiver = 2 OR id_sender = 2
+        GROUP BY id_sender
+        ORDER BY max_date DESC
+        LIMIT 3
+    ) AS sub ON c.id_sender = sub.id_sender AND c.date = sub.max_date
+    INNER JOIN users u ON c.id_sender = u.id_user
+    ORDER BY c.date DESC;
+";
                 List<User> users = User.ListarUsuarios(query);
-                List<Mensaje> lMens = Mensaje.ObtenerUltimosChats();
+                List<Mensaje> lMens = Mensaje.ListarMensajes(query);
                 if (users.Count > 0)
                 {
                     lblNombreChat1.Text = users[0].Name;
