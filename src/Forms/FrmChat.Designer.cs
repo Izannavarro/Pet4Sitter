@@ -32,6 +32,7 @@ namespace pet4sitter
         {
             this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblPagina = new System.Windows.Forms.Label();
             this.pnl1 = new System.Windows.Forms.Panel();
             this.lblIdChat2 = new System.Windows.Forms.Label();
             this.lblIdChat1 = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@ namespace pet4sitter
             this.fLPanelChat = new pet4sitter.Clases.BufferedFlowLayoutPanel();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.pnl1.SuspendLayout();
@@ -78,6 +79,7 @@ namespace pet4sitter
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
+            this.panel3.Controls.Add(this.lblPagina);
             this.panel3.Controls.Add(this.pnl1);
             this.panel3.Controls.Add(this.pnl2);
             this.panel3.Controls.Add(this.pnl3);
@@ -85,10 +87,19 @@ namespace pet4sitter
             this.panel3.Controls.Add(this.pnl4);
             this.panel3.Controls.Add(this.btnAnterior);
             this.panel3.Location = new System.Drawing.Point(143, 21);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(220, 512);
+            this.panel3.Size = new System.Drawing.Size(220, 527);
             this.panel3.TabIndex = 4;
+            // 
+            // lblPagina
+            // 
+            this.lblPagina.AutoSize = true;
+            this.lblPagina.Location = new System.Drawing.Point(73, 469);
+            this.lblPagina.Name = "lblPagina";
+            this.lblPagina.Size = new System.Drawing.Size(73, 13);
+            this.lblPagina.TabIndex = 13;
+            this.lblPagina.Text = "Pagina 1 de 1";
             // 
             // pnl1
             // 
@@ -98,7 +109,7 @@ namespace pet4sitter
             this.pnl1.Controls.Add(this.lblNombre1);
             this.pnl1.Controls.Add(this.pcbImagen1);
             this.pnl1.Location = new System.Drawing.Point(14, 14);
-            this.pnl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl1.Margin = new System.Windows.Forms.Padding(2);
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(192, 103);
             this.pnl1.TabIndex = 12;
@@ -145,7 +156,7 @@ namespace pet4sitter
             this.pcbImagen1.BackColor = System.Drawing.Color.Transparent;
             this.pcbImagen1.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbImagen1.Location = new System.Drawing.Point(11, 20);
-            this.pcbImagen1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen1.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen1.Name = "pcbImagen1";
             this.pcbImagen1.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +169,7 @@ namespace pet4sitter
             this.pnl2.Controls.Add(this.lblNombre2);
             this.pnl2.Controls.Add(this.pcbImagen2);
             this.pnl2.Location = new System.Drawing.Point(12, 129);
-            this.pnl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl2.Margin = new System.Windows.Forms.Padding(2);
             this.pnl2.Name = "pnl2";
             this.pnl2.Size = new System.Drawing.Size(194, 103);
             this.pnl2.TabIndex = 11;
@@ -180,7 +191,7 @@ namespace pet4sitter
             this.pcbImagen2.BackColor = System.Drawing.Color.Transparent;
             this.pcbImagen2.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbImagen2.Location = new System.Drawing.Point(13, 20);
-            this.pcbImagen2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen2.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen2.Name = "pcbImagen2";
             this.pcbImagen2.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -195,7 +206,7 @@ namespace pet4sitter
             this.pnl3.Controls.Add(this.lblNombre3);
             this.pnl3.Controls.Add(this.pcbImagen3);
             this.pnl3.Location = new System.Drawing.Point(12, 245);
-            this.pnl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl3.Margin = new System.Windows.Forms.Padding(2);
             this.pnl3.Name = "pnl3";
             this.pnl3.Size = new System.Drawing.Size(194, 103);
             this.pnl3.TabIndex = 10;
@@ -239,7 +250,7 @@ namespace pet4sitter
             this.pcbImagen3.BackColor = System.Drawing.Color.Transparent;
             this.pcbImagen3.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbImagen3.Location = new System.Drawing.Point(13, 20);
-            this.pcbImagen3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen3.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen3.Name = "pcbImagen3";
             this.pcbImagen3.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -248,8 +259,8 @@ namespace pet4sitter
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(106, 477);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSiguiente.Location = new System.Drawing.Point(107, 488);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(69, 25);
             this.btnSiguiente.TabIndex = 7;
@@ -264,7 +275,7 @@ namespace pet4sitter
             this.pnl4.Controls.Add(this.lblNombre4);
             this.pnl4.Controls.Add(this.pcbImagen4);
             this.pnl4.Location = new System.Drawing.Point(12, 362);
-            this.pnl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl4.Margin = new System.Windows.Forms.Padding(2);
             this.pnl4.Name = "pnl4";
             this.pnl4.Size = new System.Drawing.Size(194, 103);
             this.pnl4.TabIndex = 9;
@@ -297,7 +308,7 @@ namespace pet4sitter
             this.pcbImagen4.BackColor = System.Drawing.Color.Transparent;
             this.pcbImagen4.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbImagen4.Location = new System.Drawing.Point(13, 20);
-            this.pcbImagen4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen4.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen4.Name = "pcbImagen4";
             this.pcbImagen4.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -306,8 +317,8 @@ namespace pet4sitter
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(44, 477);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAnterior.Location = new System.Drawing.Point(45, 488);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(58, 25);
             this.btnAnterior.TabIndex = 6;
@@ -322,16 +333,16 @@ namespace pet4sitter
             this.pnlInfoChat.Controls.Add(this.lblNombreChatActivo);
             this.pnlInfoChat.Controls.Add(this.pcbImagen5);
             this.pnlInfoChat.Location = new System.Drawing.Point(381, 21);
-            this.pnlInfoChat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlInfoChat.Margin = new System.Windows.Forms.Padding(2);
             this.pnlInfoChat.Name = "pnlInfoChat";
-            this.pnlInfoChat.Size = new System.Drawing.Size(546, 88);
+            this.pnlInfoChat.Size = new System.Drawing.Size(554, 88);
             this.pnlInfoChat.TabIndex = 5;
             this.pnlInfoChat.Visible = false;
             // 
             // btnOpciones
             // 
             this.btnOpciones.Location = new System.Drawing.Point(449, 20);
-            this.btnOpciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOpciones.Margin = new System.Windows.Forms.Padding(2);
             this.btnOpciones.Name = "btnOpciones";
             this.btnOpciones.Size = new System.Drawing.Size(69, 49);
             this.btnOpciones.TabIndex = 14;
@@ -351,9 +362,9 @@ namespace pet4sitter
             // 
             // pcbImagen5
             // 
-            this.pcbImagen5.BackColor = System.Drawing.Color.Gainsboro;
+            this.pcbImagen5.BackColor = System.Drawing.Color.Transparent;
             this.pcbImagen5.Location = new System.Drawing.Point(15, 14);
-            this.pcbImagen5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen5.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen5.Name = "pcbImagen5";
             this.pcbImagen5.Size = new System.Drawing.Size(58, 62);
             this.pcbImagen5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -367,9 +378,9 @@ namespace pet4sitter
             this.pnlChat.Controls.Add(this.btnEnviar);
             this.pnlChat.Controls.Add(this.txtMensaje);
             this.pnlChat.Location = new System.Drawing.Point(381, 103);
-            this.pnlChat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlChat.Margin = new System.Windows.Forms.Padding(2);
             this.pnlChat.Name = "pnlChat";
-            this.pnlChat.Size = new System.Drawing.Size(546, 431);
+            this.pnlChat.Size = new System.Drawing.Size(554, 445);
             this.pnlChat.TabIndex = 13;
             this.pnlChat.Visible = false;
             // 
@@ -379,13 +390,13 @@ namespace pet4sitter
             this.fLPanelChat.BackColor = System.Drawing.Color.DarkSlateGray;
             this.fLPanelChat.Location = new System.Drawing.Point(3, 11);
             this.fLPanelChat.Name = "fLPanelChat";
-            this.fLPanelChat.Size = new System.Drawing.Size(540, 351);
+            this.fLPanelChat.Size = new System.Drawing.Size(545, 351);
             this.fLPanelChat.TabIndex = 14;
             // 
             // btnEnviar
             // 
             this.btnEnviar.Location = new System.Drawing.Point(468, 375);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(58, 37);
             this.btnEnviar.TabIndex = 13;
@@ -397,7 +408,7 @@ namespace pet4sitter
             // 
             this.txtMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMensaje.Location = new System.Drawing.Point(23, 375);
-            this.txtMensaje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMensaje.Margin = new System.Windows.Forms.Padding(2);
             this.txtMensaje.Name = "txtMensaje";
             this.txtMensaje.Size = new System.Drawing.Size(434, 37);
             this.txtMensaje.TabIndex = 0;
@@ -406,7 +417,7 @@ namespace pet4sitter
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(-3, 0);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4);
             this.barraLateral1.Name = "barraLateral1";
             this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 15;
@@ -427,13 +438,14 @@ namespace pet4sitter
             this.Controls.Add(this.pnlChat);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.barraLateral1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmChat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChat";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmChat_FormClosed);
             this.Load += new System.EventHandler(this.FrmChat_Load);
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.pnl1.ResumeLayout(false);
             this.pnl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagen1)).EndInit();
@@ -487,5 +499,6 @@ namespace pet4sitter
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblIdChat4;
         private System.Windows.Forms.Label lblIdChat3;
+        private System.Windows.Forms.Label lblPagina;
     }
 }

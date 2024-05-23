@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace pet4sitter.MailServices
 {
-    public class ForgotPasswordMail:MasterMailServer
+    public class MailPet4Sitter:MasterMailServer
     {
-        public ForgotPasswordMail()
+        public MailPet4Sitter()
         {
             //Ocultación de tokens:
             string jsonContent = System.IO.File.ReadAllText("token.JSON");

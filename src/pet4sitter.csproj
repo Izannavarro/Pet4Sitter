@@ -204,6 +204,12 @@
     <Compile Include="Forms\FrmIAyuda.designer.cs">
       <DependentUpon>FrmIAyuda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmReportarBug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReportarBug.Designer.cs">
+      <DependentUpon>FrmReportarBug.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -547,6 +553,9 @@
     </Compile>
     <EmbeddedResource Include="Forms\FrmIAyuda.resx">
       <DependentUpon>FrmIAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReportarBug.resx">
+      <DependentUpon>FrmReportarBug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\FrmEditarPerfil.en-US.resx" />
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmAlta.en-US.resx">

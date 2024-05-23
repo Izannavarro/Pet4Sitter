@@ -45,6 +45,7 @@ namespace pet4sitter
             this.lblForgPass = new System.Windows.Forms.Label();
             this.btnContinueWGoogle = new System.Windows.Forms.Button();
             this.pictureBoxContinueGoogle = new System.Windows.Forms.PictureBox();
+            this.lblReportarBug = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).BeginInit();
@@ -56,10 +57,10 @@ namespace pet4sitter
             this.lblWelcomeLogin.BackColor = System.Drawing.Color.Transparent;
             this.lblWelcomeLogin.Font = new System.Drawing.Font("Microsoft Tai Le", 25.25F, System.Drawing.FontStyle.Bold);
             this.lblWelcomeLogin.ForeColor = System.Drawing.Color.White;
-            this.lblWelcomeLogin.Location = new System.Drawing.Point(559, 22);
+            this.lblWelcomeLogin.Location = new System.Drawing.Point(419, 18);
             this.lblWelcomeLogin.Margin = new System.Windows.Forms.Padding(0);
             this.lblWelcomeLogin.Name = "lblWelcomeLogin";
-            this.lblWelcomeLogin.Size = new System.Drawing.Size(286, 55);
+            this.lblWelcomeLogin.Size = new System.Drawing.Size(228, 44);
             this.lblWelcomeLogin.TabIndex = 0;
             this.lblWelcomeLogin.Text = "Iniciar sesión";
             // 
@@ -67,10 +68,9 @@ namespace pet4sitter
             // 
             this.lblMail.AutoSize = true;
             this.lblMail.ForeColor = System.Drawing.Color.White;
-            this.lblMail.Location = new System.Drawing.Point(407, 90);
-            this.lblMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMail.Location = new System.Drawing.Point(305, 73);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(114, 16);
+            this.lblMail.Size = new System.Drawing.Size(94, 13);
             this.lblMail.TabIndex = 1;
             this.lblMail.Text = "Introduce tu email:";
             // 
@@ -80,11 +80,10 @@ namespace pet4sitter
             this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.txtMail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(170)))), ((int)(((byte)(110)))));
-            this.txtMail.Location = new System.Drawing.Point(411, 110);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMail.Location = new System.Drawing.Point(308, 89);
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(576, 33);
+            this.txtMail.Size = new System.Drawing.Size(432, 27);
             this.txtMail.TabIndex = 2;
             this.txtMail.Text = "Introduce email";
             this.txtMail.Enter += new System.EventHandler(this.txtMail_Enter);
@@ -96,11 +95,10 @@ namespace pet4sitter
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.txtPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(170)))), ((int)(((byte)(110)))));
-            this.txtPass.Location = new System.Drawing.Point(411, 194);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.Location = new System.Drawing.Point(308, 158);
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(576, 33);
+            this.txtPass.Size = new System.Drawing.Size(432, 27);
             this.txtPass.TabIndex = 4;
             this.txtPass.Text = "Introduce contraseña";
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
@@ -110,10 +108,9 @@ namespace pet4sitter
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.ForeColor = System.Drawing.Color.White;
-            this.lblPass.Location = new System.Drawing.Point(407, 175);
-            this.lblPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPass.Location = new System.Drawing.Point(305, 142);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(148, 16);
+            this.lblPass.Size = new System.Drawing.Size(123, 13);
             this.lblPass.TabIndex = 3;
             this.lblPass.Text = "Introduce tu contraseña:";
             // 
@@ -121,19 +118,17 @@ namespace pet4sitter
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-5, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(-4, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(351, 412);
+            this.panel1.Size = new System.Drawing.Size(263, 335);
             this.panel1.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::pet4sitter.Properties.Resources.pet4sitterLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 62);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 50);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(343, 277);
+            this.pictureBox1.Size = new System.Drawing.Size(257, 225);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -141,28 +136,25 @@ namespace pet4sitter
             // lblLine
             // 
             this.lblLine.BackColor = System.Drawing.Color.White;
-            this.lblLine.Location = new System.Drawing.Point(411, 134);
-            this.lblLine.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLine.Location = new System.Drawing.Point(308, 109);
             this.lblLine.Name = "lblLine";
-            this.lblLine.Size = new System.Drawing.Size(576, 2);
+            this.lblLine.Size = new System.Drawing.Size(432, 2);
             this.lblLine.TabIndex = 6;
             // 
             // lblLinePassword
             // 
             this.lblLinePassword.BackColor = System.Drawing.Color.White;
             this.lblLinePassword.ForeColor = System.Drawing.Color.White;
-            this.lblLinePassword.Location = new System.Drawing.Point(411, 219);
-            this.lblLinePassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLinePassword.Location = new System.Drawing.Point(308, 178);
             this.lblLinePassword.Name = "lblLinePassword";
-            this.lblLinePassword.Size = new System.Drawing.Size(576, 2);
+            this.lblLinePassword.Size = new System.Drawing.Size(432, 2);
             this.lblLinePassword.TabIndex = 7;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(411, 260);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.Location = new System.Drawing.Point(308, 211);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(576, 34);
+            this.btnLogin.Size = new System.Drawing.Size(432, 28);
             this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "Iniciar Sesión";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -170,10 +162,9 @@ namespace pet4sitter
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(411, 302);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegister.Location = new System.Drawing.Point(308, 245);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(576, 34);
+            this.btnRegister.Size = new System.Drawing.Size(432, 28);
             this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "Regístrate";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -184,10 +175,9 @@ namespace pet4sitter
             this.lblForgPass.AutoSize = true;
             this.lblForgPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgPass.ForeColor = System.Drawing.Color.White;
-            this.lblForgPass.Location = new System.Drawing.Point(407, 231);
-            this.lblForgPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblForgPass.Location = new System.Drawing.Point(305, 188);
             this.lblForgPass.Name = "lblForgPass";
-            this.lblForgPass.Size = new System.Drawing.Size(197, 17);
+            this.lblForgPass.Size = new System.Drawing.Size(149, 13);
             this.lblForgPass.TabIndex = 2;
             this.lblForgPass.Text = "¿Has olvidado tu contraseña?";
             this.lblForgPass.Click += new System.EventHandler(this.lblForgPass_Click);
@@ -197,10 +187,9 @@ namespace pet4sitter
             // btnContinueWGoogle
             // 
             this.btnContinueWGoogle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContinueWGoogle.Location = new System.Drawing.Point(411, 343);
-            this.btnContinueWGoogle.Margin = new System.Windows.Forms.Padding(4);
+            this.btnContinueWGoogle.Location = new System.Drawing.Point(308, 279);
             this.btnContinueWGoogle.Name = "btnContinueWGoogle";
-            this.btnContinueWGoogle.Size = new System.Drawing.Size(576, 34);
+            this.btnContinueWGoogle.Size = new System.Drawing.Size(432, 28);
             this.btnContinueWGoogle.TabIndex = 11;
             this.btnContinueWGoogle.Text = "Continuar con google";
             this.btnContinueWGoogle.UseVisualStyleBackColor = true;
@@ -213,21 +202,33 @@ namespace pet4sitter
             // 
             this.pictureBoxContinueGoogle.BackColor = System.Drawing.Color.White;
             this.pictureBoxContinueGoogle.Image = global::pet4sitter.Properties.Resources.google_icon_icons_com_62736;
-            this.pictureBoxContinueGoogle.Location = new System.Drawing.Point(593, 347);
-            this.pictureBoxContinueGoogle.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBoxContinueGoogle.Location = new System.Drawing.Point(445, 282);
             this.pictureBoxContinueGoogle.Name = "pictureBoxContinueGoogle";
-            this.pictureBoxContinueGoogle.Size = new System.Drawing.Size(31, 28);
+            this.pictureBoxContinueGoogle.Size = new System.Drawing.Size(23, 23);
             this.pictureBoxContinueGoogle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxContinueGoogle.TabIndex = 12;
             this.pictureBoxContinueGoogle.TabStop = false;
             this.pictureBoxContinueGoogle.Click += new System.EventHandler(this.pictureBoxContinueGoogle_Click);
             // 
+            // lblReportarBug
+            // 
+            this.lblReportarBug.AutoSize = true;
+            this.lblReportarBug.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportarBug.ForeColor = System.Drawing.Color.White;
+            this.lblReportarBug.Location = new System.Drawing.Point(709, 316);
+            this.lblReportarBug.Name = "lblReportarBug";
+            this.lblReportarBug.Size = new System.Drawing.Size(70, 13);
+            this.lblReportarBug.TabIndex = 13;
+            this.lblReportarBug.Text = "Reportar Bug";
+            this.lblReportarBug.Click += new System.EventHandler(this.lblReportarBug_Click);
+            // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1040, 406);
+            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.lblReportarBug);
             this.Controls.Add(this.pictureBoxContinueGoogle);
             this.Controls.Add(this.btnContinueWGoogle);
             this.Controls.Add(this.lblForgPass);
@@ -243,7 +244,6 @@ namespace pet4sitter
             this.Controls.Add(this.lblWelcomeLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -274,5 +274,6 @@ namespace pet4sitter
         private System.Windows.Forms.Button btnContinueWGoogle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBoxContinueGoogle;
+        private System.Windows.Forms.Label lblReportarBug;
     }
 }

@@ -18,6 +18,7 @@ using static System.Net.WebRequestMethods;
 using System.Net.Mail;
 using System.Globalization;
 using pet4sitter.Clases;
+using pet4sitter.Forms;
 
 namespace pet4sitter
 {
@@ -98,7 +99,7 @@ namespace pet4sitter
             {
                 // Código para recuperar la contraseña aquí
                 MessageBox.Show("Se ha enviado un enlace de recuperación a tu correo electrónico.", "Recuperar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                var mailService = new MailServices.ForgotPasswordMail();
+                var mailService = new MailServices.MailPet4Sitter();
                 mailService.sendMail("Recuperar Contraseña Proyecto Integrado", "Hola esto es un test desde mi app para el grupo del proyecto integrado\nTU nueva contraseña es xxxxxxxxxxxxxxxxx", txtMail.Text.ToString());
             }
             else
@@ -234,6 +235,14 @@ namespace pet4sitter
         private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lblReportarBug_Click(object sender, EventArgs e)
+        {
+            FrmReportarBug frm = new FrmReportarBug();
+
+            this.Hide();
+            frm.Show();
         }
     }
 }

@@ -48,6 +48,7 @@ namespace pet4sitter
                 {
                     User usu = User.EncontrarUsuario((int)idChatSeleccionado);
                     lblNombreChatActivo.Text = usu.Name;
+                    pcbImagen5.Image = Properties.Resources.usuario;
                     if (usu.Image != null)
                     {
                         pcbImagen5.Image = Utiles.ByteArrayToImage(usu.Image);
@@ -61,6 +62,7 @@ namespace pet4sitter
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
             }
+            ActualizarPagina();
         }
 
         private void AplicarIdioma()
@@ -165,7 +167,13 @@ namespace pet4sitter
             }
         }
 
+        private void ActualizarPagina()
+        {
+            int totalPaginas = (int)Math.Ceiling((double)totalChats / elementosPorPagina);
+            int paginaActualIndex = paginaActual + 1;
 
+            lblPagina.Text = $"Página {paginaActualIndex} de {totalPaginas}";
+        }
 
         private void ScrollToBottom()
         {
@@ -181,13 +189,19 @@ namespace pet4sitter
         {
             if (ConBD.Conexion != null)
             {
-                ConBD.AbrirConexion();
+                if (ConBD.Conexion.State != ConnectionState.Open)
+                {
+                    ConBD.AbrirConexion();
+                }
                 CargarUltimosChats();
                 if (idChatSeleccionado != null)
                 {
                     await ChatMensajes();
                 }
-                ConBD.CerrarConexion();
+                if (ConBD.Conexion.State != ConnectionState.Closed)
+                {
+                    ConBD.CerrarConexion();
+                }
             }
             else
             {
@@ -283,7 +297,11 @@ namespace pet4sitter
                             var row = d.Rows[i];
                             string newId = row["id_user"].ToString();
                             string newName = row["name"].ToString();
-                            var newImage = Utiles.ByteArrayToImage(row["image"] as byte[]);
+                            Image newImage = Properties.Resources.usuario;
+                            if (row["image"] as byte[] != null)
+                            {
+                                newImage = Utiles.ByteArrayToImage(row["image"] as byte[]);
+                            }
 
                             labelsIdChat[i].Text = newId;
                             labelsNombre[i].Text = newName;
@@ -341,6 +359,7 @@ namespace pet4sitter
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            ActualizarPagina();
             if ((paginaActual + 1) * elementosPorPagina < totalChats)
             {
                 paginaActual++;
@@ -354,6 +373,7 @@ namespace pet4sitter
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
+            ActualizarPagina();
             if (paginaActual > 0)
             {
                 paginaActual--;
