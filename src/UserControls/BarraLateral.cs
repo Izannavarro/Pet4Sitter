@@ -273,7 +273,15 @@ namespace pet4sitter
         private void pcbAjustes_Click(object sender, EventArgs e)
         {
             FrmConfiguracion frm = new FrmConfiguracion();
-            frm.ShowDialog();
+            frm.Show();
+            formActual.Dispose();
+        }
+
+        private void pcbTienda_Click(object sender, EventArgs e)
+        {
+            FrmTienda frm = new FrmTienda();
+            frm.Show();
+            formActual.Dispose();
         }
     }
 }

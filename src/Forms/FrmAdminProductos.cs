@@ -113,7 +113,7 @@ namespace pet4sitter
         {
             if (ValidarDatos())
             {
-                string nombre = txtNombre.Text;
+                string nombre = txtNombre.Text.ToUpper();
                 int cant = Convert.ToInt32(nudCant.Value);
                 double precio = Convert.ToDouble(txtPrecio.Text);
                 string descrip = txtDescripcion.Text;
@@ -167,7 +167,7 @@ namespace pet4sitter
         {
                 DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
                 lblId.Text = fila.Cells[0].Value.ToString();
-                txtNombre.Text = fila.Cells[1].Value.ToString();
+                txtNombre.Text = fila.Cells[1].Value.ToString().ToUpper();
                 txtPrecio.Text = fila.Cells[2].Value.ToString();
                 nudCant.Value = Convert.ToUInt32(fila.Cells[3].Value.ToString());
                 txtDescripcion.Text = fila.Cells[4].Value.ToString();             
@@ -176,7 +176,7 @@ namespace pet4sitter
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            string nombre = txtNombre.Text;
+            string nombre = txtNombre.Text.ToUpper();
             int cant = Convert.ToInt32(nudCant.Value);
             double precio = Convert.ToDouble(txtPrecio.Text);
             string descrip = txtDescripcion.Text;

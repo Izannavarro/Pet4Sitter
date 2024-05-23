@@ -25,6 +25,12 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                LimpiarTablaProductos();
+                ConBD.CerrarConexion();
+            }
         }
 
         private void AplicarIdioma()
@@ -44,11 +50,95 @@ namespace pet4sitter
 
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow fila = dgvProductos.Rows[e.RowIndex]; 
-            lblNombre.Text = fila.Cells[1].Value.ToString();
-            lblPrecio.Text = fila.Cells[2].Value.ToString();
-            txtDescripcion.Text = fila.Cells[4].Value.ToString();
-            ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+            else
+            {
+                DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
+                lblId.Text = fila.Cells[0].Value.ToString();
+                lblNombre.Text = fila.Cells[1].Value.ToString().ToUpper();
+                lblPrecio.Text = fila.Cells[2].Value.ToString()+"€";
+                txtDescripcion.Text = fila.Cells[4].Value.ToString();
+                lblCantidad.Text = fila.Cells[3].Value.ToString();
+                ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
+            }
+        }
+
+        private void ptbBusqueda_Click(object sender, EventArgs e)
+        {
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                if (txtBusqueda.Text != "")
+                {
+                    dgvProductos.DataSource = Producto.EncontrarNombreProducto(txtBusqueda.Text.ToUpper());
+                    ConBD.CerrarConexion();
+                    if (dgvProductos.RowCount == 0)
+                    {
+                        ConBD.AbrirConexion();
+                        MessageBox.Show("NO SE ENCONTRARON PRODUCTOS, VUELVA A BUSCAR!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        LimpiarTablaProductos();
+                        ConBD.CerrarConexion();
+                    }
+                }
+                else
+                {
+                    LimpiarTablaProductos();
+                    ConBD.CerrarConexion();
+                }
+            }
+        }
+
+        private void btnFlechaArriba_Click(object sender, EventArgs e)
+        {
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                dgvProductos.DataSource = Producto.ProductosMayorMenor();
+                ConBD.CerrarConexion();
+
+                if (dgvProductos.RowCount == 0)
+                {
+                    ConBD.AbrirConexion();
+                    MessageBox.Show("NO DISPONEMOS DE PRODUCTOS ACTUALMENTE!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LimpiarTablaProductos();
+                    ConBD.CerrarConexion();
+                }
+            }
+        }
+
+        private void btnFlechaAbajo_Click(object sender, EventArgs e)
+        {
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                dgvProductos.DataSource = Producto.ProductosMenorMayor();
+                ConBD.CerrarConexion();
+
+                if (dgvProductos.RowCount == 0)
+                {
+                    ConBD.AbrirConexion();
+                    MessageBox.Show("NO DISPONEMOS DE PRODUCTOS ACTUALMENTE!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    LimpiarTablaProductos();
+                    ConBD.CerrarConexion();
+                }
+            }
+        }
+
+        private void btnAñadir_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(lblId.Text);
+            string nombre = lblNombre.Text;
+            int canti = Convert.ToInt32(lblCantidad.Text);
+            double precio = Convert.ToDouble(lblPrecio.Text);
+            string descrip = txtDescripcion.Text;
+            Image img = ptbImagenProducto.Image;
+
+            Producto p = new Producto(id, nombre, canti, precio, descrip, img);
+
+            Carrito.Productos.Add(p);
         }
     }
 }

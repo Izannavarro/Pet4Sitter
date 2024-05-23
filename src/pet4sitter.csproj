@@ -189,6 +189,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clases\Busqueda.cs" />
+    <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\ConfiguracionIdioma.cs" />
     <Compile Include="Clases\ConBD.cs" />
@@ -846,6 +847,8 @@
     <None Include="Resources\2931142_minimize_minus_remove_line_icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\flecha %281%29.png" />
+    <Content Include="Resources\flecha-arriba.png" />
     <Content Include="Resources\iaIcon.png" />
     <Content Include="Resources\iAyuda.png" />
     <Content Include="Resources\loading.gif" />

@@ -157,6 +157,9 @@
   <data name="2931142_minimize_minus_remove_line_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2931142_minimize_minus_remove_line_icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="newsletter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newsletter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lgo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\lgo.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,11 +169,14 @@
   <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flecha (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ajuste" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ajuste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="newsletter1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\newsletter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="roboy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\roboy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="no-wifi-red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no-wifi-red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,7 +193,7 @@
   <data name="corona" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\corona.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="roboy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\roboy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flecha-arriba" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha-arriba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
