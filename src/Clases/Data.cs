@@ -25,6 +25,8 @@ namespace pet4sitter
         public static string tokenGPT;
         public static string tokenClientId;
         public static string tokenClientSecret;
+        public static string stripePublicKey;
+        public static string stripePrivateKey;
 
         static Data()
         {
@@ -33,6 +35,8 @@ namespace pet4sitter
             tokenGPT = Utiles.BuscarToken("ChatGPT");
             tokenClientId = Utiles.BuscarToken("ClientID");
             tokenClientSecret = Utiles.BuscarToken("ClientSecret");
+            stripePublicKey = Utiles.BuscarToken("StripePub");
+            stripePrivateKey = Utiles.BuscarToken("StripeSecret");
         }
 
         public static bool IsDarkModeEnabled()
