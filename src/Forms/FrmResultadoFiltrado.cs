@@ -21,6 +21,8 @@ namespace pet4sitter
         private int elementosPorPagina = 3;
         private int totalUsuarios = 0;
 
+        double? latitudReferencia = Data.CurrentUser.Latitud;  // Obtén la latitud de referencia
+        double? longitudReferencia = Data.CurrentUser.Longitud;  // Obtén la longitud de referencia
         double precioDesde;
         double precioHasta;
         public FrmResultadoFiltrado()
@@ -28,10 +30,12 @@ namespace pet4sitter
             InitializeComponent();
         }
 
-        public FrmResultadoFiltrado(List<User> luser)
+        public FrmResultadoFiltrado(List<User> luser,double precioDesde,double precioHasta)
         {
             InitializeComponent();
             users = luser;
+            precioDesde = precioDesde;  // Obtén el precio mínimo
+            precioHasta = precioHasta;  // Obtén el precio máximo
         }
 
 
@@ -39,14 +43,11 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
-
+            cmbUbicacion.SelectedIndex = 0;
+            cmbPrecio.SelectedIndex = 0;
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                double? latitudReferencia = Data.CurrentUser.Latitud;  // Obtén la latitud de referencia
-                double? longitudReferencia = Data.CurrentUser.Longitud;  // Obtén la longitud de referencia
-                double precioDesde = 0;  // Obtén el precio mínimo
-                double precioHasta = 1000;  // Obtén el precio máximo
                 totalUsuarios = User.ContarUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta);
                 ActualizarInformacionPagina();
                 ConBD.CerrarConexion();
@@ -143,7 +144,6 @@ namespace pet4sitter
             btnAnterior.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnAnterior_Text;
             lblHasta.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblHasta_Text;
             lblDesde.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDesde_Text;
-            button1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.button1_Text;
         }
 
         private void FrmResultadoFiltrado_FormClosed(object sender, FormClosedEventArgs e)
@@ -217,10 +217,6 @@ namespace pet4sitter
 
         private void CargarPagina()
         {
-            double? latitudReferencia = Data.CurrentUser.Latitud;  // Obtén la latitud de referencia
-            double? longitudReferencia = Data.CurrentUser.Longitud;  // Obtén la longitud de referencia
-            double precioDesde = 0;  // Obtén el precio mínimo
-            double precioHasta = 1000;  // Obtén el precio máximo
 
             users = User.ObtenerUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta, paginaActual * elementosPorPagina, elementosPorPagina);
             CargarResultados();
@@ -278,6 +274,13 @@ namespace pet4sitter
         {
             int totalPaginas = (int)Math.Ceiling((double)totalUsuarios / elementosPorPagina);
             lblPaginaActual.Text = $"Página {paginaActual + 1} de {totalPaginas}";
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            precioDesde = double.Parse(txtPrecioDesde.Text);
+            precioHasta = double.Parse(txtPrecioHasta.Text);
+            totalUsuarios = User.ContarUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta);
         }
     }
 }

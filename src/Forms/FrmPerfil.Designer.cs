@@ -39,7 +39,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblLocalizacion = new System.Windows.Forms.Label();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();

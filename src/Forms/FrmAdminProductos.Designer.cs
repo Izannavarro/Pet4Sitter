@@ -53,7 +53,7 @@
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.barraLateral2 = new pet4sitter.BarraLateral();
+            this.barraLateral2 = new pet4sitter.BarraLateral(this);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
             this.panel4.SuspendLayout();

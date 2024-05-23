@@ -48,6 +48,7 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptbBusqueda = new System.Windows.Forms.PictureBox();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -67,22 +68,22 @@
             this.panel3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.dgvProductos);
-            this.panel3.Location = new System.Drawing.Point(360, 128);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(270, 104);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(645, 537);
+            this.panel3.Size = new System.Drawing.Size(484, 436);
             this.panel3.TabIndex = 5;
             // 
             // dgvProductos
             // 
             this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(21, 20);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProductos.Location = new System.Drawing.Point(16, 16);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
-            this.dgvProductos.Size = new System.Drawing.Size(605, 490);
+            this.dgvProductos.Size = new System.Drawing.Size(454, 398);
             this.dgvProductos.TabIndex = 0;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
@@ -93,19 +94,19 @@
             this.panel1.Controls.Add(this.btnAñadir);
             this.panel1.Controls.Add(this.ptbImagenProducto);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(1020, 128);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(765, 104);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 537);
+            this.panel1.Size = new System.Drawing.Size(275, 436);
             this.panel1.TabIndex = 6;
             // 
             // btnAñadir
             // 
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Location = new System.Drawing.Point(120, 501);
-            this.btnAñadir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAñadir.Location = new System.Drawing.Point(90, 407);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(136, 32);
+            this.btnAñadir.Size = new System.Drawing.Size(102, 26);
             this.btnAñadir.TabIndex = 47;
             this.btnAñadir.Text = "Añadir Carrito";
             this.btnAñadir.UseVisualStyleBackColor = true;
@@ -114,10 +115,10 @@
             // ptbImagenProducto
             // 
             this.ptbImagenProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ptbImagenProducto.Location = new System.Drawing.Point(24, 32);
-            this.ptbImagenProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptbImagenProducto.Location = new System.Drawing.Point(18, 26);
+            this.ptbImagenProducto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ptbImagenProducto.Name = "ptbImagenProducto";
-            this.ptbImagenProducto.Size = new System.Drawing.Size(317, 150);
+            this.ptbImagenProducto.Size = new System.Drawing.Size(238, 122);
             this.ptbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbImagenProducto.TabIndex = 46;
             this.ptbImagenProducto.TabStop = false;
@@ -130,19 +131,20 @@
             this.panel4.Controls.Add(this.txtDescripcion);
             this.panel4.Controls.Add(this.lblNombre);
             this.panel4.Controls.Add(this.lblPrecio);
-            this.panel4.Location = new System.Drawing.Point(24, 201);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(18, 163);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(317, 294);
+            this.panel4.Size = new System.Drawing.Size(238, 239);
             this.panel4.TabIndex = 45;
             // 
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(204, 14);
+            this.lblCantidad.Location = new System.Drawing.Point(153, 11);
+            this.lblCantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(21, 22);
+            this.lblCantidad.Size = new System.Drawing.Size(17, 18);
             this.lblCantidad.TabIndex = 49;
             this.lblCantidad.Text = "a";
             this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,9 +154,10 @@
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(65, 14);
+            this.lblId.Location = new System.Drawing.Point(49, 11);
+            this.lblId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(21, 22);
+            this.lblId.Size = new System.Drawing.Size(17, 18);
             this.lblId.TabIndex = 48;
             this.lblId.Text = "a";
             this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -164,10 +167,11 @@
             // 
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txtDescripcion.Location = new System.Drawing.Point(44, 147);
+            this.txtDescripcion.Location = new System.Drawing.Point(33, 119);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
-            this.txtDescripcion.Size = new System.Drawing.Size(237, 107);
+            this.txtDescripcion.Size = new System.Drawing.Size(179, 88);
             this.txtDescripcion.TabIndex = 13;
             this.txtDescripcion.Text = "";
             this.txtDescripcion.Enter += new System.EventHandler(this.txtDescripcion_Enter);
@@ -176,9 +180,10 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(94, 50);
+            this.lblNombre.Location = new System.Drawing.Point(70, 41);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(99, 28);
+            this.lblNombre.Size = new System.Drawing.Size(79, 21);
             this.lblNombre.TabIndex = 12;
             this.lblNombre.Text = "NOMBRE";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,9 +192,10 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(113, 90);
+            this.lblPrecio.Location = new System.Drawing.Point(85, 73);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(81, 28);
+            this.lblPrecio.Size = new System.Drawing.Size(66, 21);
             this.lblPrecio.TabIndex = 11;
             this.lblPrecio.Text = "PRECIO";
             this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -202,10 +208,10 @@
             this.panel5.Controls.Add(this.ptbFlechaArriba);
             this.panel5.Controls.Add(this.btnFlechaAbajo);
             this.panel5.Controls.Add(this.btnFlechaArriba);
-            this.panel5.Location = new System.Drawing.Point(660, 10);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(495, 8);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(341, 42);
+            this.panel5.Size = new System.Drawing.Size(256, 34);
             this.panel5.TabIndex = 44;
             // 
             // ptbCarrito
@@ -222,9 +228,11 @@
             // ptbFlechaAbajo
             // 
             this.ptbFlechaAbajo.Image = global::pet4sitter.Properties.Resources.flecha__1_;
+            this.ptbFlechaAbajo.Location = new System.Drawing.Point(156, 0);
+            this.ptbFlechaAbajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ptbFlechaAbajo.Location = new System.Drawing.Point(207, 2);
             this.ptbFlechaAbajo.Name = "ptbFlechaAbajo";
-            this.ptbFlechaAbajo.Size = new System.Drawing.Size(41, 39);
+            this.ptbFlechaAbajo.Size = new System.Drawing.Size(31, 32);
             this.ptbFlechaAbajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbFlechaAbajo.TabIndex = 47;
             this.ptbFlechaAbajo.TabStop = false;
@@ -232,9 +240,10 @@
             // ptbFlechaArriba
             // 
             this.ptbFlechaArriba.Image = global::pet4sitter.Properties.Resources.flecha_arriba;
-            this.ptbFlechaArriba.Location = new System.Drawing.Point(101, 1);
+            this.ptbFlechaArriba.Location = new System.Drawing.Point(76, 1);
+            this.ptbFlechaArriba.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ptbFlechaArriba.Name = "ptbFlechaArriba";
-            this.ptbFlechaArriba.Size = new System.Drawing.Size(41, 39);
+            this.ptbFlechaArriba.Size = new System.Drawing.Size(31, 32);
             this.ptbFlechaArriba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbFlechaArriba.TabIndex = 46;
             this.ptbFlechaArriba.TabStop = false;
@@ -243,10 +252,10 @@
             // 
             this.btnFlechaAbajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.btnFlechaAbajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlechaAbajo.Location = new System.Drawing.Point(148, 1);
-            this.btnFlechaAbajo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFlechaAbajo.Location = new System.Drawing.Point(111, 1);
+            this.btnFlechaAbajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFlechaAbajo.Name = "btnFlechaAbajo";
-            this.btnFlechaAbajo.Size = new System.Drawing.Size(45, 42);
+            this.btnFlechaAbajo.Size = new System.Drawing.Size(34, 34);
             this.btnFlechaAbajo.TabIndex = 44;
             this.btnFlechaAbajo.UseVisualStyleBackColor = false;
             this.btnFlechaAbajo.Click += new System.EventHandler(this.btnFlechaAbajo_Click);
@@ -255,10 +264,10 @@
             // 
             this.btnFlechaArriba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.btnFlechaArriba.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlechaArriba.Location = new System.Drawing.Point(42, 0);
-            this.btnFlechaArriba.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFlechaArriba.Location = new System.Drawing.Point(32, 0);
+            this.btnFlechaArriba.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFlechaArriba.Name = "btnFlechaArriba";
-            this.btnFlechaArriba.Size = new System.Drawing.Size(48, 42);
+            this.btnFlechaArriba.Size = new System.Drawing.Size(36, 34);
             this.btnFlechaArriba.TabIndex = 42;
             this.btnFlechaArriba.UseVisualStyleBackColor = false;
             this.btnFlechaArriba.Click += new System.EventHandler(this.btnFlechaArriba_Click);
@@ -266,10 +275,10 @@
             // txtBusqueda
             // 
             this.txtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(17, 10);
-            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBusqueda.Location = new System.Drawing.Point(13, 8);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(536, 41);
+            this.txtBusqueda.Size = new System.Drawing.Size(403, 35);
             this.txtBusqueda.TabIndex = 18;
             this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
@@ -281,34 +290,44 @@
             this.panel2.Controls.Add(this.ptbBusqueda);
             this.panel2.Controls.Add(this.txtBusqueda);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(360, 47);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(270, 38);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1027, 63);
+            this.panel2.Size = new System.Drawing.Size(770, 51);
             this.panel2.TabIndex = 7;
             // 
             // ptbBusqueda
             // 
             this.ptbBusqueda.BackColor = System.Drawing.Color.Transparent;
             this.ptbBusqueda.Image = global::pet4sitter.Properties.Resources.lupa;
-            this.ptbBusqueda.Location = new System.Drawing.Point(572, 10);
+            this.ptbBusqueda.Location = new System.Drawing.Point(429, 8);
+            this.ptbBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ptbBusqueda.Name = "ptbBusqueda";
-            this.ptbBusqueda.Size = new System.Drawing.Size(42, 41);
+            this.ptbBusqueda.Size = new System.Drawing.Size(32, 33);
             this.ptbBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbBusqueda.TabIndex = 45;
             this.ptbBusqueda.TabStop = false;
             this.ptbBusqueda.Click += new System.EventHandler(this.ptbBusqueda_Click);
             // 
+            // barraLateral1
+            // 
+            this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
+            this.barraLateral1.Location = new System.Drawing.Point(0, -2);
+            this.barraLateral1.Name = "barraLateral1";
+            this.barraLateral1.Size = new System.Drawing.Size(311, 599);
+            this.barraLateral1.TabIndex = 8;
+            // 
             // FrmTienda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1479, 734);
+            this.ClientSize = new System.Drawing.Size(1109, 596);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.barraLateral1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmTienda";
             this.Text = "FrmTienda";
             this.Load += new System.EventHandler(this.FrmTienda_Load);
@@ -350,6 +369,8 @@
         private System.Windows.Forms.PictureBox ptbFlechaArriba;
         private System.Windows.Forms.PictureBox ptbBusqueda;
         private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Button button1;
+        private BarraLateral barraLateral1;
         private System.Windows.Forms.PictureBox ptbCarrito;
     }
 }
