@@ -30,7 +30,10 @@ namespace pet4sitter
 
         private async void FrmInicio_Load(object sender, EventArgs e)
         {
-            ModoOscuro();
+            if (Data.DarkMode)
+            {
+                ModoOscuro();
+            }
             if ((bool)Data.CurrentUser.Premium)
             {
                 await MostrarNoticia();

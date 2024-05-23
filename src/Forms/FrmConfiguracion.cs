@@ -39,7 +39,7 @@ namespace pet4sitter
         {
             AplicarIdioma();
             cmbIdioma.Text = ConfiguracionIdioma.Cultura.DisplayName;
-
+            cmbTema.SelectedIndex = Data.DarkMode ? 1 : 0;
         }
 
         private void cmbIdioma_SelectedIndexChanged(object sender, EventArgs e)

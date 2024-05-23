@@ -38,7 +38,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +66,6 @@
             this.lblRango.Size = new System.Drawing.Size(229, 29);
             this.lblRango.TabIndex = 8;
             this.lblRango.Text = "Rango de Precios:";
-            this.lblRango.Click += new System.EventHandler(this.label4_Click);
             // 
             // nudDesde
             // 
@@ -76,7 +75,6 @@
             this.nudDesde.Name = "nudDesde";
             this.nudDesde.Size = new System.Drawing.Size(56, 28);
             this.nudDesde.TabIndex = 6;
-            this.nudDesde.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // lblDesde
             // 
@@ -89,7 +87,6 @@
             this.lblDesde.Size = new System.Drawing.Size(76, 24);
             this.lblDesde.TabIndex = 9;
             this.lblDesde.Text = "Desde:";
-            this.lblDesde.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblHasta
             // 
@@ -102,7 +99,6 @@
             this.lblHasta.Size = new System.Drawing.Size(68, 24);
             this.lblHasta.TabIndex = 10;
             this.lblHasta.Text = "Hasta:";
-            this.lblHasta.Click += new System.EventHandler(this.label8_Click);
             // 
             // nudHasta
             // 
@@ -117,7 +113,6 @@
             0,
             0,
             0});
-            this.nudHasta.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // label9
             // 
