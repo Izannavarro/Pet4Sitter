@@ -38,7 +38,13 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.cmbDistancia = new System.Windows.Forms.ComboBox();
+            this.lblOrdenarPorDistancia = new System.Windows.Forms.Label();
+            this.cmbDistanciaAscDesc = new System.Windows.Forms.ComboBox();
+            this.cmbPrecioAscDesc = new System.Windows.Forms.ComboBox();
+            this.lblOrdenarPrecio = new System.Windows.Forms.Label();
+            this.cmbOrdenarPrecio = new System.Windows.Forms.ComboBox();
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +77,7 @@
             // 
             this.nudDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudDesde.Location = new System.Drawing.Point(455, 230);
-            this.nudDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudDesde.Margin = new System.Windows.Forms.Padding(2);
             this.nudDesde.Name = "nudDesde";
             this.nudDesde.Size = new System.Drawing.Size(56, 28);
             this.nudDesde.TabIndex = 6;
@@ -104,7 +110,7 @@
             // 
             this.nudHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudHasta.Location = new System.Drawing.Point(626, 229);
-            this.nudHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudHasta.Margin = new System.Windows.Forms.Padding(2);
             this.nudHasta.Name = "nudHasta";
             this.nudHasta.Size = new System.Drawing.Size(56, 28);
             this.nudHasta.TabIndex = 11;
@@ -131,7 +137,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBuscar.Location = new System.Drawing.Point(291, 414);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(510, 39);
             this.btnBuscar.TabIndex = 22;
@@ -145,7 +151,7 @@
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBorrar.Location = new System.Drawing.Point(291, 458);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(510, 39);
             this.btnBorrar.TabIndex = 23;
@@ -155,7 +161,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(830, 37);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 41);
             this.button1.TabIndex = 24;
@@ -163,11 +169,82 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cmbDistancia
+            // 
+            this.cmbDistancia.FormattingEnabled = true;
+            this.cmbDistancia.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.cmbDistancia.Location = new System.Drawing.Point(580, 276);
+            this.cmbDistancia.Name = "cmbDistancia";
+            this.cmbDistancia.Size = new System.Drawing.Size(56, 21);
+            this.cmbDistancia.TabIndex = 25;
+            this.cmbDistancia.SelectedIndexChanged += new System.EventHandler(this.cmbDistancia_SelectedIndexChanged);
+            // 
+            // lblOrdenarPorDistancia
+            // 
+            this.lblOrdenarPorDistancia.AutoSize = true;
+            this.lblOrdenarPorDistancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrdenarPorDistancia.ForeColor = System.Drawing.Color.White;
+            this.lblOrdenarPorDistancia.Location = new System.Drawing.Point(351, 273);
+            this.lblOrdenarPorDistancia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOrdenarPorDistancia.Name = "lblOrdenarPorDistancia";
+            this.lblOrdenarPorDistancia.Size = new System.Drawing.Size(224, 24);
+            this.lblOrdenarPorDistancia.TabIndex = 26;
+            this.lblOrdenarPorDistancia.Text = "Ordenar Por distancia?";
+            // 
+            // cmbDistanciaAscDesc
+            // 
+            this.cmbDistanciaAscDesc.FormattingEnabled = true;
+            this.cmbDistanciaAscDesc.Items.AddRange(new object[] {
+            "Menos a más",
+            "Más a menos"});
+            this.cmbDistanciaAscDesc.Location = new System.Drawing.Point(663, 276);
+            this.cmbDistanciaAscDesc.Name = "cmbDistanciaAscDesc";
+            this.cmbDistanciaAscDesc.Size = new System.Drawing.Size(94, 21);
+            this.cmbDistanciaAscDesc.TabIndex = 27;
+            // 
+            // cmbPrecioAscDesc
+            // 
+            this.cmbPrecioAscDesc.FormattingEnabled = true;
+            this.cmbPrecioAscDesc.Items.AddRange(new object[] {
+            "Menos a más",
+            "Más a menos"});
+            this.cmbPrecioAscDesc.Location = new System.Drawing.Point(663, 310);
+            this.cmbPrecioAscDesc.Name = "cmbPrecioAscDesc";
+            this.cmbPrecioAscDesc.Size = new System.Drawing.Size(94, 21);
+            this.cmbPrecioAscDesc.TabIndex = 30;
+            this.cmbPrecioAscDesc.Visible = false;
+            // 
+            // lblOrdenarPrecio
+            // 
+            this.lblOrdenarPrecio.AutoSize = true;
+            this.lblOrdenarPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrdenarPrecio.ForeColor = System.Drawing.Color.White;
+            this.lblOrdenarPrecio.Location = new System.Drawing.Point(373, 306);
+            this.lblOrdenarPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOrdenarPrecio.Name = "lblOrdenarPrecio";
+            this.lblOrdenarPrecio.Size = new System.Drawing.Size(201, 24);
+            this.lblOrdenarPrecio.TabIndex = 29;
+            this.lblOrdenarPrecio.Text = "Ordenar Por precio?";
+            // 
+            // cmbOrdenarPrecio
+            // 
+            this.cmbOrdenarPrecio.FormattingEnabled = true;
+            this.cmbOrdenarPrecio.Items.AddRange(new object[] {
+            "SI",
+            "NO"});
+            this.cmbOrdenarPrecio.Location = new System.Drawing.Point(580, 310);
+            this.cmbOrdenarPrecio.Name = "cmbOrdenarPrecio";
+            this.cmbOrdenarPrecio.Size = new System.Drawing.Size(56, 21);
+            this.cmbOrdenarPrecio.TabIndex = 28;
+            this.cmbOrdenarPrecio.SelectedIndexChanged += new System.EventHandler(this.cmbOrdenarPrecio_SelectedIndexChanged);
+            // 
             // barraLateral1
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(0, 0);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4);
             this.barraLateral1.Name = "barraLateral1";
             this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 0;
@@ -178,6 +255,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1109, 596);
+            this.Controls.Add(this.cmbPrecioAscDesc);
+            this.Controls.Add(this.lblOrdenarPrecio);
+            this.Controls.Add(this.cmbOrdenarPrecio);
+            this.Controls.Add(this.cmbDistanciaAscDesc);
+            this.Controls.Add(this.lblOrdenarPorDistancia);
+            this.Controls.Add(this.cmbDistancia);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnBuscar);
@@ -189,7 +272,7 @@
             this.Controls.Add(this.nudDesde);
             this.Controls.Add(this.lblFiltros);
             this.Controls.Add(this.barraLateral1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmFiltrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFiltrador";
@@ -215,5 +298,11 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbDistancia;
+        private System.Windows.Forms.Label lblOrdenarPorDistancia;
+        private System.Windows.Forms.ComboBox cmbDistanciaAscDesc;
+        private System.Windows.Forms.ComboBox cmbPrecioAscDesc;
+        private System.Windows.Forms.Label lblOrdenarPrecio;
+        private System.Windows.Forms.ComboBox cmbOrdenarPrecio;
     }
 }

@@ -37,6 +37,33 @@ namespace pet4sitter.Clases
             return new string(Enumerable.Repeat(chars, length)
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
+        public static Icon BitmapToIcon(Bitmap bitmap)
+        {
+            // Crear un archivo temporal para el ícono
+            string tempFilePath = Path.Combine(Path.GetTempPath(), "tempIcon.ico");
+
+            using (FileStream fs = new FileStream(tempFilePath, FileMode.Create))
+            {
+                bitmap.Save(fs, System.Drawing.Imaging.ImageFormat.Png);
+            }
+
+            // Convertir el archivo temporal de imagen a ícono
+            Icon icon = IconFromHandle(tempFilePath);
+
+            // Borrar el archivo temporal
+            File.Delete(tempFilePath);
+
+            return icon;
+        }
+
+        private static Icon IconFromHandle(string filePath)
+        {
+            using (var bmp = new Bitmap(filePath))
+            {
+                IntPtr hicon = bmp.GetHicon();
+                return Icon.FromHandle(hicon);
+            }
+        }
 
         public static int ObtenerAlturaTexto(Label lbl)
         {

@@ -193,5 +193,11 @@ namespace pet4sitter
             FrmCarrito frmCarrito = new FrmCarrito();
             frmCarrito.ShowDialog();
         }
+
+        private void btnCarrito_Click(object sender, EventArgs e)
+        {
+            FrmCarrito frmCarrito = new FrmCarrito();
+            frmCarrito.ShowDialog();
+        }
     }
 }
