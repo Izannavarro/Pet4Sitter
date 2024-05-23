@@ -143,37 +143,63 @@ namespace pet4sitter
 
         private async void btnRegistro_Click(object sender, EventArgs e)
         {
-            if (ConBD.Conexion != null)
+            if (Utiles.CheckDNI(txtDni.Text))
             {
-                ConBD.AbrirConexion();
-                if (!User.CompruebaUsuarioExistente(txtMail.Text))
+                if (ConBD.Conexion != null)
                 {
-                    // Validar la dirección ingresada
-                    var coordenadas = await GeoLocalizacion.ObtenerCoordenadasAsync(txtDireccion.Text);
-
-                    if (coordenadas.Latitude.HasValue && coordenadas.Longitude.HasValue)
+                    ConBD.AbrirConexion();
+                    if (!User.CompruebaUsuarioExistente(txtMail.Text))
                     {
-                        // Pregunta al usuario si desea validar la ubicación
-                        if (MessageBox.Show(
-                            "Deseas validar la ubicación?",
-                            "Confirmar Ubicación",
-                            MessageBoxButtons.YesNo,
-                            MessageBoxIcon.Question
-                        ) == DialogResult.Yes)
-                        {
-                            // Abre el navegador web predeterminado con Google Maps
-                            System.Diagnostics.Process.Start($"https://maps.google.com/?q={coordenadas.Latitude.ToString().Replace(',','.')},{coordenadas.Longitude.ToString().Replace(',', '.')}");
+                        // Validar la dirección ingresada
+                        var coordenadas = await GeoLocalizacion.ObtenerCoordenadasAsync(txtDireccion.Text);
 
-                            // Muestra otro MessageBox para solicitar la confirmación del usuario
+                        if (coordenadas.Latitude.HasValue && coordenadas.Longitude.HasValue)
+                        {
+                            // Pregunta al usuario si desea validar la ubicación
                             if (MessageBox.Show(
-                                "¿La dirección es correcta?",
-                                "Confirmar Dirección",
+                                "Deseas validar la ubicación?",
+                                "Confirmar Ubicación",
                                 MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Question
                             ) == DialogResult.Yes)
                             {
-                                // Si el usuario confirma la dirección, procede con el registro
-                                // del usuario aquí
+                                // Abre el navegador web predeterminado con Google Maps
+                                System.Diagnostics.Process.Start($"https://maps.google.com/?q={coordenadas.Latitude.ToString().Replace(',', '.')},{coordenadas.Longitude.ToString().Replace(',', '.')}");
+
+                                // Muestra otro MessageBox para solicitar la confirmación del usuario
+                                if (MessageBox.Show(
+                                    "¿La dirección es correcta?",
+                                    "Confirmar Dirección",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Question
+                                ) == DialogResult.Yes)
+                                {
+                                    // Si el usuario confirma la dirección, procede con el registro
+                                    // del usuario aquí
+                                    User u = null;
+                                    if (Data.UserGoogle != null)
+                                    {
+                                        u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, null, txtDireccion.Text, null, false, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                                    }
+                                    else
+                                    {
+                                        u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, null, txtDireccion.Text, null, false, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
+                                    }
+                                    User.RegistrarUsuario(u);
+                                    MessageBox.Show("Usuario: " + u.Name + " Registrado con éxito!");
+                                }
+                                else
+                                {
+                                    // Si el usuario no confirma la dirección, puedes realizar alguna
+                                    // acción adicional aquí, como mostrar un mensaje o volver a solicitar
+                                    // la dirección.
+                                    MessageBox.Show("Por favor, revise la dirección e intente nuevamente.", "Dirección Incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                }
+                            }
+                            else
+                            {
+                                // Si el usuario no desea validar la ubicación, procede con el registro
+                                // del usuario directamente aquí
                                 User u = null;
                                 if (Data.UserGoogle != null)
                                 {
@@ -186,46 +212,29 @@ namespace pet4sitter
                                 User.RegistrarUsuario(u);
                                 MessageBox.Show("Usuario: " + u.Name + " Registrado con éxito!");
                             }
-                            else
-                            {
-                                // Si el usuario no confirma la dirección, puedes realizar alguna
-                                // acción adicional aquí, como mostrar un mensaje o volver a solicitar
-                                // la dirección.
-                                MessageBox.Show("Por favor, revise la dirección e intente nuevamente.", "Dirección Incorrecta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            }
                         }
                         else
                         {
-                            // Si el usuario no desea validar la ubicación, procede con el registro
-                            // del usuario directamente aquí
-                            User u = null;
-                            if (Data.UserGoogle != null)
-                            {
-                                u = new User(null, Data.UserGoogle.IdGoogle, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, null, txtDireccion.Text, null, false, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
-                            }
-                            else
-                            {
-                                u = new User(null, null, txtNombre.Text, txtApellido.Text, txtMail.Text, txtDni.Text, txtPass.Text, null, txtDireccion.Text, null, false, null, null, coordenadas.Latitude.Value, coordenadas.Longitude.Value);
-                            }
-                            User.RegistrarUsuario(u);
-                            MessageBox.Show("Usuario: " + u.Name + " Registrado con éxito!");
+                            MessageBox.Show("La dirección ingresada no es válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("La dirección ingresada no es válida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ya existe un usuario con ese email", "Usuario Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    ConBD.CerrarConexion();
                 }
                 else
                 {
-                    MessageBox.Show("Ya existe un usuario con ese email", "Usuario Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                ConBD.CerrarConexion();
+                    MessageBox.Show("No existe conexión a la Base de datos");
+                }//Comprueba si la bd está disponible
             }
             else
             {
-                MessageBox.Show("No existe conexión a la Base de datos");
-            }//Comprueba si la bd está disponible
+                MessageBox.Show("El DNI introducido es Erróneo,Introdúcelo de nuevo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDni.Text = "";
+                txtDni.Focus();
+            }
         }
 
 
