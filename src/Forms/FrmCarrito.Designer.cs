@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvCarrito = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valoracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVolverPago = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -47,8 +41,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.lblResumen = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.fLPanelCarrito = new pet4sitter.Clases.BufferedFlowLayoutPanel();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -56,60 +51,13 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
-            this.panel3.Controls.Add(this.dgvCarrito);
+            this.panel3.Controls.Add(this.fLPanelCarrito);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Location = new System.Drawing.Point(189, 73);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(675, 539);
             this.panel3.TabIndex = 6;
-            // 
-            // dgvCarrito
-            // 
-            this.dgvCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Cantidad,
-            this.Precio,
-            this.Descripcion,
-            this.Valoracion});
-            this.dgvCarrito.Location = new System.Drawing.Point(37, 22);
-            this.dgvCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvCarrito.Name = "dgvCarrito";
-            this.dgvCarrito.RowHeadersWidth = 51;
-            this.dgvCarrito.RowTemplate.Height = 24;
-            this.dgvCarrito.Size = new System.Drawing.Size(605, 490);
-            this.dgvCarrito.TabIndex = 0;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // Valoracion
-            // 
-            this.Valoracion.HeaderText = "Valoracion";
-            this.Valoracion.MinimumWidth = 6;
-            this.Valoracion.Name = "Valoracion";
             // 
             // panel1
             // 
@@ -189,6 +137,7 @@
             this.btnEditarPago.TabIndex = 49;
             this.btnEditarPago.Text = "Editar";
             this.btnEditarPago.UseVisualStyleBackColor = true;
+            this.btnEditarPago.Click += new System.EventHandler(this.btnEditarPago_Click);
             // 
             // btnEditar
             // 
@@ -200,6 +149,7 @@
             this.btnEditar.TabIndex = 48;
             this.btnEditar.Text = "Editar Direccion";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // lblDescripcionLocalizacion
             // 
@@ -213,14 +163,16 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(692, 21);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(692, 31);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(172, 32);
             this.btnEliminar.TabIndex = 48;
             this.btnEliminar.Text = "Eliminar Carrito";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // lblSubtotal
             // 
@@ -242,6 +194,29 @@
             this.lblResumen.TabIndex = 49;
             this.lblResumen.Text = "Resumen Carrito";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(449, 494);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(193, 32);
+            this.button1.TabIndex = 50;
+            this.button1.Text = "Eliminar Producto";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // fLPanelCarrito
+            // 
+            this.fLPanelCarrito.AutoScroll = true;
+            this.fLPanelCarrito.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.fLPanelCarrito.Location = new System.Drawing.Point(12, 21);
+            this.fLPanelCarrito.Margin = new System.Windows.Forms.Padding(4);
+            this.fLPanelCarrito.Name = "fLPanelCarrito";
+            this.fLPanelCarrito.Size = new System.Drawing.Size(647, 455);
+            this.fLPanelCarrito.TabIndex = 51;
+            // 
             // FrmCarrito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -259,7 +234,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmCarrito_FormClosed);
             this.Load += new System.EventHandler(this.FrmCarrito_Load);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -271,12 +245,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgvCarrito;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valoracion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRealizar;
         private System.Windows.Forms.Panel panel4;
@@ -289,5 +257,7 @@
         private System.Windows.Forms.Button btnVolverPago;
         private System.Windows.Forms.Label lblDescripcionTarjeta;
         private System.Windows.Forms.Label lblMetodo;
+        private System.Windows.Forms.Button button1;
+        private Clases.BufferedFlowLayoutPanel fLPanelCarrito;
     }
 }

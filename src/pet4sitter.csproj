@@ -553,6 +553,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmAdminUsuarios.resx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ProductoEnCarrito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductoEnCarrito.Designer.cs">
+      <DependentUpon>ProductoEnCarrito.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\FrmIAyuda.resx">
       <DependentUpon>FrmIAyuda.cs</DependentUpon>
     </EmbeddedResource>
@@ -823,6 +829,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MensajeRecibido.resx">
       <DependentUpon>MensajeRecibido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProductoEnCarrito.resx">
+      <DependentUpon>ProductoEnCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

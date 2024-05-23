@@ -133,7 +133,7 @@ namespace pet4sitter
             int id = Convert.ToInt32(lblId.Text);
             string nombre = lblNombre.Text;
             int canti = Convert.ToInt32(lblCantidad.Text);
-            double precio = Convert.ToDouble(lblPrecio.Text);
+            double precio = Convert.ToDouble(lblPrecio.Text.ToString().Replace('€',' '));
             string descrip = txtDescripcion.Text;
             Image img = ptbImagenProducto.Image;
 
@@ -163,6 +163,12 @@ namespace pet4sitter
         private void txtDescripcion_Enter(object sender, EventArgs e)
         {
             this.ActiveControl = null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmCarrito frmCarrito = new FrmCarrito();
+            frmCarrito.ShowDialog();
         }
     }
 }
