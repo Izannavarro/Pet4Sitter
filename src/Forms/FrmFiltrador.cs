@@ -119,7 +119,7 @@ namespace pet4sitter
                 ConBD.AbrirConexion();
                 List<User> lUser = User.ObtenerUsuariosCercanos(Data.CurrentUser.Latitud, Data.CurrentUser.Longitud, (double)nudDesde.Value, (double)nudHasta.Value,0,3);
                 ConBD.CerrarConexion();
-                FrmResultadoFiltrado frmResultadoFiltrado = new FrmResultadoFiltrado(lUser);
+                FrmResultadoFiltrado frmResultadoFiltrado = new FrmResultadoFiltrado(lUser,(double)nudDesde.Value,(double)nudHasta.Value);
                 frmResultadoFiltrado.Show();
                 this.Dispose();
             }
