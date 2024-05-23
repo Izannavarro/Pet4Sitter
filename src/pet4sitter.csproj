@@ -120,6 +120,9 @@
     <Reference Include="OpenAI_API, Version=1.11.0.0, Culture=neutral, PublicKeyToken=1b0a4c0430762146, processorArchitecture=MSIL">
       <HintPath>packages\OpenAI.1.11.0\lib\netstandard2.0\OpenAI_API.dll</HintPath>
     </Reference>
+    <Reference Include="Stripe.net, Version=44.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Stripe.net.44.8.0\lib\net461\Stripe.net.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
@@ -164,6 +167,11 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
     </Reference>
@@ -190,6 +198,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Clases\Busqueda.cs" />
+    <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\ConfiguracionIdioma.cs" />
     <Compile Include="Clases\ConBD.cs" />
@@ -198,6 +207,7 @@
     <Compile Include="Clases\Noticia.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Prompt.cs" />
+    <Compile Include="Clases\Tarjeta.cs" />
     <Compile Include="Clases\User.cs" />
     <Compile Include="Forms\FrmIAyuda.cs">
       <SubType>Form</SubType>
@@ -552,6 +562,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmAdminUsuarios.resx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ProductoEnCarrito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ProductoEnCarrito.Designer.cs">
+      <DependentUpon>ProductoEnCarrito.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\FrmIAyuda.resx">
       <DependentUpon>FrmIAyuda.cs</DependentUpon>
     </EmbeddedResource>
@@ -823,6 +839,9 @@
     <EmbeddedResource Include="UserControls\MensajeRecibido.resx">
       <DependentUpon>MensajeRecibido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ProductoEnCarrito.resx">
+      <DependentUpon>ProductoEnCarrito.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -847,14 +866,24 @@
     <None Include="Resources\2931142_minimize_minus_remove_line_icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\usuarioBlanco.png" />
+    <None Include="Resources\ajusteBlanco.png" />
+    <None Include="Resources\ayudaBlanco.png" />
+    <None Include="Resources\carroBlanco.png" />
+    <None Include="Resources\chatBlanco.png" />
+    <Content Include="Resources\flecha %281%29.png" />
+    <Content Include="Resources\flecha-arriba.png" />
     <Content Include="Resources\iaIcon.png" />
     <Content Include="Resources\iAyuda.png" />
     <Content Include="Resources\loading.gif" />
     <Content Include="Resources\lupa.png" />
+    <None Include="Resources\lupaBlanca.png" />
     <Content Include="Resources\newsletter.png" />
+    <None Include="Resources\newsletterBlanco.png" />
     <Content Include="Resources\no-wifi-red.png" />
     <Content Include="Resources\no-wifi.png" />
     <Content Include="Resources\perfil.png" />
+    <None Include="Resources\perfilBlanco.png" />
     <Content Include="Resources\piTestLogo.png" />
     <Content Include="Resources\roboy.png" />
     <Content Include="Resources\shopbag.png" />

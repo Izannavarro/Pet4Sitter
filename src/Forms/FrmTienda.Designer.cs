@@ -34,24 +34,31 @@
             this.btnAñadir = new System.Windows.Forms.Button();
             this.ptbImagenProducto = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.btnFlecha3 = new System.Windows.Forms.Button();
-            this.btnFlecha2 = new System.Windows.Forms.Button();
-            this.btnFlecha1 = new System.Windows.Forms.Button();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.ptbCarrito = new System.Windows.Forms.PictureBox();
+            this.ptbFlechaAbajo = new System.Windows.Forms.PictureBox();
+            this.ptbFlechaArriba = new System.Windows.Forms.PictureBox();
+            this.btnFlechaAbajo = new System.Windows.Forms.Button();
+            this.btnFlechaArriba = new System.Windows.Forms.Button();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ptbBusqueda = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenProducto)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCarrito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaAbajo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaArriba)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -68,6 +75,7 @@
             // 
             // dgvProductos
             // 
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(21, 20);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -76,6 +84,7 @@
             this.dgvProductos.RowTemplate.Height = 24;
             this.dgvProductos.Size = new System.Drawing.Size(605, 490);
             this.dgvProductos.TabIndex = 0;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             // 
             // panel1
             // 
@@ -100,6 +109,7 @@
             this.btnAñadir.TabIndex = 47;
             this.btnAñadir.Text = "Añadir Carrito";
             this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
             // ptbImagenProducto
             // 
@@ -108,12 +118,15 @@
             this.ptbImagenProducto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ptbImagenProducto.Name = "ptbImagenProducto";
             this.ptbImagenProducto.Size = new System.Drawing.Size(317, 150);
+            this.ptbImagenProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbImagenProducto.TabIndex = 46;
             this.ptbImagenProducto.TabStop = false;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.lblCantidad);
+            this.panel4.Controls.Add(this.lblId);
             this.panel4.Controls.Add(this.txtDescripcion);
             this.panel4.Controls.Add(this.lblNombre);
             this.panel4.Controls.Add(this.lblPrecio);
@@ -123,50 +136,132 @@
             this.panel4.Size = new System.Drawing.Size(317, 294);
             this.panel4.TabIndex = 45;
             // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Location = new System.Drawing.Point(204, 14);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(21, 22);
+            this.lblCantidad.TabIndex = 49;
+            this.lblCantidad.Text = "a";
+            this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCantidad.Visible = false;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(65, 14);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(21, 22);
+            this.lblId.TabIndex = 48;
+            this.lblId.Text = "a";
+            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblId.Visible = false;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txtDescripcion.Location = new System.Drawing.Point(44, 147);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            this.txtDescripcion.Size = new System.Drawing.Size(237, 107);
+            this.txtDescripcion.TabIndex = 13;
+            this.txtDescripcion.Text = "";
+            this.txtDescripcion.Enter += new System.EventHandler(this.txtDescripcion_Enter);
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(94, 50);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(99, 28);
+            this.lblNombre.TabIndex = 12;
+            this.lblNombre.Text = "NOMBRE";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(113, 90);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(81, 28);
+            this.lblPrecio.TabIndex = 11;
+            this.lblPrecio.Text = "PRECIO";
+            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.btnFlecha3);
-            this.panel5.Controls.Add(this.btnFlecha2);
-            this.panel5.Controls.Add(this.btnFlecha1);
+            this.panel5.Controls.Add(this.ptbCarrito);
+            this.panel5.Controls.Add(this.ptbFlechaAbajo);
+            this.panel5.Controls.Add(this.ptbFlechaArriba);
+            this.panel5.Controls.Add(this.btnFlechaAbajo);
+            this.panel5.Controls.Add(this.btnFlechaArriba);
             this.panel5.Location = new System.Drawing.Point(660, 10);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(256, 42);
+            this.panel5.Size = new System.Drawing.Size(341, 42);
             this.panel5.TabIndex = 44;
             // 
-            // btnFlecha3
+            // ptbCarrito
             // 
-            this.btnFlecha3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlecha3.Location = new System.Drawing.Point(175, 0);
-            this.btnFlecha3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFlecha3.Name = "btnFlecha3";
-            this.btnFlecha3.Size = new System.Drawing.Size(45, 42);
-            this.btnFlecha3.TabIndex = 45;
-            this.btnFlecha3.Text = "Buscar";
-            this.btnFlecha3.UseVisualStyleBackColor = true;
+            this.ptbCarrito.Image = global::pet4sitter.Properties.Resources.carro;
+            this.ptbCarrito.Location = new System.Drawing.Point(278, 1);
+            this.ptbCarrito.Name = "ptbCarrito";
+            this.ptbCarrito.Size = new System.Drawing.Size(44, 39);
+            this.ptbCarrito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbCarrito.TabIndex = 48;
+            this.ptbCarrito.TabStop = false;
+            this.ptbCarrito.Click += new System.EventHandler(this.ptbCarrito_Click);
             // 
-            // btnFlecha2
+            // ptbFlechaAbajo
             // 
-            this.btnFlecha2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlecha2.Location = new System.Drawing.Point(91, 0);
-            this.btnFlecha2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFlecha2.Name = "btnFlecha2";
-            this.btnFlecha2.Size = new System.Drawing.Size(45, 42);
-            this.btnFlecha2.TabIndex = 44;
-            this.btnFlecha2.Text = "Buscar";
-            this.btnFlecha2.UseVisualStyleBackColor = true;
+            this.ptbFlechaAbajo.Image = global::pet4sitter.Properties.Resources.flecha__1_;
+            this.ptbFlechaAbajo.Location = new System.Drawing.Point(207, 2);
+            this.ptbFlechaAbajo.Name = "ptbFlechaAbajo";
+            this.ptbFlechaAbajo.Size = new System.Drawing.Size(41, 39);
+            this.ptbFlechaAbajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbFlechaAbajo.TabIndex = 47;
+            this.ptbFlechaAbajo.TabStop = false;
             // 
-            // btnFlecha1
+            // ptbFlechaArriba
             // 
-            this.btnFlecha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlecha1.Location = new System.Drawing.Point(0, 0);
-            this.btnFlecha1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFlecha1.Name = "btnFlecha1";
-            this.btnFlecha1.Size = new System.Drawing.Size(48, 42);
-            this.btnFlecha1.TabIndex = 42;
-            this.btnFlecha1.Text = "Buscar";
-            this.btnFlecha1.UseVisualStyleBackColor = true;
+            this.ptbFlechaArriba.Image = global::pet4sitter.Properties.Resources.flecha_arriba;
+            this.ptbFlechaArriba.Location = new System.Drawing.Point(101, 1);
+            this.ptbFlechaArriba.Name = "ptbFlechaArriba";
+            this.ptbFlechaArriba.Size = new System.Drawing.Size(41, 39);
+            this.ptbFlechaArriba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbFlechaArriba.TabIndex = 46;
+            this.ptbFlechaArriba.TabStop = false;
+            // 
+            // btnFlechaAbajo
+            // 
+            this.btnFlechaAbajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
+            this.btnFlechaAbajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFlechaAbajo.Location = new System.Drawing.Point(148, 1);
+            this.btnFlechaAbajo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFlechaAbajo.Name = "btnFlechaAbajo";
+            this.btnFlechaAbajo.Size = new System.Drawing.Size(45, 42);
+            this.btnFlechaAbajo.TabIndex = 44;
+            this.btnFlechaAbajo.UseVisualStyleBackColor = false;
+            this.btnFlechaAbajo.Click += new System.EventHandler(this.btnFlechaAbajo_Click);
+            // 
+            // btnFlechaArriba
+            // 
+            this.btnFlechaArriba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
+            this.btnFlechaArriba.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFlechaArriba.Location = new System.Drawing.Point(42, 0);
+            this.btnFlechaArriba.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFlechaArriba.Name = "btnFlechaArriba";
+            this.btnFlechaArriba.Size = new System.Drawing.Size(48, 42);
+            this.btnFlechaArriba.TabIndex = 42;
+            this.btnFlechaArriba.UseVisualStyleBackColor = false;
+            this.btnFlechaArriba.Click += new System.EventHandler(this.btnFlechaArriba_Click);
             // 
             // txtBusqueda
             // 
@@ -176,71 +271,33 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(536, 41);
             this.txtBusqueda.TabIndex = 18;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(571, 10);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(63, 42);
-            this.btnBuscar.TabIndex = 41;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
-            this.panel2.Controls.Add(this.btnBuscar);
+            this.panel2.Controls.Add(this.ptbBusqueda);
             this.panel2.Controls.Add(this.txtBusqueda);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Location = new System.Drawing.Point(360, 47);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(931, 63);
+            this.panel2.Size = new System.Drawing.Size(1027, 63);
             this.panel2.TabIndex = 7;
             // 
-            // button6
+            // ptbBusqueda
             // 
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(1296, 47);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(91, 63);
-            this.button6.TabIndex = 48;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(63, 89);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(193, 22);
-            this.lblPrecio.TabIndex = 11;
-            this.lblPrecio.Text = "Descripcion Extensa";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(63, 35);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(193, 22);
-            this.lblNombre.TabIndex = 12;
-            this.lblNombre.Text = "Descripcion Extensa";
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(44, 147);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(237, 107);
-            this.txtDescripcion.TabIndex = 13;
-            this.txtDescripcion.Text = "";
+            this.ptbBusqueda.BackColor = System.Drawing.Color.Transparent;
+            this.ptbBusqueda.Image = global::pet4sitter.Properties.Resources.lupa;
+            this.ptbBusqueda.Location = new System.Drawing.Point(572, 10);
+            this.ptbBusqueda.Name = "ptbBusqueda";
+            this.ptbBusqueda.Size = new System.Drawing.Size(42, 41);
+            this.ptbBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbBusqueda.TabIndex = 45;
+            this.ptbBusqueda.TabStop = false;
+            this.ptbBusqueda.Click += new System.EventHandler(this.ptbBusqueda_Click);
             // 
             // FrmTienda
             // 
@@ -248,7 +305,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1479, 734);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -263,8 +319,12 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCarrito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaAbajo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaArriba)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBusqueda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -278,15 +338,18 @@
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnFlecha3;
-        private System.Windows.Forms.Button btnFlecha2;
-        private System.Windows.Forms.Button btnFlecha1;
+        private System.Windows.Forms.Button btnFlechaAbajo;
+        private System.Windows.Forms.Button btnFlechaArriba;
         private System.Windows.Forms.TextBox txtBusqueda;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.PictureBox ptbFlechaAbajo;
+        private System.Windows.Forms.PictureBox ptbFlechaArriba;
+        private System.Windows.Forms.PictureBox ptbBusqueda;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.PictureBox ptbCarrito;
     }
 }

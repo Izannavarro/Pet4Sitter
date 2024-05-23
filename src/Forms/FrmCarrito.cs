@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using pet4sitter.Clases;
+using pet4sitter.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +16,8 @@ namespace pet4sitter
 {
     public partial class FrmCarrito : Form
     {
+        private List<string> productosCargados = new List<string>();
+
         public FrmCarrito()
         {
             InitializeComponent();
@@ -22,6 +27,8 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            CargarProductos();
+            lblLocalizacion.Text = Data.CurrentUser.Location;
         }
 
         private void AplicarIdioma()
@@ -41,6 +48,62 @@ namespace pet4sitter
         private void FrmCarrito_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FrmEditarDireccion frmED = new FrmEditarDireccion();
+            frmED.ShowDialog();
+        }
+
+        private void btnEditarPago_Click(object sender, EventArgs e)
+        {
+            FrmEditarTarjeta frmET = new FrmEditarTarjeta();
+            frmET.ShowDialog();
+        }
+
+        private void CargarProductos()
+        {
+            if(Carrito.Productos.Count > 0)
+            {
+                foreach(Producto p in Carrito.Productos)
+                {
+                    ProductoEnCarrito pec = new ProductoEnCarrito();
+                    pec.Nombre = p.NombreProducto;
+                    pec.Precio = p.Precio;
+                    pec.Descripcion = p.Descripcion;
+                    pec.Cantidad = p.Cantidad;
+                    pec.Imagen = p.UrlImagen;
+                    pec.Id = (int)p.Id;
+                    fLPanelCarrito.Controls.Add(pec);
+                }
+            }
+            else
+            {
+                lblInfo.Visible = true;
+                lblInfo.Text = "NO HAY PRODUCTOS EXISTENTES!";
+            }
+        }
+
+        private void ScrollToBottom()
+        {
+            if (fLPanelCarrito.Controls.Count > 0)
+            {
+                var lastControl = fLPanelCarrito.Controls[fLPanelCarrito.Controls.Count - 1];
+                fLPanelCarrito.ScrollControlIntoView(lastControl);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar el carrito?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                Carrito.Productos.Clear();
+                this.Close();
+                this.Dispose();
+            }
         }
     }
 }

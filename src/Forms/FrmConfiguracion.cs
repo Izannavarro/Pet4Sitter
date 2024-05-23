@@ -74,5 +74,10 @@ namespace pet4sitter
                 Data.DarkMode = true;
             }
         }
+
+        private void ptbVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

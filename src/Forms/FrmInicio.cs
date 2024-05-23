@@ -30,6 +30,7 @@ namespace pet4sitter
 
         private async void FrmInicio_Load(object sender, EventArgs e)
         {
+            ModoOscuro();
             if ((bool)Data.CurrentUser.Premium)
             {
                 await MostrarNoticia();
@@ -46,6 +47,14 @@ namespace pet4sitter
             if ((bool)Data.CurrentUser.Admin)
             {
                 btnAdmin.Visible = true;
+            }
+        }
+
+        private void ModoOscuro()
+        {
+            if (Data.IsDarkModeEnabled())
+            {
+                this.BackColor = Color.DarkGreen;
             }
         }
         private void CargarProductosDestacados()
@@ -181,33 +190,66 @@ namespace pet4sitter
 
         private void pnlChat1_MouseHover(object sender, EventArgs e)
         {
-            pnlChat1.BackColor = Color.LightGreen;
+            if (Data.DarkMode)
+            {
+                pnlChat1.BackColor = Color.DarkGreen;
+                lblNombreChat1.ForeColor = Color.White;
+                lblMensaje1.ForeColor = Color.White;
+            }
+            else
+            {
+                pnlChat1.BackColor = Color.LightGreen;
+            }
         }
 
         private void pnlChat1_MouseLeave(object sender, EventArgs e)
         {
             pnlChat1.BackColor = Color.White;
+            lblNombreChat1.ForeColor = Color.Black;
+            lblMensaje1.ForeColor = Color.Black;
         }
 
 
         private void pnlChat3_MouseHover(object sender, EventArgs e)
         {
-            pnlChat3.BackColor = Color.LightGreen;
+            if (Data.DarkMode)
+            {
+                pnlChat3.BackColor = Color.DarkGreen;
+                lblNombreChat3.ForeColor = Color.White;
+                lblMensaje3.ForeColor = Color.White;
+            }
+            else
+            {
+                pnlChat3.BackColor = Color.LightGreen;
+            }
         }
 
         private void pnlChat2_MouseHover(object sender, EventArgs e)
         {
-            pnlChat2.BackColor = Color.LightGreen;
+            if (Data.DarkMode)
+            {
+                pnlChat2.BackColor = Color.DarkGreen;
+                lblNombreChat2.ForeColor = Color.White;
+                lblMensaje2.ForeColor = Color.White;
+            }
+            else
+            {
+                pnlChat2.BackColor = Color.LightGreen;
+            }
         }
 
         private void pnlChat2_MouseLeave(object sender, EventArgs e)
         {
             pnlChat2.BackColor = Color.White;
+            lblNombreChat2.ForeColor = Color.Black;
+            lblMensaje2.ForeColor = Color.Black;
         }
 
         private void pnlChat3_MouseLeave(object sender, EventArgs e)
         {
             pnlChat3.BackColor = Color.White;
+            lblNombreChat3.ForeColor = Color.Black;
+            lblMensaje3.ForeColor = Color.Black;
         }
 
         private void pnlChat1_Click(object sender, EventArgs e)

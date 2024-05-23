@@ -23,7 +23,7 @@ namespace pet4sitter.Clases
 
         public int? Id { get { return id; } }
         public string NombreProducto { get { return nombreProducto; } }
-        public int Cantidad { get { return cantidad; } }
+        public int Cantidad { get { return cantidad; } set { cantidad = value; } }
         public double Precio { get { return precio; } }
         public string Descripcion { get { return descripcion; } }
         public Image UrlImagen { get { return urlImagen; } }
@@ -158,6 +158,143 @@ namespace pet4sitter.Clases
                 // Manejar excepciones
                 MessageBox.Show("Error al actualizar el producto: " + ex.Message);
             }
+        }
+
+        public static List<Producto> EncontrarNombreProducto(string nombreProducto)
+        {
+            List<Producto> productos = new List<Producto>();
+            try
+            {
+                string consulta = string.Format("SELECT * FROM products where name LIKE '{0}%'",nombreProducto);
+                MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        int i = reader.GetInt32(0);
+                        string nombre = reader.GetString(1);
+                        double precio = reader.GetDouble(2);
+                        int cantidad = reader.GetInt32(3);
+                        string descripcion = reader.GetString(4);
+
+                        byte[] array = null;
+                        if (!reader.IsDBNull(5))
+                        {
+                            long length = reader.GetBytes(5, 0, null, 0, 0); // Obtener la longitud del campo
+                            array = new byte[length];
+                            reader.GetBytes(5, 0, array, 0, (int)length);
+                        }
+
+                        Image img = null;
+                        if (array != null)
+                        {
+                            img = Utiles.ByteArrayToImage(array);
+                        }
+
+                        productos.Add(new Producto(i, nombre, cantidad, precio, descripcion, img));
+                    }
+                }
+                reader.Close();
+                return productos;
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo mostrar el producto por: "+ex.Message);
+            }
+            return productos;
+        }
+
+        public static List<Producto> ProductosMayorMenor() 
+        {
+
+            List<Producto> productos = new List<Producto>();
+            try
+            {
+                string consulta = string.Format("SELECT * FROM products ORDER BY price DESC");
+                MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        int i = reader.GetInt32(0);
+                        string nombre = reader.GetString(1);
+                        double precio = reader.GetDouble(2);
+                        int cantidad = reader.GetInt32(3);
+                        string descripcion = reader.GetString(4);
+
+                        byte[] array = null;
+                        if (!reader.IsDBNull(5))
+                        {
+                            long length = reader.GetBytes(5, 0, null, 0, 0); // Obtener la longitud del campo
+                            array = new byte[length];
+                            reader.GetBytes(5, 0, array, 0, (int)length);
+                        }
+
+                        Image img = null;
+                        if (array != null)
+                        {
+                            img = Utiles.ByteArrayToImage(array);
+                        }
+
+                        productos.Add(new Producto(i, nombre, cantidad, precio, descripcion, img));
+                    }
+                }
+                reader.Close();
+                return productos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron mostrar los producto por: " + ex.Message);
+            }
+            return productos;
+        }
+
+        public static List<Producto> ProductosMenorMayor()
+        {
+
+            List<Producto> productos = new List<Producto>();
+            try
+            {
+                string consulta = string.Format("SELECT * FROM products ORDER BY price ASC");
+                MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
+                MySqlDataReader reader = comando.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        int i = reader.GetInt32(0);
+                        string nombre = reader.GetString(1);
+                        double precio = reader.GetDouble(2);
+                        int cantidad = reader.GetInt32(3);
+                        string descripcion = reader.GetString(4);
+
+                        byte[] array = null;
+                        if (!reader.IsDBNull(5))
+                        {
+                            long length = reader.GetBytes(5, 0, null, 0, 0); // Obtener la longitud del campo
+                            array = new byte[length];
+                            reader.GetBytes(5, 0, array, 0, (int)length);
+                        }
+
+                        Image img = null;
+                        if (array != null)
+                        {
+                            img = Utiles.ByteArrayToImage(array);
+                        }
+
+                        productos.Add(new Producto(i, nombre, cantidad, precio, descripcion, img));
+                    }
+                }
+                reader.Close();
+                return productos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron mostrar los producto por: " + ex.Message);
+            }
+            return productos;
         }
 
     }
