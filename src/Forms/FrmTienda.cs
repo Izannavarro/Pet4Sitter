@@ -31,6 +31,7 @@ namespace pet4sitter
                 LimpiarTablaProductos();
                 ConBD.CerrarConexion();
             }
+            btnAñadir.Enabled = false;
         }
 
         private void AplicarIdioma()
@@ -63,6 +64,7 @@ namespace pet4sitter
                 txtDescripcion.Text = fila.Cells[4].Value.ToString();
                 lblCantidad.Text = fila.Cells[3].Value.ToString();
                 ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
+                btnAñadir.Enabled = true;
             }
         }
 
@@ -133,13 +135,34 @@ namespace pet4sitter
             int id = Convert.ToInt32(lblId.Text);
             string nombre = lblNombre.Text;
             int canti = Convert.ToInt32(lblCantidad.Text);
-            double precio = Convert.ToDouble(lblPrecio.Text.ToString().Replace('€',' '));
+            double precio = Convert.ToDouble(lblPrecio.Text.ToString().Replace('€', ' '));
             string descrip = txtDescripcion.Text;
             Image img = ptbImagenProducto.Image;
 
             Producto p = new Producto(id, nombre, canti, precio, descrip, img);
 
-            Carrito.Productos.Add(p);
+            if (Carrito.Productos.Count == 0)
+            {
+                Carrito.Productos.Add(p);
+                MessageBox.Show("PRODUCTO AÑADIDO");
+            }
+            else
+            {
+                foreach (Producto ped in Carrito.Productos)
+                {
+                    int indiceProd = Carrito.IndiceProducto((int)ped.Id);
+                    if (indiceProd != -1)
+                    {
+                        Carrito.Productos[indiceProd].Cantidad += p.Cantidad;
+                        MessageBox.Show("ACUMULADO PRODUCTO REPETIDO!");
+                    }
+                    else
+                    {
+                        Carrito.Productos.Add(p);
+                        MessageBox.Show("PRODUCTO AÑADIDO");
+                    }
+                }
+            }  
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
@@ -165,7 +188,7 @@ namespace pet4sitter
             this.ActiveControl = null;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ptbCarrito_Click(object sender, EventArgs e)
         {
             FrmCarrito frmCarrito = new FrmCarrito();
             frmCarrito.ShowDialog();

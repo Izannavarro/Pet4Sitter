@@ -23,7 +23,7 @@ namespace pet4sitter.Clases
 
         public int? Id { get { return id; } }
         public string NombreProducto { get { return nombreProducto; } }
-        public int Cantidad { get { return cantidad; } }
+        public int Cantidad { get { return cantidad; } set { cantidad = value; } }
         public double Precio { get { return precio; } }
         public string Descripcion { get { return descripcion; } }
         public Image UrlImagen { get { return urlImagen; } }

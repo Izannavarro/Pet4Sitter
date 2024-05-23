@@ -47,5 +47,17 @@ namespace pet4sitter.UserControls
             get { return pbImagen.Image; }
             set { pbImagen.Image = value; }
         }
+
+
+        public int Id
+        {
+            get { return int.Parse(lblId.Text); }
+            set { lblId.Text = value.ToString(); }
+        }
+
+        private void ProductoEnCarrito_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

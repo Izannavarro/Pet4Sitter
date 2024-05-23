@@ -40,7 +40,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ptbCarrito = new System.Windows.Forms.PictureBox();
             this.ptbFlechaAbajo = new System.Windows.Forms.PictureBox();
             this.ptbFlechaArriba = new System.Windows.Forms.PictureBox();
             this.btnFlechaAbajo = new System.Windows.Forms.Button();
@@ -55,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenProducto)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaAbajo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaArriba)).BeginInit();
             this.panel2.SuspendLayout();
@@ -202,7 +203,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.ptbCarrito);
             this.panel5.Controls.Add(this.ptbFlechaAbajo);
             this.panel5.Controls.Add(this.ptbFlechaArriba);
             this.panel5.Controls.Add(this.btnFlechaAbajo);
@@ -213,22 +214,23 @@
             this.panel5.Size = new System.Drawing.Size(256, 34);
             this.panel5.TabIndex = 44;
             // 
-            // button1
+            // ptbCarrito
             // 
-            this.button1.Location = new System.Drawing.Point(192, 1);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 34);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ptbCarrito.Image = global::pet4sitter.Properties.Resources.carro;
+            this.ptbCarrito.Location = new System.Drawing.Point(278, 1);
+            this.ptbCarrito.Name = "ptbCarrito";
+            this.ptbCarrito.Size = new System.Drawing.Size(44, 39);
+            this.ptbCarrito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbCarrito.TabIndex = 48;
+            this.ptbCarrito.TabStop = false;
+            this.ptbCarrito.Click += new System.EventHandler(this.ptbCarrito_Click);
             // 
             // ptbFlechaAbajo
             // 
             this.ptbFlechaAbajo.Image = global::pet4sitter.Properties.Resources.flecha__1_;
             this.ptbFlechaAbajo.Location = new System.Drawing.Point(156, 0);
             this.ptbFlechaAbajo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbFlechaAbajo.Location = new System.Drawing.Point(207, 2);
             this.ptbFlechaAbajo.Name = "ptbFlechaAbajo";
             this.ptbFlechaAbajo.Size = new System.Drawing.Size(31, 32);
             this.ptbFlechaAbajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -336,6 +338,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCarrito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaAbajo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaArriba)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -368,5 +371,6 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Button button1;
         private BarraLateral barraLateral1;
+        private System.Windows.Forms.PictureBox ptbCarrito;
     }
 }

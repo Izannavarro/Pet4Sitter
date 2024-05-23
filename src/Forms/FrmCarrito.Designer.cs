@@ -38,21 +38,23 @@
             this.btnEditarPago = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.lblDescripcionLocalizacion = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.lblResumen = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.lblLocalizacion = new System.Windows.Forms.Label();
+            this.lblNumTarjeta = new System.Windows.Forms.Label();
             this.fLPanelCarrito = new pet4sitter.Clases.BufferedFlowLayoutPanel();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.fLPanelCarrito.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.fLPanelCarrito);
-            this.panel3.Controls.Add(this.button1);
             this.panel3.Location = new System.Drawing.Point(189, 73);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
@@ -84,6 +86,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.lblNumTarjeta);
+            this.panel4.Controls.Add(this.lblLocalizacion);
             this.panel4.Controls.Add(this.btnRealizar);
             this.panel4.Controls.Add(this.lblDescripcionTarjeta);
             this.panel4.Controls.Add(this.lblMetodo);
@@ -111,7 +115,7 @@
             // 
             this.lblDescripcionTarjeta.AutoSize = true;
             this.lblDescripcionTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionTarjeta.Location = new System.Drawing.Point(28, 260);
+            this.lblDescripcionTarjeta.Location = new System.Drawing.Point(28, 274);
             this.lblDescripcionTarjeta.Name = "lblDescripcionTarjeta";
             this.lblDescripcionTarjeta.Size = new System.Drawing.Size(185, 22);
             this.lblDescripcionTarjeta.TabIndex = 51;
@@ -142,7 +146,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(165, 103);
+            this.btnEditar.Location = new System.Drawing.Point(166, 123);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(136, 32);
@@ -160,19 +164,6 @@
             this.lblDescripcionLocalizacion.Size = new System.Drawing.Size(231, 22);
             this.lblDescripcionLocalizacion.TabIndex = 9;
             this.lblDescripcionLocalizacion.Text = "Descripcion Localización";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Red;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(692, 31);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(172, 32);
-            this.btnEliminar.TabIndex = 48;
-            this.btnEliminar.Text = "Eliminar Carrito";
-            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // lblSubtotal
             // 
@@ -194,28 +185,58 @@
             this.lblResumen.TabIndex = 49;
             this.lblResumen.Text = "Resumen Carrito";
             // 
-            // button1
+            // btnEliminar
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(449, 494);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(193, 32);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "Eliminar Producto";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(692, 31);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(172, 32);
+            this.btnEliminar.TabIndex = 48;
+            this.btnEliminar.Text = "Eliminar Carrito";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // lblLocalizacion
+            // 
+            this.lblLocalizacion.AutoSize = true;
+            this.lblLocalizacion.Location = new System.Drawing.Point(32, 84);
+            this.lblLocalizacion.Name = "lblLocalizacion";
+            this.lblLocalizacion.Size = new System.Drawing.Size(0, 16);
+            this.lblLocalizacion.TabIndex = 52;
+            // 
+            // lblNumTarjeta
+            // 
+            this.lblNumTarjeta.AutoSize = true;
+            this.lblNumTarjeta.Location = new System.Drawing.Point(32, 222);
+            this.lblNumTarjeta.Name = "lblNumTarjeta";
+            this.lblNumTarjeta.Size = new System.Drawing.Size(44, 16);
+            this.lblNumTarjeta.TabIndex = 53;
+            this.lblNumTarjeta.Text = "label1";
             // 
             // fLPanelCarrito
             // 
             this.fLPanelCarrito.AutoScroll = true;
             this.fLPanelCarrito.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.fLPanelCarrito.Controls.Add(this.lblInfo);
             this.fLPanelCarrito.Location = new System.Drawing.Point(12, 21);
             this.fLPanelCarrito.Margin = new System.Windows.Forms.Padding(4);
             this.fLPanelCarrito.Name = "fLPanelCarrito";
-            this.fLPanelCarrito.Size = new System.Drawing.Size(647, 455);
+            this.fLPanelCarrito.Size = new System.Drawing.Size(647, 491);
             this.fLPanelCarrito.TabIndex = 51;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.White;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Location = new System.Drawing.Point(3, 0);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(0, 39);
+            this.lblInfo.TabIndex = 0;
+            this.lblInfo.Visible = false;
             // 
             // FrmCarrito
             // 
@@ -237,6 +258,8 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.fLPanelCarrito.ResumeLayout(false);
+            this.fLPanelCarrito.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,7 +272,6 @@
         private System.Windows.Forms.Button btnRealizar;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblDescripcionLocalizacion;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Button btnEditarPago;
         private System.Windows.Forms.Button btnEditar;
@@ -257,7 +279,10 @@
         private System.Windows.Forms.Button btnVolverPago;
         private System.Windows.Forms.Label lblDescripcionTarjeta;
         private System.Windows.Forms.Label lblMetodo;
-        private System.Windows.Forms.Button button1;
         private Clases.BufferedFlowLayoutPanel fLPanelCarrito;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label lblNumTarjeta;
+        private System.Windows.Forms.Label lblLocalizacion;
     }
 }

@@ -29,40 +29,27 @@
         private void InitializeComponent()
         {
             this.lblDireccion = new System.Windows.Forms.Label();
-            this.lblCalle = new System.Windows.Forms.Label();
             this.lblEditarDireccion = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblDireccion
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(80, 170);
+            this.lblDireccion.Location = new System.Drawing.Point(216, 125);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(196, 29);
             this.lblDireccion.TabIndex = 53;
             this.lblDireccion.Text = "Nueva Dirección:";
             // 
-            // lblCalle
-            // 
-            this.lblCalle.AutoSize = true;
-            this.lblCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalle.Location = new System.Drawing.Point(80, 79);
-            this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(152, 29);
-            this.lblCalle.TabIndex = 52;
-            this.lblCalle.Text = "Calle Actual: ";
-            this.lblCalle.Click += new System.EventHandler(this.label6_Click);
-            // 
             // lblEditarDireccion
             // 
             this.lblEditarDireccion.AutoSize = true;
             this.lblEditarDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditarDireccion.Location = new System.Drawing.Point(214, 25);
+            this.lblEditarDireccion.Location = new System.Drawing.Point(184, 37);
             this.lblEditarDireccion.Name = "lblEditarDireccion";
             this.lblEditarDireccion.Size = new System.Drawing.Size(264, 38);
             this.lblEditarDireccion.TabIndex = 51;
@@ -84,7 +71,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(85, 215);
+            this.txtDireccion.Location = new System.Drawing.Point(85, 177);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(482, 34);
             this.txtDireccion.TabIndex = 57;
@@ -100,18 +87,7 @@
             this.btnGuardar.TabIndex = 55;
             this.btnGuardar.Text = "Guardar Cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Red;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(462, 76);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(116, 32);
-            this.btnEliminar.TabIndex = 58;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FrmEditarDireccion
             // 
@@ -119,12 +95,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(645, 345);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblDireccion);
-            this.Controls.Add(this.lblCalle);
             this.Controls.Add(this.lblEditarDireccion);
             this.Name = "FrmEditarDireccion";
             this.Text = "FrmEditarDireccion";
@@ -138,11 +112,9 @@
         #endregion
 
         private System.Windows.Forms.Label lblDireccion;
-        private System.Windows.Forms.Label lblCalle;
         private System.Windows.Forms.Label lblEditarDireccion;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnEliminar;
     }
 }

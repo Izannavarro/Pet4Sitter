@@ -207,6 +207,7 @@
     <Compile Include="Clases\Noticia.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Prompt.cs" />
+    <Compile Include="Clases\Tarjeta.cs" />
     <Compile Include="Clases\User.cs" />
     <Compile Include="Forms\FrmIAyuda.cs">
       <SubType>Form</SubType>
