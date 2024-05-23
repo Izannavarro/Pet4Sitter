@@ -34,6 +34,7 @@
             this.btnAñadir = new System.Windows.Forms.Button();
             this.ptbImagenProducto = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblCantidad = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptbBusqueda = new System.Windows.Forms.PictureBox();
-            this.lblCantidad = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,6 +73,7 @@
             // 
             // dgvProductos
             // 
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(21, 20);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -133,33 +134,49 @@
             this.panel4.Size = new System.Drawing.Size(317, 294);
             this.panel4.TabIndex = 45;
             // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Location = new System.Drawing.Point(204, 14);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(21, 22);
+            this.lblCantidad.TabIndex = 49;
+            this.lblCantidad.Text = "a";
+            this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCantidad.Visible = false;
+            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(63, 15);
+            this.lblId.Location = new System.Drawing.Point(65, 14);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(21, 22);
             this.lblId.TabIndex = 48;
             this.lblId.Text = "a";
             this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblId.Visible = false;
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtDescripcion.Location = new System.Drawing.Point(44, 147);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(237, 107);
             this.txtDescripcion.TabIndex = 13;
             this.txtDescripcion.Text = "";
+            this.txtDescripcion.Enter += new System.EventHandler(this.txtDescripcion_Enter);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(97, 48);
+            this.lblNombre.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(94, 50);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(94, 22);
+            this.lblNombre.Size = new System.Drawing.Size(99, 28);
             this.lblNombre.TabIndex = 12;
             this.lblNombre.Text = "NOMBRE";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -167,10 +184,10 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(107, 88);
+            this.lblPrecio.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(113, 90);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(84, 22);
+            this.lblPrecio.Size = new System.Drawing.Size(81, 28);
             this.lblPrecio.TabIndex = 11;
             this.lblPrecio.Text = "PRECIO";
             this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -240,6 +257,7 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(536, 41);
             this.txtBusqueda.TabIndex = 18;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // panel2
             // 
@@ -257,7 +275,7 @@
             // 
             // ptbBusqueda
             // 
-            this.ptbBusqueda.BackColor = System.Drawing.Color.White;
+            this.ptbBusqueda.BackColor = System.Drawing.Color.Transparent;
             this.ptbBusqueda.Image = global::pet4sitter.Properties.Resources.lupa;
             this.ptbBusqueda.Location = new System.Drawing.Point(572, 10);
             this.ptbBusqueda.Name = "ptbBusqueda";
@@ -266,17 +284,6 @@
             this.ptbBusqueda.TabIndex = 45;
             this.ptbBusqueda.TabStop = false;
             this.ptbBusqueda.Click += new System.EventHandler(this.ptbBusqueda_Click);
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(201, 15);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(21, 22);
-            this.lblCantidad.TabIndex = 49;
-            this.lblCantidad.Text = "a";
-            this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmTienda
             // 
