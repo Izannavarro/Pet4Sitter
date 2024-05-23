@@ -40,6 +40,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ptbCarrito = new System.Windows.Forms.PictureBox();
             this.ptbFlechaAbajo = new System.Windows.Forms.PictureBox();
             this.ptbFlechaArriba = new System.Windows.Forms.PictureBox();
             this.btnFlechaAbajo = new System.Windows.Forms.Button();
@@ -53,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagenProducto)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaAbajo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaArriba)).BeginInit();
             this.panel2.SuspendLayout();
@@ -195,6 +197,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.ptbCarrito);
             this.panel5.Controls.Add(this.ptbFlechaAbajo);
             this.panel5.Controls.Add(this.ptbFlechaArriba);
             this.panel5.Controls.Add(this.btnFlechaAbajo);
@@ -205,10 +208,21 @@
             this.panel5.Size = new System.Drawing.Size(341, 42);
             this.panel5.TabIndex = 44;
             // 
+            // ptbCarrito
+            // 
+            this.ptbCarrito.Image = global::pet4sitter.Properties.Resources.carro;
+            this.ptbCarrito.Location = new System.Drawing.Point(278, 1);
+            this.ptbCarrito.Name = "ptbCarrito";
+            this.ptbCarrito.Size = new System.Drawing.Size(44, 39);
+            this.ptbCarrito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbCarrito.TabIndex = 48;
+            this.ptbCarrito.TabStop = false;
+            this.ptbCarrito.Click += new System.EventHandler(this.ptbCarrito_Click);
+            // 
             // ptbFlechaAbajo
             // 
             this.ptbFlechaAbajo.Image = global::pet4sitter.Properties.Resources.flecha__1_;
-            this.ptbFlechaAbajo.Location = new System.Drawing.Point(255, 1);
+            this.ptbFlechaAbajo.Location = new System.Drawing.Point(207, 2);
             this.ptbFlechaAbajo.Name = "ptbFlechaAbajo";
             this.ptbFlechaAbajo.Size = new System.Drawing.Size(41, 39);
             this.ptbFlechaAbajo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -229,7 +243,7 @@
             // 
             this.btnFlechaAbajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.btnFlechaAbajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlechaAbajo.Location = new System.Drawing.Point(201, 0);
+            this.btnFlechaAbajo.Location = new System.Drawing.Point(148, 1);
             this.btnFlechaAbajo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFlechaAbajo.Name = "btnFlechaAbajo";
             this.btnFlechaAbajo.Size = new System.Drawing.Size(45, 42);
@@ -305,6 +319,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCarrito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaAbajo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFlechaArriba)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -335,5 +350,6 @@
         private System.Windows.Forms.PictureBox ptbFlechaArriba;
         private System.Windows.Forms.PictureBox ptbBusqueda;
         private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.PictureBox ptbCarrito;
     }
 }

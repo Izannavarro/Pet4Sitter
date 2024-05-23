@@ -38,6 +38,7 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            ModoOscuro();
 
             if (ConBD.Conexion != null)
             {
@@ -63,6 +64,15 @@ namespace pet4sitter
                 MessageBox.Show("No existe conexión a la Base de datos");
             }
             ActualizarPagina();
+        }
+
+        private void ModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.BackColor = Color.DarkGreen;
+                pnlChat.BackColor = Color.FromArgb(187, 133, 98);
+            }
         }
 
         private void AplicarIdioma()

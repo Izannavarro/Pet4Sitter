@@ -224,6 +224,30 @@ namespace pet4sitter
         private void BarraLateral_Load(object sender, EventArgs e)
         {
             LeaveBarraLateral();
+            ModoOscuro();
+        }
+        
+        private void ModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                pnlBarraLateral.BackColor = Color.Black;
+                pcbBuscar.Image = Properties.Resources.lupaBlanca;
+                LblBúsqueda.ForeColor = Color.White;
+                pcbChat.Image = Properties.Resources.chatBlanco;
+                lblChat.ForeColor = Color.White;
+                pcbNoticias.Image = Properties.Resources.newsletterBlanco;
+                lblNoticias.ForeColor = Color.White;
+                pcbTienda.Image = Properties.Resources.carroBlanco;
+                lblTienda.ForeColor = Color.White;
+                pcbIaYuda.Image = Properties.Resources.ayudaBlanco;
+                lblIaYuda.ForeColor = Color.White;
+                pcbAjustes.Image = Properties.Resources.ajusteBlanco;
+                lblAjustes.ForeColor = Color.White;
+                pcbEditarPerfil.Image = Properties.Resources.usuarioBlanco;
+                lblPerfil.ForeColor = Color.White;
+
+            }
         }
 
         private void pcbBuscar_Click(object sender, EventArgs e)
@@ -273,8 +297,7 @@ namespace pet4sitter
         private void pcbAjustes_Click(object sender, EventArgs e)
         {
             FrmConfiguracion frm = new FrmConfiguracion();
-            frm.Show();
-            formActual.Dispose();
+            frm.ShowDialog();
         }
 
         private void pcbTienda_Click(object sender, EventArgs e)

@@ -81,6 +81,14 @@ namespace pet4sitter
                 lblName.Text = fila.Cells[1].Value.ToString();
                 lblEmail.Text = fila.Cells[2].Value.ToString();
                 lblPassword.Text = fila.Cells[3].Value.ToString();
+                if(fila.Cells[7].Value as byte[] != null)
+                {
+                    ptbImagen.Image = Utiles.ByteArrayToImage(fila.Cells[7].Value as byte[]);
+                }
+                else
+                {
+                    ptbImagen.Image = Properties.Resources.usuario;
+                }
                 if (fila.Cells[5].Value.ToString() == "0" || fila.Cells[5].Value.ToString() == "")
                 {
                 }
