@@ -123,13 +123,13 @@ namespace pet4sitter
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
-                string query = @"
+                string query = $@"
     SELECT *
     FROM chat c
     INNER JOIN (
         SELECT id_sender, MAX(date) AS max_date
         FROM chat
-        WHERE id_receiver = 2 OR id_sender = 2
+        WHERE id_receiver = {Data.CurrentUser.IdUser} OR id_sender = {Data.CurrentUser.IdUser} and id_sender != {Data.CurrentUser.IdUser}
         GROUP BY id_sender
         ORDER BY max_date DESC
         LIMIT 3
