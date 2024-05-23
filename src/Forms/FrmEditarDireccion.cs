@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pet4sitter.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,11 +37,9 @@ namespace pet4sitter
         private void AplicarIdioma()
         {
             lblDireccion.Text = Resources.Recursos_Localizable.FrmEditarDireccion.lblDireccion_Text;
-            lblCalle.Text = Resources.Recursos_Localizable.FrmEditarDireccion.lblCalle_Text;
             lblEditarDireccion.Text = Resources.Recursos_Localizable.FrmEditarDireccion.lblEditarDireccion_Text;
             btnVolver.Text = Resources.Recursos_Localizable.FrmEditarDireccion.btnVolver_Text;
             btnGuardar.Text = Resources.Recursos_Localizable.FrmEditarDireccion.btnGuardar_Text;
-            btnEliminar.Text = Resources.Recursos_Localizable.FrmEditarDireccion.btnEliminar_Text;
         }
 
         private void FrmEditarDireccion_FormClosed(object sender, FormClosedEventArgs e)
@@ -52,6 +51,63 @@ namespace pet4sitter
         {
             this.Close();
             this.Dispose();
+        }
+
+        private async void btnGuardar_Click(object sender, EventArgs e)
+        {
+            double? precio = Data.CurrentUser.Precio;
+            string loca = txtDireccion.Text;
+            double oldLat = (double)Data.CurrentUser.Latitud;
+            double oldLong = (double)Data.CurrentUser.Longitud;
+            double? lat = null;
+            double? longi = null;
+
+            if (loca == "")
+            {
+                MessageBox.Show("La Dirección introducida es errónea. Introdúcela de nuevo!");
+            }
+            else {
+
+                if (loca != Data.CurrentUser.Location)
+                {
+                    var coordenadas = await GeoLocalizacion.ObtenerCoordenadasAsync(loca);
+
+                    if (coordenadas.Latitude.HasValue && coordenadas.Longitude.HasValue)
+                    {
+                        MessageBox.Show("Si");
+                        if (coordenadas.Latitude.Value != oldLat)
+                        {
+                            lat = coordenadas.Latitude.Value;
+                        }
+                        else
+                        {
+                            lat = oldLat;
+                        }
+
+                        if (coordenadas.Longitude.Value != oldLong)
+                        {
+                            longi = coordenadas.Longitude.Value;
+                        }
+                        else
+                        {
+                            longi = oldLong;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Direccion INCORRECTA");
+                    }
+                }
+            }
+
+            User u = new User(Data.CurrentUser.IdUser,Data.CurrentUser.IdGoogle,Data.CurrentUser.Name, Data.CurrentUser.Surname, Data.CurrentUser.Email,Data.CurrentUser.Dni,Data.CurrentUser.Password,precio,loca,Data.CurrentUser.Premium,Data.CurrentUser.Sitter,Data.CurrentUser.Admin,Data.CurrentUser.Image,lat,longi);
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                User.ActualizarUsuario(u);
+                ConBD.CerrarConexion();
+                MessageBox.Show("Localización del Usuario Actualizada con éxito!");
+            }
         }
     }
 }

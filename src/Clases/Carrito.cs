@@ -10,8 +10,18 @@ namespace pet4sitter.Clases
     {
         private static List<Producto> productos = new List<Producto>();
 
-        public static List<Producto> Productos { get { return productos; } }
+        public static List<Producto> Productos { get { return productos; }  set{productos = value;} }
 
-
+        public static int IndiceProducto(int id)
+        {
+            for (int i = 0; i < productos.Count; i++)
+            {
+                if (productos[i].Id == id)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
     }
 }
