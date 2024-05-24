@@ -17,6 +17,7 @@ namespace pet4sitter
     public partial class FrmCarrito : Form
     {
         int cantProdList;
+        string loc;
 
         public FrmCarrito()
         {
@@ -28,7 +29,8 @@ namespace pet4sitter
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
             CargarProductos();
-            lblLocalizacion.Text = Data.CurrentUser.Location;
+            loc = Data.CurrentUser.Location;
+            lblLocalizacion.Text = loc;
             cantProdList = Carrito.Productos.Count;
         }
 
@@ -101,6 +103,29 @@ namespace pet4sitter
             if(Carrito.Productos.Count != cantProdList)
             {
                 CargarProductos();
+            }
+        }
+
+        private void btnRealizar_Click(object sender, EventArgs e)
+        {
+
+            bool pagoExitoso = StripePaymentService.ProcessPayment((decimal)Carrito.ObtenerPrecioTotal(Carrito.Productos),"eur");
+
+            if (pagoExitoso)
+            {
+                MessageBox.Show("Pago realizado con éxito.");
+                Pedido p = new Pedido((int)Data.CurrentUser.IdUser,loc,Carrito.Productos);
+                Pedido.GuardarPedido(p);
+                int idPedido = Pedido.ObtenerIdUltimoPedido();
+                Pedido.GuardarProductosPedido(idPedido, Carrito.Productos);
+                string htmlMailPedido = Pedido.GenerarHtmlPedido(p);
+
+                var mailService = new MailServices.MailPet4Sitter();
+                mailService.sendMailHtml("Pedido Realizado!",htmlMailPedido, Data.CurrentUser.Email);
+            }
+            else
+            {
+                MessageBox.Show("El pago falló.");
             }
         }
     }

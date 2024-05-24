@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pet4sitter.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,6 +49,13 @@ namespace pet4sitter
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Tarjeta tarjeta = new Tarjeta(int.Parse(txtNumero.Text),txtTitular.Text,txtFecha.Text,int.Parse(txtCVC.Text));
+            Data.CurrentTarjeta = tarjeta;
+            MessageBox.Show("Tarjeta guardada correctamente");
         }
     }
 }

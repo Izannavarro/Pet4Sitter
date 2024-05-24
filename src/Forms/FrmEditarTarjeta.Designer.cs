@@ -73,6 +73,7 @@
             this.btnGuardar.TabIndex = 62;
             this.btnGuardar.Text = "Guardar Cambios";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblConfiguracionAvanzada
             // 

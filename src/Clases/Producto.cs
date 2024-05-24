@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace pet4sitter.Clases
 {
-     class Producto
+     public class Producto
     {
         private int? id;
         private string nombreProducto;

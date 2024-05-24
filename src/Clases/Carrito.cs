@@ -23,5 +23,15 @@ namespace pet4sitter.Clases
             }
             return -1;
         }
+
+        public static double ObtenerPrecioTotal(List<Producto> lprod)
+        {
+            double total = 0;
+            foreach (Producto p in lprod)
+            {
+                total += p.Precio;
+            }
+            return total;
+        }
     }
 }
