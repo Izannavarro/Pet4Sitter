@@ -69,4 +69,4 @@ CREATE TABLE IF NOT EXISTS `user_logs` (
   PRIMARY KEY (`id_log`),
   KEY `id_user` (`id_user`),
   CONSTRAINT `user_logs_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=UTF8MB4;
