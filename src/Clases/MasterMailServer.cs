@@ -52,5 +52,34 @@ namespace pet4sitter
                 smtpClient.Dispose();
             }
         }
+
+        public void sendMailHtml(string subject, string body, string recipientMail)
+        {
+            var mailMessage = new MailMessage();
+            try
+            {
+                mailMessage.From = new MailAddress(senderMail);
+                mailMessage.To.Add(recipientMail);
+                mailMessage.Subject = subject;
+                mailMessage.IsBodyHtml = true;
+                mailMessage.Body = body;
+                mailMessage.Priority = MailPriority.Normal;
+                smtpClient.Send(mailMessage);
+            }
+            catch (Exception ex)
+            {
+                // Registra la excepción en la consola o en un archivo de registro
+                Console.WriteLine("Error al enviar el correo electrónico: " + ex.Message);
+
+                // También puedes mostrar un mensaje de error al usuario
+                MessageBox.Show("Se produjo un error al enviar el correo electrónico. Por favor, inténtalo de nuevo más tarde.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mailMessage.Dispose();
+                smtpClient.Dispose();
+            }
+        }
+
     }
 }

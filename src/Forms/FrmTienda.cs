@@ -259,6 +259,7 @@ namespace pet4sitter
         {
             if (Carrito.Productos.Count != cantProdList)
             {
+                cantProdList = Carrito.Productos.Count;
                 CargarProductos();
             }
             if (Carrito.Productos.Count == 0)

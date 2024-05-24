@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.fLPanelCarrito = new pet4sitter.Clases.BufferedFlowLayoutPanel();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVolverPago = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -44,43 +46,63 @@
             this.lblSubtotal = new System.Windows.Forms.Label();
             this.lblResumen = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.fLPanelCarrito = new pet4sitter.Clases.BufferedFlowLayoutPanel();
-            this.lblInfo = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
+            this.fLPanelCarrito.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.fLPanelCarrito.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.fLPanelCarrito);
-            this.panel3.Location = new System.Drawing.Point(142, 59);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(189, 73);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(460, 438);
+            this.panel3.Size = new System.Drawing.Size(613, 539);
             this.panel3.TabIndex = 6;
+            // 
+            // fLPanelCarrito
+            // 
+            this.fLPanelCarrito.AutoScroll = true;
+            this.fLPanelCarrito.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.fLPanelCarrito.Controls.Add(this.lblInfo);
+            this.fLPanelCarrito.Location = new System.Drawing.Point(12, 21);
+            this.fLPanelCarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fLPanelCarrito.Name = "fLPanelCarrito";
+            this.fLPanelCarrito.Size = new System.Drawing.Size(581, 491);
+            this.fLPanelCarrito.TabIndex = 51;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.White;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Location = new System.Drawing.Point(3, 0);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(0, 39);
+            this.lblInfo.TabIndex = 0;
+            this.lblInfo.Visible = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel1.Controls.Add(this.btnVolverPago);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(666, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(888, 34);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 469);
+            this.panel1.Size = new System.Drawing.Size(367, 577);
             this.panel1.TabIndex = 10;
             // 
             // btnVolverPago
             // 
             this.btnVolverPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverPago.Location = new System.Drawing.Point(70, 433);
-            this.btnVolverPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolverPago.Location = new System.Drawing.Point(93, 533);
+            this.btnVolverPago.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVolverPago.Name = "btnVolverPago";
-            this.btnVolverPago.Size = new System.Drawing.Size(142, 26);
+            this.btnVolverPago.Size = new System.Drawing.Size(189, 32);
             this.btnVolverPago.TabIndex = 52;
             this.btnVolverPago.Text = "Volver";
             this.btnVolverPago.UseVisualStyleBackColor = true;
@@ -96,50 +118,48 @@
             this.panel4.Controls.Add(this.btnEditarPago);
             this.panel4.Controls.Add(this.btnEditar);
             this.panel4.Controls.Add(this.lblDescripcionLocalizacion);
-            this.panel4.Location = new System.Drawing.Point(18, 22);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(24, 27);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(238, 395);
+            this.panel4.Size = new System.Drawing.Size(317, 486);
             this.panel4.TabIndex = 45;
             // 
             // lblNumTarjeta
             // 
             this.lblNumTarjeta.AutoSize = true;
-            this.lblNumTarjeta.Location = new System.Drawing.Point(24, 180);
-            this.lblNumTarjeta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNumTarjeta.Location = new System.Drawing.Point(32, 222);
             this.lblNumTarjeta.Name = "lblNumTarjeta";
-            this.lblNumTarjeta.Size = new System.Drawing.Size(35, 13);
+            this.lblNumTarjeta.Size = new System.Drawing.Size(44, 16);
             this.lblNumTarjeta.TabIndex = 53;
             this.lblNumTarjeta.Text = "label1";
             // 
             // lblLocalizacion
             // 
             this.lblLocalizacion.AutoSize = true;
-            this.lblLocalizacion.Location = new System.Drawing.Point(24, 68);
-            this.lblLocalizacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLocalizacion.Location = new System.Drawing.Point(32, 84);
             this.lblLocalizacion.Name = "lblLocalizacion";
-            this.lblLocalizacion.Size = new System.Drawing.Size(0, 13);
+            this.lblLocalizacion.Size = new System.Drawing.Size(0, 16);
             this.lblLocalizacion.TabIndex = 52;
             // 
             // btnRealizar
             // 
             this.btnRealizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRealizar.Location = new System.Drawing.Point(52, 353);
-            this.btnRealizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRealizar.Location = new System.Drawing.Point(69, 434);
+            this.btnRealizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRealizar.Name = "btnRealizar";
-            this.btnRealizar.Size = new System.Drawing.Size(142, 26);
+            this.btnRealizar.Size = new System.Drawing.Size(189, 32);
             this.btnRealizar.TabIndex = 47;
             this.btnRealizar.Text = "Realizar Pedido";
             this.btnRealizar.UseVisualStyleBackColor = true;
+            this.btnRealizar.Click += new System.EventHandler(this.btnRealizar_Click);
             // 
             // lblDescripcionTarjeta
             // 
             this.lblDescripcionTarjeta.AutoSize = true;
             this.lblDescripcionTarjeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionTarjeta.Location = new System.Drawing.Point(21, 223);
-            this.lblDescripcionTarjeta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescripcionTarjeta.Location = new System.Drawing.Point(28, 274);
             this.lblDescripcionTarjeta.Name = "lblDescripcionTarjeta";
-            this.lblDescripcionTarjeta.Size = new System.Drawing.Size(155, 18);
+            this.lblDescripcionTarjeta.Size = new System.Drawing.Size(185, 22);
             this.lblDescripcionTarjeta.TabIndex = 51;
             this.lblDescripcionTarjeta.Text = "Descripcion Tarjeta";
             // 
@@ -147,20 +167,19 @@
             // 
             this.lblMetodo.AutoSize = true;
             this.lblMetodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMetodo.Location = new System.Drawing.Point(21, 139);
-            this.lblMetodo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMetodo.Location = new System.Drawing.Point(28, 171);
             this.lblMetodo.Name = "lblMetodo";
-            this.lblMetodo.Size = new System.Drawing.Size(137, 18);
+            this.lblMetodo.Size = new System.Drawing.Size(161, 22);
             this.lblMetodo.TabIndex = 50;
             this.lblMetodo.Text = "Metodo de Pago:";
             // 
             // btnEditarPago
             // 
             this.btnEditarPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarPago.Location = new System.Drawing.Point(158, 167);
-            this.btnEditarPago.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarPago.Location = new System.Drawing.Point(211, 206);
+            this.btnEditarPago.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditarPago.Name = "btnEditarPago";
-            this.btnEditarPago.Size = new System.Drawing.Size(68, 26);
+            this.btnEditarPago.Size = new System.Drawing.Size(91, 32);
             this.btnEditarPago.TabIndex = 49;
             this.btnEditarPago.Text = "Editar";
             this.btnEditarPago.UseVisualStyleBackColor = true;
@@ -169,10 +188,10 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(124, 100);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Location = new System.Drawing.Point(165, 123);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(102, 26);
+            this.btnEditar.Size = new System.Drawing.Size(136, 32);
             this.btnEditar.TabIndex = 48;
             this.btnEditar.Text = "Editar Direccion";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -182,10 +201,9 @@
             // 
             this.lblDescripcionLocalizacion.AutoSize = true;
             this.lblDescripcionLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcionLocalizacion.Location = new System.Drawing.Point(14, 27);
-            this.lblDescripcionLocalizacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDescripcionLocalizacion.Location = new System.Drawing.Point(19, 33);
             this.lblDescripcionLocalizacion.Name = "lblDescripcionLocalizacion";
-            this.lblDescripcionLocalizacion.Size = new System.Drawing.Size(198, 18);
+            this.lblDescripcionLocalizacion.Size = new System.Drawing.Size(231, 22);
             this.lblDescripcionLocalizacion.TabIndex = 9;
             this.lblDescripcionLocalizacion.Text = "Descripcion Localización";
             // 
@@ -193,10 +211,9 @@
             // 
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubtotal.Location = new System.Drawing.Point(478, 502);
-            this.lblSubtotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubtotal.Location = new System.Drawing.Point(637, 618);
             this.lblSubtotal.Name = "lblSubtotal";
-            this.lblSubtotal.Size = new System.Drawing.Size(124, 18);
+            this.lblSubtotal.Size = new System.Drawing.Size(148, 22);
             this.lblSubtotal.TabIndex = 10;
             this.lblSubtotal.Text = "Subtotal: XXXX";
             // 
@@ -204,10 +221,9 @@
             // 
             this.lblResumen.AutoSize = true;
             this.lblResumen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResumen.Location = new System.Drawing.Point(148, 33);
-            this.lblResumen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblResumen.Location = new System.Drawing.Point(197, 41);
             this.lblResumen.Name = "lblResumen";
-            this.lblResumen.Size = new System.Drawing.Size(136, 18);
+            this.lblResumen.Size = new System.Drawing.Size(160, 22);
             this.lblResumen.TabIndex = 49;
             this.lblResumen.Text = "Resumen Carrito";
             // 
@@ -216,36 +232,14 @@
             this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(519, 25);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(692, 31);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(129, 26);
+            this.btnEliminar.Size = new System.Drawing.Size(172, 32);
             this.btnEliminar.TabIndex = 48;
             this.btnEliminar.Text = "Eliminar Carrito";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // fLPanelCarrito
-            // 
-            this.fLPanelCarrito.AutoScroll = true;
-            this.fLPanelCarrito.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.fLPanelCarrito.Controls.Add(this.lblInfo);
-            this.fLPanelCarrito.Location = new System.Drawing.Point(9, 17);
-            this.fLPanelCarrito.Name = "fLPanelCarrito";
-            this.fLPanelCarrito.Size = new System.Drawing.Size(436, 399);
-            this.fLPanelCarrito.TabIndex = 51;
-            // 
-            // lblInfo
-            // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.BackColor = System.Drawing.Color.White;
-            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(2, 0);
-            this.lblInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(0, 31);
-            this.lblInfo.TabIndex = 0;
-            this.lblInfo.Visible = false;
             // 
             // timer1
             // 
@@ -255,25 +249,25 @@
             // 
             // FrmCarrito
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1109, 596);
+            this.ClientSize = new System.Drawing.Size(1479, 734);
             this.Controls.Add(this.lblResumen);
             this.Controls.Add(this.lblSubtotal);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmCarrito";
             this.Text = "FrmCarrito";
             this.Load += new System.EventHandler(this.FrmCarrito_Load);
             this.panel3.ResumeLayout(false);
+            this.fLPanelCarrito.ResumeLayout(false);
+            this.fLPanelCarrito.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.fLPanelCarrito.ResumeLayout(false);
-            this.fLPanelCarrito.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

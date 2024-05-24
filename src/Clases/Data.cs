@@ -17,6 +17,8 @@ namespace pet4sitter
         
         public static User UserGoogle = null;
         public static User CurrentUser = null;
+        public static Pedido CurrentPedido = null;
+        public static Tarjeta CurrentTarjeta = null;
         //public static User CurrentUser = new User(1,null,"Pepe","ad","p@p.p",null,null,null,true,false,false,null, 39.493, -0.462143);
 
         public static bool DarkMode;
