@@ -59,3 +59,14 @@ CREATE TABLE if NOT EXISTS tokens(
 id_token INT auto_increment PRIMARY KEY,
 token_name VARCHAR(50) NOT NULL,
 token_value VARCHAR(255) NOT NULL);
+
+CREATE TABLE IF NOT EXISTS `user_logs` (
+  `id_log` int NOT NULL AUTO_INCREMENT,
+  `id_user` int NOT NULL,
+  `action` varchar(50) NOT NULL,
+  `action_date` datetime DEFAULT CURRENT_TIMESTAMP,
+  `details` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_log`),
+  KEY `id_user` (`id_user`),
+  CONSTRAINT `user_logs_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
