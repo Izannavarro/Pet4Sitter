@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet4Sitter - Cuidadores de Animales</title>
-    <link rel="stylesheet" href="styleDownload.css">
+    <link rel="stylesheet" href="./style/styleDownload.css">
 </head>
 <body >
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Logo de Pet4Sitter">
+            <img src="./img/logo.png" alt="Logo de Pet4Sitter">
             <h1>Pet4Sitter</h1>
         </div>
         <div id="switch-container">
@@ -32,9 +32,9 @@
     </header>
 <p>Selecciona tu sistema operativo</p>
 <div class="container">
-    <img id="windows-img" src="windows.png" alt="Logo de windows" onclick="showMessage('windows')" >
-    <img id="mac-img" src="mac.png" alt="Logo de mac" onclick="showMessage('mac')">
-    <img id="linux-img" src="Linux.png" alt="Logo de Linux" onclick="showMessage('linux')">
+    <img id="windows-img" src="./img/windows.png" alt="Logo de windows" onclick="showMessage('windows')" >
+    <img id="mac-img" src="./img/mac.png" alt="Logo de mac" onclick="showMessage('mac')">
+    <img id="linux-img" src="./img/Linux.png" alt="Logo de Linux" onclick="showMessage('linux')">
 </div>
 
 <div id="message-box" class="hidden">
@@ -48,7 +48,6 @@
     <p>&copy; 2024 Pet4Sitter. Todos los derechos reservados.</p>
 </footer>
 
-<script src="script.js"></script>
 <script>
     const checkbox = document.getElementById('cambiarColor');
     var solLuna = document.querySelector(".sol-luna");

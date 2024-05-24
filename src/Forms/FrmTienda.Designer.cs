@@ -53,6 +53,7 @@
             this.ptbBusqueda = new System.Windows.Forms.PictureBox();
             this.flpCarrito = new System.Windows.Forms.FlowLayoutPanel();
             this.tmr = new System.Windows.Forms.Timer(this.components);
+            this.lblInfo = new System.Windows.Forms.Label();
             this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -219,7 +220,7 @@
             // btnVerCarrito
             // 
             this.btnVerCarrito.Location = new System.Drawing.Point(223, 0);
-            this.btnVerCarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVerCarrito.Margin = new System.Windows.Forms.Padding(4);
             this.btnVerCarrito.Name = "btnVerCarrito";
             this.btnVerCarrito.Size = new System.Drawing.Size(119, 42);
             this.btnVerCarrito.TabIndex = 50;
@@ -231,7 +232,7 @@
             // 
             this.ptbCarrito.Image = global::pet4sitter.Properties.Resources.carro;
             this.ptbCarrito.Location = new System.Drawing.Point(371, 1);
-            this.ptbCarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbCarrito.Margin = new System.Windows.Forms.Padding(4);
             this.ptbCarrito.Name = "ptbCarrito";
             this.ptbCarrito.Size = new System.Drawing.Size(59, 48);
             this.ptbCarrito.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,7 +289,7 @@
             // btnCarrito
             // 
             this.btnCarrito.Location = new System.Drawing.Point(1020, 671);
-            this.btnCarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCarrito.Margin = new System.Windows.Forms.Padding(4);
             this.btnCarrito.Name = "btnCarrito";
             this.btnCarrito.Size = new System.Drawing.Size(367, 42);
             this.btnCarrito.TabIndex = 49;
@@ -337,7 +338,7 @@
             // 
             this.flpCarrito.AutoScroll = true;
             this.flpCarrito.Location = new System.Drawing.Point(787, 110);
-            this.flpCarrito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flpCarrito.Margin = new System.Windows.Forms.Padding(4);
             this.flpCarrito.Name = "flpCarrito";
             this.flpCarrito.Size = new System.Drawing.Size(581, 255);
             this.flpCarrito.TabIndex = 50;
@@ -348,6 +349,18 @@
             this.tmr.Enabled = true;
             this.tmr.Interval = 1000;
             this.tmr.Tick += new System.EventHandler(this.tmr_Tick);
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.BackColor = System.Drawing.Color.White;
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Location = new System.Drawing.Point(807, 222);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(503, 26);
+            this.lblInfo.TabIndex = 0;
+            this.lblInfo.Text = "NO HAS SELECCIONADO NINGÚN PRODUCTO";
+            this.lblInfo.Visible = false;
             // 
             // barraLateral1
             // 
@@ -364,6 +377,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1479, 734);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.flpCarrito);
             this.Controls.Add(this.btnCarrito);
             this.Controls.Add(this.panel1);
@@ -389,6 +403,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbBusqueda)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -420,5 +435,6 @@
         private System.Windows.Forms.Button btnVerCarrito;
         private System.Windows.Forms.FlowLayoutPanel flpCarrito;
         private System.Windows.Forms.Timer tmr;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
