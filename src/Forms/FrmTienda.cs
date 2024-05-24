@@ -36,6 +36,11 @@ namespace pet4sitter
                 ConBD.CerrarConexion();
             }
             btnAñadir.Enabled = false;
+            if(dgvProductos.Rows.Count > 0)
+            {
+                SeleccionarPrimerProducto();
+            }
+            
         }
 
         private void AplicarIdioma()
@@ -70,6 +75,18 @@ namespace pet4sitter
                 ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
                 btnAñadir.Enabled = true;
             }
+        }
+
+        private void SeleccionarPrimerProducto()
+        {
+                DataGridViewRow fila = dgvProductos.Rows[0];
+                lblId.Text = fila.Cells[0].Value.ToString();
+                lblNombre.Text = fila.Cells[1].Value.ToString().ToUpper();
+                lblPrecio.Text = fila.Cells[3].Value.ToString() + "€";
+                txtDescripcion.Text = fila.Cells[4].Value.ToString();
+                lblCantidad.Text = fila.Cells[2].Value.ToString();
+                ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
+                btnAñadir.Enabled = true;
         }
 
         private void ptbBusqueda_Click(object sender, EventArgs e)

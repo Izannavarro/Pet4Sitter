@@ -53,6 +53,8 @@ namespace pet4sitter
                     {
                         ConBD.AbrirConexion();
                         User.ActivarCuidador(u);
+                        Data.CurrentUser = User.EncontrarUsuario((int)u.IdUser);
+                        //(int)Data.CurrentUser.IdUser
                         ConBD.CerrarConexion();
                     }
                     MessageBox.Show("Has sido dado de Alta como Cuidador!");

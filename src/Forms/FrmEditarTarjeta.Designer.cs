@@ -89,9 +89,11 @@
             // 
             this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero.Location = new System.Drawing.Point(70, 214);
+            this.txtNumero.MaxLength = 16;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(482, 34);
             this.txtNumero.TabIndex = 66;
+            this.txtNumero.Tag = "int";
             // 
             // txtFecha
             // 
@@ -105,6 +107,7 @@
             // 
             this.txtCVC.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCVC.Location = new System.Drawing.Point(346, 291);
+            this.txtCVC.MaxLength = 4;
             this.txtCVC.Name = "txtCVC";
             this.txtCVC.Size = new System.Drawing.Size(135, 34);
             this.txtCVC.TabIndex = 68;
@@ -168,7 +171,6 @@
             this.Controls.Add(this.lblConfiguracionAvanzada);
             this.Name = "FrmEditarTarjeta";
             this.Text = " ";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmEditarTarjeta_FormClosed);
             this.Load += new System.EventHandler(this.FrmEditarTarjeta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
