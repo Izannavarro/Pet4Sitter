@@ -205,8 +205,10 @@
     <Compile Include="Clases\GeoLocalizacion.cs" />
     <Compile Include="Clases\NewsFetcher.cs" />
     <Compile Include="Clases\Noticia.cs" />
+    <Compile Include="Clases\Pedido.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Prompt.cs" />
+    <Compile Include="Clases\StripePaymentService.cs" />
     <Compile Include="Clases\Tarjeta.cs" />
     <Compile Include="Clases\User.cs" />
     <Compile Include="Forms\FrmIAyuda.cs">

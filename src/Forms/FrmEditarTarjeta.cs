@@ -48,6 +48,9 @@ namespace pet4sitter
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Tarjeta tarjeta = new Tarjeta(int.Parse(txtNumero.Text),txtTitular.Text,txtFecha.Text,int.Parse(txtCVC.Text));
+            Data.CurrentTarjeta = tarjeta;
+            MessageBox.Show("Tarjeta guardada correctamente");
             if (txtNumero.Text.Length == 16)
             {
                 DateTime fechaIntroducida = DateTime.Parse(txtFecha.Text);
