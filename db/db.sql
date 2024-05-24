@@ -62,7 +62,7 @@ token_value VARCHAR(255) NOT NULL);
 
 CREATE TABLE IF NOT EXISTS `user_logs` (
   `id_log` int NOT NULL AUTO_INCREMENT,
-  `id_user` int NOT NULL,
+  `id_user` int,
   `action` varchar(50) NOT NULL,
   `action_date` datetime DEFAULT CURRENT_TIMESTAMP,
   `details` varchar(255) DEFAULT NULL,
