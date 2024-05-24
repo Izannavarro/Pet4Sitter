@@ -16,7 +16,7 @@ namespace pet4sitter
 {
     public partial class FrmCarrito : Form
     {
-        private List<string> productosCargados = new List<string>();
+        int cantProdList;
 
         public FrmCarrito()
         {
@@ -29,6 +29,7 @@ namespace pet4sitter
             AplicarIdioma();
             CargarProductos();
             lblLocalizacion.Text = Data.CurrentUser.Location;
+            cantProdList = Carrito.Productos.Count;
         }
 
         private void AplicarIdioma()
@@ -45,11 +46,6 @@ namespace pet4sitter
             btnRealizar.Text = Resources.Recursos_Localizable.FrmCarrito.btnRealizar_Text;
         }
 
-        private void FrmCarrito_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             FrmEditarDireccion frmED = new FrmEditarDireccion();
@@ -64,17 +60,20 @@ namespace pet4sitter
 
         private void CargarProductos()
         {
+            fLPanelCarrito.Controls.Clear();
             if(Carrito.Productos.Count > 0)
             {
                 foreach(Producto p in Carrito.Productos)
                 {
                     ProductoEnCarrito pec = new ProductoEnCarrito();
+                    pec.Dock = DockStyle.Top;
+                    pec.BringToFront();
                     pec.Nombre = p.NombreProducto;
                     pec.Precio = p.Precio;
                     pec.Descripcion = p.Descripcion;
+                    pec.Id = (int)p.Id;
                     pec.Cantidad = p.Cantidad;
                     pec.Imagen = p.UrlImagen;
-                    pec.Id = (int)p.Id;
                     fLPanelCarrito.Controls.Add(pec);
                 }
             }
@@ -82,15 +81,6 @@ namespace pet4sitter
             {
                 lblInfo.Visible = true;
                 lblInfo.Text = "NO HAY PRODUCTOS EXISTENTES!";
-            }
-        }
-
-        private void ScrollToBottom()
-        {
-            if (fLPanelCarrito.Controls.Count > 0)
-            {
-                var lastControl = fLPanelCarrito.Controls[fLPanelCarrito.Controls.Count - 1];
-                fLPanelCarrito.ScrollControlIntoView(lastControl);
             }
         }
 
@@ -103,6 +93,14 @@ namespace pet4sitter
                 Carrito.Productos.Clear();
                 this.Close();
                 this.Dispose();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(Carrito.Productos.Count != cantProdList)
+            {
+                CargarProductos();
             }
         }
     }

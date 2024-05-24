@@ -31,9 +31,6 @@ namespace pet4sitter
         private void AplicarIdioma()
         {
             btnVolver.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.btnVolver_Text;
-            btnEliminar.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.btnEliminar_Text;
-            lblDireccion.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.lblDireccion_Text;
-            lblTarjeta.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.lblTarjeta_Text;
             lblConfiguracionAvanzada.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.lblConfiguracionAvanzada_Text;
             lblTitular.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.lblTitular_Text;
             lblNumero.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.lblNumero_Text;

@@ -30,10 +30,7 @@ namespace pet4sitter
 
         private async void FrmInicio_Load(object sender, EventArgs e)
         {
-            if (Data.DarkMode)
-            {
                 ModoOscuro();
-            }
             if ((bool)Data.CurrentUser.Premium)
             {
                 await MostrarNoticia();
@@ -55,8 +52,9 @@ namespace pet4sitter
 
         private void ModoOscuro()
         {
-            if (Data.IsDarkModeEnabled())
+            if (Data.DarkMode)
             {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
                 this.BackColor = Color.DarkGreen;
             }
         }

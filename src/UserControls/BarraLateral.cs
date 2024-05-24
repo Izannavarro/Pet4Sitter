@@ -298,10 +298,13 @@ namespace pet4sitter
         {
             FrmConfiguracion frm = new FrmConfiguracion();
             frm.ShowDialog();
-<<<<<<< HEAD
             formActual.Refresh();
-=======
->>>>>>> f3dda26dfdce8daedbb1ecbfe0da195bc2d02165
+            if(Data.CurrentUser == null)
+            {
+                formActual.Dispose();
+                FrmLogin login = new FrmLogin();
+                login.Show();
+            }
         }
 
         private void pcbTienda_Click(object sender, EventArgs e)

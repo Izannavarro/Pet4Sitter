@@ -884,6 +884,7 @@
     <Content Include="Resources\no-wifi.png" />
     <Content Include="Resources\perfil.png" />
     <None Include="Resources\perfilBlanco.png" />
+    <None Include="Resources\pet4sitterLogo1.png" />
     <Content Include="Resources\piTestLogo.png" />
     <Content Include="Resources\roboy.png" />
     <Content Include="Resources\shopbag.png" />

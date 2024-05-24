@@ -24,6 +24,17 @@ namespace pet4sitter
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
             ModoOscuro();
+            AsignarComboBox();
+        }
+
+        private void AsignarComboBox()
+        {
+            cmbDistancia.SelectedIndex = 0;
+            cmbDistanciaAscDesc.SelectedIndex = 0;
+            cmbOrdenarPrecio.SelectedIndex = 1;
+            cmbPrecioAscDesc.SelectedIndex = 0;
+            cmbPrecioAscDesc.Visible = false;
+
         }
 
         private void ModoOscuro()
@@ -59,14 +70,68 @@ namespace pet4sitter
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            bool ordenDist = false;
+            string ordenDistOrden = "";
+            bool ordenPrecio = false;
+            string ordenPrecioOrden = "";
             if (ConBD.Conexion != null)
             {
+                if(cmbDistancia.SelectedIndex == 0)
+                {
+                    ordenDist = true;
+                    if(cmbDistanciaAscDesc.SelectedIndex == 0)
+                    {
+                        ordenDistOrden = "ASC";
+                    }
+                    else
+                    {
+                        ordenDistOrden = "DESC";
+                    }
+                }
+
+                if(cmbOrdenarPrecio.SelectedIndex == 0)
+                {
+                    ordenPrecio = true;
+                    if (cmbPrecioAscDesc.SelectedIndex == 0)
+                    {
+                        ordenPrecioOrden = "ASC";
+                    }
+                    else
+                    {
+                        ordenPrecioOrden = "DESC";
+                    }
+                }
+
                 ConBD.AbrirConexion();
-                List<User> lUser = User.ObtenerUsuariosCercanos(Data.CurrentUser.Latitud, Data.CurrentUser.Longitud, (double)nudDesde.Value, (double)nudHasta.Value,0,3);
+                List<User> lUser = User.ObtenerUsuariosCercanos(Data.CurrentUser.Latitud, Data.CurrentUser.Longitud, (double)nudDesde.Value, (double)nudHasta.Value,ordenDist,ordenDistOrden,ordenPrecio,ordenPrecioOrden,0,3);
                 ConBD.CerrarConexion();
-                FrmResultadoFiltrado frmResultadoFiltrado = new FrmResultadoFiltrado(lUser,(double)nudDesde.Value,(double)nudHasta.Value);
+                FrmResultadoFiltrado frmResultadoFiltrado = new FrmResultadoFiltrado(lUser,(double)nudDesde.Value,(double)nudHasta.Value, ordenDist, ordenDistOrden, ordenPrecio, ordenPrecioOrden);
                 frmResultadoFiltrado.Show();
                 this.Dispose();
+            }
+        }
+
+        private void cmbDistancia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbDistancia.SelectedIndex == 0)
+            {
+                cmbDistanciaAscDesc.Visible = true;
+            }
+            else
+            {
+                cmbDistanciaAscDesc.Visible = false;
+            }
+        }
+
+        private void cmbOrdenarPrecio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbOrdenarPrecio.SelectedIndex == 1)
+            {
+                cmbPrecioAscDesc.Visible = false;
+            }
+            else
+            {
+                cmbPrecioAscDesc.Visible = true;
             }
         }
     }

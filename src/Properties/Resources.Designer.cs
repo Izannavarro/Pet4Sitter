@@ -243,6 +243,16 @@ namespace pet4sitter.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lgo1 {
+            get {
+                object obj = ResourceManager.GetObject("lgo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loading {
             get {
                 object obj = ResourceManager.GetObject("loading", resourceCulture);
@@ -346,6 +356,16 @@ namespace pet4sitter.Properties {
         internal static System.Drawing.Bitmap pet4sitterLogo {
             get {
                 object obj = ResourceManager.GetObject("pet4sitterLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pet4sitterLogo1 {
+            get {
+                object obj = ResourceManager.GetObject("pet4sitterLogo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

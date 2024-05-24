@@ -211,6 +211,7 @@ namespace pet4sitter
             if (Data.DarkMode)
             {
                 // Configurar el tema oscuro
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
                 panel1.BackColor = Color.Black;
                 this.BackColor = Color.DarkGreen;
                 this.txtMail.BackColor = Color.DarkGreen;
