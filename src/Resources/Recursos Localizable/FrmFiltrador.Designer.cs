@@ -61,65 +61,128 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a BORRAR.
+        ///   Busca una cadena traducida similar a Delete.
         /// </summary>
         internal static string btnBorrar_Text {
             get {
-                return ResourceManager.GetString("btnBorrar.Text", resourceCulture);
+                return ResourceManager.GetString("btnBorrar_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a BUSCAR.
+        ///   Busca una cadena traducida similar a Search.
         /// </summary>
         internal static string btnBuscar_Text {
             get {
-                return ResourceManager.GetString("btnBuscar.Text", resourceCulture);
+                return ResourceManager.GetString("btnBuscar_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Desde:.
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        internal static string button1_Text {
+            get {
+                return ResourceManager.GetString("button1_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Distance.
+        /// </summary>
+        internal static string cmbDistancia_Text {
+            get {
+                return ResourceManager.GetString("cmbDistancia_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ascending.
+        /// </summary>
+        internal static string cmbDistanciaAscDesc_Text {
+            get {
+                return ResourceManager.GetString("cmbDistanciaAscDesc_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Price.
+        /// </summary>
+        internal static string cmbOrdenarPrecio_Text {
+            get {
+                return ResourceManager.GetString("cmbOrdenarPrecio_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ascending.
+        /// </summary>
+        internal static string cmbPrecioAscDesc_Text {
+            get {
+                return ResourceManager.GetString("cmbPrecioAscDesc_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        internal static string label9_Text {
+            get {
+                return ResourceManager.GetString("label9_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a From:.
         /// </summary>
         internal static string lblDesde_Text {
             get {
-                return ResourceManager.GetString("lblDesde.Text", resourceCulture);
+                return ResourceManager.GetString("lblDesde_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Filtros de Cuidador.
+        ///   Busca una cadena traducida similar a Filters:.
         /// </summary>
         internal static string lblFiltros_Text {
             get {
-                return ResourceManager.GetString("lblFiltros.Text", resourceCulture);
+                return ResourceManager.GetString("lblFiltros_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Hasta:.
+        ///   Busca una cadena traducida similar a To:.
         /// </summary>
         internal static string lblHasta_Text {
             get {
-                return ResourceManager.GetString("lblHasta.Text", resourceCulture);
+                return ResourceManager.GetString("lblHasta_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Rango de Precios:.
+        ///   Busca una cadena traducida similar a Sort by Distance:.
+        /// </summary>
+        internal static string lblOrdenarPorDistancia_Text {
+            get {
+                return ResourceManager.GetString("lblOrdenarPorDistancia_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sort by Price:.
+        /// </summary>
+        internal static string lblOrdenarPrecio_Text {
+            get {
+                return ResourceManager.GetString("lblOrdenarPrecio_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Range:.
         /// </summary>
         internal static string lblRango_Text {
             get {
-                return ResourceManager.GetString("lblRango.Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Ubicación:.
-        /// </summary>
-        internal static string lblUbicacion_Text {
-            get {
-                return ResourceManager.GetString("lblUbicacion.Text", resourceCulture);
+                return ResourceManager.GetString("lblRango_Text", resourceCulture);
             }
         }
     }

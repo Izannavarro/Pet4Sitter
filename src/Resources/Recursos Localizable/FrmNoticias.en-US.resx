@@ -98,10 +98,13 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="btnAnterior_Text" xml:space="preserve">
-    <value>Previous</value>
-</data>
-	<data name="btnSiguiente_Text" xml:space="preserve">
-    <value>Next</value>
-</data>
+	<data name="lblFuncPre" xml:space="preserve">
+    <value>PREMIUM Feature</value>
+  </data>
+	<data name="lblTituloNoticias" xml:space="preserve">
+    <value>NEWS ABOUT OUR BELOVED ANIMALS</value>
+  </data>
+	<data name="lblInfoPulsar" xml:space="preserve">
+    <value>Click on the title of any news to be redirected to the official news</value>
+  </data>
 </root>

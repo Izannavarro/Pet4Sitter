@@ -89,15 +89,17 @@ namespace pet4sitter
                 {
                     ptbImagen.Image = Properties.Resources.usuario;
                 }
-                if (fila.Cells[5].Value.ToString() == "0" || fila.Cells[5].Value.ToString() == "")
+                if (fila.Cells[5].Value.ToString() == "0")
                 {
+                    ckbSitter.Checked = false;
                 }
                 else
                 {
                     ckbSitter.Checked = true;
                 }
-                if (fila.Cells[6].Value.ToString() == "" || fila.Cells[6].Value.ToString() == "0")
+                if ( fila.Cells[6].Value.ToString() == "0")
                 {
+                    ckbAdministrator.Checked = false;   
                 }
                 else
                 {
@@ -131,9 +133,9 @@ namespace pet4sitter
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnVolver_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

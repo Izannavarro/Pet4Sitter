@@ -24,7 +24,14 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             CompruebaPremium();
-            
+            AplicarIdioma();
+        }
+
+        private void AplicarIdioma()
+        {
+            lblFuncPre.Text = Resources.Recursos_Localizable.FrmNoticias.lblFuncPre;
+            lblTituloNoticias.Text = Resources.Recursos_Localizable.FrmNoticias.lblTituloNoticias;
+            lblInfoPulsar.Text = Resources.Recursos_Localizable.FrmNoticias.lblInfoPulsar;
         }
 
         private async void CompruebaPremium()
@@ -194,11 +201,5 @@ namespace pet4sitter
                 pcbGifCarga.Visible = false;
             }
         }
-
-        private void FrmNoticias_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
     }
 }

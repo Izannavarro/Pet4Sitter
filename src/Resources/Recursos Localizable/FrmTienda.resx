@@ -123,4 +123,13 @@
   <data name="btnAñadir.Text" xml:space="preserve">
     <value>Añadir</value>
   </data>
+  <data name="btnCarrito.Text" xml:space="preserve">
+    <value>Revisar y Pagar!</value>
+  </data>
+  <data name="btnVerCarrito.Text" xml:space="preserve">
+    <value>Ver Carrito</value>
+  </data>
+  <data name="lblInfo.Text" xml:space="preserve">
+    <value>NO HAS SELECCIONADO NINGÚN PRODUCTO</value>
+  </data>
 </root>

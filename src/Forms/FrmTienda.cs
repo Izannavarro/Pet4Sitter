@@ -46,6 +46,9 @@ namespace pet4sitter
         private void AplicarIdioma()
         {
             btnAñadir.Text = Resources.Recursos_Localizable.FrmTienda.btnAñadir_Text;
+            btnCarrito.Text = Resources.Recursos_Localizable.FrmTienda.btnCarrito_Text;
+            btnVerCarrito.Text = Resources.Recursos_Localizable.FrmTienda.btnVerCarrito_Text;
+            lblInfo.Text = Resources.Recursos_Localizable.FrmTienda.lblInfo_Text;
         }
 
         private void LimpiarTablaProductos()

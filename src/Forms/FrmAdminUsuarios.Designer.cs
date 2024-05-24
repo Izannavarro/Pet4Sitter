@@ -66,6 +66,7 @@ namespace pet4sitter
             this.btnVolver.TabIndex = 53;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lblUsuarioss
             // 
@@ -152,7 +153,6 @@ namespace pet4sitter
             this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar Imagen";
             this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // lblAdministrator
             // 
