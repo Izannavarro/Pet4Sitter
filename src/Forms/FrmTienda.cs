@@ -1,5 +1,6 @@
 ﻿using Org.BouncyCastle.Asn1.Ocsp;
 using pet4sitter.Clases;
+using pet4sitter.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace pet4sitter
 {
     public partial class FrmTienda : Form
     {
+        bool carritoActivo = false;
         public FrmTienda()
         {
             InitializeComponent();
@@ -134,35 +136,25 @@ namespace pet4sitter
         {
             int id = Convert.ToInt32(lblId.Text);
             string nombre = lblNombre.Text;
-            int canti = Convert.ToInt32(lblCantidad.Text);
+            int canti = 1;
             double precio = Convert.ToDouble(lblPrecio.Text.ToString().Replace('€', ' '));
             string descrip = txtDescripcion.Text;
             Image img = ptbImagenProducto.Image;
 
             Producto p = new Producto(id, nombre, canti, precio, descrip, img);
 
-            if (Carrito.Productos.Count == 0)
-            {
-                Carrito.Productos.Add(p);
-                MessageBox.Show("PRODUCTO AÑADIDO");
-            }
-            else
-            {
-                foreach (Producto ped in Carrito.Productos)
-                {
-                    int indiceProd = Carrito.IndiceProducto((int)ped.Id);
+                    int indiceProd = Carrito.IndiceProducto((int)p.Id);
                     if (indiceProd != -1)
                     {
                         Carrito.Productos[indiceProd].Cantidad += p.Cantidad;
                         MessageBox.Show("ACUMULADO PRODUCTO REPETIDO!");
+                        CargarProductos();
                     }
                     else
                     {
                         Carrito.Productos.Add(p);
                         MessageBox.Show("PRODUCTO AÑADIDO");
                     }
-                }
-            }  
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
@@ -198,6 +190,32 @@ namespace pet4sitter
         {
             FrmCarrito frmCarrito = new FrmCarrito();
             frmCarrito.ShowDialog();
+        }
+
+        private void btnVerCarrito_Click(object sender, EventArgs e)
+        {
+            flpCarrito.Visible = true;
+            CargarProductos();
+        }
+        private void CargarProductos()
+        {
+            flpCarrito.Controls.Clear();
+            if (Carrito.Productos.Count > 0)
+            {
+                foreach (Producto p in Carrito.Productos)
+                {
+                    ProductoEnCarrito pec = new ProductoEnCarrito();
+                    pec.Dock = DockStyle.Top;
+                    pec.BringToFront();
+                    pec.Nombre = p.NombreProducto;
+                    pec.Precio = p.Precio;
+                    pec.Descripcion = p.Descripcion;
+                    pec.Cantidad = p.Cantidad;
+                    pec.Imagen = p.UrlImagen;
+                    pec.Id = (int)p.Id;
+                    flpCarrito.Controls.Add(pec);
+                }
+            }
         }
     }
 }

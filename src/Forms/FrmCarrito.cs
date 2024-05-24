@@ -16,7 +16,7 @@ namespace pet4sitter
 {
     public partial class FrmCarrito : Form
     {
-        private List<string> productosCargados = new List<string>();
+        int cantProdList;
 
         public FrmCarrito()
         {
@@ -29,6 +29,7 @@ namespace pet4sitter
             AplicarIdioma();
             CargarProductos();
             lblLocalizacion.Text = Data.CurrentUser.Location;
+            cantProdList = Carrito.Productos.Count;
         }
 
         private void AplicarIdioma()
@@ -64,11 +65,14 @@ namespace pet4sitter
 
         private void CargarProductos()
         {
+            fLPanelCarrito.Controls.Clear();
             if(Carrito.Productos.Count > 0)
             {
                 foreach(Producto p in Carrito.Productos)
                 {
                     ProductoEnCarrito pec = new ProductoEnCarrito();
+                    pec.Dock = DockStyle.Top;
+                    pec.BringToFront();
                     pec.Nombre = p.NombreProducto;
                     pec.Precio = p.Precio;
                     pec.Descripcion = p.Descripcion;
@@ -85,15 +89,6 @@ namespace pet4sitter
             }
         }
 
-        private void ScrollToBottom()
-        {
-            if (fLPanelCarrito.Controls.Count > 0)
-            {
-                var lastControl = fLPanelCarrito.Controls[fLPanelCarrito.Controls.Count - 1];
-                fLPanelCarrito.ScrollControlIntoView(lastControl);
-            }
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar el carrito?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -103,6 +98,14 @@ namespace pet4sitter
                 Carrito.Productos.Clear();
                 this.Close();
                 this.Dispose();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(Carrito.Productos.Count != cantProdList)
+            {
+                CargarProductos();
             }
         }
     }

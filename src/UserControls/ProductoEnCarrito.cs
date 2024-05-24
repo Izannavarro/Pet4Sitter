@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pet4sitter.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace pet4sitter.UserControls
 {
     public partial class ProductoEnCarrito : UserControl
     {
+        Form frmActual;
         public ProductoEnCarrito()
         {
             InitializeComponent();
@@ -32,8 +34,8 @@ namespace pet4sitter.UserControls
 
         public int Cantidad
         {
-            get { return int.Parse(lblCantidad.Text); }
-            set { lblCantidad.Text = value.ToString(); }
+            get { return (int)nudCantidad.Value; }
+            set { nudCantidad.Value = value; }
         }
 
         public string Descripcion
@@ -58,6 +60,18 @@ namespace pet4sitter.UserControls
         private void ProductoEnCarrito_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            int index = Carrito.IndiceProducto(int.Parse(lblId.Text));
+            Carrito.Productos.RemoveAt(index);
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            int index = Carrito.IndiceProducto(int.Parse(lblId.Text));
+            Carrito.Productos[index].Cantidad = (int)nudCantidad.Value;
         }
     }
 }

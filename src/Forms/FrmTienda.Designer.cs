@@ -40,6 +40,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnCarrito = new System.Windows.Forms.Button();
             this.ptbCarrito = new System.Windows.Forms.PictureBox();
             this.ptbFlechaAbajo = new System.Windows.Forms.PictureBox();
             this.ptbFlechaArriba = new System.Windows.Forms.PictureBox();
@@ -48,8 +49,9 @@
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ptbBusqueda = new System.Windows.Forms.PictureBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
-            this.btnCarrito = new System.Windows.Forms.Button();
+            this.btnVerCarrito = new System.Windows.Forms.Button();
+            this.flpCarrito = new System.Windows.Forms.FlowLayoutPanel();
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -204,7 +206,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.btnCarrito);
+            this.panel5.Controls.Add(this.btnVerCarrito);
             this.panel5.Controls.Add(this.ptbCarrito);
             this.panel5.Controls.Add(this.ptbFlechaAbajo);
             this.panel5.Controls.Add(this.ptbFlechaArriba);
@@ -215,6 +217,16 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(256, 34);
             this.panel5.TabIndex = 44;
+            // 
+            // btnCarrito
+            // 
+            this.btnCarrito.Location = new System.Drawing.Point(765, 545);
+            this.btnCarrito.Name = "btnCarrito";
+            this.btnCarrito.Size = new System.Drawing.Size(275, 34);
+            this.btnCarrito.TabIndex = 49;
+            this.btnCarrito.Text = "Revisar y pagar";
+            this.btnCarrito.UseVisualStyleBackColor = true;
+            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
             // 
             // ptbCarrito
             // 
@@ -230,7 +242,7 @@
             // ptbFlechaAbajo
             // 
             this.ptbFlechaAbajo.Image = global::pet4sitter.Properties.Resources.flecha__1_;
-            this.ptbFlechaAbajo.Location = new System.Drawing.Point(149, 1);
+            this.ptbFlechaAbajo.Location = new System.Drawing.Point(115, 0);
             this.ptbFlechaAbajo.Margin = new System.Windows.Forms.Padding(2);
             this.ptbFlechaAbajo.Name = "ptbFlechaAbajo";
             this.ptbFlechaAbajo.Size = new System.Drawing.Size(31, 32);
@@ -241,7 +253,7 @@
             // ptbFlechaArriba
             // 
             this.ptbFlechaArriba.Image = global::pet4sitter.Properties.Resources.flecha_arriba;
-            this.ptbFlechaArriba.Location = new System.Drawing.Point(76, 1);
+            this.ptbFlechaArriba.Location = new System.Drawing.Point(42, 0);
             this.ptbFlechaArriba.Margin = new System.Windows.Forms.Padding(2);
             this.ptbFlechaArriba.Name = "ptbFlechaArriba";
             this.ptbFlechaArriba.Size = new System.Drawing.Size(31, 32);
@@ -253,7 +265,7 @@
             // 
             this.btnFlechaAbajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.btnFlechaAbajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlechaAbajo.Location = new System.Drawing.Point(111, 1);
+            this.btnFlechaAbajo.Location = new System.Drawing.Point(77, -1);
             this.btnFlechaAbajo.Margin = new System.Windows.Forms.Padding(2);
             this.btnFlechaAbajo.Name = "btnFlechaAbajo";
             this.btnFlechaAbajo.Size = new System.Drawing.Size(34, 34);
@@ -265,7 +277,7 @@
             // 
             this.btnFlechaArriba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.btnFlechaArriba.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlechaArriba.Location = new System.Drawing.Point(32, 0);
+            this.btnFlechaArriba.Location = new System.Drawing.Point(2, 1);
             this.btnFlechaArriba.Margin = new System.Windows.Forms.Padding(2);
             this.btnFlechaArriba.Name = "btnFlechaArriba";
             this.btnFlechaArriba.Size = new System.Drawing.Size(36, 34);
@@ -310,6 +322,25 @@
             this.ptbBusqueda.TabStop = false;
             this.ptbBusqueda.Click += new System.EventHandler(this.ptbBusqueda_Click);
             // 
+            // btnVerCarrito
+            // 
+            this.btnVerCarrito.Location = new System.Drawing.Point(167, 0);
+            this.btnVerCarrito.Name = "btnVerCarrito";
+            this.btnVerCarrito.Size = new System.Drawing.Size(89, 34);
+            this.btnVerCarrito.TabIndex = 50;
+            this.btnVerCarrito.Text = "VerCarrito";
+            this.btnVerCarrito.UseVisualStyleBackColor = true;
+            this.btnVerCarrito.Click += new System.EventHandler(this.btnVerCarrito_Click);
+            // 
+            // flpCarrito
+            // 
+            this.flpCarrito.AutoScroll = true;
+            this.flpCarrito.Location = new System.Drawing.Point(590, 89);
+            this.flpCarrito.Name = "flpCarrito";
+            this.flpCarrito.Size = new System.Drawing.Size(436, 207);
+            this.flpCarrito.TabIndex = 50;
+            this.flpCarrito.Visible = false;
+            // 
             // barraLateral1
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
@@ -318,28 +349,21 @@
             this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 8;
             // 
-            // btnCarrito
-            // 
-            this.btnCarrito.Location = new System.Drawing.Point(207, 0);
-            this.btnCarrito.Name = "btnCarrito";
-            this.btnCarrito.Size = new System.Drawing.Size(49, 34);
-            this.btnCarrito.TabIndex = 49;
-            this.btnCarrito.Text = "Carrito";
-            this.btnCarrito.UseVisualStyleBackColor = true;
-            this.btnCarrito.Click += new System.EventHandler(this.btnCarrito_Click);
-            // 
             // FrmTienda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1109, 596);
+            this.Controls.Add(this.flpCarrito);
+            this.Controls.Add(this.btnCarrito);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.barraLateral1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTienda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTienda";
             this.Load += new System.EventHandler(this.FrmTienda_Load);
             this.panel3.ResumeLayout(false);
@@ -384,5 +408,7 @@
         private BarraLateral barraLateral1;
         private System.Windows.Forms.PictureBox ptbCarrito;
         private System.Windows.Forms.Button btnCarrito;
+        private System.Windows.Forms.Button btnVerCarrito;
+        private System.Windows.Forms.FlowLayoutPanel flpCarrito;
     }
 }
