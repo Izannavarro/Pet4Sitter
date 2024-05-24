@@ -538,7 +538,7 @@ namespace pet4sitter.Clases
         {
             try
             {
-                string consulta = "UPDATE users SET name = @name, surname = @surname, location = @location, email = @Email, password = @password, image = @image, latitud = @latitud, longitud = @longitud WHERE id_user = @id_user";
+                string consulta = "UPDATE users SET name = @name, surname = @surname, location = @location, email = @Email, password = @password, image = @image, latitud = @latitud, longitud = @longitud, sitter = @sitter WHERE id_user = @id_user";
                 MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
                 comando.Parameters.AddWithValue("@name", u.Name);
                 comando.Parameters.AddWithValue("@surname", u.Surname);
@@ -548,6 +548,7 @@ namespace pet4sitter.Clases
                 comando.Parameters.AddWithValue("@image", u.Image);
                 comando.Parameters.AddWithValue("@id_user", u.IdUser);
                 comando.Parameters.AddWithValue("@latitud", u.Latitud);
+                comando.Parameters.AddWithValue("@sitter", u.Sitter);
                 comando.Parameters.AddWithValue("@longitud", u.Longitud);
                 comando.ExecuteNonQuery();
                 Data.CurrentUser = User.EncontrarUsuario((int)u.idUser);

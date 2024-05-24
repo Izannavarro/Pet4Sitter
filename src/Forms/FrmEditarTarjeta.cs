@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pet4sitter.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,15 +40,35 @@ namespace pet4sitter
             btnGuardar.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.btnGuardar_Text;
         }
 
-        private void FrmEditarTarjeta_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
             this.Dispose();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (txtNumero.Text.Length == 16)
+            {
+                DateTime fechaIntroducida = DateTime.Parse(txtFecha.Text);
+                if (fechaIntroducida > DateTime.Now)
+                {
+                    int numTarg = Convert.ToInt32(txtNumero.Text);
+                    string titular = txtTitular.Text;
+                    int cvc = Convert.ToInt32(txtCVC.Text);
+                    string fecha = txtFecha.Text;
+
+                    Tarjeta t = new Tarjeta(numTarg,titular,fecha,cvc);
+                }
+                else
+                {
+                    MessageBox.Show("La fecha introducida es errónea o está caducada!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Los números de la Tarjeta son Incorrectos!");
+            }
         }
     }
 }

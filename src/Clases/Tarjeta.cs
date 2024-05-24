@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stripe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,16 +7,24 @@ using System.Threading.Tasks;
 
 namespace pet4sitter.Clases
 {
-    public static class Tarjeta
+    public class Tarjeta
     {
-        private static int numeroTarjeta;
-        private static string titularTarjeta;
-        private static string fechaCaducidad;
-        private static int cvc;
+        private int numeroTarjeta;
+        private string titularTarjeta;
+        private string fechaCaducidad;
+        private int cvc;
 
-        public static int NumeroTarjeta { get { return numeroTarjeta; } }
-        public static string TitularTarjeta { get { return titularTarjeta; } }
-        public static string FechaCaducidad { get { return fechaCaducidad; } }
-        public static int Cvc { get { return cvc; } }
+        public int NumeroTarjeta { get { return numeroTarjeta; } }
+        public string TitularTarjeta { get { return titularTarjeta; } }
+        public string FechaCaducidad { get { return fechaCaducidad; } }
+        public int Cvc { get { return cvc; } }
+
+        public Tarjeta(int numTarg, string titular, string fecha, int cvc)
+        {
+            numeroTarjeta = numTarg;
+            titularTarjeta = titular;
+            fechaCaducidad = fecha;
+            this.cvc = cvc;
+        }
     }
 }
