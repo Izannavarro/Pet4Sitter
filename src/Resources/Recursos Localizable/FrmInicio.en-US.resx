@@ -117,19 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnDarseBaja_Text" xml:space="preserve">
-    <value>UnSubscribe As Sitter</value>
-  </data>
-  <data name="lblUltimaCompra_Text" xml:space="preserve">
-    <value>Last Purchases:</value>
-  </data>
-  <data name="btnEditarPerfil_Text" xml:space="preserve">
-    <value>Edit Profile</value>
-  </data>
-  <data name="btnDarAlta_Text" xml:space="preserve">
-    <value>Subscribe As Sitter</value>
-  </data>
-  <data name="btnPremium_Text" xml:space="preserve">
-    <value>Premium</value>
-  </data>
+  <data name="lbl" xml:space="preserve">
+    <value>Premium Functionality</value>
+</data>
+<data name="link" xml:space="preserve">
+    <value>Link to the news</value>
+</data>
 </root>

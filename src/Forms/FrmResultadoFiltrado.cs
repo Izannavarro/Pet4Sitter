@@ -143,12 +143,28 @@ namespace pet4sitter
         }
         private void AplicarIdioma()
         {
-            lblNombreCuidador3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion3_Text;
-            lblNombreCuidador2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion2_Text;
-            lblNombreCuidador1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion1_Text;
+            lblNombreCuidador3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblNombreCuidador3_Text;
+            lblNombreCuidador2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblNombreCuidador2_Text;
+            lblNombreCuidador1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblNombreCuidador1_Text;
             btnSiguiente.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnSiguiente_Text;
             btnAnterior.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnAnterior_Text;
+            lblPaginaActual.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPaginaActual_Text;
+            lblResPrecio3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblResPrecio3_Text;
+            lblPrecio3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPrecio3_Text;
+            lblUbicacion3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblUbicacion3_Text;
+            btnEnviarMensajeChat3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnEnviarMensajeChat3_Text;
+            lblResPrecio2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblResPrecio2_Text;
+            lblPrecio2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPrecio2_Text;
+            lblUbicacion2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblUbicacion2_Text;
+            btnEnviarMensajeChat2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnEnviarMensajeChat2_Text;
+            lblResPrecio1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblResPrecio1_Text;
+            lblPrecio1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPrecio1_Text;
+            lblUbicacion1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblUbicacion1_Text;
+            btnEnviarMensajeChat1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnEnviarMensajeChat1_Text;
+            lblNombreCuidador1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblNombreCuidador1_Text;
+            lblPaginaActual.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPaginaActual_Text;
         }
+
 
         private void FrmResultadoFiltrado_FormClosed(object sender, FormClosedEventArgs e)
         {

@@ -30,7 +30,21 @@ namespace pet4sitter
             lblNombre.Text = Data.CurrentUser.Name.ToUpper();
             lblLocalizacion.Text = Data.CurrentUser.Location;
             CompruebaSitter();
+            CompruebaPremium();
         }
+
+        private void CompruebaPremium()
+        {
+            if (Data.CurrentUser.Premium == true)
+            {
+                btnPremium.Visible = false;
+            }
+            else
+            {
+                btnPremium.Visible = false;
+            }
+        }
+
 
         private void CompruebaSitter()
         {
@@ -53,11 +67,9 @@ namespace pet4sitter
             lblUltimaCompra.Text = Resources.Recursos_Localizable.FrmPerfil.lblUltimaCompra_Text;
             btnEditarPerfil.Text = Resources.Recursos_Localizable.FrmPerfil.btnEditarPerfil_Text;
             btnDarAlta.Text = Resources.Recursos_Localizable.FrmPerfil.btnDarAlta_Text;
-        }
-
-        private void FrmPerfil_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            btnDarseBaja.Text = Resources.Recursos_Localizable.FrmPerfil.btnDarAlta_Text;
+            btnDarseBaja.Text = Resources.Recursos_Localizable.FrmPerfil.btnDarseBaja_Text;
+            btnPremium.Text = Resources.Recursos_Localizable.FrmPerfil.btnPremium_Text;
         }
 
         private void btnEditarPerfil_Click(object sender, EventArgs e)

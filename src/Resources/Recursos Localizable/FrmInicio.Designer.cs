@@ -22,14 +22,14 @@ namespace pet4sitter.Resources.Recursos_Localizable {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class FrmPerfil {
+    internal class FrmInicio {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal FrmPerfil() {
+        internal FrmInicio() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("pet4sitter.Resources.Recursos_Localizable.FrmPerfil", typeof(FrmPerfil).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("pet4sitter.Resources.Recursos_Localizable.FrmInicio", typeof(FrmInicio).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,20 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Dar de Alta.
+        ///   Busca una cadena traducida similar a Funcionalidad Premium.
         /// </summary>
-        internal static string btnDarAlta_Text {
+        internal static string lbl {
             get {
-                return ResourceManager.GetString("btnDarAlta_Text", resourceCulture);
+                return ResourceManager.GetString("lbl", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Darse de Baja.
+        ///   Busca una cadena traducida similar a Link a la noticia.
         /// </summary>
-        internal static string btnDarseBaja_Text {
+        internal static string link {
             get {
-                return ResourceManager.GetString("btnDarseBaja_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Editar Perfil.
-        /// </summary>
-        internal static string btnEditarPerfil_Text {
-            get {
-                return ResourceManager.GetString("btnEditarPerfil_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Premium.
-        /// </summary>
-        internal static string btnPremium_Text {
-            get {
-                return ResourceManager.GetString("btnPremium_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Últimas Compras:.
-        /// </summary>
-        internal static string lblUltimaCompra_Text {
-            get {
-                return ResourceManager.GetString("lblUltimaCompra_Text", resourceCulture);
+                return ResourceManager.GetString("link", resourceCulture);
             }
         }
     }

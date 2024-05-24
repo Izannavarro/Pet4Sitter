@@ -41,6 +41,7 @@
             this.lblLocalizacion = new System.Windows.Forms.Label();
             this.btnDarseBaja = new System.Windows.Forms.Button();
             this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.btnPremium = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -115,10 +116,10 @@
             // 
             this.btnDarAlta.BackColor = System.Drawing.Color.White;
             this.btnDarAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarAlta.Location = new System.Drawing.Point(1089, 95);
+            this.btnDarAlta.Location = new System.Drawing.Point(997, 95);
             this.btnDarAlta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDarAlta.Name = "btnDarAlta";
-            this.btnDarAlta.Size = new System.Drawing.Size(221, 56);
+            this.btnDarAlta.Size = new System.Drawing.Size(379, 56);
             this.btnDarAlta.TabIndex = 11;
             this.btnDarAlta.Text = "Ser Cuidador";
             this.btnDarAlta.UseVisualStyleBackColor = false;
@@ -170,10 +171,10 @@
             // 
             this.btnDarseBaja.BackColor = System.Drawing.Color.White;
             this.btnDarseBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarseBaja.Location = new System.Drawing.Point(1057, 95);
+            this.btnDarseBaja.Location = new System.Drawing.Point(997, 95);
             this.btnDarseBaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDarseBaja.Name = "btnDarseBaja";
-            this.btnDarseBaja.Size = new System.Drawing.Size(283, 56);
+            this.btnDarseBaja.Size = new System.Drawing.Size(379, 56);
             this.btnDarseBaja.TabIndex = 17;
             this.btnDarseBaja.Text = "Darse Baja Cuidador";
             this.btnDarseBaja.UseVisualStyleBackColor = false;
@@ -189,12 +190,25 @@
             this.barraLateral1.Size = new System.Drawing.Size(415, 737);
             this.barraLateral1.TabIndex = 14;
             // 
+            // btnPremium
+            // 
+            this.btnPremium.BackColor = System.Drawing.Color.White;
+            this.btnPremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPremium.Location = new System.Drawing.Point(1089, 171);
+            this.btnPremium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPremium.Name = "btnPremium";
+            this.btnPremium.Size = new System.Drawing.Size(221, 56);
+            this.btnPremium.TabIndex = 18;
+            this.btnPremium.Text = "Premium";
+            this.btnPremium.UseVisualStyleBackColor = false;
+            // 
             // FrmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.ClientSize = new System.Drawing.Size(1479, 734);
+            this.Controls.Add(this.btnPremium);
             this.Controls.Add(this.lblLocalizacion);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
@@ -208,7 +222,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmPerfil";
             this.Text = "FrmPerfil";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPerfil_FormClosed);
             this.Load += new System.EventHandler(this.FrmPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
@@ -240,5 +253,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnDarseBaja;
+        private System.Windows.Forms.Button btnPremium;
     }
 }

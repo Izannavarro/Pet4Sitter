@@ -34,7 +34,6 @@ namespace pet4sitter
             cmbOrdenarPrecio.SelectedIndex = 1;
             cmbPrecioAscDesc.SelectedIndex = 0;
             cmbPrecioAscDesc.Visible = false;
-
         }
 
         private void ModoOscuro()
@@ -53,19 +52,12 @@ namespace pet4sitter
             lblHasta.Text = Resources.Recursos_Localizable.FrmFiltrador.lblHasta_Text;
             btnBuscar.Text = Resources.Recursos_Localizable.FrmFiltrador.btnBuscar_Text;
             btnBorrar.Text = Resources.Recursos_Localizable.FrmFiltrador.btnBorrar_Text;
-        }
-
-
-        private void FrmFiltrador_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmConfiguracion frm = new FrmConfiguracion(); // Crea una nueva instancia de FrmConfiguracion
-            frm.Show();
+            lblOrdenarPorDistancia.Text = Resources.Recursos_Localizable.FrmFiltrador.lblOrdenarPorDistancia_Text;
+            lblOrdenarPrecio.Text = Resources.Recursos_Localizable.FrmFiltrador.lblOrdenarPrecio_Text;
+            cmbDistanciaAscDesc.Text = Resources.Recursos_Localizable.FrmFiltrador.cmbDistanciaAscDesc_Text;
+            cmbPrecioAscDesc.Text = Resources.Recursos_Localizable.FrmFiltrador.cmbPrecioAscDesc_Text;
+            cmbOrdenarPrecio.Text = Resources.Recursos_Localizable.FrmFiltrador.cmbOrdenarPrecio_Text;
+            cmbDistancia.Text = Resources.Recursos_Localizable.FrmFiltrador.cmbDistancia_Text;
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
