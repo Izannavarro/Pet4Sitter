@@ -61,15 +61,6 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Añadir Carrito.
-        /// </summary>
-        internal static string btnAñadir_Text {
-            get {
-                return ResourceManager.GetString("btnAñadir_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Anterior.
         /// </summary>
         internal static string btnAnterior_Text {
@@ -79,11 +70,29 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a button4.
+        ///   Busca una cadena traducida similar a Enviar Mensaje.
         /// </summary>
-        internal static string btnConf_Text {
+        internal static string btnEnviarMensajeChat1_Text {
             get {
-                return ResourceManager.GetString("btnConf_Text", resourceCulture);
+                return ResourceManager.GetString("btnEnviarMensajeChat1_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar Mensaje.
+        /// </summary>
+        internal static string btnEnviarMensajeChat2_Text {
+            get {
+                return ResourceManager.GetString("btnEnviarMensajeChat2_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enviar Mensaje.
+        /// </summary>
+        internal static string btnEnviarMensajeChat3_Text {
+            get {
+                return ResourceManager.GetString("btnEnviarMensajeChat3_Text", resourceCulture);
             }
         }
         
@@ -97,92 +106,119 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Precio.
+        ///   Busca una cadena traducida similar a Sin resultados.
         /// </summary>
-        internal static string button1_Text {
+        internal static string lblNombreCuidador1_Text {
             get {
-                return ResourceManager.GetString("button1_Text", resourceCulture);
+                return ResourceManager.GetString("lblNombreCuidador1_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Distancia.
+        ///   Busca una cadena traducida similar a Sin resultados.
         /// </summary>
-        internal static string button3_Text {
+        internal static string lblNombreCuidador2_Text {
             get {
-                return ResourceManager.GetString("button3_Text", resourceCulture);
+                return ResourceManager.GetString("lblNombreCuidador2_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Sin Resultados.
+        ///   Busca una cadena traducida similar a Sin resultados.
         /// </summary>
-        internal static string lblDescripcion1_Text {
+        internal static string lblNombreCuidador3_Text {
             get {
-                return ResourceManager.GetString("lblDescripcion1_Text", resourceCulture);
+                return ResourceManager.GetString("lblNombreCuidador3_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Sin Resultados.
+        ///   Busca una cadena traducida similar a Pagina x de x.
         /// </summary>
-        internal static string lblDescripcion2_Text {
+        internal static string lblPaginaActual_Text {
             get {
-                return ResourceManager.GetString("lblDescripcion2_Text", resourceCulture);
+                return ResourceManager.GetString("lblPaginaActual_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Sin Resultados.
+        ///   Busca una cadena traducida similar a Precio:.
         /// </summary>
-        internal static string lblDescripcion3_Text {
+        internal static string lblPrecio1_Text {
             get {
-                return ResourceManager.GetString("lblDescripcion3_Text", resourceCulture);
+                return ResourceManager.GetString("lblPrecio1_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Sin Resultados.
+        ///   Busca una cadena traducida similar a Precio:.
         /// </summary>
-        internal static string lblDescripcion4_Text {
+        internal static string lblPrecio2_Text {
             get {
-                return ResourceManager.GetString("lblDescripcion4_Text", resourceCulture);
+                return ResourceManager.GetString("lblPrecio2_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Desde:.
+        ///   Busca una cadena traducida similar a Precio:.
         /// </summary>
-        internal static string lblDesde_Text {
+        internal static string lblPrecio3_Text {
             get {
-                return ResourceManager.GetString("lblDesde_Text", resourceCulture);
+                return ResourceManager.GetString("lblPrecio3_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Direccion:.
+        ///   Busca una cadena traducida similar a xx.
         /// </summary>
-        internal static string lblDireccion_Text {
+        internal static string lblResPrecio1_Text {
             get {
-                return ResourceManager.GetString("lblDireccion_Text", resourceCulture);
+                return ResourceManager.GetString("lblResPrecio1_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Hasta:.
+        ///   Busca una cadena traducida similar a xx.
         /// </summary>
-        internal static string lblHasta_Text {
+        internal static string lblResPrecio2_Text {
             get {
-                return ResourceManager.GetString("lblHasta_Text", resourceCulture);
+                return ResourceManager.GetString("lblResPrecio2_Text", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Valoración:.
+        ///   Busca una cadena traducida similar a xx.
         /// </summary>
-        internal static string lblValoracion_Text {
+        internal static string lblResPrecio3_Text {
             get {
-                return ResourceManager.GetString("lblValoracion_Text", resourceCulture);
+                return ResourceManager.GetString("lblResPrecio3_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ubicación:.
+        /// </summary>
+        internal static string lblUbicacion1_Text {
+            get {
+                return ResourceManager.GetString("lblUbicacion1_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ubicación:.
+        /// </summary>
+        internal static string lblUbicacion2_Text {
+            get {
+                return ResourceManager.GetString("lblUbicacion2_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ubicación:.
+        /// </summary>
+        internal static string lblUbicacion3_Text {
+            get {
+                return ResourceManager.GetString("lblUbicacion3_Text", resourceCulture);
             }
         }
     }

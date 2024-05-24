@@ -98,46 +98,58 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="btnAñadir_Text" xml:space="preserve">
-        <value>Add to Cart</value>
-    </data>
-	<data name="lblDescripcion4_Text" xml:space="preserve">
-        <value>Extensive Description</value>
-    </data>
-	<data name="lblDescripcion3_Text" xml:space="preserve">
-        <value>Caretaker Description</value>
-    </data>
-	<data name="lblDescripcion2_Text" xml:space="preserve">
-        <value>Caretaker Description</value>
-    </data>
-	<data name="lblDescripcion1_Text" xml:space="preserve">
-        <value>Caretaker Description</value>
-    </data>
 	<data name="btnSiguiente_Text" xml:space="preserve">
-        <value>Next</value>
-    </data>
+    <value>Next</value>
+</data>
 	<data name="btnAnterior_Text" xml:space="preserve">
-        <value>Previous</value>
-    </data>
-	<data name="lblValoracion_Text" xml:space="preserve">
-        <value>Rating:</value>
-    </data>
-	<data name="lblDireccion_Text" xml:space="preserve">
-        <value>Address:</value>
-    </data>
-	<data name="lblHasta_Text" xml:space="preserve">
-        <value>To:</value>
-    </data>
-	<data name="lblDesde_Text" xml:space="preserve">
-        <value>From:</value>
-    </data>
-	<data name="button1_Text" xml:space="preserve">
-        <value>Price</value>
-    </data>
-	<data name="button3_Text" xml:space="preserve">
-        <value>Distance</value>
-    </data>
-	<data name="btnConf_Text" xml:space="preserve">
-        <value>button4</value>
-    </data>
+    <value>Previous</value>
+</data>
+	<data name="lblPaginaActual_Text" xml:space="preserve">
+    <value>Page x of x</value>
+</data>
+	<data name="lblResPrecio3_Text" xml:space="preserve">
+    <value>xx</value>
+</data>
+	<data name="lblPrecio3_Text" xml:space="preserve">
+    <value>Price:</value>
+</data>
+	<data name="lblUbicacion3_Text" xml:space="preserve">
+    <value>Location:</value>
+</data>
+	<data name="btnEnviarMensajeChat3_Text" xml:space="preserve">
+    <value>Send Message</value>
+</data>
+	<data name="lblNombreCuidador3_Text" xml:space="preserve">
+    <value>No results</value>
+</data>
+	<data name="lblResPrecio2_Text" xml:space="preserve">
+    <value>xx</value>
+</data>
+	<data name="lblPrecio2_Text" xml:space="preserve">
+    <value>Price:</value>
+</data>
+	<data name="lblUbicacion2_Text" xml:space="preserve">
+    <value>Location:</value>
+</data>
+	<data name="btnEnviarMensajeChat2_Text" xml:space="preserve">
+    <value>Send Message</value>
+</data>
+	<data name="lblNombreCuidador2_Text" xml:space="preserve">
+    <value>No results</value>
+</data>
+	<data name="lblResPrecio1_Text" xml:space="preserve">
+    <value>xx</value>
+</data>
+	<data name="lblPrecio1_Text" xml:space="preserve">
+    <value>Price:</value>
+</data>
+	<data name="lblUbicacion1_Text" xml:space="preserve">
+    <value>Location:</value>
+</data>
+	<data name="btnEnviarMensajeChat1_Text" xml:space="preserve">
+    <value>Send Message</value>
+</data>
+	<data name="lblNombreCuidador1_Text" xml:space="preserve">
+    <value>No results</value>
+</data>
 </root>

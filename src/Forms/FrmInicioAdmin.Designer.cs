@@ -95,7 +95,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmInicioAdmin";
             this.Text = "FrmInicioAdmin";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmInicioAdmin_FormClosed);
             this.Load += new System.EventHandler(this.FrmInicioAdmin_Load);
             this.ResumeLayout(false);
 

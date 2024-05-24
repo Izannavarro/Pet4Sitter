@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stripe;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,11 @@ namespace pet4sitter.Clases
         public string FechaCaducidad { get { return fechaCaducidad; } }
         public int Cvc { get { return cvc; } }
 
-        public Tarjeta(int numeroTarjeta, string titularTarjeta, string fechaCaducidad, int cvc)
+        public Tarjeta(int numTarg, string titular, string fecha, int cvc)
         {
-            this.numeroTarjeta = numeroTarjeta;
-            this.titularTarjeta = titularTarjeta;
-            this.fechaCaducidad = fechaCaducidad;
+            numeroTarjeta = numTarg;
+            titularTarjeta = titular;
+            fechaCaducidad = fecha;
             this.cvc = cvc;
         }
     }

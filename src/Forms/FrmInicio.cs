@@ -30,7 +30,8 @@ namespace pet4sitter
 
         private async void FrmInicio_Load(object sender, EventArgs e)
         {
-                ModoOscuro();
+            ModoOscuro();
+            AplicarIdioma();
             if ((bool)Data.CurrentUser.Premium)
             {
                 await MostrarNoticia();
@@ -48,6 +49,12 @@ namespace pet4sitter
             {
                 btnAdmin.Visible = true;
             }
+        }
+
+        private void AplicarIdioma()
+        {
+            lblPremium.Text = Resources.Recursos_Localizable.FrmInicio.lbl;
+            linkNoticia.Text = Resources.Recursos_Localizable.FrmInicio.link;
         }
 
         private void ModoOscuro()
