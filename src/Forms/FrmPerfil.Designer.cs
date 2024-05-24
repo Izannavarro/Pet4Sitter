@@ -39,6 +39,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblLocalizacion = new System.Windows.Forms.Label();
+            this.btnDarseBaja = new System.Windows.Forms.Button();
             this.barraLateral1 = new pet4sitter.BarraLateral(this);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
@@ -165,6 +166,20 @@
             this.lblLocalizacion.TabIndex = 16;
             this.lblLocalizacion.Text = "Información del Usuario";
             // 
+            // btnDarseBaja
+            // 
+            this.btnDarseBaja.BackColor = System.Drawing.Color.White;
+            this.btnDarseBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarseBaja.Location = new System.Drawing.Point(1057, 95);
+            this.btnDarseBaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDarseBaja.Name = "btnDarseBaja";
+            this.btnDarseBaja.Size = new System.Drawing.Size(283, 56);
+            this.btnDarseBaja.TabIndex = 17;
+            this.btnDarseBaja.Text = "Darse Baja Cuidador";
+            this.btnDarseBaja.UseVisualStyleBackColor = false;
+            this.btnDarseBaja.Visible = false;
+            this.btnDarseBaja.Click += new System.EventHandler(this.btnDarseBaja_Click);
+            // 
             // barraLateral1
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
@@ -189,6 +204,7 @@
             this.Controls.Add(this.lblUltimaCompra);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.barraLateral1);
+            this.Controls.Add(this.btnDarseBaja);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmPerfil";
             this.Text = "FrmPerfil";
@@ -223,5 +239,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnDarseBaja;
     }
 }

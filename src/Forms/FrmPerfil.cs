@@ -29,13 +29,21 @@ namespace pet4sitter
             }
             lblNombre.Text = Data.CurrentUser.Name.ToUpper();
             lblLocalizacion.Text = Data.CurrentUser.Location;
+            CompruebaSitter();
+        }
+
+        private void CompruebaSitter()
+        {
             if (Data.CurrentUser.Sitter == true)
             {
-                lblPrecio.Text = Data.CurrentUser.Precio.ToString()+"€/Día";
+                lblPrecio.Text = Data.CurrentUser.Precio.ToString() + "€/Día";
                 btnDarAlta.Visible = false;
+                btnDarseBaja.Visible = true;
             }
             else
             {
+                btnDarAlta.Visible = true;
+                btnDarseBaja.Visible = false;
                 lblPrecio.Text = "Este Usuario NO es Cuidador";
             }
         }
@@ -66,6 +74,30 @@ namespace pet4sitter
         {
             FrmDarseDeAlta frm = new FrmDarseDeAlta();
             frm.ShowDialog();
+            CompruebaSitter();
+
+        }
+
+        private void btnDarseBaja_Click(object sender, EventArgs e)
+        {
+            User u = new User(Data.CurrentUser.IdUser, Data.CurrentUser.IdGoogle, Data.CurrentUser.Name, Data.CurrentUser.Surname, Data.CurrentUser.Email, Data.CurrentUser.Dni, Data.CurrentUser.Password, Data.CurrentUser.Precio, Data.CurrentUser.Location, Data.CurrentUser.Premium, false, Data.CurrentUser.Admin, Data.CurrentUser.Image, Data.CurrentUser.Latitud, Data.CurrentUser.Longitud);
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                User.ActualizarUsuario(u);
+                ConBD.CerrarConexion();
+                MessageBox.Show("Usuario: "+ Data.CurrentUser.Name+" dado de baja como cuidador con éxito!");
+                this.Hide();
+                btnDarAlta.Visible = true;
+                btnDarseBaja.Visible = false;
+                this.Show();
+                lblPrecio.Text = "Este Usuario NO es Cuidador";
+
+            }
+            else
+            {
+                MessageBox.Show("No te has podido dar de baja!");
+            }
         }
     }
 }
