@@ -17,6 +17,7 @@ namespace pet4sitter
     public partial class FrmTienda : Form
     {
         bool carritoActivo = false;
+        int cantProdList;
         public FrmTienda()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            cantProdList = Carrito.Productos.Count;
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
@@ -155,6 +157,7 @@ namespace pet4sitter
                         Carrito.Productos.Add(p);
                         MessageBox.Show("PRODUCTO AÑADIDO");
                     }
+            cantProdList = Carrito.Productos.Count;
         }
 
         private void txtBusqueda_TextChanged(object sender, EventArgs e)
@@ -210,11 +213,23 @@ namespace pet4sitter
                     pec.Nombre = p.NombreProducto;
                     pec.Precio = p.Precio;
                     pec.Descripcion = p.Descripcion;
+                    pec.Id = (int)p.Id;
                     pec.Cantidad = p.Cantidad;
                     pec.Imagen = p.UrlImagen;
-                    pec.Id = (int)p.Id;
                     flpCarrito.Controls.Add(pec);
                 }
+            }
+            else
+            {
+                flpCarrito.Controls.Clear();
+            }
+        }
+
+        private void tmr_Tick(object sender, EventArgs e)
+        {
+            if (Carrito.Productos.Count != cantProdList)
+            {
+                CargarProductos();
             }
         }
     }

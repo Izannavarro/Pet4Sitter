@@ -33,21 +33,16 @@
             this.lblTema = new System.Windows.Forms.Label();
             this.lblPrivacidad = new System.Windows.Forms.Label();
             this.lblEliminar = new System.Windows.Forms.Label();
-            this.lblDesactivar = new System.Windows.Forms.Label();
             this.cmbIdioma = new System.Windows.Forms.ComboBox();
             this.cmbTema = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnDesactivar = new System.Windows.Forms.Button();
-            this.lbl2pasos = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.ptbVolver = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbVolver)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,16 +97,6 @@
             this.lblEliminar.TabIndex = 5;
             this.lblEliminar.Text = "Eliminar Mi Cuenta:";
             // 
-            // lblDesactivar
-            // 
-            this.lblDesactivar.AutoSize = true;
-            this.lblDesactivar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesactivar.Location = new System.Drawing.Point(3, 0);
-            this.lblDesactivar.Name = "lblDesactivar";
-            this.lblDesactivar.Size = new System.Drawing.Size(245, 29);
-            this.lblDesactivar.TabIndex = 6;
-            this.lblDesactivar.Text = "Desactivar Mi Cuenta:";
-            // 
             // cmbIdioma
             // 
             this.cmbIdioma.FormattingEnabled = true;
@@ -148,27 +133,7 @@
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnDesactivar
-            // 
-            this.btnDesactivar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesactivar.Location = new System.Drawing.Point(254, 2);
-            this.btnDesactivar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDesactivar.Name = "btnDesactivar";
-            this.btnDesactivar.Size = new System.Drawing.Size(123, 34);
-            this.btnDesactivar.TabIndex = 10;
-            this.btnDesactivar.Text = "Desactivar";
-            this.btnDesactivar.UseVisualStyleBackColor = true;
-            // 
-            // lbl2pasos
-            // 
-            this.lbl2pasos.AutoSize = true;
-            this.lbl2pasos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2pasos.Location = new System.Drawing.Point(97, 185);
-            this.lbl2pasos.Name = "lbl2pasos";
-            this.lbl2pasos.Size = new System.Drawing.Size(324, 29);
-            this.lbl2pasos.TabIndex = 3;
-            this.lbl2pasos.Text = "Autentificación en dos pasos:";
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -177,7 +142,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.lblIdioma, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.cmbIdioma, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(101, 127);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(101, 156);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -192,7 +157,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.Controls.Add(this.lblTema, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmbTema, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(453, 127);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(453, 156);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -207,28 +172,13 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.btnEliminar, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblEliminar, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(181, 241);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(189, 241);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(425, 38);
             this.tableLayoutPanel3.TabIndex = 13;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel4.Controls.Add(this.lblDesactivar, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.btnDesactivar, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(181, 304);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(508, 41);
-            this.tableLayoutPanel4.TabIndex = 14;
             // 
             // ptbVolver
             // 
@@ -248,12 +198,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ptbVolver);
-            this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.lblPrivacidad);
-            this.Controls.Add(this.lbl2pasos);
             this.Controls.Add(this.lblConfiguracionAvanzada);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmConfiguracion";
@@ -266,8 +214,6 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbVolver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -281,16 +227,12 @@
         private System.Windows.Forms.Label lblTema;
         private System.Windows.Forms.Label lblPrivacidad;
         private System.Windows.Forms.Label lblEliminar;
-        private System.Windows.Forms.Label lblDesactivar;
         private System.Windows.Forms.ComboBox cmbIdioma;
         private System.Windows.Forms.ComboBox cmbTema;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnDesactivar;
-        private System.Windows.Forms.Label lbl2pasos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.PictureBox ptbVolver;
     }
 }

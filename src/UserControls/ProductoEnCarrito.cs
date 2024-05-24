@@ -65,7 +65,10 @@ namespace pet4sitter.UserControls
         private void btnEliminarProducto_Click(object sender, EventArgs e)
         {
             int index = Carrito.IndiceProducto(int.Parse(lblId.Text));
-            Carrito.Productos.RemoveAt(index);
+            if(index >= 0)
+            {
+                Carrito.Productos.RemoveAt(index);
+            }
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)

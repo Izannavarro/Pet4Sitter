@@ -46,11 +46,6 @@ namespace pet4sitter
             btnRealizar.Text = Resources.Recursos_Localizable.FrmCarrito.btnRealizar_Text;
         }
 
-        private void FrmCarrito_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             FrmEditarDireccion frmED = new FrmEditarDireccion();
@@ -76,9 +71,9 @@ namespace pet4sitter
                     pec.Nombre = p.NombreProducto;
                     pec.Precio = p.Precio;
                     pec.Descripcion = p.Descripcion;
+                    pec.Id = (int)p.Id;
                     pec.Cantidad = p.Cantidad;
                     pec.Imagen = p.UrlImagen;
-                    pec.Id = (int)p.Id;
                     fLPanelCarrito.Controls.Add(pec);
                 }
             }

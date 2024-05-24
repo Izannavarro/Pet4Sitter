@@ -267,7 +267,6 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmCarrito";
             this.Text = "FrmCarrito";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmCarrito_FormClosed);
             this.Load += new System.EventHandler(this.FrmCarrito_Load);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
