@@ -44,7 +44,7 @@
             this.cmbPrecioAscDesc = new System.Windows.Forms.ComboBox();
             this.lblOrdenarPrecio = new System.Windows.Forms.Label();
             this.cmbOrdenarPrecio = new System.Windows.Forms.ComboBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).BeginInit();
             this.SuspendLayout();
