@@ -59,7 +59,7 @@ namespace pet4sitter.UserControls
 
         private void ProductoEnCarrito_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnEliminarProducto_Click(object sender, EventArgs e)

@@ -64,9 +64,9 @@ namespace pet4sitter
                 DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
                 lblId.Text = fila.Cells[0].Value.ToString();
                 lblNombre.Text = fila.Cells[1].Value.ToString().ToUpper();
-                lblPrecio.Text = fila.Cells[2].Value.ToString()+"€";
+                lblPrecio.Text = fila.Cells[3].Value.ToString()+"€";
                 txtDescripcion.Text = fila.Cells[4].Value.ToString();
-                lblCantidad.Text = fila.Cells[3].Value.ToString();
+                lblCantidad.Text = fila.Cells[2].Value.ToString();
                 ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
                 btnAñadir.Enabled = true;
             }
@@ -197,8 +197,21 @@ namespace pet4sitter
 
         private void btnVerCarrito_Click(object sender, EventArgs e)
         {
-            flpCarrito.Visible = true;
-            CargarProductos();
+            if (!flpCarrito.Visible)
+            {
+                flpCarrito.Visible = true;
+                CargarProductos();
+                if (Carrito.Productos.Count == 0)
+                {
+                    lblInfo.Visible = true;
+                    lblInfo.BringToFront();
+                }
+            }
+            else
+            {
+                flpCarrito.Visible = false;
+                lblInfo.Visible = false;
+            } 
         }
         private void CargarProductos()
         {
@@ -230,6 +243,17 @@ namespace pet4sitter
             if (Carrito.Productos.Count != cantProdList)
             {
                 CargarProductos();
+            }
+            if (Carrito.Productos.Count == 0)
+            {
+                if (flpCarrito.Visible == true)
+                {
+                    lblInfo.Visible = true;
+                }
+                else
+                {
+                    lblInfo.Visible = false;
+                }
             }
         }
     }
