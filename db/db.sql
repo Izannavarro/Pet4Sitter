@@ -43,10 +43,11 @@ CREATE TABLE IF NOT EXISTS chat (
 CREATE TABLE IF NOT EXISTS delivery (
     id_delivery int auto_increment primary key,
     id_receiver INT NOT NULL,
-    cant_product int not null,
     delivery_date DATETIME not null,
+    direction VARCHAR(200) NOT NULL,
     FOREIGN KEY (id_receiver) REFERENCES users(id_user)on delete cascade
 ) CHARACTER SET utf8mb4;
+
 CREATE TABLE IF NOT EXISTS delivery_products (
     id_delivery INT NOT NULL,
     id_product INT NOT NULL,
