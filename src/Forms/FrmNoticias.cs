@@ -22,9 +22,13 @@ namespace pet4sitter
 
         private async void FrmNoticias_Load(object sender, EventArgs e)
         {
+            pcbGifCarga.Visible = true;
+            pcbGifCarga.BringToFront();
+            AplicarModoOscuro();
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             CompruebaPremium();
             AplicarIdioma();
+            pcbGifCarga.Visible = false;
         }
 
         private void AplicarIdioma()
@@ -32,6 +36,16 @@ namespace pet4sitter
             lblFuncPre.Text = Resources.Recursos_Localizable.FrmNoticias.lblFuncPre;
             lblTituloNoticias.Text = Resources.Recursos_Localizable.FrmNoticias.lblTituloNoticias;
             lblInfoPulsar.Text = Resources.Recursos_Localizable.FrmNoticias.lblInfoPulsar;
+        }
+
+        private void AplicarModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.BackColor = Color.DarkGreen;
+                lblTituloNoticias.ForeColor = Color.White;
+                lblInfoPulsar.ForeColor = Color.White;
+            }
         }
 
         private async void CompruebaPremium()

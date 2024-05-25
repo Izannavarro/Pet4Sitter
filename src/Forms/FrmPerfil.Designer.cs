@@ -40,7 +40,7 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblLocalizacion = new System.Windows.Forms.Label();
             this.btnDarseBaja = new System.Windows.Forms.Button();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.btnPremium = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
@@ -51,10 +51,10 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox3.Location = new System.Drawing.Point(21, 20);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Location = new System.Drawing.Point(16, 16);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(299, 187);
+            this.pictureBox3.Size = new System.Drawing.Size(224, 152);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
@@ -62,10 +62,10 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(194, 345);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(146, 280);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(384, 334);
+            this.panel4.Size = new System.Drawing.Size(288, 271);
             this.panel4.TabIndex = 5;
             // 
             // panel6
@@ -73,19 +73,20 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Location = new System.Drawing.Point(19, 21);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Location = new System.Drawing.Point(14, 17);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(349, 304);
+            this.panel6.Size = new System.Drawing.Size(262, 247);
             this.panel6.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 223);
+            this.label5.Location = new System.Drawing.Point(20, 181);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 22);
+            this.label5.Size = new System.Drawing.Size(77, 18);
             this.label5.TabIndex = 6;
             this.label5.Text = "Producto";
             // 
@@ -93,9 +94,10 @@
             // 
             this.lblUltimaCompra.AutoSize = true;
             this.lblUltimaCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUltimaCompra.Location = new System.Drawing.Point(584, 288);
+            this.lblUltimaCompra.Location = new System.Drawing.Point(438, 234);
+            this.lblUltimaCompra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUltimaCompra.Name = "lblUltimaCompra";
-            this.lblUltimaCompra.Size = new System.Drawing.Size(433, 32);
+            this.lblUltimaCompra.Size = new System.Drawing.Size(343, 26);
             this.lblUltimaCompra.TabIndex = 9;
             this.lblUltimaCompra.Text = "Últimos Productos Comprados:";
             // 
@@ -103,10 +105,10 @@
             // 
             this.btnEditarPerfil.BackColor = System.Drawing.Color.White;
             this.btnEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarPerfil.Location = new System.Drawing.Point(1089, 28);
-            this.btnEditarPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditarPerfil.Location = new System.Drawing.Point(817, 23);
+            this.btnEditarPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditarPerfil.Name = "btnEditarPerfil";
-            this.btnEditarPerfil.Size = new System.Drawing.Size(221, 54);
+            this.btnEditarPerfil.Size = new System.Drawing.Size(166, 44);
             this.btnEditarPerfil.TabIndex = 10;
             this.btnEditarPerfil.Text = "Editar Perfil";
             this.btnEditarPerfil.UseVisualStyleBackColor = false;
@@ -116,10 +118,10 @@
             // 
             this.btnDarAlta.BackColor = System.Drawing.Color.White;
             this.btnDarAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarAlta.Location = new System.Drawing.Point(997, 95);
-            this.btnDarAlta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDarAlta.Location = new System.Drawing.Point(748, 77);
+            this.btnDarAlta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDarAlta.Name = "btnDarAlta";
-            this.btnDarAlta.Size = new System.Drawing.Size(379, 56);
+            this.btnDarAlta.Size = new System.Drawing.Size(284, 46);
             this.btnDarAlta.TabIndex = 11;
             this.btnDarAlta.Text = "Ser Cuidador";
             this.btnDarAlta.UseVisualStyleBackColor = false;
@@ -129,10 +131,10 @@
             // 
             this.pcbImagen.BackColor = System.Drawing.Color.Transparent;
             this.pcbImagen.Image = global::pet4sitter.Properties.Resources.usuario;
-            this.pcbImagen.Location = new System.Drawing.Point(231, 28);
-            this.pcbImagen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbImagen.Location = new System.Drawing.Point(173, 23);
+            this.pcbImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbImagen.Name = "pcbImagen";
-            this.pcbImagen.Size = new System.Drawing.Size(270, 226);
+            this.pcbImagen.Size = new System.Drawing.Size(202, 184);
             this.pcbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbImagen.TabIndex = 12;
             this.pcbImagen.TabStop = false;
@@ -141,9 +143,10 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(537, 39);
+            this.lblNombre.Location = new System.Drawing.Point(403, 32);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(336, 32);
+            this.lblNombre.Size = new System.Drawing.Size(265, 26);
             this.lblNombre.TabIndex = 13;
             this.lblNombre.Text = "Información del Usuario";
             // 
@@ -151,9 +154,10 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(537, 119);
+            this.lblPrecio.Location = new System.Drawing.Point(403, 97);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(336, 32);
+            this.lblPrecio.Size = new System.Drawing.Size(265, 26);
             this.lblPrecio.TabIndex = 15;
             this.lblPrecio.Text = "Información del Usuario";
             // 
@@ -161,9 +165,10 @@
             // 
             this.lblLocalizacion.AutoSize = true;
             this.lblLocalizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalizacion.Location = new System.Drawing.Point(537, 198);
+            this.lblLocalizacion.Location = new System.Drawing.Point(403, 161);
+            this.lblLocalizacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLocalizacion.Name = "lblLocalizacion";
-            this.lblLocalizacion.Size = new System.Drawing.Size(336, 32);
+            this.lblLocalizacion.Size = new System.Drawing.Size(265, 26);
             this.lblLocalizacion.TabIndex = 16;
             this.lblLocalizacion.Text = "Información del Usuario";
             // 
@@ -171,10 +176,10 @@
             // 
             this.btnDarseBaja.BackColor = System.Drawing.Color.White;
             this.btnDarseBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarseBaja.Location = new System.Drawing.Point(997, 95);
-            this.btnDarseBaja.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDarseBaja.Location = new System.Drawing.Point(748, 77);
+            this.btnDarseBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDarseBaja.Name = "btnDarseBaja";
-            this.btnDarseBaja.Size = new System.Drawing.Size(379, 56);
+            this.btnDarseBaja.Size = new System.Drawing.Size(284, 46);
             this.btnDarseBaja.TabIndex = 17;
             this.btnDarseBaja.Text = "Darse Baja Cuidador";
             this.btnDarseBaja.UseVisualStyleBackColor = false;
@@ -185,29 +190,29 @@
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(0, -2);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(5);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.barraLateral1.Name = "barraLateral1";
-            this.barraLateral1.Size = new System.Drawing.Size(415, 737);
+            this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 14;
             // 
             // btnPremium
             // 
             this.btnPremium.BackColor = System.Drawing.Color.White;
             this.btnPremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPremium.Location = new System.Drawing.Point(1089, 171);
-            this.btnPremium.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPremium.Location = new System.Drawing.Point(817, 139);
+            this.btnPremium.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPremium.Name = "btnPremium";
-            this.btnPremium.Size = new System.Drawing.Size(221, 56);
+            this.btnPremium.Size = new System.Drawing.Size(166, 46);
             this.btnPremium.TabIndex = 18;
             this.btnPremium.Text = "Premium";
             this.btnPremium.UseVisualStyleBackColor = false;
             // 
             // FrmPerfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1479, 734);
+            this.ClientSize = new System.Drawing.Size(1109, 596);
             this.Controls.Add(this.btnPremium);
             this.Controls.Add(this.lblLocalizacion);
             this.Controls.Add(this.lblPrecio);
@@ -219,8 +224,9 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.barraLateral1);
             this.Controls.Add(this.btnDarseBaja);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmPerfil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPerfil";
             this.Load += new System.EventHandler(this.FrmPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

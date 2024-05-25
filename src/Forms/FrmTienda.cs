@@ -28,6 +28,7 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            AplicarModoOscuro();
             cantProdList = Carrito.Productos.Count;
             if (ConBD.Conexion != null)
             {
@@ -49,6 +50,14 @@ namespace pet4sitter
             btnCarrito.Text = Resources.Recursos_Localizable.FrmTienda.btnCarrito_Text;
             btnVerCarrito.Text = Resources.Recursos_Localizable.FrmTienda.btnVerCarrito_Text;
             lblInfo.Text = Resources.Recursos_Localizable.FrmTienda.lblInfo_Text;
+        }
+        private void AplicarModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.BackColor = Color.DarkGreen;
+                flpCarrito.BackColor = Color.DarkGreen;
+            }
         }
 
         private void LimpiarTablaProductos()

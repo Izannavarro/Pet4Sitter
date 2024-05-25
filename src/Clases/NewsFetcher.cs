@@ -7,9 +7,11 @@ using NewsAPI.Constants;
 using NewsAPI.Models;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace pet4sitter.Clases
 {
+    //Clase para la API de noticias
     public class NewsFetcher
     {
         private readonly NewsApiClient _newsApiClient;
@@ -20,14 +22,30 @@ namespace pet4sitter.Clases
             _newsApiClient = new NewsApiClient(apiKey);
         }
 
+        /// <summary>
+        /// Recupera una noticia relacionada con animales de una fuente de noticias externa.
+        /// </summary>
+        /// <returns>Una tarea que representa la operación asincrónica. La tarea devuelve un objeto Noticia si se encuentra una noticia, o lanza una excepción si no se encuentran noticias.</returns>
         public async Task<Noticia> FetchAnimalNews()
         {
             try
             {
+                // Obtener el código de idioma actual de la configuración de la aplicación
+                string codigoIdioma = ConfiguracionIdioma.Cultura.Name;
+
+                // Definir la consulta de búsqueda por defecto (en inglés)
+                string consulta = "dogs cats animals";
+                Languages idioma = Languages.EN;
+                if (codigoIdioma == "es-ES")
+                {
+                    consulta = "perros gatos animales";
+                    idioma = Languages.ES;
+                }
                 var articlesResponse = await _newsApiClient.GetEverythingAsync(new EverythingRequest
                 {
-                    Q = "perros gatos animales",
-                    Language = Languages.ES, // Opcional: Cambia a tu idioma preferido
+
+                    Q = consulta,
+                    Language = idioma
                 });
 
                 if (articlesResponse.Status == Statuses.Ok && articlesResponse.TotalResults > 0)
@@ -52,15 +70,34 @@ namespace pet4sitter.Clases
             }
         }
 
-
+        /// <summary>
+        /// Recupera una lista de noticias relacionadas con animales de una fuente de noticias externa.
+        /// </summary>
+        /// <returns>
+        /// Una tarea que representa la operación asincrónica. 
+        /// La tarea devuelve una lista de objetos Noticia si se encuentran noticias, 
+        /// o lanza una excepción si no se encuentran noticias.
+        /// </returns>
         public async Task<List<Noticia>> FetchAnimalNewsList()
         {
             try
             {
+                // Obtener el código de idioma actual de la configuración de la aplicación
+                string codigoIdioma = ConfiguracionIdioma.Cultura.Name;
+
+                // Definir la consulta de búsqueda por defecto (en inglés)
+                string consulta = "dogs cats animals";
+                Languages idioma = Languages.EN;
+                if (codigoIdioma == "es-ES")
+                {
+                    consulta = "perros gatos animales";
+                    idioma = Languages.ES;
+                }
                 var articlesResponse = await _newsApiClient.GetEverythingAsync(new EverythingRequest
                 {
-                    Q = "perros gatos animales",
-                    Language = Languages.ES, // Opcional: Cambia a tu idioma preferido
+
+                    Q = consulta,
+                    Language = idioma
                 });
 
                 if (articlesResponse.Status == Statuses.Ok && articlesResponse.TotalResults > 0)

@@ -197,7 +197,6 @@
     <Compile Include="Clases\BufferedLayoutPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Clases\Busqueda.cs" />
     <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\ConfiguracionIdioma.cs" />
@@ -277,7 +276,7 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Data.cs" />
-    <Compile Include="Clases\ForgotPasswordMail.cs" />
+    <Compile Include="Clases\MailPet4Sitter.cs" />
     <Compile Include="Forms\FrmAdminProductos.cs">
       <SubType>Form</SubType>
     </Compile>
