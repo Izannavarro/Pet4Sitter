@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReportarBug));
             this.lblReportarBug = new System.Windows.Forms.Label();
             this.txtMail = new System.Windows.Forms.TextBox();
             this.lblCorreoElectronicoUsuario = new System.Windows.Forms.Label();
@@ -116,6 +117,7 @@
             this.Controls.Add(this.lblCorreoElectronicoUsuario);
             this.Controls.Add(this.txtMail);
             this.Controls.Add(this.lblReportarBug);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmReportarBug";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReportarBug";

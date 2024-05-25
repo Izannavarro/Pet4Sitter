@@ -59,7 +59,7 @@
             this.lblIdUser1 = new System.Windows.Forms.Label();
             this.lblIdUser2 = new System.Windows.Forms.Label();
             this.lblIdUser3 = new System.Windows.Forms.Label();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.lblTituloRes = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.pnl3.SuspendLayout();

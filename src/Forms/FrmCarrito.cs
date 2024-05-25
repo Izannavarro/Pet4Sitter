@@ -18,6 +18,7 @@ namespace pet4sitter
     {
         int cantProdList;
         string loc;
+        List<Producto> prodListAnt;
 
         public FrmCarrito()
         {
@@ -32,6 +33,12 @@ namespace pet4sitter
             loc = Data.CurrentUser.Location;
             lblLocalizacion.Text = loc;
             cantProdList = Carrito.Productos.Count;
+            prodListAnt = Carrito.CopiarProductos(Carrito.Productos);
+            lblSubtotal.Text = Carrito.ObtenerPrecioTotal(Carrito.Productos).ToString() + " EUR";
+        }
+        private void AplicarModoOscuro()
+        {
+            this.BackColor = Color.DarkGreen;
         }
 
         private void AplicarIdioma()
@@ -103,7 +110,14 @@ namespace pet4sitter
             if(Carrito.Productos.Count != cantProdList)
             {
                 CargarProductos();
+                lblSubtotal.Text = Carrito.ObtenerPrecioTotal(Carrito.Productos).ToString() + " EUR";
             }
+            if (Carrito.HaCambiadoLaCantidad(this.prodListAnt))
+            {
+
+                lblSubtotal.Text = Carrito.ObtenerPrecioTotal(Carrito.Productos).ToString() + " EUR";
+            }
+            prodListAnt = Carrito.CopiarProductos(Carrito.Productos);
         }
 
         private void btnRealizar_Click(object sender, EventArgs e)
@@ -127,6 +141,11 @@ namespace pet4sitter
             {
                 MessageBox.Show("El pago falló.");
             }
+        }
+
+        private void btnVolverPago_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

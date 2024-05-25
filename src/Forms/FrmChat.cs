@@ -84,7 +84,7 @@ namespace pet4sitter
             lblNombreChatActivo.Text = Resources.Recursos_Localizable.FrmChat.lblNombre5_Text;
             btnSiguiente.Text = Resources.Recursos_Localizable.FrmChat.btnSiguiente_Text;
             btnAnterior.Text = Resources.Recursos_Localizable.FrmChat.btnAnterior_Text;
-            btnOpciones.Text = Resources.Recursos_Localizable.FrmChat.btnOpciones_Text;
+            btnCerrarChat.Text = Resources.Recursos_Localizable.FrmChat.btnOpciones_Text;
             btnEnviar.Text = Resources.Recursos_Localizable.FrmChat.btnEnviar_Text;
         }
 
@@ -420,6 +420,13 @@ namespace pet4sitter
                 pcbImagen5.Image = pcbImagen4.Image;
                 await ChatMensajes();
             }
+        }
+
+        private void btnCerrarChat_Click(object sender, EventArgs e)
+        {
+            this.pnlChat.Visible = false;
+            fLPanelChat.Controls.Clear();
+            pnlInfoChat.Visible = false;
         }
     }
 }

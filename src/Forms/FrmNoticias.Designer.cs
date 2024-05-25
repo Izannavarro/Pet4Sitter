@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNoticias));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -76,7 +77,7 @@
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Location = new System.Drawing.Point(250, 109);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(779, 410);
             this.panel3.TabIndex = 3;
@@ -87,7 +88,7 @@
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Controls.Add(this.pcbNoticia3);
             this.panel2.Location = new System.Drawing.Point(10, 266);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(748, 128);
             this.panel2.TabIndex = 8;
@@ -99,7 +100,7 @@
             this.tableLayoutPanel3.Controls.Add(this.lblTituloNoticia3, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblCuerpoNoticia3, 0, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(161, 12);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -130,7 +131,7 @@
             // pcbNoticia3
             // 
             this.pcbNoticia3.Location = new System.Drawing.Point(0, 0);
-            this.pcbNoticia3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbNoticia3.Margin = new System.Windows.Forms.Padding(2);
             this.pcbNoticia3.Name = "pcbNoticia3";
             this.pcbNoticia3.Size = new System.Drawing.Size(159, 126);
             this.pcbNoticia3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -143,7 +144,7 @@
             this.panel9.Controls.Add(this.tableLayoutPanel1);
             this.panel9.Controls.Add(this.pcbNoticia1);
             this.panel9.Location = new System.Drawing.Point(10, 15);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(748, 128);
             this.panel9.TabIndex = 6;
@@ -155,7 +156,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblTituloNoticia1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblCuerpoNoticia, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(161, 10);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -186,7 +187,7 @@
             // pcbNoticia1
             // 
             this.pcbNoticia1.Location = new System.Drawing.Point(0, 0);
-            this.pcbNoticia1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbNoticia1.Margin = new System.Windows.Forms.Padding(2);
             this.pcbNoticia1.Name = "pcbNoticia1";
             this.pcbNoticia1.Size = new System.Drawing.Size(157, 122);
             this.pcbNoticia1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -199,7 +200,7 @@
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Controls.Add(this.pcbNoticia2);
             this.panel1.Location = new System.Drawing.Point(10, 139);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(748, 134);
             this.panel1.TabIndex = 7;
@@ -211,7 +212,7 @@
             this.tableLayoutPanel2.Controls.Add(this.lblCuerpoNoticia2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblTituloNoticia2, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(161, 12);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -242,7 +243,7 @@
             // pcbNoticia2
             // 
             this.pcbNoticia2.Location = new System.Drawing.Point(0, 2);
-            this.pcbNoticia2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbNoticia2.Margin = new System.Windows.Forms.Padding(2);
             this.pcbNoticia2.Name = "pcbNoticia2";
             this.pcbNoticia2.Size = new System.Drawing.Size(159, 121);
             this.pcbNoticia2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -265,7 +266,7 @@
             this.pnlPremium.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.pnlPremium.Controls.Add(this.panel5);
             this.pnlPremium.Location = new System.Drawing.Point(251, 109);
-            this.pnlPremium.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPremium.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPremium.Name = "pnlPremium";
             this.pnlPremium.Size = new System.Drawing.Size(779, 410);
             this.pnlPremium.TabIndex = 11;
@@ -295,7 +296,7 @@
             // 
             this.ptbCorona.Image = global::pet4sitter.Properties.Resources.corona;
             this.ptbCorona.Location = new System.Drawing.Point(306, 76);
-            this.ptbCorona.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbCorona.Margin = new System.Windows.Forms.Padding(2);
             this.ptbCorona.Name = "ptbCorona";
             this.ptbCorona.Size = new System.Drawing.Size(133, 141);
             this.ptbCorona.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -307,7 +308,7 @@
             this.pcbGifCarga.BackColor = System.Drawing.Color.Transparent;
             this.pcbGifCarga.Image = global::pet4sitter.Properties.Resources.loading;
             this.pcbGifCarga.Location = new System.Drawing.Point(562, 233);
-            this.pcbGifCarga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbGifCarga.Margin = new System.Windows.Forms.Padding(2);
             this.pcbGifCarga.Name = "pcbGifCarga";
             this.pcbGifCarga.Size = new System.Drawing.Size(171, 160);
             this.pcbGifCarga.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -355,7 +356,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.barraLateral1);
             this.Controls.Add(this.pnlPremium);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmNoticias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNoticias";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPerfil));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -52,7 +53,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox3.Location = new System.Drawing.Point(16, 16);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(224, 152);
             this.pictureBox3.TabIndex = 3;
@@ -63,7 +64,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Location = new System.Drawing.Point(146, 280);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(288, 271);
             this.panel4.TabIndex = 5;
@@ -74,7 +75,7 @@
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.pictureBox3);
             this.panel6.Location = new System.Drawing.Point(14, 17);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(262, 247);
             this.panel6.TabIndex = 4;
@@ -106,7 +107,7 @@
             this.btnEditarPerfil.BackColor = System.Drawing.Color.White;
             this.btnEditarPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarPerfil.Location = new System.Drawing.Point(817, 23);
-            this.btnEditarPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditarPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditarPerfil.Name = "btnEditarPerfil";
             this.btnEditarPerfil.Size = new System.Drawing.Size(166, 44);
             this.btnEditarPerfil.TabIndex = 10;
@@ -119,7 +120,7 @@
             this.btnDarAlta.BackColor = System.Drawing.Color.White;
             this.btnDarAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDarAlta.Location = new System.Drawing.Point(748, 77);
-            this.btnDarAlta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDarAlta.Margin = new System.Windows.Forms.Padding(2);
             this.btnDarAlta.Name = "btnDarAlta";
             this.btnDarAlta.Size = new System.Drawing.Size(284, 46);
             this.btnDarAlta.TabIndex = 11;
@@ -132,7 +133,7 @@
             this.pcbImagen.BackColor = System.Drawing.Color.Transparent;
             this.pcbImagen.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbImagen.Location = new System.Drawing.Point(173, 23);
-            this.pcbImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbImagen.Margin = new System.Windows.Forms.Padding(2);
             this.pcbImagen.Name = "pcbImagen";
             this.pcbImagen.Size = new System.Drawing.Size(202, 184);
             this.pcbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -177,7 +178,7 @@
             this.btnDarseBaja.BackColor = System.Drawing.Color.White;
             this.btnDarseBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDarseBaja.Location = new System.Drawing.Point(748, 77);
-            this.btnDarseBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDarseBaja.Margin = new System.Windows.Forms.Padding(2);
             this.btnDarseBaja.Name = "btnDarseBaja";
             this.btnDarseBaja.Size = new System.Drawing.Size(284, 46);
             this.btnDarseBaja.TabIndex = 17;
@@ -190,7 +191,7 @@
             // 
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(0, -2);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4);
             this.barraLateral1.Name = "barraLateral1";
             this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 14;
@@ -200,7 +201,7 @@
             this.btnPremium.BackColor = System.Drawing.Color.White;
             this.btnPremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPremium.Location = new System.Drawing.Point(817, 139);
-            this.btnPremium.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPremium.Margin = new System.Windows.Forms.Padding(2);
             this.btnPremium.Name = "btnPremium";
             this.btnPremium.Size = new System.Drawing.Size(166, 46);
             this.btnPremium.TabIndex = 18;
@@ -224,7 +225,8 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.barraLateral1);
             this.Controls.Add(this.btnDarseBaja);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPerfil";

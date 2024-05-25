@@ -269,12 +269,6 @@
       <DependentUpon>BarraLateral.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Utiles.cs" />
-    <Compile Include="Forms\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\Data.cs" />
     <Compile Include="Clases\MailPet4Sitter.cs" />
     <Compile Include="Forms\FrmAdminProductos.cs">
@@ -618,9 +612,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BarraLateral.resx">
       <DependentUpon>BarraLateral.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAdminProductos.resx">
       <DependentUpon>FrmAdminProductos.cs</DependentUpon>

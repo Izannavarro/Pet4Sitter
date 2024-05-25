@@ -44,5 +44,29 @@ namespace pet4sitter.Clases
             }
             return total;
         }
+
+        public static bool HaCambiadoLaCantidad(List<Producto> lprod)
+        {
+            if (lprod == null || lprod.Count != productos.Count)
+            {
+                return true;
+            }
+
+            for (int i = 0; i < productos.Count; i++)
+            {
+                if (productos[i].Id != lprod[i].Id || productos[i].Cantidad != lprod[i].Cantidad)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static List<Producto> CopiarProductos(List<Producto> productos)
+        {
+            return productos.Select(p => new Producto(p.Id, p.NombreProducto, p.Cantidad, p.Precio, p.Descripcion, p.UrlImagen)).ToList();
+        }
+
     }
 }

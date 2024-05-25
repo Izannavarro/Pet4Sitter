@@ -51,6 +51,7 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            CargaModoOscuro();
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
@@ -61,6 +62,11 @@ namespace pet4sitter
 
             CargarResultados();
 
+        }
+
+        private void CargaModoOscuro()
+        {
+            this.BackColor = Color.DarkGreen;
         }
 
         private void CargarResultados()

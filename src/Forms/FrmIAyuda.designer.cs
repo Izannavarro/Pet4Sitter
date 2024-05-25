@@ -29,6 +29,7 @@ namespace pet4sitter
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIAyuda));
             this.lblTitlepet4sitter = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -251,6 +252,7 @@ namespace pet4sitter
             this.Controls.Add(this.barraLateral1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(947, 478);
             this.Name = "FrmIAyuda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

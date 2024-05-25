@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlChat1 = new System.Windows.Forms.Panel();
             this.lblMensaje1 = new System.Windows.Forms.Label();
@@ -69,7 +70,7 @@
             this.lblIdChat3 = new System.Windows.Forms.Label();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel1.SuspendLayout();
             this.pnlChat1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbChat1)).BeginInit();
@@ -604,6 +605,7 @@
             this.Controls.Add(this.barraLateral1);
             this.Controls.Add(this.pcbNoticia);
             this.Controls.Add(this.pnlNoticia);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1124, 631);
             this.Name = "FrmInicio";

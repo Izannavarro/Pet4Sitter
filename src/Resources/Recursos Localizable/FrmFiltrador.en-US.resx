@@ -117,46 +117,40 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-	<data name="lblFiltros_Text" xml:space="preserve">
+  <data name="lblFiltros_Text" xml:space="preserve">
     <value>Filters:</value>
-</data>
-	<data name="lblRango_Text" xml:space="preserve">
-    <value>Range:</value>
-</data>
-	<data name="lblDesde_Text" xml:space="preserve">
+  </data>
+  <data name="lblRango_Text" xml:space="preserve">
+    <value>Range of price:</value>
+  </data>
+  <data name="lblDesde_Text" xml:space="preserve">
     <value>From:</value>
-</data>
-	<data name="lblHasta_Text" xml:space="preserve">
+  </data>
+  <data name="lblHasta_Text" xml:space="preserve">
     <value>To:</value>
-</data>
-	<data name="label9_Text" xml:space="preserve">
-    <value></value>
-</data>
-	<data name="btnBuscar_Text" xml:space="preserve">
+  </data>
+  <data name="btnBuscar_Text" xml:space="preserve">
     <value>Search</value>
-</data>
-	<data name="btnBorrar_Text" xml:space="preserve">
+  </data>
+  <data name="btnBorrar_Text" xml:space="preserve">
     <value>Delete</value>
-</data>
-	<data name="button1_Text" xml:space="preserve">
-    <value></value>
-</data>
-	<data name="lblOrdenarPorDistancia_Text" xml:space="preserve">
+  </data>
+  <data name="lblOrdenarPorDistancia_Text" xml:space="preserve">
     <value>Sort by Distance:</value>
-</data>
-	<data name="lblOrdenarPrecio_Text" xml:space="preserve">
+  </data>
+  <data name="lblOrdenarPrecio_Text" xml:space="preserve">
     <value>Sort by Price:</value>
-</data>
-	<data name="cmbDistanciaAscDesc_Text" xml:space="preserve">
+  </data>
+  <data name="cmbDistanciaAscDesc_Text" xml:space="preserve">
     <value>Ascending</value>
-</data>
-	<data name="cmbPrecioAscDesc_Text" xml:space="preserve">
+  </data>
+  <data name="cmbPrecioAscDesc_Text" xml:space="preserve">
     <value>Ascending</value>
-</data>
-	<data name="cmbOrdenarPrecio_Text" xml:space="preserve">
+  </data>
+  <data name="cmbOrdenarPrecio_Text" xml:space="preserve">
     <value>Price</value>
-</data>
-	<data name="cmbDistancia_Text" xml:space="preserve">
+  </data>
+  <data name="cmbDistancia_Text" xml:space="preserve">
     <value>Distance</value>
-</data>
+  </data>
 </root>
