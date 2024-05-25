@@ -121,7 +121,7 @@
     <value>Darse de Baja</value>
   </data>
   <data name="lblUltimaCompra_Text" xml:space="preserve">
-    <value>Últimas Compras:</value>
+    <value>Te podría interesar:</value>
   </data>
   <data name="btnEditarPerfil_Text" xml:space="preserve">
     <value>Editar Perfil</value>

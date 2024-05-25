@@ -58,29 +58,43 @@ namespace pet4sitter
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNumero.Text.Length == 16)
+            if (txtTitular.Text.ToString() != "")
             {
-                DateTime fechaIntroducida = dtpFecha.Value;
-                if (fechaIntroducida > DateTime.Now)
+                if (txtCVC.Text.Length > 2)
                 {
-                    long numTarg = long.Parse(txtNumero.Text);
-                    string titular = txtTitular.Text;
-                    int cvc = Convert.ToInt32(txtCVC.Text);
-                    DateTime fecha = fechaIntroducida;
+                    if (txtNumero.Text.Length == 16)
+                    {
+                        DateTime fechaIntroducida = dtpFecha.Value;
+                        if (fechaIntroducida > DateTime.Now)
+                        {
+                            long numTarg = long.Parse(txtNumero.Text);
+                            string titular = txtTitular.Text;
+                            int cvc = Convert.ToInt32(txtCVC.Text);
+                            DateTime fecha = fechaIntroducida;
 
-                    Tarjeta t = new Tarjeta(numTarg,titular,fecha,cvc);
-                    Data.CurrentTarjeta = t;
-                    MessageBox.Show("Tarjeta guardada correctamente");
-                    this.Dispose();
+                            Tarjeta t = new Tarjeta(numTarg, titular, fecha, cvc);
+                            Data.CurrentTarjeta = t;
+                            MessageBox.Show("Tarjeta guardada correctamente");
+                            this.Dispose();
+                        }
+                        else
+                        {
+                            MessageBox.Show("La fecha introducida es errónea o está caducada!");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Los números de la Tarjeta son Incorrectos!");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("La fecha introducida es errónea o está caducada!");
+                    MessageBox.Show("Error en CVC");
                 }
             }
             else
             {
-                MessageBox.Show("Los números de la Tarjeta son Incorrectos!");
+                MessageBox.Show("Error datos titular");
             }
         }
     }

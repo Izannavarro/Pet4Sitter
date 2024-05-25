@@ -53,7 +53,7 @@
             this.pcbGifCarga = new System.Windows.Forms.PictureBox();
             this.lblTituloNoticias = new System.Windows.Forms.Label();
             this.lblInfoPulsar = new System.Windows.Forms.Label();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -359,9 +359,9 @@
             this.Controls.Add(this.lblInfoPulsar);
             this.Controls.Add(this.lblTituloNoticias);
             this.Controls.Add(this.pcbGifCarga);
+            this.Controls.Add(this.pnlPremium);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.barraLateral1);
-            this.Controls.Add(this.pnlPremium);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1125, 635);

@@ -97,7 +97,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Últimas Compras:.
+        ///   Busca una cadena traducida similar a Te podría interesar:.
         /// </summary>
         internal static string lblUltimaCompra_Text {
             get {

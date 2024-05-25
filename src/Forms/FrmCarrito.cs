@@ -18,6 +18,7 @@ namespace pet4sitter
     {
         int cantProdList;
         string loc;
+        bool tarjetaCargada = false;
         List<Producto> prodListAnt;
 
         public FrmCarrito()
@@ -75,10 +76,12 @@ namespace pet4sitter
         {
             FrmEditarTarjeta frmET = new FrmEditarTarjeta();
             frmET.ShowDialog();
-            if (Data.CurrentTarjeta != null)
+            if (Data.CurrentTarjeta != null && !tarjetaCargada)
             {
+                
                 lblNumTarjeta.Text = "**** **** **** " + Data.CurrentTarjeta.NumeroTarjeta.ToString().Substring(Data.CurrentTarjeta.NumeroTarjeta.ToString().Length - 4);
                 lblDescripcionTarjeta.Text += "\n" + Data.CurrentTarjeta.ToString();
+                tarjetaCargada = true;
             }
         }
 
