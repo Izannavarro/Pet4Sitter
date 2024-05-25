@@ -53,7 +53,7 @@
             this.pcbGifCarga = new System.Windows.Forms.PictureBox();
             this.lblTituloNoticias = new System.Windows.Forms.Label();
             this.lblInfoPulsar = new System.Windows.Forms.Label();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -368,6 +368,7 @@
             this.Name = "FrmNoticias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmNoticias";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmNoticias_FormClosed);
             this.Load += new System.EventHandler(this.FrmNoticias_Load);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

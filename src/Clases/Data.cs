@@ -33,12 +33,15 @@ namespace pet4sitter
         static Data()
         {
             DarkMode = IsDarkModeEnabled();
-            tokenNoticias = Utiles.BuscarToken("News");//Busca tokens importantes de APIS usadas en el proyecto
-            tokenGPT = Utiles.BuscarToken("ChatGPT");
-            tokenClientId = Utiles.BuscarToken("ClientID");
-            tokenClientSecret = Utiles.BuscarToken("ClientSecret");
-            stripePublicKey = Utiles.BuscarToken("StripePub");
-            stripePrivateKey = Utiles.BuscarToken("StripeSecret");
+            if (ConBD.ComprobarConexion())
+            {
+                tokenNoticias = Utiles.BuscarToken("News");//Busca tokens importantes de APIS usadas en el proyecto
+                tokenGPT = Utiles.BuscarToken("ChatGPT");
+                tokenClientId = Utiles.BuscarToken("ClientID");
+                tokenClientSecret = Utiles.BuscarToken("ClientSecret");
+                stripePublicKey = Utiles.BuscarToken("StripePub");
+                stripePrivateKey = Utiles.BuscarToken("StripeSecret");
+            }
         }
 
         /// <summary>

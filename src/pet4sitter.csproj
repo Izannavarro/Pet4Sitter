@@ -15,6 +15,22 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\rngir\Desktop\sitter\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +53,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>lgo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>681BAFAFEE95F6DDAA7158FE22C180E4B9F27C16</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>pet4sitter_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
@@ -361,12 +389,6 @@
     <Compile Include="Forms\FrmResultadoFiltrado.Designer.cs">
       <DependentUpon>FrmResultadoFiltrado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmTest.Designer.cs">
-      <DependentUpon>FrmTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmTienda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -658,9 +680,6 @@
     <EmbeddedResource Include="Forms\FrmResultadoFiltrado.resx">
       <DependentUpon>FrmResultadoFiltrado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmTest.resx">
-      <DependentUpon>FrmTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTienda.resx">
       <DependentUpon>FrmTienda.cs</DependentUpon>
     </EmbeddedResource>
@@ -855,6 +874,7 @@
       <DependentUpon>ProductoEnCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="pet4sitter_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -912,6 +932,18 @@
     <None Include="Resources\corona.png" />
     <Content Include="Resources\config.png" />
     <Content Include="Resources\gAuthRedirection.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

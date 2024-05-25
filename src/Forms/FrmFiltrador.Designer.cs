@@ -44,7 +44,7 @@
             this.cmbPrecioAscDesc = new System.Windows.Forms.ComboBox();
             this.lblOrdenarPrecio = new System.Windows.Forms.Label();
             this.cmbOrdenarPrecio = new System.Windows.Forms.ComboBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).BeginInit();
             this.SuspendLayout();
@@ -282,6 +282,7 @@
             this.Name = "FrmFiltrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFiltrador";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmFiltrador_FormClosed);
             this.Load += new System.EventHandler(this.FrmFiltrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).EndInit();

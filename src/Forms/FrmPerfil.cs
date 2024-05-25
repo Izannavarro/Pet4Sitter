@@ -160,5 +160,10 @@ namespace pet4sitter
                 MessageBox.Show("No te has podido dar de baja!");
             }
         }
+
+        private void FrmPerfil_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

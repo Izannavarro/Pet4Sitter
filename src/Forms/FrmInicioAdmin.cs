@@ -67,5 +67,10 @@ namespace pet4sitter
             frm.Show();
             this.Close();
         }
+
+        private void FrmInicioAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

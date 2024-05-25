@@ -94,22 +94,24 @@ namespace pet4sitter
 
         private void lblForgPass_Click(object sender, EventArgs e)
         {
-            // Mostrar el MessageBox
-            DialogResult result = MessageBox.Show("¿Olvidaste tu contraseña?", "Recuperar Contraseña", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            // Comprobar la respuesta del usuario
-            if (result == DialogResult.Yes)
+            if (ConBD.ComprobarConexion())
             {
-                string newPassword = Utiles.GenerateRandomPassword(10); // Genera una contraseña aleatoria de longitud 10
-                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(newPassword); // Cifra la contraseña con BCrypt
-                if (ConBD.Conexion != null)
+                // Mostrar el MessageBox
+                DialogResult result = MessageBox.Show("¿Olvidaste tu contraseña?", "Recuperar Contraseña", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                // Comprobar la respuesta del usuario
+                if (result == DialogResult.Yes)
                 {
-                    ConBD.AbrirConexion();
-                    if (User.CompruebaUsuarioExistente(txtMail.Text))
+                    string newPassword = Utiles.GenerateRandomPassword(10); // Genera una contraseña aleatoria de longitud 10
+                    string hashedPassword = BCrypt.Net.BCrypt.HashPassword(newPassword); // Cifra la contraseña con BCrypt
+                    if (ConBD.Conexion != null)
                     {
-                        User.ActualizarContraseña(txtMail.Text, hashedPassword);
-                        // Crea el mensaje de correo electrónico con la nueva contraseña
-                        string mensajeCorreo = $@"
+                        ConBD.AbrirConexion();
+                        if (User.CompruebaUsuarioExistente(txtMail.Text))
+                        {
+                            User.ActualizarContraseña(txtMail.Text, hashedPassword);
+                            // Crea el mensaje de correo electrónico con la nueva contraseña
+                            string mensajeCorreo = $@"
                     <!DOCTYPE html>
                     <html lang='es'>
                     <head>
@@ -182,27 +184,34 @@ namespace pet4sitter
                     </body>
                     </html>";
 
-                        // Envía el correo electrónico al usuario
-                        var mailService = new MailServices.MailPet4Sitter();
-                        mailService.sendMailHtml("Recuperación de Contraseña", mensajeCorreo, txtMail.Text.ToString());
-                        MessageBox.Show("Revisa tu bandeja de entrada, te hemos enviado tu nueva contraseña", "Recuperar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            // Envía el correo electrónico al usuario
+                            var mailService = new MailServices.MailPet4Sitter();
+                            mailService.sendMailHtml("Recuperación de Contraseña", mensajeCorreo, txtMail.Text.ToString());
+                            MessageBox.Show("Revisa tu bandeja de entrada, te hemos enviado tu nueva contraseña", "Recuperar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha podido verificar que el usuario con ese email existe. Revisa tu email o regístrate.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        ConBD.CerrarConexion();
                     }
-                    else
-                    {
-                        MessageBox.Show("No se ha podido verificar que el usuario con ese email existe. Revisa tu email o regístrate.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                    ConBD.CerrarConexion();
+                }
+                else
+                {
+                    MessageBox.Show("¡No hay problema! Puedes recordarla más tarde.", "Recuperar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("¡No hay problema! Puedes recordarla más tarde.", "Recuperar Contraseña", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Error al conectar con la base de datos. Por favor, asegúrate de tener conexión a internet y vuelve a intentarlo.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
 
         private async void btnIniciarSesionGoogle_Click(object sender, EventArgs e)
         {
+            if (ConBD.ComprobarConexion())
+            {
             await GoogleAuthenticator.exchangeCode();
             if (ConBD.Conexion != null)
             {
@@ -227,6 +236,11 @@ namespace pet4sitter
                 MessageBox.Show("No existe conexión a la Base de datos");
             }//Comprueba si la bd está disponible
             ConBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("Error al conectar con la base de datos. Por favor, asegúrate de tener conexión a internet y vuelve a intentarlo.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
 
@@ -250,12 +264,19 @@ namespace pet4sitter
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario RegisterForm
-            FrmRegister registerForm = new FrmRegister();
+            if (ConBD.ComprobarConexion())
+            {
+                // Crear una instancia del formulario RegisterForm
+                FrmRegister registerForm = new FrmRegister();
 
-            this.Hide();
-            // Mostrar el formulario RegisterForm
-            registerForm.Show();
+                this.Hide();
+                // Mostrar el formulario RegisterForm
+                registerForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Error al conectar con la base de datos. Por favor, asegúrate de tener conexión a internet y vuelve a intentarlo.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
@@ -299,34 +320,41 @@ namespace pet4sitter
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (ConBD.Conexion != null)
+            if (ConBD.ComprobarConexion())
             {
-                ConBD.AbrirConexion();
-                if (User.CompruebaUsuarioExistente(txtMail.Text))
+                if (ConBD.Conexion != null)
                 {
-                    if (User.CompruebaCredencialesUsuario(txtMail.Text, txtPass.Text))
+                    ConBD.AbrirConexion();
+                    if (User.CompruebaUsuarioExistente(txtMail.Text))
                     {
-                        Data.CurrentUser = User.EncontrarUsuario(txtMail.Text);
-                        ConBD.CerrarConexion();
-                        FrmInicio frmInicio = new FrmInicio();
-                        frmInicio.Show();
-                        this.Hide();
+                        if (User.CompruebaCredencialesUsuario(txtMail.Text, txtPass.Text))
+                        {
+                            Data.CurrentUser = User.EncontrarUsuario(txtMail.Text);
+                            ConBD.CerrarConexion();
+                            FrmInicio frmInicio = new FrmInicio();
+                            frmInicio.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Comprueba tus credenciales");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Comprueba tus credenciales");
+                        MessageBox.Show("El usuario no existe, Regístrate", "Usuario no Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
+                    ConBD.CerrarConexion();
                 }
                 else
                 {
-                    MessageBox.Show("El usuario no existe, Regístrate", "Usuario no Existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                ConBD.CerrarConexion();
+                    MessageBox.Show("No existe conexión a la Base de datos");
+                }//Comprueba si la bd está disponible
             }
             else
             {
-                MessageBox.Show("No existe conexión a la Base de datos");
-            }//Comprueba si la bd está disponible
+                MessageBox.Show("Error al conectar con la base de datos. Por favor, asegúrate de tener conexión a internet y vuelve a intentarlo.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void FrmLogin_FormClosed(object sender, FormClosedEventArgs e)
@@ -336,10 +364,17 @@ namespace pet4sitter
 
         private void lblReportarBug_Click(object sender, EventArgs e)
         {
-            FrmReportarBug frm = new FrmReportarBug();
+            if (ConBD.ComprobarConexion())
+            {
+                FrmReportarBug frm = new FrmReportarBug();
 
-            this.Hide();
-            frm.Show();
+                this.Hide();
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Error al conectar con la base de datos. Por favor, asegúrate de tener conexión a internet y vuelve a intentarlo.", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

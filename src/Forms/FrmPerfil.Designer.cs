@@ -42,7 +42,7 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblLocalizacion = new System.Windows.Forms.Label();
             this.btnDarseBaja = new System.Windows.Forms.Button();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.btnPremium = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -386,6 +386,7 @@
             this.Name = "FrmPerfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPerfil";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPerfil_FormClosed);
             this.Load += new System.EventHandler(this.FrmPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbProd1)).EndInit();
             this.panel4.ResumeLayout(false);
