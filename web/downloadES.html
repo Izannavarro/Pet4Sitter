@@ -6,7 +6,7 @@
     <title>Pet4Sitter - Cuidadores de Animales</title>
     <link rel="stylesheet" href="./style/styleDownload.css">
 </head>
-<body >
+<body>
     <header>
         <div class="logo-container">
             <img src="./img/logo.png" alt="Logo de Pet4Sitter">
@@ -30,113 +30,72 @@
             <a href="downloadES.html">ES</a>
         </div>
     </header>
-<p>Selecciona tu sistema operativo</p>
-<div class="container">
-    <img id="windows-img" src="./img/windows.png" alt="Logo de windows" onclick="showMessage('windows')" >
-    <img id="mac-img" src="./img/mac.png" alt="Logo de mac" onclick="showMessage('mac')">
-    <img id="linux-img" src="./img/Linux.png" alt="Logo de Linux" onclick="showMessage('linux')">
-</div>
-
-<div id="message-box" class="hidden">
-    <div id="message-container">
-        <p id="message-text"></p>
-        <button id="download-btn" class="download-button">Descargar aquí</button>
+    <p>Selecciona tu sistema operativo</p>
+    <div class="container">
+        <img id="windows-img" src="./img/windows.png" alt="Logo de windows" onclick="showMessage('windows')">
+        <img id="mac-img" src="./img/mac.png" alt="Logo de mac" onclick="showMessage('mac')">
+        <img id="linux-img" src="./img/Linux.png" alt="Logo de Linux" onclick="showMessage('linux')">
     </div>
-</div>
 
-<br><br><br><footer>
-    <p>&copy; 2024 Pet4Sitter. Todos los derechos reservados.</p>
-</footer>
+    <div id="message-box" class="hidden">
+        <div id="message-container">
+            <p id="message-text"></p>
+            <button id="download-btn" class="download-button" style="display: none;">
+                <a id="download-link" style="text-decoration: none; color: white;" href="./Instalador/setup.exe" download>Descargar aquí</a>
+            </button>
+        </div>
+    </div>
 
-<script>
-    const checkbox = document.getElementById('cambiarColor');
-    var solLuna = document.querySelector(".sol-luna");
-    checkbox.addEventListener('change', () => {
-        document.body.classList.toggle('dark-mode');
-        const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
+    <footer>
+        <p>&copy; 2024 Pet4Sitter. Todos los derechos reservados.</p>
+    </footer>
 
-        elementsToToggle.forEach(element => {
-            element.classList.toggle('dark-mode');
-            
-        });
-
-        if (checkbox.checked) {
-            solLuna.innerHTML = "&#127769;";
-        } else {
-            solLuna.innerHTML = "&#9728;";
-        }
-
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        localStorage.setItem('isDarkMode', isDarkMode);
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const isDarkMode = JSON.parse(localStorage.getItem('isDarkMode'));
-        if (isDarkMode) {
-            document.body.classList.add('dark-mode');
-            checkbox.checked = true;
+    <script>
+        const checkbox = document.getElementById('cambiarColor');
+        var solLuna = document.querySelector(".sol-luna");
+        checkbox.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
             const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
-            elementsToToggle.forEach(element => {
-                element.classList.add('dark-mode');
-                
-            });
-            solLuna.innerHTML = "&#127769;";
-        }else{
-            solLuna.innerHTML = "&#9728;";
-        }
-    });
-</script>
-    <script>
-        function showMessage(type) {
-            const messageBox = document.getElementById('message-box');
-            const messageText = document.getElementById('message-text');
-            const downloadBtn = document.getElementById('download-btn');
-    
-            // Resaltar la imagen seleccionada
-            document.getElementById('windows-img').style.border = 'none';
-            document.getElementById('mac-img').style.border = 'none';
-            document.getElementById('linux-img').style.border = 'none';
-    
-            if (type === 'windows') {
-                messageText.textContent = 'Puedes descargar la versión para Windows.';
-                downloadBtn.style.display = 'block';
-                document.getElementById('windows-img').style.border = '2px solid #000';
-            } else {
-                messageText.textContent = 'La descarga para esta plataforma estará disponible próximamente...';
-                downloadBtn.style.display = 'none';
-                document.getElementById(type + '-img').style.border = '2px solid #000';
-            }
-    
-            messageBox.classList.remove('hidden');
-        }
-    </script>
-    <button id="download-btn" class="download-button" style="display: none;" onclick="download()">Descargar aquí</button>
 
-    <script>
-        function download() {
-            // Simulación de descarga
-            alert('Descargando la versión para Windows...');
-        }
-    </script>
-    <script>
+            elementsToToggle.forEach(element => {
+                element.classList.toggle('dark-mode');
+            });
+
+            if (checkbox.checked) {
+                solLuna.innerHTML = "&#127769;";
+            } else {
+                solLuna.innerHTML = "&#9728;";
+            }
+
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('isDarkMode', isDarkMode);
+        });
+
         document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const os = urlParams.get('os');
-            if (os) {
-                showMessage(os);
+            const isDarkMode = JSON.parse(localStorage.getItem('isDarkMode'));
+            if (isDarkMode) {
+                document.body.classList.add('dark-mode');
+                checkbox.checked = true;
+                const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
+                elementsToToggle.forEach(element => {
+                    element.classList.add('dark-mode');
+                });
+                solLuna.innerHTML = "&#127769;";
+            } else {
+                solLuna.innerHTML = "&#9728;";
             }
         });
-    
+
         function showMessage(type) {
             const messageBox = document.getElementById('message-box');
             const messageText = document.getElementById('message-text');
             const downloadBtn = document.getElementById('download-btn');
-    
+
             // Resaltar la imagen seleccionada
             document.getElementById('windows-img').style.border = 'none';
             document.getElementById('mac-img').style.border = 'none';
             document.getElementById('linux-img').style.border = 'none';
-    
+
             if (type === 'windows') {
                 messageText.textContent = 'Puedes descargar la versión para Windows.';
                 downloadBtn.style.display = 'block';
@@ -146,10 +105,9 @@
                 downloadBtn.style.display = 'none';
                 document.getElementById(type + '-img').style.border = '2px solid #000';
             }
-    
+
             messageBox.classList.remove('hidden');
         }
     </script>
-
 </body>
 </html>
