@@ -30,16 +30,20 @@ namespace pet4sitter
 
         private async void FrmInicio_Load(object sender, EventArgs e)
         {
-                ModoOscuro();
+            pictureBox1.Visible = true;
+            ModoOscuro();
+            AplicarIdioma();
             if ((bool)Data.CurrentUser.Premium)
             {
                 await MostrarNoticia();
                 pnlNoticiaPremium.Visible = false;
+                pcbNoticia.Visible = true;
             }
             else
             {
                 pnlNoticiaPremium.Visible = true;
                 pnlNoticiaPremium.BringToFront();
+                pcbNoticia.Visible = false;
             }
             CargarProductosDestacados();
             CargarUltimosChats();
@@ -48,6 +52,13 @@ namespace pet4sitter
             {
                 btnAdmin.Visible = true;
             }
+            pictureBox1.Visible = false;
+        }
+
+        private void AplicarIdioma()
+        {
+            lblPremium.Text = Resources.Recursos_Localizable.FrmInicio.lbl;
+            linkNoticia.Text = Resources.Recursos_Localizable.FrmInicio.link;
         }
 
         private void ModoOscuro()
@@ -296,5 +307,6 @@ namespace pet4sitter
         {
             Application.Exit();
         }
+
     }
 }

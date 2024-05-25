@@ -23,15 +23,25 @@ namespace pet4sitter.Clases
 
         public string Message { get { return message; } }
 
+        /// <summary>
+        /// Envía un mensaje y lo inserta en la base de datos.
+        /// </summary>
+        /// <param name="chat">El objeto Mensaje que contiene la información del mensaje a enviar.</param>
         public static void EnviarMensaje(Mensaje chat)
         {
             string query = "INSERT INTO `pet4sitter`.`chat` (`id_receiver`, `id_sender`, `messages`) VALUES (@id_receiver, @id_sender, @mensaje);";
             MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
-            com.Parameters.AddWithValue("id_receiver",chat.id_receiver);
+            com.Parameters.AddWithValue("id_receiver", chat.id_receiver);
             com.Parameters.AddWithValue("id_sender", chat.id_sender);
             com.Parameters.AddWithValue("mensaje", chat.message);
             com.ExecuteNonQuery();
         }
+
+        /// <summary>
+        /// Lista los mensajes de acuerdo con la consulta proporcionada.
+        /// </summary>
+        /// <param name="query">La consulta SQL para listar los mensajes.</param>
+        /// <returns>Una lista de objetos Mensaje obtenidos de la base de datos.</returns>
         public static List<Mensaje> ListarMensajes(string query)
         {
             List<Mensaje> mensajes = new List<Mensaje>();
@@ -54,44 +64,19 @@ namespace pet4sitter.Clases
             return mensajes;
         }
 
-        public static List<Mensaje> ObtenerUltimosChats()
-        {
-            List<Mensaje> mensajes = new List<Mensaje>();
-
-            string query = @"
-        SELECT distinct c.id_sender ,messages
-        FROM chat c
-        WHERE c.id_receiver = @idUsuActual
-        ORDER BY date DESC;
-    ";
-
-            MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
-            com.Parameters.AddWithValue("idUsuActual", Data.CurrentUser.IdUser);
-            using (MySqlDataReader reader = com.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    int? id_sender = reader.IsDBNull(0) ? (int?)null : reader.GetInt32(0);
-                    string message = reader.GetString(1);
-                    Mensaje mensaje = new Mensaje(null, id_sender, message);
-                    mensajes.Add(mensaje);
-                }
-                reader.Close();
-            }
-            
-
-            return mensajes;
-        }
-
+        /// <summary>
+        /// Cuenta el número total de chats únicos del usuario actual.
+        /// </summary>
+        /// <returns>El número total de chats únicos del usuario actual.</returns>
         public static int ContarTotalChats()
         {
             int res = 0;
             try
             {
                 string query = @"
-        SELECT COUNT(DISTINCT IF(id_sender = @CurrentUserId, id_receiver, id_sender)) AS total_chats
-        FROM chat
-        WHERE id_receiver = @CurrentUserId OR id_sender = @CurrentUserId";
+    SELECT COUNT(DISTINCT IF(id_sender = @CurrentUserId, id_receiver, id_sender)) AS total_chats
+    FROM chat
+    WHERE id_receiver = @CurrentUserId OR id_sender = @CurrentUserId";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, ConBD.Conexion))
                 {

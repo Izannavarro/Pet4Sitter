@@ -28,6 +28,7 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            AplicarModoOscuro();
             cantProdList = Carrito.Productos.Count;
             if (ConBD.Conexion != null)
             {
@@ -36,16 +37,28 @@ namespace pet4sitter
                 ConBD.CerrarConexion();
             }
             btnAñadir.Enabled = false;
-            if(dgvProductos.Rows.Count > 0)
+            if (dgvProductos.Rows.Count > 0)
             {
                 SeleccionarPrimerProducto();
             }
-            
+
         }
 
         private void AplicarIdioma()
         {
             btnAñadir.Text = Resources.Recursos_Localizable.FrmTienda.btnAñadir_Text;
+            btnCarrito.Text = Resources.Recursos_Localizable.FrmTienda.btnCarrito_Text;
+            btnVerCarrito.Text = Resources.Recursos_Localizable.FrmTienda.btnVerCarrito_Text;
+            lblInfo.Text = Resources.Recursos_Localizable.FrmTienda.lblInfo_Text;
+        }
+        private void AplicarModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+                flpCarrito.BackColor = Color.DarkGreen;
+            }
         }
 
         private void LimpiarTablaProductos()
@@ -69,7 +82,7 @@ namespace pet4sitter
                 DataGridViewRow fila = dgvProductos.Rows[e.RowIndex];
                 lblId.Text = fila.Cells[0].Value.ToString();
                 lblNombre.Text = fila.Cells[1].Value.ToString().ToUpper();
-                lblPrecio.Text = fila.Cells[3].Value.ToString()+"€";
+                lblPrecio.Text = fila.Cells[3].Value.ToString() + "€";
                 txtDescripcion.Text = fila.Cells[4].Value.ToString();
                 lblCantidad.Text = fila.Cells[2].Value.ToString();
                 ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
@@ -79,14 +92,14 @@ namespace pet4sitter
 
         private void SeleccionarPrimerProducto()
         {
-                DataGridViewRow fila = dgvProductos.Rows[0];
-                lblId.Text = fila.Cells[0].Value.ToString();
-                lblNombre.Text = fila.Cells[1].Value.ToString().ToUpper();
-                lblPrecio.Text = fila.Cells[3].Value.ToString() + "€";
-                txtDescripcion.Text = fila.Cells[4].Value.ToString();
-                lblCantidad.Text = fila.Cells[2].Value.ToString();
-                ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
-                btnAñadir.Enabled = true;
+            DataGridViewRow fila = dgvProductos.Rows[0];
+            lblId.Text = fila.Cells[0].Value.ToString();
+            lblNombre.Text = fila.Cells[1].Value.ToString().ToUpper();
+            lblPrecio.Text = fila.Cells[3].Value.ToString() + "€";
+            txtDescripcion.Text = fila.Cells[4].Value.ToString();
+            lblCantidad.Text = fila.Cells[2].Value.ToString();
+            ptbImagenProducto.Image = (Image)fila.Cells[5].Value;
+            btnAñadir.Enabled = true;
         }
 
         private void ptbBusqueda_Click(object sender, EventArgs e)
@@ -162,18 +175,18 @@ namespace pet4sitter
 
             Producto p = new Producto(id, nombre, canti, precio, descrip, img);
 
-                    int indiceProd = Carrito.IndiceProducto((int)p.Id);
-                    if (indiceProd != -1)
-                    {
-                        Carrito.Productos[indiceProd].Cantidad += p.Cantidad;
-                        MessageBox.Show("ACUMULADO PRODUCTO REPETIDO!");
-                        CargarProductos();
-                    }
-                    else
-                    {
-                        Carrito.Productos.Add(p);
-                        MessageBox.Show("PRODUCTO AÑADIDO");
-                    }
+            int indiceProd = Carrito.IndiceProducto((int)p.Id);
+            if (indiceProd != -1)
+            {
+                Carrito.Productos[indiceProd].Cantidad += p.Cantidad;
+                MessageBox.Show("ACUMULADO PRODUCTO REPETIDO!");
+                CargarProductos();
+            }
+            else
+            {
+                Carrito.Productos.Add(p);
+                MessageBox.Show("PRODUCTO AÑADIDO");
+            }
             cantProdList = Carrito.Productos.Count;
         }
 
@@ -228,7 +241,7 @@ namespace pet4sitter
             {
                 flpCarrito.Visible = false;
                 lblInfo.Visible = false;
-            } 
+            }
         }
         private void CargarProductos()
         {

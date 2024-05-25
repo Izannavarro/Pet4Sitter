@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace pet4sitter
 {
+    //Clase para el envío de mails vía la app
     public abstract class MasterMailServer
     {
         SmtpClient smtpClient;
@@ -27,6 +28,12 @@ namespace pet4sitter
             smtpClient.EnableSsl = ssl;
         }
 
+        /// <summary>
+        /// Método para enviar mail de texto
+        /// </summary>
+        /// <param name="subject"></param>
+        /// <param name="body"></param>
+        /// <param name="recipientMail"></param>
         public void sendMail(string subject,string body,string recipientMail)
         {
             var mailMessage = new MailMessage();
@@ -53,6 +60,12 @@ namespace pet4sitter
             }
         }
 
+        /// <summary>
+        /// Método para enviar mail con html
+        /// </summary>
+        /// <param name="subject"></param>
+        /// <param name="body"></param>
+        /// <param name="recipientMail"></param>
         public void sendMailHtml(string subject, string body, string recipientMail)
         {
             var mailMessage = new MailMessage();

@@ -22,9 +22,31 @@ namespace pet4sitter
 
         private async void FrmNoticias_Load(object sender, EventArgs e)
         {
+            pcbGifCarga.Visible = true;
+            pcbGifCarga.BringToFront();
+            AplicarModoOscuro();
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             CompruebaPremium();
-            
+            AplicarIdioma();
+            pcbGifCarga.Visible = false;
+        }
+
+        private void AplicarIdioma()
+        {
+            lblFuncPre.Text = Resources.Recursos_Localizable.FrmNoticias.lblFuncPre;
+            lblTituloNoticias.Text = Resources.Recursos_Localizable.FrmNoticias.lblTituloNoticias;
+            lblInfoPulsar.Text = Resources.Recursos_Localizable.FrmNoticias.lblInfoPulsar;
+        }
+
+        private void AplicarModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+                lblTituloNoticias.ForeColor = Color.White;
+                lblInfoPulsar.ForeColor = Color.White;
+            }
         }
 
         private async void CompruebaPremium()
@@ -115,14 +137,14 @@ namespace pet4sitter
                                 Console.WriteLine($"Error al cargar la imagen: {ex.Message}");
                                 // Asignar una imagen de marcador de posición o mostrar un mensaje de error
                                 pcbNoticia1.Image = Properties.Resources.lgo; // Ejemplo de imagen de marcador de posición
-                                                                                            // También puedes mostrar un mensaje de error
+                                                                              // También puedes mostrar un mensaje de error
                             }
                         }
                         else
                         {
                             // Asignar una imagen de marcador de posición o mostrar un mensaje de error si la URL de la imagen es nula o vacía
                             pcbNoticia1.Image = Properties.Resources.lgo; // Ejemplo de imagen de marcador de posición
-                                                                                        // También puedes mostrar un mensaje de error
+                                                                          // También puedes mostrar un mensaje de error
                         }
                     }
 
@@ -194,11 +216,5 @@ namespace pet4sitter
                 pcbGifCarga.Visible = false;
             }
         }
-
-        private void FrmNoticias_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmResultadoFiltrado));
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblPaginaActual = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
@@ -72,6 +73,7 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.lblPaginaActual);
             this.panel3.Controls.Add(this.btnSiguiente);
@@ -414,6 +416,7 @@
             // 
             // lblIdUser1
             // 
+            this.lblIdUser1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdUser1.AutoSize = true;
             this.lblIdUser1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdUser1.Location = new System.Drawing.Point(898, 152);
@@ -424,6 +427,7 @@
             // 
             // lblIdUser2
             // 
+            this.lblIdUser2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdUser2.AutoSize = true;
             this.lblIdUser2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdUser2.Location = new System.Drawing.Point(934, 252);
@@ -434,6 +438,7 @@
             // 
             // lblIdUser3
             // 
+            this.lblIdUser3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdUser3.AutoSize = true;
             this.lblIdUser3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdUser3.Location = new System.Drawing.Point(1014, 227);
@@ -444,6 +449,7 @@
             // 
             // barraLateral1
             // 
+            this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(0, -4);
             this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -453,10 +459,11 @@
             // 
             // lblTituloRes
             // 
+            this.lblTituloRes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTituloRes.AutoSize = true;
             this.lblTituloRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloRes.ForeColor = System.Drawing.Color.White;
-            this.lblTituloRes.Location = new System.Drawing.Point(521, 46);
+            this.lblTituloRes.Location = new System.Drawing.Point(517, 67);
             this.lblTituloRes.Name = "lblTituloRes";
             this.lblTituloRes.Size = new System.Drawing.Size(131, 26);
             this.lblTituloRes.TabIndex = 58;
@@ -474,7 +481,9 @@
             this.Controls.Add(this.lblIdUser1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.barraLateral1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmResultadoFiltrado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmResultadoFiltrado";

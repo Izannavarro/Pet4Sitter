@@ -139,7 +139,7 @@
     <value>Anterior</value>
   </data>
   <data name="btnOpciones.Text" xml:space="preserve">
-    <value>Opciones</value>
+    <value>Cerrar</value>
   </data>
   <data name="btnEnviar.Text" xml:space="preserve">
     <value>Enviar</value>

@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblUltimasValoraciones_Text" xml:space="preserve">
-    <value />
+  <data name="btnDarseBaja_Text" xml:space="preserve">
+    <value>Darse de Baja</value>
   </data>
   <data name="lblUltimaCompra_Text" xml:space="preserve">
     <value>Últimas Compras:</value>
@@ -128,5 +128,8 @@
   </data>
   <data name="btnDarAlta_Text" xml:space="preserve">
     <value>Dar de Alta</value>
+  </data>
+  <data name="btnPremium_Text" xml:space="preserve">
+    <value>Premium</value>
   </data>
 </root>

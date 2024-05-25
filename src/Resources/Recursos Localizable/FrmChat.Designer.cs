@@ -79,7 +79,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Opciones.
+        ///   Busca una cadena traducida similar a Cerrar.
         /// </summary>
         internal static string btnOpciones_Text {
             get {

@@ -106,7 +106,8 @@ namespace pet4sitter
                     MessageBox.Show("Ya existe un usuario vinculado a esa cuenta de google");
                 }
                 ConBD.CerrarConexion();
-            }else
+            }
+            else
             {
                 MessageBox.Show("No existe conexión a la Base de datos");
             }//Comprueba si la bd está disponible
@@ -278,6 +279,7 @@ namespace pet4sitter
         }
         private void AplicarModoOscuro()
         {
+            this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
             lblWelcomeLogin.ForeColor = Color.Black;
             this.BackColor = Color.DarkGreen;
             txtNombre.BackColor = Color.DarkGreen;

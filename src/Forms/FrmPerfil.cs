@@ -21,6 +21,8 @@ namespace pet4sitter
 
         private void FrmPerfil_Load(object sender, EventArgs e)
         {
+            ModoOscuro();
+            CargarProductosDestacados();
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
             if (Data.CurrentUser.Image != null)
@@ -30,7 +32,68 @@ namespace pet4sitter
             lblNombre.Text = Data.CurrentUser.Name.ToUpper();
             lblLocalizacion.Text = Data.CurrentUser.Location;
             CompruebaSitter();
+            CompruebaPremium();
         }
+        void ModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+            }
+        }
+
+
+        private void CompruebaPremium()
+        {
+            if (Data.CurrentUser.Premium == true)
+            {
+                btnPremium.Visible = false;
+            }
+            else
+            {
+                btnPremium.Visible = false;
+            }
+        }
+
+        private void CargarProductosDestacados()
+        {
+            if (ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                string query = "Select * from products order by rand() limit 3;";
+                List<Producto> lprod = Producto.ListarProductos(query);
+                if (lprod.Count > 0)
+                {
+
+                    lblProd1.Text = lprod[0].NombreProducto;
+                    lblPrecioProd1.Text = lprod[0].Precio.ToString() + " EUR";
+                    pcbProd1.Image = lprod[0].UrlImagen;
+                }
+
+                if (lprod.Count > 1)
+                {
+                    lblProd2.Text = lprod[1].NombreProducto;
+                    lblPrecioProd2.Text = lprod[1].Precio.ToString() + " EUR";
+                    pcbProd2.Image = lprod[1].UrlImagen;
+                }
+
+                if (lprod.Count > 2)
+                {
+
+                    lblProd3.Text = lprod[2].NombreProducto;
+                    lblPrecioProd3.Text = lprod[2].Precio.ToString() + " EUR";
+                    pcbProd3.Image = lprod[2].UrlImagen;
+                }
+
+                ConBD.CerrarConexion();
+            }
+            else
+            {
+                MessageBox.Show("No existe conexión a la Base de datos");
+            }//Comprueba si la bd está disponible
+        }
+
 
         private void CompruebaSitter()
         {
@@ -50,14 +113,12 @@ namespace pet4sitter
 
         private void AplicarIdioma()
         {
-            lblUltimaCompra.Text = Resources.Recursos_Localizable.FrmPerfil.lblUltimaCompra_Text;
+            lblTePodriaInteresar.Text = Resources.Recursos_Localizable.FrmPerfil.lblUltimaCompra_Text;
             btnEditarPerfil.Text = Resources.Recursos_Localizable.FrmPerfil.btnEditarPerfil_Text;
             btnDarAlta.Text = Resources.Recursos_Localizable.FrmPerfil.btnDarAlta_Text;
-        }
-
-        private void FrmPerfil_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
+            btnDarseBaja.Text = Resources.Recursos_Localizable.FrmPerfil.btnDarAlta_Text;
+            btnDarseBaja.Text = Resources.Recursos_Localizable.FrmPerfil.btnDarseBaja_Text;
+            btnPremium.Text = Resources.Recursos_Localizable.FrmPerfil.btnPremium_Text;
         }
 
         private void btnEditarPerfil_Click(object sender, EventArgs e)

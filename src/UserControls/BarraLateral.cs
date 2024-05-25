@@ -246,6 +246,7 @@ namespace pet4sitter
                 lblAjustes.ForeColor = Color.White;
                 pcbEditarPerfil.Image = Properties.Resources.usuarioBlanco;
                 lblPerfil.ForeColor = Color.White;
+                lblNombreApp.ForeColor = Color.White;
 
             }
         }

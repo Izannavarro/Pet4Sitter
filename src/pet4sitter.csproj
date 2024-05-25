@@ -197,7 +197,6 @@
     <Compile Include="Clases\BufferedLayoutPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Clases\Busqueda.cs" />
     <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\ConfiguracionIdioma.cs" />
@@ -243,6 +242,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmEditarPerfil.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmInicio.en-US.Designer.cs">
+      <DependentUpon>FrmInicio.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmNoticias.en-US.Designer.cs">
+      <DependentUpon>FrmNoticias.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmNoticias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmNoticias.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmInicio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmInicio.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\BarraLateral.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -250,14 +269,8 @@
       <DependentUpon>BarraLateral.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Utiles.cs" />
-    <Compile Include="Forms\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\Data.cs" />
-    <Compile Include="Clases\ForgotPasswordMail.cs" />
+    <Compile Include="Clases\MailPet4Sitter.cs" />
     <Compile Include="Forms\FrmAdminProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -509,16 +522,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmLogin.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Recursos Localizable\FrmNoticias.en-US.Designer.cs">
-      <DependentUpon>FrmNoticias.en-US.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Resources\Recursos Localizable\FrmNoticias.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FrmNoticias.resx</DependentUpon>
-    </Compile>
     <Compile Include="Resources\Recursos Localizable\FrmPerfil.en-US.Designer.cs">
       <DependentUpon>FrmPerfil.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -592,11 +595,23 @@
       <LastGenOutput>FrmEditarPerfil.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmInicio.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmInicio.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmNoticias.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmNoticias.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmInicio.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmInicio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BarraLateral.resx">
       <DependentUpon>BarraLateral.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAdminProductos.resx">
       <DependentUpon>FrmAdminProductos.cs</DependentUpon>
@@ -783,15 +798,10 @@
       <LastGenOutput>FrmLogin.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Recursos Localizable\FrmNoticias.en-US.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>FrmNoticias.en-US.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmNoticias.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>FrmNoticias.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>FrmNoticias.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmPerfil.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>

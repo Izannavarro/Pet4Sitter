@@ -70,11 +70,38 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Revisar y Pagar!.
+        /// </summary>
+        internal static string btnCarrito_Text {
+            get {
+                return ResourceManager.GetString("btnCarrito.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ver Carrito.
+        /// </summary>
+        internal static string btnVerCarrito_Text {
+            get {
+                return ResourceManager.GetString("btnVerCarrito.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Descripcion Extensa.
         /// </summary>
         internal static string lblDescripcion_Text {
             get {
                 return ResourceManager.GetString("lblDescripcion.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a NO HAS SELECCIONADO NINGÚN PRODUCTO.
+        /// </summary>
+        internal static string lblInfo_Text {
+            get {
+                return ResourceManager.GetString("lblInfo.Text", resourceCulture);
             }
         }
     }

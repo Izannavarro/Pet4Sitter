@@ -21,32 +21,26 @@ namespace pet4sitter
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmAdminProductos_Load(object sender, EventArgs e)
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
-
+            ModoOscuro();
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
                 LimpiarTablaProductos();
                 ConBD.CerrarConexion();
                 
+            }
+        }
+
+        private void ModoOscuro()
+        {
+            if(Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
             }
         }
 

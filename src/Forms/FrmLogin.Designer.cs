@@ -37,6 +37,7 @@ namespace pet4sitter
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblPass = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLine = new System.Windows.Forms.Label();
             this.lblLinePassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -45,10 +46,9 @@ namespace pet4sitter
             this.btnContinueWGoogle = new System.Windows.Forms.Button();
             this.lblReportarBug = new System.Windows.Forms.Label();
             this.pictureBoxContinueGoogle = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWelcomeLogin
@@ -122,6 +122,16 @@ namespace pet4sitter
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(263, 335);
             this.panel1.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::pet4sitter.Properties.Resources.pet4sitterLogo;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(257, 225);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // lblLine
             // 
@@ -212,16 +222,6 @@ namespace pet4sitter
             this.pictureBoxContinueGoogle.TabStop = false;
             this.pictureBoxContinueGoogle.Click += new System.EventHandler(this.pictureBoxContinueGoogle_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::pet4sitter.Properties.Resources.pet4sitterLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 50);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(257, 225);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,8 +251,8 @@ namespace pet4sitter
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLogin_FormClosed);
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

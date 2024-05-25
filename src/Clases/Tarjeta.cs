@@ -9,22 +9,31 @@ namespace pet4sitter.Clases
 {
     public class Tarjeta
     {
-        private int numeroTarjeta;
+        private long numeroTarjeta;
         private string titularTarjeta;
-        private string fechaCaducidad;
+        private DateTime fechaCaducidad;
         private int cvc;
 
-        public int NumeroTarjeta { get { return numeroTarjeta; } }
+        public long NumeroTarjeta { get { return numeroTarjeta; } }
         public string TitularTarjeta { get { return titularTarjeta; } }
-        public string FechaCaducidad { get { return fechaCaducidad; } }
+        public DateTime FechaCaducidad { get { return fechaCaducidad; } }
         public int Cvc { get { return cvc; } }
 
-        public Tarjeta(int numTarg, string titular, string fecha, int cvc)
+        public Tarjeta(long numTarg, string titular, DateTime fecha, int cvc)
         {
             numeroTarjeta = numTarg;
             titularTarjeta = titular;
             fechaCaducidad = fecha;
             this.cvc = cvc;
         }
+
+        public override string ToString()
+        {
+            string numTarjetaStr = numeroTarjeta.ToString();
+            string ultimosCuatroDigitos = numTarjetaStr.Length >= 4 ? numTarjetaStr.Substring(numTarjetaStr.Length - 4) : numTarjetaStr;
+
+            return $"Titular: {titularTarjeta}\nNúmero de Tarjeta:\n**** **** **** {ultimosCuatroDigitos}\nFecha de Caducidad:\n{fechaCaducidad.Month}/{fechaCaducidad.Year}";
+        }
+
     }
 }

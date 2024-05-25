@@ -5,10 +5,16 @@ using Newtonsoft.Json.Linq;
 
 namespace pet4sitter.Clases
 {
+    //Clase para llamada de API para pasar dirección en texto y recibir coordenadas aproximadas.
     public class GeoLocalizacion
     {
         private static readonly HttpClient client = new HttpClient();
 
+        /// <summary>
+        /// Método para llamar a la API y recibir las coordenadas
+        /// </summary>
+        /// <param name="direccion"></param>
+        /// <returns></returns>
         public static async Task<(double? Latitude, double? Longitude)> ObtenerCoordenadasAsync(string direccion)
         {
             try

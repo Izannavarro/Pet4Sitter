@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFiltrador));
             this.lblFiltros = new System.Windows.Forms.Label();
             this.lblRango = new System.Windows.Forms.Label();
             this.nudDesde = new System.Windows.Forms.NumericUpDown();
@@ -37,7 +38,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.cmbDistancia = new System.Windows.Forms.ComboBox();
             this.lblOrdenarPorDistancia = new System.Windows.Forms.Label();
             this.cmbDistanciaAscDesc = new System.Windows.Forms.ComboBox();
@@ -51,6 +51,7 @@
             // 
             // lblFiltros
             // 
+            this.lblFiltros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFiltros.AutoSize = true;
             this.lblFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltros.ForeColor = System.Drawing.Color.White;
@@ -63,6 +64,7 @@
             // 
             // lblRango
             // 
+            this.lblRango.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRango.AutoSize = true;
             this.lblRango.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRango.ForeColor = System.Drawing.Color.White;
@@ -75,6 +77,7 @@
             // 
             // nudDesde
             // 
+            this.nudDesde.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudDesde.Location = new System.Drawing.Point(455, 230);
             this.nudDesde.Margin = new System.Windows.Forms.Padding(2);
@@ -84,6 +87,7 @@
             // 
             // lblDesde
             // 
+            this.lblDesde.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDesde.AutoSize = true;
             this.lblDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesde.ForeColor = System.Drawing.Color.White;
@@ -96,6 +100,7 @@
             // 
             // lblHasta
             // 
+            this.lblHasta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHasta.AutoSize = true;
             this.lblHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHasta.ForeColor = System.Drawing.Color.White;
@@ -108,6 +113,7 @@
             // 
             // nudHasta
             // 
+            this.nudHasta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudHasta.Location = new System.Drawing.Point(626, 229);
             this.nudHasta.Margin = new System.Windows.Forms.Padding(2);
@@ -122,6 +128,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
@@ -133,6 +140,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBuscar.BackColor = System.Drawing.Color.White;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -147,6 +155,7 @@
             // 
             // btnBorrar
             // 
+            this.btnBorrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBorrar.BackColor = System.Drawing.Color.White;
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -158,19 +167,9 @@
             this.btnBorrar.Text = "BORRAR";
             this.btnBorrar.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(830, 37);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 41);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // cmbDistancia
             // 
+            this.cmbDistancia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDistancia.FormattingEnabled = true;
             this.cmbDistancia.Items.AddRange(new object[] {
             "SI",
@@ -183,6 +182,7 @@
             // 
             // lblOrdenarPorDistancia
             // 
+            this.lblOrdenarPorDistancia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOrdenarPorDistancia.AutoSize = true;
             this.lblOrdenarPorDistancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrdenarPorDistancia.ForeColor = System.Drawing.Color.White;
@@ -195,6 +195,7 @@
             // 
             // cmbDistanciaAscDesc
             // 
+            this.cmbDistanciaAscDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDistanciaAscDesc.FormattingEnabled = true;
             this.cmbDistanciaAscDesc.Items.AddRange(new object[] {
             "Menos a más",
@@ -206,6 +207,7 @@
             // 
             // cmbPrecioAscDesc
             // 
+            this.cmbPrecioAscDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbPrecioAscDesc.FormattingEnabled = true;
             this.cmbPrecioAscDesc.Items.AddRange(new object[] {
             "Menos a más",
@@ -218,6 +220,7 @@
             // 
             // lblOrdenarPrecio
             // 
+            this.lblOrdenarPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblOrdenarPrecio.AutoSize = true;
             this.lblOrdenarPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOrdenarPrecio.ForeColor = System.Drawing.Color.White;
@@ -230,6 +233,7 @@
             // 
             // cmbOrdenarPrecio
             // 
+            this.cmbOrdenarPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbOrdenarPrecio.FormattingEnabled = true;
             this.cmbOrdenarPrecio.Items.AddRange(new object[] {
             "SI",
@@ -242,6 +246,7 @@
             // 
             // barraLateral1
             // 
+            this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(0, 0);
             this.barraLateral1.Margin = new System.Windows.Forms.Padding(4);
@@ -261,7 +266,6 @@
             this.Controls.Add(this.cmbDistanciaAscDesc);
             this.Controls.Add(this.lblOrdenarPorDistancia);
             this.Controls.Add(this.cmbDistancia);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label9);
@@ -272,11 +276,12 @@
             this.Controls.Add(this.nudDesde);
             this.Controls.Add(this.lblFiltros);
             this.Controls.Add(this.barraLateral1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmFiltrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmFiltrador";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmFiltrador_FormClosed);
             this.Load += new System.EventHandler(this.FrmFiltrador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudDesde)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).EndInit();
@@ -297,7 +302,6 @@
         private BarraLateral barraLateral1;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbDistancia;
         private System.Windows.Forms.Label lblOrdenarPorDistancia;
         private System.Windows.Forms.ComboBox cmbDistanciaAscDesc;
