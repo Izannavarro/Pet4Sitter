@@ -70,6 +70,7 @@ namespace pet4sitter
         {
             if (Data.DarkMode)
             {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
                 this.BackColor = Color.DarkGreen;
                 pnlChat.BackColor = Color.FromArgb(187, 133, 98);
             }

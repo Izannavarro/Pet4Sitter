@@ -45,9 +45,10 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(489, 431);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(224, 31);
             this.btnGuardar.TabIndex = 62;
@@ -57,9 +58,10 @@
             // 
             // btnVolver
             // 
+            this.btnVolver.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(260, 431);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(224, 31);
             this.btnVolver.TabIndex = 61;
@@ -69,6 +71,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
@@ -80,6 +83,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
@@ -91,6 +95,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -102,6 +107,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
@@ -113,6 +119,7 @@
             // 
             // lblPrecioDia
             // 
+            this.lblPrecioDia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrecioDia.AutoSize = true;
             this.lblPrecioDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecioDia.ForeColor = System.Drawing.Color.White;
@@ -125,6 +132,7 @@
             // 
             // lblDarseAlta
             // 
+            this.lblDarseAlta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDarseAlta.AutoSize = true;
             this.lblDarseAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDarseAlta.ForeColor = System.Drawing.Color.White;
@@ -137,6 +145,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -148,21 +157,23 @@
             // 
             // nudPrecio
             // 
+            this.nudPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudPrecio.DecimalPlaces = 2;
             this.nudPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudPrecio.Location = new System.Drawing.Point(439, 232);
-            this.nudPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.nudPrecio.Name = "nudPrecio";
             this.nudPrecio.Size = new System.Drawing.Size(128, 37);
             this.nudPrecio.TabIndex = 67;
             // 
             // chkTerminos
             // 
+            this.chkTerminos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chkTerminos.AutoSize = true;
             this.chkTerminos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkTerminos.ForeColor = System.Drawing.SystemColors.Window;
             this.chkTerminos.Location = new System.Drawing.Point(332, 311);
-            this.chkTerminos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkTerminos.Margin = new System.Windows.Forms.Padding(2);
             this.chkTerminos.Name = "chkTerminos";
             this.chkTerminos.Size = new System.Drawing.Size(327, 28);
             this.chkTerminos.TabIndex = 69;
@@ -187,8 +198,10 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lblPrecioDia);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmDarseDeAlta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDarseDeAlta";
             this.Load += new System.EventHandler(this.FrmDarseDeAlta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecio)).EndInit();

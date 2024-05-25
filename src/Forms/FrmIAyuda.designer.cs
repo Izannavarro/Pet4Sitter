@@ -46,7 +46,7 @@ namespace pet4sitter
             this.btnSend = new System.Windows.Forms.Button();
             this.txtPrompt = new System.Windows.Forms.TextBox();
             this.cmbPrompts = new System.Windows.Forms.ComboBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLoading)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoWifi)).BeginInit();
@@ -231,6 +231,7 @@ namespace pet4sitter
             // 
             // barraLateral1
             // 
+            this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(1, -2);
             this.barraLateral1.Margin = new System.Windows.Forms.Padding(4);
@@ -253,7 +254,7 @@ namespace pet4sitter
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(947, 478);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmIAyuda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pet4sitter";

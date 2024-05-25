@@ -1,4 +1,5 @@
-﻿using System;
+﻿using pet4sitter.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,7 +23,17 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            ModoOscuro();
         }
+        void ModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+            }
+        }
+
         private void AplicarIdioma()
         {
             btnProductos.Text = Resources.Recursos_Localizable.FrmInicioAdmin.btnProductos_Text;

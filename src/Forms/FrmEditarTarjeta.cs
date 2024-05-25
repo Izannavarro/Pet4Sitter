@@ -26,9 +26,19 @@ namespace pet4sitter
 
         private void FrmEditarTarjeta_Load(object sender, EventArgs e)
         {
+            ModoOscuro();
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
         }
+        void ModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+            }
+        }
+
         private void AplicarIdioma()
         {
             btnVolver.Text = Resources.Recursos_Localizable.FrmEditarTarjeta.btnVolver_Text;
@@ -48,20 +58,20 @@ namespace pet4sitter
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Tarjeta tarjeta = new Tarjeta(int.Parse(txtNumero.Text),txtTitular.Text,txtFecha.Text,int.Parse(txtCVC.Text));
-            Data.CurrentTarjeta = tarjeta;
-            MessageBox.Show("Tarjeta guardada correctamente");
             if (txtNumero.Text.Length == 16)
             {
-                DateTime fechaIntroducida = DateTime.Parse(txtFecha.Text);
+                DateTime fechaIntroducida = dtpFecha.Value;
                 if (fechaIntroducida > DateTime.Now)
                 {
-                    int numTarg = Convert.ToInt32(txtNumero.Text);
+                    long numTarg = long.Parse(txtNumero.Text);
                     string titular = txtTitular.Text;
                     int cvc = Convert.ToInt32(txtCVC.Text);
-                    string fecha = txtFecha.Text;
+                    DateTime fecha = fechaIntroducida;
 
                     Tarjeta t = new Tarjeta(numTarg,titular,fecha,cvc);
+                    Data.CurrentTarjeta = t;
+                    MessageBox.Show("Tarjeta guardada correctamente");
+                    this.Dispose();
                 }
                 else
                 {

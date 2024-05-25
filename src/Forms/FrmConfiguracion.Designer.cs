@@ -49,6 +49,7 @@
             // 
             // lblConfiguracionAvanzada
             // 
+            this.lblConfiguracionAvanzada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblConfiguracionAvanzada.AutoSize = true;
             this.lblConfiguracionAvanzada.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfiguracionAvanzada.Location = new System.Drawing.Point(142, 35);
@@ -83,6 +84,7 @@
             // 
             // lblPrivacidad
             // 
+            this.lblPrivacidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPrivacidad.AutoSize = true;
             this.lblPrivacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrivacidad.Location = new System.Drawing.Point(138, 301);
@@ -110,7 +112,7 @@
             "Español",
             "Ingles"});
             this.cmbIdioma.Location = new System.Drawing.Point(77, 2);
-            this.cmbIdioma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdioma.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdioma.Name = "cmbIdioma";
             this.cmbIdioma.Size = new System.Drawing.Size(115, 21);
             this.cmbIdioma.TabIndex = 7;
@@ -123,7 +125,7 @@
             "Claro",
             "Oscuro"});
             this.cmbTema.Location = new System.Drawing.Point(70, 2);
-            this.cmbTema.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTema.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTema.Name = "cmbTema";
             this.cmbTema.Size = new System.Drawing.Size(122, 21);
             this.cmbTema.TabIndex = 8;
@@ -133,7 +135,7 @@
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(179, 2);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(92, 26);
             this.btnEliminar.TabIndex = 9;
@@ -143,13 +145,14 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.lblIdioma, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.cmbIdioma, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(76, 127);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -158,13 +161,14 @@
             // 
             // tableLayoutPanel2
             // 
+            this.tableLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.Controls.Add(this.lblTema, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cmbTema, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(340, 127);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -173,13 +177,14 @@
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel3.Controls.Add(this.btnEliminar, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblEliminar, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(142, 196);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -188,9 +193,10 @@
             // 
             // ptbVolver
             // 
+            this.ptbVolver.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbVolver.Image = global::pet4sitter.Properties.Resources.lgo;
             this.ptbVolver.Location = new System.Drawing.Point(500, 18);
-            this.ptbVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbVolver.Margin = new System.Windows.Forms.Padding(2);
             this.ptbVolver.Name = "ptbVolver";
             this.ptbVolver.Size = new System.Drawing.Size(65, 64);
             this.ptbVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -211,7 +217,7 @@
             this.Controls.Add(this.lblPrivacidad);
             this.Controls.Add(this.lblConfiguracionAvanzada);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmConfiguracion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConfiguracion";

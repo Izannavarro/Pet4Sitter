@@ -61,7 +61,7 @@ namespace pet4sitter
             this.fLPanelChat = new pet4sitter.Clases.BufferedFlowLayoutPanel();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.pnl1.SuspendLayout();
@@ -79,6 +79,7 @@ namespace pet4sitter
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.lblPagina);
             this.panel3.Controls.Add(this.pnl1);
@@ -329,6 +330,7 @@ namespace pet4sitter
             // 
             // pnlInfoChat
             // 
+            this.pnlInfoChat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlInfoChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.pnlInfoChat.Controls.Add(this.btnCerrarChat);
             this.pnlInfoChat.Controls.Add(this.lblNombreChatActivo);
@@ -375,6 +377,7 @@ namespace pet4sitter
             // 
             // pnlChat
             // 
+            this.pnlChat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlChat.BackColor = System.Drawing.Color.White;
             this.pnlChat.Controls.Add(this.fLPanelChat);
             this.pnlChat.Controls.Add(this.btnEnviar);
@@ -417,6 +420,7 @@ namespace pet4sitter
             // 
             // barraLateral1
             // 
+            this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral1.Location = new System.Drawing.Point(-3, 0);
             this.barraLateral1.Margin = new System.Windows.Forms.Padding(4);
@@ -442,6 +446,7 @@ namespace pet4sitter
             this.Controls.Add(this.barraLateral1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmChat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChat";

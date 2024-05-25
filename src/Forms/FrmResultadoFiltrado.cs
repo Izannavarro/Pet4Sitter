@@ -34,7 +34,7 @@ namespace pet4sitter
             InitializeComponent();
         }
 
-        public FrmResultadoFiltrado(List<User> luser,double precioDesde,double precioHasta,bool ordenDist, string ordenDistOrden, bool ordenPrecio, string ordenPrecioOrden)
+        public FrmResultadoFiltrado(List<User> luser, double precioDesde, double precioHasta, bool ordenDist, string ordenDistOrden, bool ordenPrecio, string ordenPrecioOrden)
         {
             InitializeComponent();
             users = luser;
@@ -66,6 +66,7 @@ namespace pet4sitter
 
         private void CargaModoOscuro()
         {
+            this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
             this.BackColor = Color.DarkGreen;
         }
 
@@ -79,7 +80,7 @@ namespace pet4sitter
                 lblResPrecio1.Text = $"{user.Precio.ToString()} EUR";
                 lblPrecio1.Visible = true;
                 lblResPrecio1.Visible = true;
-                lblIdUser1.Text =  user.IdUser.ToString();
+                lblIdUser1.Text = user.IdUser.ToString();
                 lblResUbi1.Text = user.Location;
                 lblResUbi1.Links.Clear();
                 string lat = user.Latitud.ToString().Replace(',', '.');
@@ -88,7 +89,7 @@ namespace pet4sitter
                 btnEnviarMensajeChat1.Visible = true;
                 lblResUbi1.Visible = true;
                 lblUbicacion1.Visible = true;
-                if(user.Image != null)
+                if (user.Image != null)
                 {
                     pcbCuidador1.Image = Utiles.ByteArrayToImage(user.Image);
                 }
@@ -244,7 +245,7 @@ namespace pet4sitter
         private void CargarPagina()
         {
 
-            users = User.ObtenerUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta,ordenDist,ordenDistOrden,ordenPrecio,ordenPrecioOrden, paginaActual * elementosPorPagina, elementosPorPagina);
+            users = User.ObtenerUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta, ordenDist, ordenDistOrden, ordenPrecio, ordenPrecioOrden, paginaActual * elementosPorPagina, elementosPorPagina);
             CargarResultados();
         }
 

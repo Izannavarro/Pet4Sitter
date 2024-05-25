@@ -40,6 +40,7 @@
             // 
             // lblReportarBug
             // 
+            this.lblReportarBug.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblReportarBug.AutoSize = true;
             this.lblReportarBug.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReportarBug.ForeColor = System.Drawing.Color.White;
@@ -51,6 +52,7 @@
             // 
             // txtMail
             // 
+            this.txtMail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMail.Location = new System.Drawing.Point(409, 88);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(231, 20);
@@ -58,6 +60,7 @@
             // 
             // lblCorreoElectronicoUsuario
             // 
+            this.lblCorreoElectronicoUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCorreoElectronicoUsuario.AutoSize = true;
             this.lblCorreoElectronicoUsuario.ForeColor = System.Drawing.Color.Black;
             this.lblCorreoElectronicoUsuario.Location = new System.Drawing.Point(148, 91);
@@ -68,6 +71,7 @@
             // 
             // lblDetallesDelBug
             // 
+            this.lblDetallesDelBug.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDetallesDelBug.AutoSize = true;
             this.lblDetallesDelBug.ForeColor = System.Drawing.Color.Black;
             this.lblDetallesDelBug.Location = new System.Drawing.Point(148, 139);
@@ -78,6 +82,7 @@
             // 
             // txtCuerpoMensaje
             // 
+            this.txtCuerpoMensaje.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCuerpoMensaje.Location = new System.Drawing.Point(151, 166);
             this.txtCuerpoMensaje.Multiline = true;
             this.txtCuerpoMensaje.Name = "txtCuerpoMensaje";
@@ -86,6 +91,7 @@
             // 
             // btnEnviar
             // 
+            this.btnEnviar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEnviar.Location = new System.Drawing.Point(151, 317);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(489, 35);
@@ -96,6 +102,7 @@
             // 
             // btnVolverALogin
             // 
+            this.btnVolverALogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVolverALogin.Location = new System.Drawing.Point(151, 358);
             this.btnVolverALogin.Name = "btnVolverALogin";
             this.btnVolverALogin.Size = new System.Drawing.Size(489, 35);

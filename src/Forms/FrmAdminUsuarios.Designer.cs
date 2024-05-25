@@ -58,10 +58,11 @@ namespace pet4sitter
             // 
             // btnVolver
             // 
+            this.btnVolver.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVolver.BackColor = System.Drawing.Color.White;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(637, 512);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(275, 26);
             this.btnVolver.TabIndex = 53;
@@ -71,6 +72,7 @@ namespace pet4sitter
             // 
             // lblUsuarioss
             // 
+            this.lblUsuarioss.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblUsuarioss.AutoSize = true;
             this.lblUsuarioss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioss.Location = new System.Drawing.Point(118, 43);
@@ -82,11 +84,12 @@ namespace pet4sitter
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel1.Controls.Add(this.btnEliminarUsuario);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(637, 38);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 469);
             this.panel1.TabIndex = 52;
@@ -97,7 +100,7 @@ namespace pet4sitter
             this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarUsuario.ForeColor = System.Drawing.Color.White;
             this.btnEliminarUsuario.Location = new System.Drawing.Point(67, 429);
-            this.btnEliminarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(142, 26);
             this.btnEliminarUsuario.TabIndex = 47;
@@ -121,7 +124,7 @@ namespace pet4sitter
             this.panel4.Controls.Add(this.ptbImagen);
             this.panel4.Controls.Add(this.lblUsuario);
             this.panel4.Location = new System.Drawing.Point(18, 22);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(238, 395);
             this.panel4.TabIndex = 45;
@@ -130,7 +133,7 @@ namespace pet4sitter
             // 
             this.ckbAdministrator.AutoSize = true;
             this.ckbAdministrator.Location = new System.Drawing.Point(158, 365);
-            this.ckbAdministrator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ckbAdministrator.Margin = new System.Windows.Forms.Padding(2);
             this.ckbAdministrator.Name = "ckbAdministrator";
             this.ckbAdministrator.Size = new System.Drawing.Size(15, 14);
             this.ckbAdministrator.TabIndex = 20;
@@ -140,7 +143,7 @@ namespace pet4sitter
             // 
             this.ckbSitter.AutoSize = true;
             this.ckbSitter.Location = new System.Drawing.Point(158, 335);
-            this.ckbSitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ckbSitter.Margin = new System.Windows.Forms.Padding(2);
             this.ckbSitter.Name = "ckbSitter";
             this.ckbSitter.Size = new System.Drawing.Size(15, 14);
             this.ckbSitter.TabIndex = 19;
@@ -149,7 +152,7 @@ namespace pet4sitter
             // btnEditar
             // 
             this.btnEditar.Location = new System.Drawing.Point(7, 77);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(56, 54);
             this.btnEditar.TabIndex = 18;
@@ -243,7 +246,7 @@ namespace pet4sitter
             // ptbImagen
             // 
             this.ptbImagen.Location = new System.Drawing.Point(70, 57);
-            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2);
             this.ptbImagen.Name = "ptbImagen";
             this.ptbImagen.Size = new System.Drawing.Size(114, 91);
             this.ptbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,10 +266,11 @@ namespace pet4sitter
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.dgvUsers);
             this.panel3.Location = new System.Drawing.Point(112, 69);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(506, 438);
             this.panel3.TabIndex = 50;
@@ -279,7 +283,7 @@ namespace pet4sitter
             this.dgvUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvUsers.ColumnHeadersHeight = 29;
             this.dgvUsers.Location = new System.Drawing.Point(28, 16);
-            this.dgvUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvUsers.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
@@ -308,8 +312,10 @@ namespace pet4sitter
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmAdminUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdminUsuarios";
             this.Load += new System.EventHandler(this.FrmAdminUsuarios_Load);
             this.panel1.ResumeLayout(false);

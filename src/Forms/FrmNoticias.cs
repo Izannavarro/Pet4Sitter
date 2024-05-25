@@ -42,6 +42,7 @@ namespace pet4sitter
         {
             if (Data.DarkMode)
             {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
                 this.BackColor = Color.DarkGreen;
                 lblTituloNoticias.ForeColor = Color.White;
                 lblInfoPulsar.ForeColor = Color.White;
@@ -136,14 +137,14 @@ namespace pet4sitter
                                 Console.WriteLine($"Error al cargar la imagen: {ex.Message}");
                                 // Asignar una imagen de marcador de posición o mostrar un mensaje de error
                                 pcbNoticia1.Image = Properties.Resources.lgo; // Ejemplo de imagen de marcador de posición
-                                                                                            // También puedes mostrar un mensaje de error
+                                                                              // También puedes mostrar un mensaje de error
                             }
                         }
                         else
                         {
                             // Asignar una imagen de marcador de posición o mostrar un mensaje de error si la URL de la imagen es nula o vacía
                             pcbNoticia1.Image = Properties.Resources.lgo; // Ejemplo de imagen de marcador de posición
-                                                                                        // También puedes mostrar un mensaje de error
+                                                                          // También puedes mostrar un mensaje de error
                         }
                     }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmResultadoFiltrado));
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblPaginaActual = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
@@ -72,6 +73,7 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.lblPaginaActual);
             this.panel3.Controls.Add(this.btnSiguiente);
@@ -79,28 +81,29 @@
             this.panel3.Controls.Add(this.btnAnterior);
             this.panel3.Controls.Add(this.pnlRes2);
             this.panel3.Controls.Add(this.pnlRes1);
-            this.panel3.Location = new System.Drawing.Point(329, 172);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(247, 140);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(960, 455);
+            this.panel3.Size = new System.Drawing.Size(720, 370);
             this.panel3.TabIndex = 49;
             // 
             // lblPaginaActual
             // 
             this.lblPaginaActual.AutoSize = true;
             this.lblPaginaActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaginaActual.Location = new System.Drawing.Point(396, 418);
+            this.lblPaginaActual.Location = new System.Drawing.Point(297, 340);
+            this.lblPaginaActual.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPaginaActual.Name = "lblPaginaActual";
-            this.lblPaginaActual.Size = new System.Drawing.Size(125, 24);
+            this.lblPaginaActual.Size = new System.Drawing.Size(95, 18);
             this.lblPaginaActual.TabIndex = 56;
             this.lblPaginaActual.Text = "Pagina x de x";
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(572, 416);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSiguiente.Location = new System.Drawing.Point(429, 338);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(127, 31);
+            this.btnSiguiente.Size = new System.Drawing.Size(95, 25);
             this.btnSiguiente.TabIndex = 54;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
@@ -116,19 +119,20 @@
             this.pnl3.Controls.Add(this.btnEnviarMensajeChat3);
             this.pnl3.Controls.Add(this.lblNombreCuidador3);
             this.pnl3.Controls.Add(this.pcbCuidador3);
-            this.pnl3.Location = new System.Drawing.Point(36, 284);
-            this.pnl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnl3.Location = new System.Drawing.Point(27, 231);
+            this.pnl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl3.Name = "pnl3";
-            this.pnl3.Size = new System.Drawing.Size(855, 127);
+            this.pnl3.Size = new System.Drawing.Size(641, 103);
             this.pnl3.TabIndex = 55;
             // 
             // lblResPrecio3
             // 
             this.lblResPrecio3.AutoSize = true;
             this.lblResPrecio3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResPrecio3.Location = new System.Drawing.Point(263, 85);
+            this.lblResPrecio3.Location = new System.Drawing.Point(197, 69);
+            this.lblResPrecio3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResPrecio3.Name = "lblResPrecio3";
-            this.lblResPrecio3.Size = new System.Drawing.Size(30, 24);
+            this.lblResPrecio3.Size = new System.Drawing.Size(22, 18);
             this.lblResPrecio3.TabIndex = 15;
             this.lblResPrecio3.Text = "xx";
             this.lblResPrecio3.Visible = false;
@@ -137,9 +141,10 @@
             // 
             this.lblPrecio3.AutoSize = true;
             this.lblPrecio3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio3.Location = new System.Drawing.Point(184, 85);
+            this.lblPrecio3.Location = new System.Drawing.Point(138, 69);
+            this.lblPrecio3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio3.Name = "lblPrecio3";
-            this.lblPrecio3.Size = new System.Drawing.Size(69, 24);
+            this.lblPrecio3.Size = new System.Drawing.Size(55, 18);
             this.lblPrecio3.TabIndex = 58;
             this.lblPrecio3.Text = "Precio:";
             this.lblPrecio3.Visible = false;
@@ -147,10 +152,9 @@
             // lblResUbi3
             // 
             this.lblResUbi3.AutoSize = true;
-            this.lblResUbi3.Location = new System.Drawing.Point(292, 53);
-            this.lblResUbi3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResUbi3.Location = new System.Drawing.Point(219, 43);
             this.lblResUbi3.Name = "lblResUbi3";
-            this.lblResUbi3.Size = new System.Drawing.Size(68, 16);
+            this.lblResUbi3.Size = new System.Drawing.Size(55, 13);
             this.lblResUbi3.TabIndex = 57;
             this.lblResUbi3.TabStop = true;
             this.lblResUbi3.Text = "linkLabel1";
@@ -161,19 +165,19 @@
             // 
             this.lblUbicacion3.AutoSize = true;
             this.lblUbicacion3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUbicacion3.Location = new System.Drawing.Point(181, 48);
+            this.lblUbicacion3.Location = new System.Drawing.Point(136, 39);
+            this.lblUbicacion3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUbicacion3.Name = "lblUbicacion3";
-            this.lblUbicacion3.Size = new System.Drawing.Size(99, 24);
+            this.lblUbicacion3.Size = new System.Drawing.Size(78, 18);
             this.lblUbicacion3.TabIndex = 11;
             this.lblUbicacion3.Text = "Ubicación:";
             this.lblUbicacion3.Visible = false;
             // 
             // btnEnviarMensajeChat3
             // 
-            this.btnEnviarMensajeChat3.Location = new System.Drawing.Point(685, 28);
-            this.btnEnviarMensajeChat3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnviarMensajeChat3.Location = new System.Drawing.Point(514, 23);
             this.btnEnviarMensajeChat3.Name = "btnEnviarMensajeChat3";
-            this.btnEnviarMensajeChat3.Size = new System.Drawing.Size(152, 65);
+            this.btnEnviarMensajeChat3.Size = new System.Drawing.Size(114, 53);
             this.btnEnviarMensajeChat3.TabIndex = 56;
             this.btnEnviarMensajeChat3.Text = "Enviar Mensaje";
             this.btnEnviarMensajeChat3.UseVisualStyleBackColor = true;
@@ -184,9 +188,10 @@
             // 
             this.lblNombreCuidador3.AutoSize = true;
             this.lblNombreCuidador3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCuidador3.Location = new System.Drawing.Point(181, 17);
+            this.lblNombreCuidador3.Location = new System.Drawing.Point(136, 14);
+            this.lblNombreCuidador3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCuidador3.Name = "lblNombreCuidador3";
-            this.lblNombreCuidador3.Size = new System.Drawing.Size(138, 22);
+            this.lblNombreCuidador3.Size = new System.Drawing.Size(116, 18);
             this.lblNombreCuidador3.TabIndex = 7;
             this.lblNombreCuidador3.Text = "Sin resultados";
             // 
@@ -194,20 +199,20 @@
             // 
             this.pcbCuidador3.BackColor = System.Drawing.Color.Transparent;
             this.pcbCuidador3.Image = global::pet4sitter.Properties.Resources.usuario;
-            this.pcbCuidador3.Location = new System.Drawing.Point(17, 15);
-            this.pcbCuidador3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbCuidador3.Location = new System.Drawing.Point(13, 12);
+            this.pcbCuidador3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbCuidador3.Name = "pcbCuidador3";
-            this.pcbCuidador3.Size = new System.Drawing.Size(117, 92);
+            this.pcbCuidador3.Size = new System.Drawing.Size(88, 75);
             this.pcbCuidador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbCuidador3.TabIndex = 5;
             this.pcbCuidador3.TabStop = false;
             // 
             // btnAnterior
             // 
-            this.btnAnterior.Location = new System.Drawing.Point(223, 416);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAnterior.Location = new System.Drawing.Point(167, 338);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.Size = new System.Drawing.Size(127, 31);
+            this.btnAnterior.Size = new System.Drawing.Size(95, 25);
             this.btnAnterior.TabIndex = 53;
             this.btnAnterior.Text = "Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
@@ -223,19 +228,20 @@
             this.pnlRes2.Controls.Add(this.btnEnviarMensajeChat2);
             this.pnlRes2.Controls.Add(this.lblNombreCuidador2);
             this.pnlRes2.Controls.Add(this.pcbCuidador2);
-            this.pnlRes2.Location = new System.Drawing.Point(36, 151);
-            this.pnlRes2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlRes2.Location = new System.Drawing.Point(27, 123);
+            this.pnlRes2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlRes2.Name = "pnlRes2";
-            this.pnlRes2.Size = new System.Drawing.Size(855, 127);
+            this.pnlRes2.Size = new System.Drawing.Size(641, 103);
             this.pnlRes2.TabIndex = 54;
             // 
             // lblResPrecio2
             // 
             this.lblResPrecio2.AutoSize = true;
             this.lblResPrecio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResPrecio2.Location = new System.Drawing.Point(263, 86);
+            this.lblResPrecio2.Location = new System.Drawing.Point(197, 70);
+            this.lblResPrecio2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResPrecio2.Name = "lblResPrecio2";
-            this.lblResPrecio2.Size = new System.Drawing.Size(30, 24);
+            this.lblResPrecio2.Size = new System.Drawing.Size(22, 18);
             this.lblResPrecio2.TabIndex = 14;
             this.lblResPrecio2.Text = "xx";
             this.lblResPrecio2.Visible = false;
@@ -244,9 +250,10 @@
             // 
             this.lblPrecio2.AutoSize = true;
             this.lblPrecio2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio2.Location = new System.Drawing.Point(184, 86);
+            this.lblPrecio2.Location = new System.Drawing.Point(138, 70);
+            this.lblPrecio2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio2.Name = "lblPrecio2";
-            this.lblPrecio2.Size = new System.Drawing.Size(69, 24);
+            this.lblPrecio2.Size = new System.Drawing.Size(55, 18);
             this.lblPrecio2.TabIndex = 13;
             this.lblPrecio2.Text = "Precio:";
             this.lblPrecio2.Visible = false;
@@ -254,10 +261,9 @@
             // lblResUbi2
             // 
             this.lblResUbi2.AutoSize = true;
-            this.lblResUbi2.Location = new System.Drawing.Point(292, 54);
-            this.lblResUbi2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResUbi2.Location = new System.Drawing.Point(219, 44);
             this.lblResUbi2.Name = "lblResUbi2";
-            this.lblResUbi2.Size = new System.Drawing.Size(68, 16);
+            this.lblResUbi2.Size = new System.Drawing.Size(55, 13);
             this.lblResUbi2.TabIndex = 12;
             this.lblResUbi2.TabStop = true;
             this.lblResUbi2.Text = "linkLabel1";
@@ -268,19 +274,19 @@
             // 
             this.lblUbicacion2.AutoSize = true;
             this.lblUbicacion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUbicacion2.Location = new System.Drawing.Point(181, 49);
+            this.lblUbicacion2.Location = new System.Drawing.Point(136, 40);
+            this.lblUbicacion2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUbicacion2.Name = "lblUbicacion2";
-            this.lblUbicacion2.Size = new System.Drawing.Size(99, 24);
+            this.lblUbicacion2.Size = new System.Drawing.Size(78, 18);
             this.lblUbicacion2.TabIndex = 10;
             this.lblUbicacion2.Text = "Ubicación:";
             this.lblUbicacion2.Visible = false;
             // 
             // btnEnviarMensajeChat2
             // 
-            this.btnEnviarMensajeChat2.Location = new System.Drawing.Point(685, 30);
-            this.btnEnviarMensajeChat2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnviarMensajeChat2.Location = new System.Drawing.Point(514, 24);
             this.btnEnviarMensajeChat2.Name = "btnEnviarMensajeChat2";
-            this.btnEnviarMensajeChat2.Size = new System.Drawing.Size(152, 65);
+            this.btnEnviarMensajeChat2.Size = new System.Drawing.Size(114, 53);
             this.btnEnviarMensajeChat2.TabIndex = 9;
             this.btnEnviarMensajeChat2.Text = "Enviar Mensaje";
             this.btnEnviarMensajeChat2.UseVisualStyleBackColor = true;
@@ -291,9 +297,10 @@
             // 
             this.lblNombreCuidador2.AutoSize = true;
             this.lblNombreCuidador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCuidador2.Location = new System.Drawing.Point(181, 17);
+            this.lblNombreCuidador2.Location = new System.Drawing.Point(136, 14);
+            this.lblNombreCuidador2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCuidador2.Name = "lblNombreCuidador2";
-            this.lblNombreCuidador2.Size = new System.Drawing.Size(138, 22);
+            this.lblNombreCuidador2.Size = new System.Drawing.Size(116, 18);
             this.lblNombreCuidador2.TabIndex = 7;
             this.lblNombreCuidador2.Text = "Sin resultados";
             // 
@@ -301,10 +308,10 @@
             // 
             this.pcbCuidador2.BackColor = System.Drawing.Color.Transparent;
             this.pcbCuidador2.Image = global::pet4sitter.Properties.Resources.usuario;
-            this.pcbCuidador2.Location = new System.Drawing.Point(17, 16);
-            this.pcbCuidador2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbCuidador2.Location = new System.Drawing.Point(13, 13);
+            this.pcbCuidador2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbCuidador2.Name = "pcbCuidador2";
-            this.pcbCuidador2.Size = new System.Drawing.Size(117, 92);
+            this.pcbCuidador2.Size = new System.Drawing.Size(88, 75);
             this.pcbCuidador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbCuidador2.TabIndex = 5;
             this.pcbCuidador2.TabStop = false;
@@ -319,19 +326,20 @@
             this.pnlRes1.Controls.Add(this.btnEnviarMensajeChat1);
             this.pnlRes1.Controls.Add(this.lblNombreCuidador1);
             this.pnlRes1.Controls.Add(this.pcbCuidador1);
-            this.pnlRes1.Location = new System.Drawing.Point(36, 18);
-            this.pnlRes1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlRes1.Location = new System.Drawing.Point(27, 15);
+            this.pnlRes1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlRes1.Name = "pnlRes1";
-            this.pnlRes1.Size = new System.Drawing.Size(855, 127);
+            this.pnlRes1.Size = new System.Drawing.Size(641, 103);
             this.pnlRes1.TabIndex = 53;
             // 
             // lblResPrecio1
             // 
             this.lblResPrecio1.AutoSize = true;
             this.lblResPrecio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResPrecio1.Location = new System.Drawing.Point(263, 85);
+            this.lblResPrecio1.Location = new System.Drawing.Point(197, 69);
+            this.lblResPrecio1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResPrecio1.Name = "lblResPrecio1";
-            this.lblResPrecio1.Size = new System.Drawing.Size(30, 24);
+            this.lblResPrecio1.Size = new System.Drawing.Size(22, 18);
             this.lblResPrecio1.TabIndex = 13;
             this.lblResPrecio1.Text = "xx";
             this.lblResPrecio1.Visible = false;
@@ -340,9 +348,10 @@
             // 
             this.lblPrecio1.AutoSize = true;
             this.lblPrecio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio1.Location = new System.Drawing.Point(184, 85);
+            this.lblPrecio1.Location = new System.Drawing.Point(138, 69);
+            this.lblPrecio1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecio1.Name = "lblPrecio1";
-            this.lblPrecio1.Size = new System.Drawing.Size(69, 24);
+            this.lblPrecio1.Size = new System.Drawing.Size(55, 18);
             this.lblPrecio1.TabIndex = 12;
             this.lblPrecio1.Text = "Precio:";
             this.lblPrecio1.Visible = false;
@@ -350,10 +359,9 @@
             // lblResUbi1
             // 
             this.lblResUbi1.AutoSize = true;
-            this.lblResUbi1.Location = new System.Drawing.Point(292, 55);
-            this.lblResUbi1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblResUbi1.Location = new System.Drawing.Point(219, 45);
             this.lblResUbi1.Name = "lblResUbi1";
-            this.lblResUbi1.Size = new System.Drawing.Size(68, 16);
+            this.lblResUbi1.Size = new System.Drawing.Size(55, 13);
             this.lblResUbi1.TabIndex = 11;
             this.lblResUbi1.TabStop = true;
             this.lblResUbi1.Text = "linkLabel1";
@@ -364,19 +372,19 @@
             // 
             this.lblUbicacion1.AutoSize = true;
             this.lblUbicacion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUbicacion1.Location = new System.Drawing.Point(181, 52);
+            this.lblUbicacion1.Location = new System.Drawing.Point(136, 42);
+            this.lblUbicacion1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUbicacion1.Name = "lblUbicacion1";
-            this.lblUbicacion1.Size = new System.Drawing.Size(99, 24);
+            this.lblUbicacion1.Size = new System.Drawing.Size(78, 18);
             this.lblUbicacion1.TabIndex = 9;
             this.lblUbicacion1.Text = "Ubicación:";
             this.lblUbicacion1.Visible = false;
             // 
             // btnEnviarMensajeChat1
             // 
-            this.btnEnviarMensajeChat1.Location = new System.Drawing.Point(685, 31);
-            this.btnEnviarMensajeChat1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnviarMensajeChat1.Location = new System.Drawing.Point(514, 25);
             this.btnEnviarMensajeChat1.Name = "btnEnviarMensajeChat1";
-            this.btnEnviarMensajeChat1.Size = new System.Drawing.Size(152, 65);
+            this.btnEnviarMensajeChat1.Size = new System.Drawing.Size(114, 53);
             this.btnEnviarMensajeChat1.TabIndex = 8;
             this.btnEnviarMensajeChat1.Text = "Enviar Mensaje";
             this.btnEnviarMensajeChat1.UseVisualStyleBackColor = true;
@@ -387,9 +395,10 @@
             // 
             this.lblNombreCuidador1.AutoSize = true;
             this.lblNombreCuidador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCuidador1.Location = new System.Drawing.Point(181, 17);
+            this.lblNombreCuidador1.Location = new System.Drawing.Point(136, 14);
+            this.lblNombreCuidador1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCuidador1.Name = "lblNombreCuidador1";
-            this.lblNombreCuidador1.Size = new System.Drawing.Size(138, 22);
+            this.lblNombreCuidador1.Size = new System.Drawing.Size(116, 18);
             this.lblNombreCuidador1.TabIndex = 7;
             this.lblNombreCuidador1.Text = "Sin resultados";
             // 
@@ -397,75 +406,84 @@
             // 
             this.pcbCuidador1.BackColor = System.Drawing.Color.Transparent;
             this.pcbCuidador1.Image = global::pet4sitter.Properties.Resources.usuario;
-            this.pcbCuidador1.Location = new System.Drawing.Point(17, 15);
-            this.pcbCuidador1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbCuidador1.Location = new System.Drawing.Point(13, 12);
+            this.pcbCuidador1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pcbCuidador1.Name = "pcbCuidador1";
-            this.pcbCuidador1.Size = new System.Drawing.Size(117, 92);
+            this.pcbCuidador1.Size = new System.Drawing.Size(88, 75);
             this.pcbCuidador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbCuidador1.TabIndex = 5;
             this.pcbCuidador1.TabStop = false;
             // 
             // lblIdUser1
             // 
+            this.lblIdUser1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdUser1.AutoSize = true;
             this.lblIdUser1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdUser1.Location = new System.Drawing.Point(1197, 187);
+            this.lblIdUser1.Location = new System.Drawing.Point(898, 152);
+            this.lblIdUser1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdUser1.Name = "lblIdUser1";
-            this.lblIdUser1.Size = new System.Drawing.Size(0, 22);
+            this.lblIdUser1.Size = new System.Drawing.Size(0, 18);
             this.lblIdUser1.TabIndex = 9;
             // 
             // lblIdUser2
             // 
+            this.lblIdUser2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdUser2.AutoSize = true;
             this.lblIdUser2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdUser2.Location = new System.Drawing.Point(1245, 310);
+            this.lblIdUser2.Location = new System.Drawing.Point(934, 252);
+            this.lblIdUser2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdUser2.Name = "lblIdUser2";
-            this.lblIdUser2.Size = new System.Drawing.Size(0, 22);
+            this.lblIdUser2.Size = new System.Drawing.Size(0, 18);
             this.lblIdUser2.TabIndex = 55;
             // 
             // lblIdUser3
             // 
+            this.lblIdUser3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdUser3.AutoSize = true;
             this.lblIdUser3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdUser3.Location = new System.Drawing.Point(1352, 279);
+            this.lblIdUser3.Location = new System.Drawing.Point(1014, 227);
+            this.lblIdUser3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdUser3.Name = "lblIdUser3";
-            this.lblIdUser3.Size = new System.Drawing.Size(0, 22);
+            this.lblIdUser3.Size = new System.Drawing.Size(0, 18);
             this.lblIdUser3.TabIndex = 56;
             // 
             // barraLateral1
             // 
+            this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
-            this.barraLateral1.Location = new System.Drawing.Point(0, -5);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.barraLateral1.Location = new System.Drawing.Point(0, -4);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.barraLateral1.Name = "barraLateral1";
-            this.barraLateral1.Size = new System.Drawing.Size(415, 737);
+            this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 57;
             // 
             // lblTituloRes
             // 
+            this.lblTituloRes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTituloRes.AutoSize = true;
             this.lblTituloRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloRes.ForeColor = System.Drawing.Color.White;
-            this.lblTituloRes.Location = new System.Drawing.Point(689, 82);
-            this.lblTituloRes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTituloRes.Location = new System.Drawing.Point(517, 67);
             this.lblTituloRes.Name = "lblTituloRes";
-            this.lblTituloRes.Size = new System.Drawing.Size(161, 31);
+            this.lblTituloRes.Size = new System.Drawing.Size(131, 26);
             this.lblTituloRes.TabIndex = 58;
             this.lblTituloRes.Text = "Resultados";
             // 
             // FrmResultadoFiltrado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1479, 734);
+            this.ClientSize = new System.Drawing.Size(1109, 596);
             this.Controls.Add(this.lblTituloRes);
             this.Controls.Add(this.lblIdUser3);
             this.Controls.Add(this.lblIdUser2);
             this.Controls.Add(this.lblIdUser1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.barraLateral1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmResultadoFiltrado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmResultadoFiltrado";

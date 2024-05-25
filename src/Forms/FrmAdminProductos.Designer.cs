@@ -54,7 +54,7 @@
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.barraLateral2 = new pet4sitter.BarraLateral();
+            this.barraLateral2 = new pet4sitter.BarraLateral(this);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
             this.panel4.SuspendLayout();
@@ -78,7 +78,7 @@
             this.panel1.Controls.Add(this.ptbImagen);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Location = new System.Drawing.Point(719, 66);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(362, 476);
             this.panel1.TabIndex = 10;
@@ -87,7 +87,7 @@
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.Location = new System.Drawing.Point(272, 440);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(88, 26);
             this.btnVolver.TabIndex = 48;
@@ -99,7 +99,7 @@
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Location = new System.Drawing.Point(182, 440);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 26);
             this.btnEliminar.TabIndex = 50;
@@ -111,7 +111,7 @@
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Location = new System.Drawing.Point(97, 440);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(88, 26);
             this.btnEditar.TabIndex = 49;
@@ -122,7 +122,7 @@
             // btnFoto
             // 
             this.btnFoto.Location = new System.Drawing.Point(246, 102);
-            this.btnFoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFoto.Margin = new System.Windows.Forms.Padding(2);
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.Size = new System.Drawing.Size(57, 55);
             this.btnFoto.TabIndex = 48;
@@ -134,7 +134,7 @@
             // 
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadir.Location = new System.Drawing.Point(10, 440);
-            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(88, 26);
             this.btnAñadir.TabIndex = 47;
@@ -146,7 +146,7 @@
             // 
             this.ptbImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ptbImagen.Location = new System.Drawing.Point(66, 16);
-            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbImagen.Margin = new System.Windows.Forms.Padding(2);
             this.ptbImagen.Name = "ptbImagen";
             this.ptbImagen.Size = new System.Drawing.Size(176, 141);
             this.ptbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -163,7 +163,7 @@
             this.panel4.Controls.Add(this.txtDescripcion);
             this.panel4.Controls.Add(this.lblDescripcion);
             this.panel4.Location = new System.Drawing.Point(16, 162);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(327, 266);
             this.panel4.TabIndex = 45;
@@ -187,7 +187,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtPrecio, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(166, 76);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -204,12 +204,11 @@
             this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 12;
             this.label3.Text = "Precio:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(68, 2);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(83, 20);
             this.txtPrecio.TabIndex = 13;
@@ -222,7 +221,7 @@
             this.tableLayoutPanel3.Controls.Add(this.lblCantidad, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.nudCant, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 76);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -243,7 +242,7 @@
             // nudCant
             // 
             this.nudCant.Location = new System.Drawing.Point(85, 2);
-            this.nudCant.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nudCant.Margin = new System.Windows.Forms.Padding(2);
             this.nudCant.Name = "nudCant";
             this.nudCant.Size = new System.Drawing.Size(64, 20);
             this.nudCant.TabIndex = 16;
@@ -256,7 +255,7 @@
             this.tableLayoutPanel2.Controls.Add(this.lblNombre, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtNombre, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 37);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -273,12 +272,11 @@
             this.lblNombre.Size = new System.Drawing.Size(73, 18);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre:";
-            this.lblNombre.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(79, 2);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(233, 20);
             this.txtNombre.TabIndex = 15;
@@ -286,7 +284,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(19, 137);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(288, 115);
             this.txtDescripcion.TabIndex = 35;
@@ -309,7 +307,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.dgvProductos);
             this.panel3.Location = new System.Drawing.Point(180, 66);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(509, 476);
             this.panel3.TabIndex = 9;
@@ -318,7 +316,7 @@
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(27, 16);
-            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
@@ -340,9 +338,10 @@
             // 
             // barraLateral2
             // 
+            this.barraLateral2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.barraLateral2.BackColor = System.Drawing.Color.Transparent;
             this.barraLateral2.Location = new System.Drawing.Point(-1, -2);
-            this.barraLateral2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLateral2.Margin = new System.Windows.Forms.Padding(4);
             this.barraLateral2.Name = "barraLateral2";
             this.barraLateral2.Size = new System.Drawing.Size(311, 599);
             this.barraLateral2.TabIndex = 1;
@@ -357,8 +356,10 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.barraLateral2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmAdminProductos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdminProductos";
             this.Load += new System.EventHandler(this.FrmAdminProductos_Load);
             this.panel1.ResumeLayout(false);

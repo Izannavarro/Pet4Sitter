@@ -38,8 +38,9 @@ namespace pet4sitter
 
         private void ModoOscuro()
         {
-            if(Data.DarkMode)
+            if (Data.DarkMode)
             {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
                 this.BackColor = Color.DarkGreen;
             }
         }
@@ -68,10 +69,10 @@ namespace pet4sitter
             string ordenPrecioOrden = "";
             if (ConBD.Conexion != null)
             {
-                if(cmbDistancia.SelectedIndex == 0)
+                if (cmbDistancia.SelectedIndex == 0)
                 {
                     ordenDist = true;
-                    if(cmbDistanciaAscDesc.SelectedIndex == 0)
+                    if (cmbDistanciaAscDesc.SelectedIndex == 0)
                     {
                         ordenDistOrden = "ASC";
                     }
@@ -81,7 +82,7 @@ namespace pet4sitter
                     }
                 }
 
-                if(cmbOrdenarPrecio.SelectedIndex == 0)
+                if (cmbOrdenarPrecio.SelectedIndex == 0)
                 {
                     ordenPrecio = true;
                     if (cmbPrecioAscDesc.SelectedIndex == 0)
@@ -95,9 +96,9 @@ namespace pet4sitter
                 }
 
                 ConBD.AbrirConexion();
-                List<User> lUser = User.ObtenerUsuariosCercanos(Data.CurrentUser.Latitud, Data.CurrentUser.Longitud, (double)nudDesde.Value, (double)nudHasta.Value,ordenDist,ordenDistOrden,ordenPrecio,ordenPrecioOrden,0,3);
+                List<User> lUser = User.ObtenerUsuariosCercanos(Data.CurrentUser.Latitud, Data.CurrentUser.Longitud, (double)nudDesde.Value, (double)nudHasta.Value, ordenDist, ordenDistOrden, ordenPrecio, ordenPrecioOrden, 0, 3);
                 ConBD.CerrarConexion();
-                FrmResultadoFiltrado frmResultadoFiltrado = new FrmResultadoFiltrado(lUser,(double)nudDesde.Value,(double)nudHasta.Value, ordenDist, ordenDistOrden, ordenPrecio, ordenPrecioOrden);
+                FrmResultadoFiltrado frmResultadoFiltrado = new FrmResultadoFiltrado(lUser, (double)nudDesde.Value, (double)nudHasta.Value, ordenDist, ordenDistOrden, ordenPrecio, ordenPrecioOrden);
                 frmResultadoFiltrado.Show();
                 this.Dispose();
             }
@@ -105,7 +106,7 @@ namespace pet4sitter
 
         private void cmbDistancia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbDistancia.SelectedIndex == 0)
+            if (cmbDistancia.SelectedIndex == 0)
             {
                 cmbDistanciaAscDesc.Visible = true;
             }

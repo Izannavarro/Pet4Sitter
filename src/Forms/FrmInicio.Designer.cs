@@ -70,7 +70,7 @@
             this.lblIdChat3 = new System.Windows.Forms.Label();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.panel1.SuspendLayout();
             this.pnlChat1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbChat1)).BeginInit();
@@ -518,6 +518,7 @@
             // 
             // pcbNoticia
             // 
+            this.pcbNoticia.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pcbNoticia.BackColor = System.Drawing.Color.Gainsboro;
             this.pcbNoticia.Image = global::pet4sitter.Properties.Resources.lgo;
             this.pcbNoticia.Location = new System.Drawing.Point(437, 326);
@@ -530,6 +531,7 @@
             // 
             // lblIdChat1
             // 
+            this.lblIdChat1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdChat1.AutoSize = true;
             this.lblIdChat1.Location = new System.Drawing.Point(1020, 122);
             this.lblIdChat1.Name = "lblIdChat1";
@@ -539,6 +541,7 @@
             // 
             // lblIdChat2
             // 
+            this.lblIdChat2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdChat2.AutoSize = true;
             this.lblIdChat2.Location = new System.Drawing.Point(1040, 211);
             this.lblIdChat2.Name = "lblIdChat2";
@@ -557,6 +560,7 @@
             // 
             // btnAdmin
             // 
+            this.btnAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdmin.Location = new System.Drawing.Point(1033, 555);
             this.btnAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdmin.Name = "btnAdmin";
@@ -569,6 +573,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::pet4sitter.Properties.Resources.loading;
             this.pictureBox1.Location = new System.Drawing.Point(428, 166);
@@ -607,7 +612,7 @@
             this.Controls.Add(this.pnlNoticia);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(1124, 631);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInicio";

@@ -37,9 +37,10 @@
             // 
             // btnProductos
             // 
+            this.btnProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductos.Location = new System.Drawing.Point(283, 37);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(208, 206);
             this.btnProductos.TabIndex = 48;
@@ -49,9 +50,10 @@
             // 
             // btnInicio
             // 
+            this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.Location = new System.Drawing.Point(283, 266);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(208, 206);
             this.btnInicio.TabIndex = 49;
@@ -61,9 +63,10 @@
             // 
             // btnCerrarSesion
             // 
+            this.btnCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.Location = new System.Drawing.Point(507, 266);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(208, 206);
             this.btnCerrarSesion.TabIndex = 51;
@@ -73,9 +76,10 @@
             // 
             // btnUsuarios
             // 
+            this.btnUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.Location = new System.Drawing.Point(507, 37);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(208, 206);
             this.btnUsuarios.TabIndex = 50;
@@ -94,8 +98,10 @@
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.btnProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmInicioAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInicioAdmin";
             this.Load += new System.EventHandler(this.FrmInicioAdmin_Load);
             this.ResumeLayout(false);
