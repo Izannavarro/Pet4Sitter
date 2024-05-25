@@ -183,5 +183,10 @@ namespace pet4sitter
         {
 
         }
+
+        private void FrmIAyuda_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

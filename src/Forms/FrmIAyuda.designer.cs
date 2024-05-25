@@ -46,7 +46,7 @@ namespace pet4sitter
             this.btnSend = new System.Windows.Forms.Button();
             this.txtPrompt = new System.Windows.Forms.TextBox();
             this.cmbPrompts = new System.Windows.Forms.ComboBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLoading)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoWifi)).BeginInit();
@@ -258,6 +258,7 @@ namespace pet4sitter
             this.Name = "FrmIAyuda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pet4sitter";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIAyuda_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

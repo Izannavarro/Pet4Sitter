@@ -56,7 +56,6 @@ namespace pet4sitter
                 try
                 {
                     await CargarNoticiasAsync();
-                    // Aquí puedes hacer algo con lNoticias, como actualizar la UI
                 }
                 catch (Exception ex)
                 {
@@ -215,6 +214,11 @@ namespace pet4sitter
                 // Oculta el GIF de carga
                 pcbGifCarga.Visible = false;
             }
+        }
+
+        private void FrmNoticias_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

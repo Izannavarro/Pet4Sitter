@@ -70,5 +70,28 @@ namespace pet4sitter.Clases
                 instancia.Close();
         }
 
+        //Método publico para comprobar la conexion a la BD , para bloquear a los usuarios sin conexion o evitar errores en la APP
+        public static bool ComprobarConexion()
+        {
+            if (ConBD.Conexion != null)
+            {
+                try
+                {
+                    AbrirConexion();
+                    // Realizar una consulta sencilla para verificar la conexión
+                    string query = "SELECT 1";
+                    MySqlCommand cmd = new MySqlCommand(query, Conexion);
+                    cmd.ExecuteScalar();
+                    CerrarConexion();
+                    return true;
+                }
+                catch (MySqlException)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
     }
 }

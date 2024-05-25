@@ -287,5 +287,10 @@ namespace pet4sitter
                 }
             }
         }
+
+        private void FrmTienda_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

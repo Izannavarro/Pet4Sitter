@@ -127,5 +127,10 @@ namespace pet4sitter
                 cmbPrecioAscDesc.Visible = true;
             }
         }
+
+        private void FrmFiltrador_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

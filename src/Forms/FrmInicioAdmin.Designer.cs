@@ -103,6 +103,7 @@
             this.Name = "FrmInicioAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInicioAdmin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmInicioAdmin_FormClosed);
             this.Load += new System.EventHandler(this.FrmInicioAdmin_Load);
             this.ResumeLayout(false);
 
