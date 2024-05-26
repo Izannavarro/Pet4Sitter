@@ -157,6 +157,12 @@ namespace pet4sitter
 
                         var mailService = new MailServices.MailPet4Sitter();
                         mailService.sendMailHtml("Pedido Realizado!", htmlMailPedido, Data.CurrentUser.Email);
+                        if(ConBD.Conexion != null)
+                        {
+                            ConBD.AbrirConexion();
+                            Data.CurrentUser = User.EncontrarUsuario((int)Data.CurrentUser.IdUser);
+                            ConBD.CerrarConexion();
+                        }
                     }
                     else
                     {

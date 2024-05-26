@@ -16,6 +16,7 @@ namespace pet4sitter
 {
     public partial class FrmAdminProductos : Form
     {
+        bool imagenModif = false;
         public FrmAdminProductos()
         {
             InitializeComponent();
@@ -72,6 +73,7 @@ namespace pet4sitter
 
                     // Aquí podrías mostrar la imagen seleccionada en un PictureBox si lo deseas
                     ptbImagen.Image = imagenSeleccionada;
+                    imagenModif = true;
                 }
                 catch (Exception ex)
                 {
@@ -82,6 +84,11 @@ namespace pet4sitter
 
         private bool ValidarDatos()
         {
+            if (lblId.Text != "")
+            {
+                MessageBox.Show("Vacía el pedido anterior para poder crear otro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("Ingresa Nombre!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -95,6 +102,11 @@ namespace pet4sitter
             if (txtPrecio.Text == "")
             {
                 MessageBox.Show("Ingresa un Precio al producto!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (!imagenModif)
+            {
+                MessageBox.Show("Ingresa una Imagen al producto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -111,7 +123,15 @@ namespace pet4sitter
                 int cant = Convert.ToInt32(nudCant.Value);
                 double precio = Convert.ToDouble(txtPrecio.Text);
                 string descrip = txtDescripcion.Text;
-                Image image = ptbImagen.Image;
+                Image image;
+                if(ptbImagen.Image != null && imagenModif)
+                {
+                    image = ptbImagen.Image;
+                }
+                else
+                {
+                    image = null;
+                }
 
                 Producto p1 = new Producto(null, nombre, cant, precio, descrip, image);
 
@@ -126,6 +146,7 @@ namespace pet4sitter
                 {
                     MessageBox.Show("No se pudo conectar a la base de datos!");
                 }
+                imagenModif = false;
             }
         }
 
@@ -170,32 +191,52 @@ namespace pet4sitter
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            string nombre = txtNombre.Text.ToUpper();
-            int cant = Convert.ToInt32(nudCant.Value);
-            double precio = Convert.ToDouble(txtPrecio.Text);
-            string descrip = txtDescripcion.Text;
-            Image img = ptbImagen.Image;
-            int id = int.Parse(lblId.Text);
-
-            Producto p1 = new Producto(id, nombre, cant, precio, descrip, img);
-
-
-            if (ConBD.Conexion != null)
+                string nombre = txtNombre.Text.ToUpper();
+                int cant = Convert.ToInt32(nudCant.Value);
+                double precio = Convert.ToDouble(txtPrecio.Text);
+                string descrip = txtDescripcion.Text;
+                Image img = ptbImagen.Image;
+                int id = int.Parse(lblId.Text);
+            Producto p1;
+            if (imagenModif)
             {
-                ConBD.AbrirConexion();
-                Producto.ActualizarProducto(p1);
-                LimpiarTablaProductos();
-                ConBD.CerrarConexion();
+
+                p1 = new Producto(id, nombre, cant, precio, descrip, img);
             }
             else
             {
-                MessageBox.Show("No se pudo conectar a la base de datos!");
+
+                p1 = new Producto(id, nombre, cant, precio, descrip, null);
             }
+
+
+                if (ConBD.Conexion != null)
+                {
+                    ConBD.AbrirConexion();
+                    Producto.ActualizarProducto(p1);
+                    LimpiarTablaProductos();
+                    ConBD.CerrarConexion();
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo conectar a la base de datos!");
+                }
+            
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnVaciarCampos_Click(object sender, EventArgs e)
+        {
+            lblId.Text = "";
+            txtNombre.Text = "";
+            ptbImagen.Image = null;
+            nudCant.Value = 1;
+            txtPrecio.Clear();
+            txtDescripcion.Clear();
         }
     }
 }

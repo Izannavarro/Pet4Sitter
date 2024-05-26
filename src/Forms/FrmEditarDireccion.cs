@@ -52,10 +52,6 @@ namespace pet4sitter
             btnGuardar.Text = Resources.Recursos_Localizable.FrmEditarDireccion.btnGuardar_Text;
         }
 
-        private void FrmEditarDireccion_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {

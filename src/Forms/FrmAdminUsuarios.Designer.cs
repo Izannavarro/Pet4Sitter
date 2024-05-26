@@ -36,7 +36,6 @@ namespace pet4sitter
             this.panel4 = new System.Windows.Forms.Panel();
             this.ckbAdministrator = new System.Windows.Forms.CheckBox();
             this.ckbSitter = new System.Windows.Forms.CheckBox();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.lblAdministrator = new System.Windows.Forms.Label();
             this.lblSitter = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -113,7 +112,6 @@ namespace pet4sitter
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.ckbAdministrator);
             this.panel4.Controls.Add(this.ckbSitter);
-            this.panel4.Controls.Add(this.btnEditar);
             this.panel4.Controls.Add(this.lblAdministrator);
             this.panel4.Controls.Add(this.lblSitter);
             this.panel4.Controls.Add(this.lblPassword);
@@ -148,16 +146,6 @@ namespace pet4sitter
             this.ckbSitter.Size = new System.Drawing.Size(15, 14);
             this.ckbSitter.TabIndex = 19;
             this.ckbSitter.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(7, 77);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(56, 54);
-            this.btnEditar.TabIndex = 18;
-            this.btnEditar.Text = "Editar Imagen";
-            this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // lblAdministrator
             // 
@@ -347,7 +335,6 @@ namespace pet4sitter
         private System.Windows.Forms.PictureBox ptbImagen;
         private System.Windows.Forms.Label lblAdministrator;
         private System.Windows.Forms.Label lblSitter;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.CheckBox ckbAdministrator;
         private System.Windows.Forms.CheckBox ckbSitter;
         private System.Windows.Forms.Label lblPassword;

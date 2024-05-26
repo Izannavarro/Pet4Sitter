@@ -57,7 +57,6 @@ namespace pet4sitter
             btnVolver.Text = Resources.Recursos_Localizable.FrmAdminUsuarios.btnVolver_Text;
             lblUsuarioss.Text = Resources.Recursos_Localizable.FrmAdminUsuarios.lblUsuarioss_Text;
             btnEliminarUsuario.Text = Resources.Recursos_Localizable.FrmAdminUsuarios.btnEliminarUsuario_Text;
-            btnEditar.Text = Resources.Recursos_Localizable.FrmAdminUsuarios.btnEditar_Text;
             lblUsuario.Text = Resources.Recursos_Localizable.FrmAdminUsuarios.lblUsuario_Text;
             label1.Text = Resources.Recursos_Localizable.FrmAdminUsuarios.label1_Text;
             lblPassword.Text = Resources.Recursos_Localizable.FrmAdminUsuarios.label8_Text;

@@ -52,7 +52,6 @@ namespace pet4sitter
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
             this.Dispose();
         }
 

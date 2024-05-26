@@ -144,21 +144,38 @@ namespace pet4sitter.Clases
         {
             try
             {
-                byte[] imgArr = Utiles.ImageToByteArray(p1.UrlImagen);
+                string consulta;
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = ConBD.Conexion;
 
-                string consulta = string.Format("UPDATE products set name = '{0}' ,quantity = '{1}', price = '{2}', description = '{3}', image = @imagen WHERE id_product = '{5}'", p1.NombreProducto, p1.Cantidad, p1.Precio, p1.Descripcion, p1.UrlImagen, p1.Id);
-                MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
-                comando.Parameters.AddWithValue("@imagen", imgArr);
+                if (p1.UrlImagen != null)
+                {
+                    byte[] imgArr = Utiles.ImageToByteArray(p1.UrlImagen);
+                    consulta = "UPDATE products SET name = @nombre, quantity = @cantidad, price = @precio, description = @descripcion, image = @imagen WHERE id_product = @id";
+                    comando.Parameters.AddWithValue("@imagen", imgArr);
+                }
+                else
+                {
+                    consulta = "UPDATE products SET name = @nombre, quantity = @cantidad, price = @precio, description = @descripcion WHERE id_product = @id";
+                }
+
+                comando.CommandText = consulta;
+                comando.Parameters.AddWithValue("@nombre", p1.NombreProducto);
+                comando.Parameters.AddWithValue("@cantidad", p1.Cantidad);
+                comando.Parameters.AddWithValue("@precio", p1.Precio);
+                comando.Parameters.AddWithValue("@descripcion", p1.Descripcion);
+                comando.Parameters.AddWithValue("@id", p1.Id);
+
                 MySqlDataReader reader = comando.ExecuteReader();
                 reader.Close();
             }
-
             catch (Exception ex)
             {
                 // Manejar excepciones
                 MessageBox.Show("Error al actualizar el producto: " + ex.Message);
             }
         }
+
 
         public static List<Producto> EncontrarNombreProducto(string nombreProducto)
         {

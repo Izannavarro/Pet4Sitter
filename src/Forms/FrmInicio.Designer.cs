@@ -427,9 +427,9 @@
             // pnlNoticia1
             // 
             this.pnlNoticia1.BackColor = System.Drawing.Color.White;
-            this.pnlNoticia1.Controls.Add(this.pnlNoticiaPremium);
             this.pnlNoticia1.Controls.Add(this.linkNoticia);
             this.pnlNoticia1.Controls.Add(this.tableLayoutPanel3);
+            this.pnlNoticia1.Controls.Add(this.pnlNoticiaPremium);
             this.pnlNoticia1.Location = new System.Drawing.Point(10, 15);
             this.pnlNoticia1.Margin = new System.Windows.Forms.Padding(2);
             this.pnlNoticia1.Name = "pnlNoticia1";
@@ -439,8 +439,8 @@
             // pnlNoticiaPremium
             // 
             this.pnlNoticiaPremium.BackColor = System.Drawing.Color.White;
-            this.pnlNoticiaPremium.Controls.Add(this.lblPremium);
             this.pnlNoticiaPremium.Controls.Add(this.pcbPremium);
+            this.pnlNoticiaPremium.Controls.Add(this.lblPremium);
             this.pnlNoticiaPremium.Location = new System.Drawing.Point(0, 0);
             this.pnlNoticiaPremium.Margin = new System.Windows.Forms.Padding(2);
             this.pnlNoticiaPremium.Name = "pnlNoticiaPremium";
@@ -451,12 +451,13 @@
             // 
             this.lblPremium.AutoSize = true;
             this.lblPremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPremium.Location = new System.Drawing.Point(158, 132);
+            this.lblPremium.Location = new System.Drawing.Point(85, 131);
             this.lblPremium.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPremium.Name = "lblPremium";
-            this.lblPremium.Size = new System.Drawing.Size(184, 18);
+            this.lblPremium.Size = new System.Drawing.Size(338, 36);
             this.lblPremium.TabIndex = 7;
-            this.lblPremium.Text = "Funcionalidad Premium";
+            this.lblPremium.Text = "Funcionalidad Premium\r\nHaz almenos una compra para ser premium";
+            this.lblPremium.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pcbPremium
             // 
