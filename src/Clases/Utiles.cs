@@ -14,15 +14,24 @@ using System.Security.Cryptography;
 
 namespace pet4sitter.Clases
 {
+    /// <summary>
+    /// Clase que proporciona métodos útiles para diversas tareas.
+    /// </summary>
     public class Utiles
     {
+        /// <summary>
+        /// Busca un token en la base de datos por su nombre.
+        /// </summary>
+        /// <param name="nombre">El nombre del token a buscar.</param>
+        /// <returns>El valor del token si se encuentra; de lo contrario, devuelve "none".</returns>
         public static string BuscarToken(string nombre)
         {
-            if(ConBD.Conexion != null)
+            // Verificar la conexión a la base de datos
+            if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
                 string query = "SELECT token_value FROM tokens WHERE token_name=@name;";
-                MySqlCommand com = new MySqlCommand(query,ConBD.Conexion);
+                MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
                 com.Parameters.AddWithValue("name", nombre);
                 string tokenValue = com.ExecuteScalar()?.ToString(); // Ejecuta el comando y obtén el valor del token
                 ConBD.CerrarConexion();
@@ -30,6 +39,12 @@ namespace pet4sitter.Clases
             }
             return "none";
         }
+
+        /// <summary>
+        /// Genera una contraseña aleatoria de la longitud especificada.
+        /// </summary>
+        /// <param name="length">La longitud de la contraseña.</param>
+        /// <returns>Una cadena que representa la contraseña aleatoria generada.</returns>
         public static string GenerateRandomPassword(int length)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -37,6 +52,12 @@ namespace pet4sitter.Clases
             return new string(Enumerable.Repeat(chars, length)
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
+
+        /// <summary>
+        /// Convierte un objeto Bitmap en un objeto Icon.
+        /// </summary>
+        /// <param name="bitmap">El objeto Bitmap a convertir.</param>
+        /// <returns>El objeto Icon resultante.</returns>
         public static Icon BitmapToIcon(Bitmap bitmap)
         {
             // Crear un archivo temporal para el ícono
@@ -56,6 +77,11 @@ namespace pet4sitter.Clases
             return icon;
         }
 
+        /// <summary>
+        /// Convierte un archivo de imagen en un objeto Icon.
+        /// </summary>
+        /// <param name="filePath">La ruta del archivo de imagen.</param>
+        /// <returns>El objeto Icon resultante.</returns>
         private static Icon IconFromHandle(string filePath)
         {
             using (var bmp = new Bitmap(filePath))
@@ -65,6 +91,11 @@ namespace pet4sitter.Clases
             }
         }
 
+        /// <summary>
+        /// Obtiene la altura del texto en un control Label.
+        /// </summary>
+        /// <param name="lbl">El control Label que contiene el texto.</param>
+        /// <returns>La altura del texto en el control Label.</returns>
         public static int ObtenerAlturaTexto(Label lbl)
         {
             using (Graphics g = lbl.CreateGraphics())
@@ -75,6 +106,11 @@ namespace pet4sitter.Clases
             }
         }
 
+        /// <summary>
+        /// Convierte una imagen en un arreglo de bytes.
+        /// </summary>
+        /// <param name="imageIn">La imagen a convertir.</param>
+        /// <returns>El arreglo de bytes que representa la imagen.</returns>
         public static byte[] ImageToByteArray(Image imageIn)
         {
             using (MemoryStream ms = new MemoryStream())
@@ -84,6 +120,11 @@ namespace pet4sitter.Clases
             }
         }
 
+        /// <summary>
+        /// Convierte un arreglo de bytes en una imagen.
+        /// </summary>
+        /// <param name="byteArrayIn">El arreglo de bytes que representa la imagen.</param>
+        /// <returns>La imagen resultante.</returns>
         public static Image ByteArrayToImage(byte[] byteArrayIn)
         {
             using (MemoryStream ms = new MemoryStream(byteArrayIn))
@@ -93,7 +134,11 @@ namespace pet4sitter.Clases
             }
         }
 
-
+        /// <summary>
+        /// Ejecuta una consulta SQL y devuelve los resultados en un DataTable.
+        /// </summary>
+        /// <param name="query">La consulta SQL a ejecutar.</param>
+        /// <returns>Un DataTable que contiene los resultados de la consulta.</returns>
         public static DataTable ExecuteQuery(string query)
         {
             // Create a new DataTable to hold the query results
@@ -120,22 +165,28 @@ namespace pet4sitter.Clases
             return dataTable;
         }
 
+        /// <summary>
+        /// Ejecuta una consulta SQL parametrizada y devuelve los resultados en un DataTable.
+        /// </summary>
+        /// <param name="query">La consulta SQL parametrizada a ejecutar.</param>
+        /// <param name="parameters">Los parámetros de la consulta.</param>
+        /// <returns>Un DataTable que contiene los resultados de la consulta.</returns>
         public static DataTable ExecuteQuery(string query, params MySqlParameter[] parameters)
         {
             DataTable dt = new DataTable();
             try
             {
-                    using (MySqlCommand cmd = new MySqlCommand(query, ConBD.Conexion))
+                using (MySqlCommand cmd = new MySqlCommand(query, ConBD.Conexion))
+                {
+                    if (parameters != null)
                     {
-                        if (parameters != null)
-                        {
-                            cmd.Parameters.AddRange(parameters);
-                        }
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
-                        {
-                            adapter.Fill(dt);
-                        }
+                        cmd.Parameters.AddRange(parameters);
                     }
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        adapter.Fill(dt);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -144,42 +195,56 @@ namespace pet4sitter.Clases
             return dt;
         }
 
+        /// <summary>
+        /// Verifica la validez de un número de DNI (Documento Nacional de Identidad) español.
+        /// </summary>
+        /// <param name="dni">El número de DNI a verificar.</param>
+        /// <returns>True si el DNI es válido; de lo contrario, false.</returns>
         public static bool CheckDNI(string dni)
         {
+            // Verificar la longitud del DNI
             if (dni.Length != 9)
             {
                 return false;
             }
 
-            //Extraemos los números y la letra
+            // Extraer los números y la letra del DNI
             string dniNumbers = dni.Substring(0, dni.Length - 1);
-            string dniLeter = dni.Substring(dni.Length - 1, 1);
-            //Intentamos convertir los números del DNI a integer
-            var numbersValid = int.TryParse(dniNumbers, out int dniInteger);
-            if (!numbersValid)
+            string dniLetter = dni.Substring(dni.Length - 1, 1);
+
+            // Intentar convertir los números del DNI a formato numérico
+            if (!int.TryParse(dniNumbers, out int dniInteger))
             {
-                //No se pudo convertir los números a formato númerico
+                // No se pudo convertir los números a formato numérico
                 return false;
             }
-            if (CalculateDNILeter(dniInteger) != dniLeter)
+
+            // Verificar la letra del DNI
+            if (CalculateDNILeter(dniInteger) != dniLetter)
             {
-                //La letra del DNI es incorrecta
+                // La letra del DNI es incorrecta
                 return false;
             }
-            //DNI Valido :)
+
+            // El DNI es válido
             return true;
         }
 
-
+        /// <summary>
+        /// Calcula la letra correspondiente a los números de un DNI español.
+        /// </summary>
+        /// <param name="dniNumbers">Los números del DNI.</param>
+        /// <returns>La letra correspondiente a los números del DNI.</returns>
         public static string CalculateDNILeter(int dniNumbers)
         {
-            //Cargamos los digitos de control
+            // Cargar los dígitos de control
             string[] control = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
+
+            // Calcular el dígito de control
             var mod = dniNumbers % 23;
+
+            // Devolver la letra correspondiente al dígito de control
             return control[mod];
         }
-
-
-
     }
 }

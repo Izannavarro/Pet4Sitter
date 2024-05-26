@@ -13,6 +13,7 @@ namespace pet4sitter.Clases
         public string Url { get; set; }
         public string UrlImagen;
 
+        //Clase Noticia
         public Noticia(string titulo, string descripcion, string url, string urlImagen)
         {
             Titulo = titulo;

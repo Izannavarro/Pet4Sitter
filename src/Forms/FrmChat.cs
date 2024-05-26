@@ -239,7 +239,6 @@ namespace pet4sitter
 
         private void pnl1_MouseHover(object sender, EventArgs e)
         {
-            pnl1.BackColor = Color.Orange;
         }
 
         private void pnl1_Paint(object sender, PaintEventArgs e)

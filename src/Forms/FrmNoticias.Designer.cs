@@ -288,11 +288,12 @@
             // 
             this.lblFuncPre.AutoSize = true;
             this.lblFuncPre.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFuncPre.Location = new System.Drawing.Point(234, 218);
+            this.lblFuncPre.Location = new System.Drawing.Point(140, 219);
             this.lblFuncPre.Name = "lblFuncPre";
             this.lblFuncPre.Size = new System.Drawing.Size(318, 31);
             this.lblFuncPre.TabIndex = 1;
             this.lblFuncPre.Text = "Funcionalidad PREMIUM";
+            this.lblFuncPre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ptbCorona
             // 

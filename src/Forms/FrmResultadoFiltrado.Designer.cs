@@ -82,7 +82,7 @@
             this.panel3.Controls.Add(this.pnlRes2);
             this.panel3.Controls.Add(this.pnlRes1);
             this.panel3.Location = new System.Drawing.Point(247, 140);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(720, 370);
             this.panel3.TabIndex = 49;
@@ -101,7 +101,7 @@
             // btnSiguiente
             // 
             this.btnSiguiente.Location = new System.Drawing.Point(429, 338);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(2);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(95, 25);
             this.btnSiguiente.TabIndex = 54;
@@ -120,7 +120,7 @@
             this.pnl3.Controls.Add(this.lblNombreCuidador3);
             this.pnl3.Controls.Add(this.pcbCuidador3);
             this.pnl3.Location = new System.Drawing.Point(27, 231);
-            this.pnl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl3.Margin = new System.Windows.Forms.Padding(2);
             this.pnl3.Name = "pnl3";
             this.pnl3.Size = new System.Drawing.Size(641, 103);
             this.pnl3.TabIndex = 55;
@@ -200,7 +200,7 @@
             this.pcbCuidador3.BackColor = System.Drawing.Color.Transparent;
             this.pcbCuidador3.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbCuidador3.Location = new System.Drawing.Point(13, 12);
-            this.pcbCuidador3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbCuidador3.Margin = new System.Windows.Forms.Padding(2);
             this.pcbCuidador3.Name = "pcbCuidador3";
             this.pcbCuidador3.Size = new System.Drawing.Size(88, 75);
             this.pcbCuidador3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -210,7 +210,7 @@
             // btnAnterior
             // 
             this.btnAnterior.Location = new System.Drawing.Point(167, 338);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(95, 25);
             this.btnAnterior.TabIndex = 53;
@@ -229,7 +229,7 @@
             this.pnlRes2.Controls.Add(this.lblNombreCuidador2);
             this.pnlRes2.Controls.Add(this.pcbCuidador2);
             this.pnlRes2.Location = new System.Drawing.Point(27, 123);
-            this.pnlRes2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlRes2.Margin = new System.Windows.Forms.Padding(2);
             this.pnlRes2.Name = "pnlRes2";
             this.pnlRes2.Size = new System.Drawing.Size(641, 103);
             this.pnlRes2.TabIndex = 54;
@@ -309,7 +309,7 @@
             this.pcbCuidador2.BackColor = System.Drawing.Color.Transparent;
             this.pcbCuidador2.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbCuidador2.Location = new System.Drawing.Point(13, 13);
-            this.pcbCuidador2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbCuidador2.Margin = new System.Windows.Forms.Padding(2);
             this.pcbCuidador2.Name = "pcbCuidador2";
             this.pcbCuidador2.Size = new System.Drawing.Size(88, 75);
             this.pcbCuidador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -327,7 +327,7 @@
             this.pnlRes1.Controls.Add(this.lblNombreCuidador1);
             this.pnlRes1.Controls.Add(this.pcbCuidador1);
             this.pnlRes1.Location = new System.Drawing.Point(27, 15);
-            this.pnlRes1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlRes1.Margin = new System.Windows.Forms.Padding(2);
             this.pnlRes1.Name = "pnlRes1";
             this.pnlRes1.Size = new System.Drawing.Size(641, 103);
             this.pnlRes1.TabIndex = 53;
@@ -407,7 +407,7 @@
             this.pcbCuidador1.BackColor = System.Drawing.Color.Transparent;
             this.pcbCuidador1.Image = global::pet4sitter.Properties.Resources.usuario;
             this.pcbCuidador1.Location = new System.Drawing.Point(13, 12);
-            this.pcbCuidador1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcbCuidador1.Margin = new System.Windows.Forms.Padding(2);
             this.pcbCuidador1.Name = "pcbCuidador1";
             this.pcbCuidador1.Size = new System.Drawing.Size(88, 75);
             this.pcbCuidador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -451,8 +451,8 @@
             // 
             this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
-            this.barraLateral1.Location = new System.Drawing.Point(0, -4);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLateral1.Location = new System.Drawing.Point(0, -2);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4);
             this.barraLateral1.Name = "barraLateral1";
             this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 57;
@@ -482,7 +482,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.barraLateral1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmResultadoFiltrado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

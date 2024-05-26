@@ -84,7 +84,7 @@ namespace pet4sitter
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(432, 27);
-            this.txtMail.TabIndex = 2;
+            this.txtMail.TabIndex = 0;
             this.txtMail.Text = "Introduce email";
             this.txtMail.Enter += new System.EventHandler(this.txtMail_Enter);
             this.txtMail.Leave += new System.EventHandler(this.txtMail_Leave);
@@ -99,7 +99,7 @@ namespace pet4sitter
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(432, 27);
-            this.txtPass.TabIndex = 4;
+            this.txtPass.TabIndex = 1;
             this.txtPass.Text = "Introduce contraseña";
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
@@ -155,7 +155,7 @@ namespace pet4sitter
             this.btnLogin.Location = new System.Drawing.Point(308, 211);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(432, 28);
-            this.btnLogin.TabIndex = 8;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Iniciar Sesión";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -165,7 +165,7 @@ namespace pet4sitter
             this.btnRegister.Location = new System.Drawing.Point(308, 245);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(432, 28);
-            this.btnRegister.TabIndex = 9;
+            this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "Regístrate";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -190,7 +190,7 @@ namespace pet4sitter
             this.btnContinueWGoogle.Location = new System.Drawing.Point(308, 279);
             this.btnContinueWGoogle.Name = "btnContinueWGoogle";
             this.btnContinueWGoogle.Size = new System.Drawing.Size(432, 28);
-            this.btnContinueWGoogle.TabIndex = 11;
+            this.btnContinueWGoogle.TabIndex = 4;
             this.btnContinueWGoogle.Text = "Continuar con google";
             this.btnContinueWGoogle.UseVisualStyleBackColor = true;
             this.btnContinueWGoogle.Click += new System.EventHandler(this.btnIniciarSesionGoogle_Click);
