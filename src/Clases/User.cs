@@ -259,7 +259,7 @@ namespace pet4sitter.Clases
             comando.Parameters.AddWithValue("@dni", u.dni);
             comando.Parameters.AddWithValue("@password", hashedPassword);
             comando.Parameters.AddWithValue("@location", u.location);
-            comando.Parameters.AddWithValue("@sitter", u.sitter);
+            comando.Parameters.AddWithValue("@sitter", 0);
 
             // Verificar si idGoogle no es nulo y agregarlo a la consulta
             if (u.idGoogle != null)
