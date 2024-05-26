@@ -246,6 +246,7 @@ namespace pet4sitter
                 lblAjustes.ForeColor = Color.White;
                 pcbEditarPerfil.Image = Properties.Resources.usuarioBlanco;
                 lblPerfil.ForeColor = Color.White;
+                lblNombreApp.ForeColor = Color.White;
 
             }
         }
@@ -298,10 +299,13 @@ namespace pet4sitter
         {
             FrmConfiguracion frm = new FrmConfiguracion();
             frm.ShowDialog();
-<<<<<<< HEAD
             formActual.Refresh();
-=======
->>>>>>> f3dda26dfdce8daedbb1ecbfe0da195bc2d02165
+            if(Data.CurrentUser == null)
+            {
+                formActual.Dispose();
+                FrmLogin login = new FrmLogin();
+                login.Show();
+            }
         }
 
         private void pcbTienda_Click(object sender, EventArgs e)

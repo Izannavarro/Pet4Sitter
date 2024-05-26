@@ -61,20 +61,29 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Anterior.
+        ///   Busca una cadena traducida similar a Funcionalidad PREMIUM.
         /// </summary>
-        internal static string btnAnterior_Text {
+        internal static string lblFuncPre {
             get {
-                return ResourceManager.GetString("btnAnterior_Text", resourceCulture);
+                return ResourceManager.GetString("lblFuncPre", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Siguiente.
+        ///   Busca una cadena traducida similar a Pulsa en el titulo de cualquier noticia para redirijirte a la noticia oficial.
         /// </summary>
-        internal static string btnSiguiente_Text {
+        internal static string lblInfoPulsar {
             get {
-                return ResourceManager.GetString("btnSiguiente_Text", resourceCulture);
+                return ResourceManager.GetString("lblInfoPulsar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a NOTICIAS SOBRE NUESTROS QUERIDOS ANIMALES.
+        /// </summary>
+        internal static string lblTituloNoticias {
+            get {
+                return ResourceManager.GetString("lblTituloNoticias", resourceCulture);
             }
         }
     }

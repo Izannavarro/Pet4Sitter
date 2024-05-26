@@ -30,19 +30,20 @@ namespace pet4sitter
 
         private async void FrmInicio_Load(object sender, EventArgs e)
         {
-            if (Data.DarkMode)
-            {
-                ModoOscuro();
-            }
+            pictureBox1.Visible = true;
+            ModoOscuro();
+            AplicarIdioma();
             if ((bool)Data.CurrentUser.Premium)
             {
                 await MostrarNoticia();
                 pnlNoticiaPremium.Visible = false;
+                pcbNoticia.Visible = true;
             }
             else
             {
                 pnlNoticiaPremium.Visible = true;
                 pnlNoticiaPremium.BringToFront();
+                pcbNoticia.Visible = false;
             }
             CargarProductosDestacados();
             CargarUltimosChats();
@@ -51,12 +52,20 @@ namespace pet4sitter
             {
                 btnAdmin.Visible = true;
             }
+            pictureBox1.Visible = false;
+        }
+
+        private void AplicarIdioma()
+        {
+            lblPremium.Text = Resources.Recursos_Localizable.FrmInicio.lbl;
+            linkNoticia.Text = Resources.Recursos_Localizable.FrmInicio.link;
         }
 
         private void ModoOscuro()
         {
-            if (Data.IsDarkModeEnabled())
+            if (Data.DarkMode)
             {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
                 this.BackColor = Color.DarkGreen;
             }
         }
@@ -69,15 +78,16 @@ namespace pet4sitter
                 List<Producto> lprod = Producto.ListarProductos(query);
                 if (lprod.Count > 0)
                 {
+
                     lblProductoDestacado1.Text = lprod[0].NombreProducto;
-                    lblPrecioProductoDestacado1.Text = lprod[0].Precio.ToString();
+                    lblPrecioProductoDestacado1.Text = lprod[0].Precio.ToString() + " EUR";
                     pcbProductoDestacado1.Image = lprod[0].UrlImagen;
                 }
 
                 if (lprod.Count > 1)
                 {
                     lblProductoDestacado2.Text = lprod[1].NombreProducto;
-                    lblPrecioProductoDestacado2.Text = lprod[1].Precio.ToString();
+                    lblPrecioProductoDestacado2.Text = lprod[1].Precio.ToString() + " EUR";
                     pcbProductoDestacado2.Image = lprod[1].UrlImagen;
                 }
                 ConBD.CerrarConexion();
@@ -297,5 +307,6 @@ namespace pet4sitter
         {
             Application.Exit();
         }
+
     }
 }

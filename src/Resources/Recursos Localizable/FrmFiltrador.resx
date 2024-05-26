@@ -98,26 +98,46 @@
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
-	<data name="lblFiltros.Text" xml:space="preserve">
-  <value>Filtros de Cuidador</value>
+	<data name="lblFiltros_Text" xml:space="preserve">
+    <value>Filters:</value>
 </data>
-	<data name="lblRango.Text" xml:space="preserve">
-  <value>Rango de Precios:</value>
+	<data name="lblRango_Text" xml:space="preserve">
+    <value>Range:</value>
 </data>
-	<data name="lblUbicacion.Text" xml:space="preserve">
-  <value>Ubicación:</value>
+	<data name="lblDesde_Text" xml:space="preserve">
+    <value>From:</value>
 </data>
-	<data name="lblDesde.Text" xml:space="preserve">
-  <value>Desde:</value>
+	<data name="lblHasta_Text" xml:space="preserve">
+    <value>To:</value>
 </data>
-	<data name="lblHasta.Text" xml:space="preserve">
-  <value>Hasta:</value>
+	<data name="label9_Text" xml:space="preserve">
+    <value></value>
 </data>
-	<data name="btnBuscar.Text" xml:space="preserve">
-  <value>BUSCAR</value>
+	<data name="btnBuscar_Text" xml:space="preserve">
+    <value>Search</value>
 </data>
-	<data name="btnBorrar.Text" xml:space="preserve">
-  <value>BORRAR</value>
+	<data name="btnBorrar_Text" xml:space="preserve">
+    <value>Delete</value>
 </data>
-
+	<data name="button1_Text" xml:space="preserve">
+    <value></value>
+</data>
+	<data name="lblOrdenarPorDistancia_Text" xml:space="preserve">
+    <value>Sort by Distance:</value>
+</data>
+	<data name="lblOrdenarPrecio_Text" xml:space="preserve">
+    <value>Sort by Price:</value>
+</data>
+	<data name="cmbDistanciaAscDesc_Text" xml:space="preserve">
+    <value>Ascending</value>
+</data>
+	<data name="cmbPrecioAscDesc_Text" xml:space="preserve">
+    <value>Ascending</value>
+</data>
+	<data name="cmbOrdenarPrecio_Text" xml:space="preserve">
+    <value>Price</value>
+</data>
+	<data name="cmbDistancia_Text" xml:space="preserve">
+    <value>Distance</value>
+</data>
 </root>

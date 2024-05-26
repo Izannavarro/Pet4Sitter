@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Net.NetworkInformation;
 using System.Net;
 using pet4sitter.Clases;
+using System.Drawing;
 
 namespace pet4sitter
 {
@@ -19,13 +20,9 @@ namespace pet4sitter
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private async void Form1_Load(object sender, EventArgs e)
         {
+            ModoOscuro();
             await VerificarConexionYActualizarUI();
         }
 
@@ -48,6 +45,15 @@ namespace pet4sitter
                 await Task.Delay(1000); // Esperar 1 segundo (ajusta este valor según lo deseado)
             }
         }
+        void ModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+            }
+        }
+
         private void ActualizarUIConection(bool b)
         {
             if (!b)
@@ -176,6 +182,11 @@ namespace pet4sitter
         private void barraLateral1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmIAyuda_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

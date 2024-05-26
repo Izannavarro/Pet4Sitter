@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicioAdmin));
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
@@ -36,11 +37,12 @@
             // 
             // btnProductos
             // 
+            this.btnProductos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.Location = new System.Drawing.Point(377, 46);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProductos.Location = new System.Drawing.Point(283, 37);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(277, 254);
+            this.btnProductos.Size = new System.Drawing.Size(208, 206);
             this.btnProductos.TabIndex = 48;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = true;
@@ -48,11 +50,12 @@
             // 
             // btnInicio
             // 
+            this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.Location = new System.Drawing.Point(377, 327);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInicio.Location = new System.Drawing.Point(283, 266);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(277, 254);
+            this.btnInicio.Size = new System.Drawing.Size(208, 206);
             this.btnInicio.TabIndex = 49;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
@@ -60,11 +63,12 @@
             // 
             // btnCerrarSesion
             // 
+            this.btnCerrarSesion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.Location = new System.Drawing.Point(676, 327);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(507, 266);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(277, 254);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(208, 206);
             this.btnCerrarSesion.TabIndex = 51;
             this.btnCerrarSesion.Text = "Cerrar sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
@@ -72,11 +76,12 @@
             // 
             // btnUsuarios
             // 
+            this.btnUsuarios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.Location = new System.Drawing.Point(676, 46);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUsuarios.Location = new System.Drawing.Point(507, 37);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(277, 254);
+            this.btnUsuarios.Size = new System.Drawing.Size(208, 206);
             this.btnUsuarios.TabIndex = 50;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = true;
@@ -84,16 +89,19 @@
             // 
             // FrmInicioAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
-            this.ClientSize = new System.Drawing.Size(1479, 734);
+            this.ClientSize = new System.Drawing.Size(1109, 596);
             this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.btnProductos);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmInicioAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInicioAdmin";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmInicioAdmin_FormClosed);
             this.Load += new System.EventHandler(this.FrmInicioAdmin_Load);

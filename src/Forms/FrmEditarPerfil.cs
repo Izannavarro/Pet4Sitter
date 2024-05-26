@@ -31,6 +31,7 @@ namespace pet4sitter
 
         private void FrmEditarPerfil_Load(object sender, EventArgs e)
         {
+            ModoOscuro();
             txtNombre.Text = Data.CurrentUser.Name;
             txtApellido.Text = Data.CurrentUser.Surname;
             txtContrasenya.Clear();
@@ -45,15 +46,15 @@ namespace pet4sitter
             AplicarIdioma();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        void ModoOscuro()
         {
-
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+            }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void AplicarIdioma()
         {

@@ -425,6 +425,86 @@ namespace pet4sitter.Clases
             return usuariosCercanos;
         }
 
+
+        public static List<User> ObtenerUsuariosCercanos(double? latitudReferencia, double? longitudReferencia,
+                                                  double precioDesde, double precioHasta,
+                                                  bool ordenarPorDistancia, string ordenDistanciaOrden,
+                                                  bool ordenarPorPrecio, string ordenPrecioOrden,
+                                                  int offset, int limit)
+        {
+            List<User> usuariosCercanos = new List<User>();
+
+            // Consulta SQL parametrizada
+            string query = @"
+    SELECT *
+    FROM users
+    WHERE price >= @PrecioDesde AND price <= @PrecioHasta AND id_user != @IdUsuario AND sitter = 1";
+
+            // Agregar condiciones de ordenamiento si se requiere
+            if (ordenarPorDistancia)
+            {
+                query += " ORDER BY SQRT(POW(latitud - @LatitudReferencia, 2) + POW(longitud - @LongitudReferencia, 2))";
+                query += " " + ordenDistanciaOrden; // Agregar ASC o DESC
+            }
+            else if (ordenarPorPrecio)
+            {
+                query += " ORDER BY price";
+                query += " " + ordenPrecioOrden; // Agregar ASC o DESC
+            }
+
+            // Agregar límite y desplazamiento
+            query += " LIMIT @Limit OFFSET @Offset";
+
+            try
+            {
+                using (MySqlCommand command = new MySqlCommand(query, ConBD.Conexion))
+                {
+                    // Parámetros de la consulta
+                    command.Parameters.AddWithValue("@LatitudReferencia", latitudReferencia);
+                    command.Parameters.AddWithValue("@LongitudReferencia", longitudReferencia);
+                    command.Parameters.AddWithValue("@PrecioDesde", precioDesde);
+                    command.Parameters.AddWithValue("@PrecioHasta", precioHasta);
+                    command.Parameters.AddWithValue("@Limit", limit);
+                    command.Parameters.AddWithValue("@Offset", offset);
+                    command.Parameters.AddWithValue("@IdUsuario", Data.CurrentUser.idUser);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            byte[] ArrImg = reader.IsDBNull(reader.GetOrdinal("image")) ? null : (byte[])reader["image"];
+                            User user = new User(
+                                    reader.IsDBNull(reader.GetOrdinal("id_user")) ? (int?)null : reader.GetInt32(reader.GetOrdinal("id_user")),
+                                    reader.IsDBNull(reader.GetOrdinal("id_google")) ? null : reader.GetString(reader.GetOrdinal("id_google")),
+                                    reader.IsDBNull(reader.GetOrdinal("name")) ? null : reader.GetString(reader.GetOrdinal("name")),
+                                    reader.IsDBNull(reader.GetOrdinal("surname")) ? null : reader.GetString(reader.GetOrdinal("surname")),
+                                    reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString(reader.GetOrdinal("email")),
+                                    reader.IsDBNull(reader.GetOrdinal("dni")) ? null : reader.GetString(reader.GetOrdinal("dni")),
+                                    reader.IsDBNull(reader.GetOrdinal("password")) ? null : reader.GetString(reader.GetOrdinal("password")),
+                                    reader.IsDBNull(reader.GetOrdinal("price")) ? (double?)null : reader.GetDouble("price"),
+                                    reader.IsDBNull(reader.GetOrdinal("location")) ? null : reader.GetString(reader.GetOrdinal("location")),
+                                    reader.IsDBNull(reader.GetOrdinal("premium")) ? (bool?)null : reader.GetBoolean(reader.GetOrdinal("premium")),
+                                    reader.IsDBNull(reader.GetOrdinal("sitter")) ? (bool?)null : reader.GetBoolean(reader.GetOrdinal("sitter")),
+                                    reader.IsDBNull(reader.GetOrdinal("admin")) ? (bool?)null : reader.GetBoolean(reader.GetOrdinal("admin")),
+                                    reader.IsDBNull(reader.GetOrdinal("image")) ? null : ArrImg,
+                                    reader.IsDBNull(reader.GetOrdinal("latitud")) ? (double?)null : reader.GetDouble(reader.GetOrdinal("latitud")),
+                                    reader.IsDBNull(reader.GetOrdinal("longitud")) ? (double?)null : reader.GetDouble(reader.GetOrdinal("longitud"))
+                                    );
+
+                            usuariosCercanos.Add(user);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener usuarios cercanos: " + ex.Message);
+            }
+
+            return usuariosCercanos;
+        }
+
+
         public static int ContarUsuariosCercanos(double? latitudReferencia, double? longitudReferencia, double precioDesde, double precioHasta)
         {
             int totalUsuarios = 0;
@@ -458,7 +538,7 @@ namespace pet4sitter.Clases
         {
             try
             {
-                string consulta = "UPDATE users SET name = @name, surname = @surname, location = @location, email = @Email, password = @password, image = @image, latitud = @latitud, longitud = @longitud WHERE id_user = @id_user";
+                string consulta = "UPDATE users SET name = @name, surname = @surname, location = @location, email = @Email, password = @password, image = @image, latitud = @latitud, longitud = @longitud, sitter = @sitter WHERE id_user = @id_user";
                 MySqlCommand comando = new MySqlCommand(consulta, ConBD.Conexion);
                 comando.Parameters.AddWithValue("@name", u.Name);
                 comando.Parameters.AddWithValue("@surname", u.Surname);
@@ -468,6 +548,7 @@ namespace pet4sitter.Clases
                 comando.Parameters.AddWithValue("@image", u.Image);
                 comando.Parameters.AddWithValue("@id_user", u.IdUser);
                 comando.Parameters.AddWithValue("@latitud", u.Latitud);
+                comando.Parameters.AddWithValue("@sitter", u.Sitter);
                 comando.Parameters.AddWithValue("@longitud", u.Longitud);
                 comando.ExecuteNonQuery();
                 Data.CurrentUser = User.EncontrarUsuario((int)u.idUser);

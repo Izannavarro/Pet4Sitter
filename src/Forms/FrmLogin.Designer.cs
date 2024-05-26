@@ -44,8 +44,8 @@ namespace pet4sitter
             this.btnRegister = new System.Windows.Forms.Button();
             this.lblForgPass = new System.Windows.Forms.Label();
             this.btnContinueWGoogle = new System.Windows.Forms.Button();
-            this.pictureBoxContinueGoogle = new System.Windows.Forms.PictureBox();
             this.lblReportarBug = new System.Windows.Forms.Label();
+            this.pictureBoxContinueGoogle = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxContinueGoogle)).BeginInit();
@@ -198,18 +198,6 @@ namespace pet4sitter
             this.btnContinueWGoogle.MouseLeave += new System.EventHandler(this.btnContinueWGoogle_Leave);
             this.btnContinueWGoogle.MouseHover += new System.EventHandler(this.btnContinueWGoogle_MouseHover);
             // 
-            // pictureBoxContinueGoogle
-            // 
-            this.pictureBoxContinueGoogle.BackColor = System.Drawing.Color.White;
-            this.pictureBoxContinueGoogle.Image = global::pet4sitter.Properties.Resources.google_icon_icons_com_62736;
-            this.pictureBoxContinueGoogle.Location = new System.Drawing.Point(445, 282);
-            this.pictureBoxContinueGoogle.Name = "pictureBoxContinueGoogle";
-            this.pictureBoxContinueGoogle.Size = new System.Drawing.Size(23, 23);
-            this.pictureBoxContinueGoogle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxContinueGoogle.TabIndex = 12;
-            this.pictureBoxContinueGoogle.TabStop = false;
-            this.pictureBoxContinueGoogle.Click += new System.EventHandler(this.pictureBoxContinueGoogle_Click);
-            // 
             // lblReportarBug
             // 
             this.lblReportarBug.AutoSize = true;
@@ -221,6 +209,18 @@ namespace pet4sitter
             this.lblReportarBug.TabIndex = 13;
             this.lblReportarBug.Text = "Reportar Bug";
             this.lblReportarBug.Click += new System.EventHandler(this.lblReportarBug_Click);
+            // 
+            // pictureBoxContinueGoogle
+            // 
+            this.pictureBoxContinueGoogle.BackColor = System.Drawing.Color.White;
+            this.pictureBoxContinueGoogle.Image = global::pet4sitter.Properties.Resources.google_icon_icons_com_62736;
+            this.pictureBoxContinueGoogle.Location = new System.Drawing.Point(445, 282);
+            this.pictureBoxContinueGoogle.Name = "pictureBoxContinueGoogle";
+            this.pictureBoxContinueGoogle.Size = new System.Drawing.Size(23, 23);
+            this.pictureBoxContinueGoogle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxContinueGoogle.TabIndex = 12;
+            this.pictureBoxContinueGoogle.TabStop = false;
+            this.pictureBoxContinueGoogle.Click += new System.EventHandler(this.pictureBoxContinueGoogle_Click);
             // 
             // FrmLogin
             // 

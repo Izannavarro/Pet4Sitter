@@ -33,7 +33,17 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
+            ModoOscuro();
         }
+        void ModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+            }
+        }
+
         private void AplicarIdioma()
         {
             lblDireccion.Text = Resources.Recursos_Localizable.FrmEditarDireccion.lblDireccion_Text;
@@ -49,18 +59,12 @@ namespace pet4sitter
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
             this.Dispose();
         }
 
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
-            double? precio = Data.CurrentUser.Precio;
             string loca = txtDireccion.Text;
-            double oldLat = (double)Data.CurrentUser.Latitud;
-            double oldLong = (double)Data.CurrentUser.Longitud;
-            double? lat = null;
-            double? longi = null;
 
             if (loca == "")
             {
@@ -74,39 +78,15 @@ namespace pet4sitter
 
                     if (coordenadas.Latitude.HasValue && coordenadas.Longitude.HasValue)
                     {
-                        MessageBox.Show("Si");
-                        if (coordenadas.Latitude.Value != oldLat)
-                        {
-                            lat = coordenadas.Latitude.Value;
-                        }
-                        else
-                        {
-                            lat = oldLat;
-                        }
-
-                        if (coordenadas.Longitude.Value != oldLong)
-                        {
-                            longi = coordenadas.Longitude.Value;
-                        }
-                        else
-                        {
-                            longi = oldLong;
-                        }
+                        Data.CurrentPedido.Localizacion = loca;
+                        MessageBox.Show("Dirección Correcta");
+                        this.Dispose();
                     }
                     else
                     {
                         MessageBox.Show("Direccion INCORRECTA");
                     }
                 }
-            }
-
-            User u = new User(Data.CurrentUser.IdUser,Data.CurrentUser.IdGoogle,Data.CurrentUser.Name, Data.CurrentUser.Surname, Data.CurrentUser.Email,Data.CurrentUser.Dni,Data.CurrentUser.Password,precio,loca,Data.CurrentUser.Premium,Data.CurrentUser.Sitter,Data.CurrentUser.Admin,Data.CurrentUser.Image,lat,longi);
-            if (ConBD.Conexion != null)
-            {
-                ConBD.AbrirConexion();
-                User.ActualizarUsuario(u);
-                ConBD.CerrarConexion();
-                MessageBox.Show("Localización del Usuario Actualizada con éxito!");
             }
         }
     }

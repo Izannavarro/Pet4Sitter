@@ -70,6 +70,15 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Darse de Baja.
+        /// </summary>
+        internal static string btnDarseBaja_Text {
+            get {
+                return ResourceManager.GetString("btnDarseBaja_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Editar Perfil.
         /// </summary>
         internal static string btnEditarPerfil_Text {
@@ -79,20 +88,20 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Premium.
+        /// </summary>
+        internal static string btnPremium_Text {
+            get {
+                return ResourceManager.GetString("btnPremium_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Últimas Compras:.
         /// </summary>
         internal static string lblUltimaCompra_Text {
             get {
                 return ResourceManager.GetString("lblUltimaCompra_Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a .
-        /// </summary>
-        internal static string lblUltimasValoraciones_Text {
-            get {
-                return ResourceManager.GetString("lblUltimasValoraciones_Text", resourceCulture);
             }
         }
     }

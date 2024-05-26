@@ -9,6 +9,7 @@ using System.Drawing.Imaging;
 
 namespace pet4sitter
 {
+    //Clase Data para guardar datos relevantes de la app
     public class Data
     {
 
@@ -17,7 +18,8 @@ namespace pet4sitter
         
         public static User UserGoogle = null;
         public static User CurrentUser = null;
-        //public static User CurrentUser = new User(1,null,"Pepe","ad","p@p.p",null,null,null,true,false,false,null, 39.493, -0.462143);
+        public static Pedido CurrentPedido = null;
+        public static Tarjeta CurrentTarjeta = null;
 
         public static bool DarkMode;
         public static string Ginfo { get { return ginfo; } set { ginfo = value; } }
@@ -31,14 +33,21 @@ namespace pet4sitter
         static Data()
         {
             DarkMode = IsDarkModeEnabled();
-            tokenNoticias = Utiles.BuscarToken("News");
-            tokenGPT = Utiles.BuscarToken("ChatGPT");
-            tokenClientId = Utiles.BuscarToken("ClientID");
-            tokenClientSecret = Utiles.BuscarToken("ClientSecret");
-            stripePublicKey = Utiles.BuscarToken("StripePub");
-            stripePrivateKey = Utiles.BuscarToken("StripeSecret");
+            if (ConBD.ComprobarConexion())
+            {
+                tokenNoticias = Utiles.BuscarToken("News");//Busca tokens importantes de APIS usadas en el proyecto
+                tokenGPT = Utiles.BuscarToken("ChatGPT");
+                tokenClientId = Utiles.BuscarToken("ClientID");
+                tokenClientSecret = Utiles.BuscarToken("ClientSecret");
+                stripePublicKey = Utiles.BuscarToken("StripePub");
+                stripePrivateKey = Utiles.BuscarToken("StripeSecret");
+            }
         }
 
+        /// <summary>
+        /// Método para comprobar el tema del sistema del usuario.
+        /// </summary>
+        /// <returns></returns>
         public static bool IsDarkModeEnabled()
         {
             const string registryKey = @"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize";

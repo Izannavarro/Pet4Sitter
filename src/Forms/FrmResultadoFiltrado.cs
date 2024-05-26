@@ -25,17 +25,25 @@ namespace pet4sitter
         double? longitudReferencia = Data.CurrentUser.Longitud;  // Obtén la longitud de referencia
         double precioDesde;
         double precioHasta;
+        bool ordenDist;
+        string ordenDistOrden;
+        bool ordenPrecio;
+        string ordenPrecioOrden;
         public FrmResultadoFiltrado()
         {
             InitializeComponent();
         }
 
-        public FrmResultadoFiltrado(List<User> luser,double precioDesde,double precioHasta)
+        public FrmResultadoFiltrado(List<User> luser, double precioDesde, double precioHasta, bool ordenDist, string ordenDistOrden, bool ordenPrecio, string ordenPrecioOrden)
         {
             InitializeComponent();
             users = luser;
-            precioDesde = precioDesde;  // Obtén el precio mínimo
-            precioHasta = precioHasta;  // Obtén el precio máximo
+            this.precioDesde = precioDesde;  // Obtén el precio mínimo
+            this.precioHasta = precioHasta;  // Obtén el precio máximo
+            this.ordenDist = ordenDist;
+            this.ordenDistOrden = ordenDistOrden;
+            this.ordenPrecio = ordenPrecio;
+            this.ordenPrecioOrden = ordenPrecioOrden;
         }
 
 
@@ -43,8 +51,7 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
-            cmbUbicacion.SelectedIndex = 0;
-            cmbPrecio.SelectedIndex = 0;
+            CargaModoOscuro();
             if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
@@ -57,6 +64,12 @@ namespace pet4sitter
 
         }
 
+        private void CargaModoOscuro()
+        {
+            this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+            this.BackColor = Color.DarkGreen;
+        }
+
         private void CargarResultados()
         {
             if (users.Count > 0)
@@ -67,7 +80,7 @@ namespace pet4sitter
                 lblResPrecio1.Text = $"{user.Precio.ToString()} EUR";
                 lblPrecio1.Visible = true;
                 lblResPrecio1.Visible = true;
-                lblIdUser1.Text =  user.IdUser.ToString();
+                lblIdUser1.Text = user.IdUser.ToString();
                 lblResUbi1.Text = user.Location;
                 lblResUbi1.Links.Clear();
                 string lat = user.Latitud.ToString().Replace(',', '.');
@@ -76,7 +89,7 @@ namespace pet4sitter
                 btnEnviarMensajeChat1.Visible = true;
                 lblResUbi1.Visible = true;
                 lblUbicacion1.Visible = true;
-                if(user.Image != null)
+                if (user.Image != null)
                 {
                     pcbCuidador1.Image = Utiles.ByteArrayToImage(user.Image);
                 }
@@ -137,14 +150,28 @@ namespace pet4sitter
         }
         private void AplicarIdioma()
         {
-            lblNombreCuidador3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion3_Text;
-            lblNombreCuidador2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion2_Text;
-            lblNombreCuidador1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDescripcion1_Text;
+            lblNombreCuidador3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblNombreCuidador3_Text;
+            lblNombreCuidador2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblNombreCuidador2_Text;
+            lblNombreCuidador1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblNombreCuidador1_Text;
             btnSiguiente.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnSiguiente_Text;
             btnAnterior.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnAnterior_Text;
-            lblHasta.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblHasta_Text;
-            lblDesde.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblDesde_Text;
+            lblPaginaActual.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPaginaActual_Text;
+            lblResPrecio3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblResPrecio3_Text;
+            lblPrecio3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPrecio3_Text;
+            lblUbicacion3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblUbicacion3_Text;
+            btnEnviarMensajeChat3.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnEnviarMensajeChat3_Text;
+            lblResPrecio2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblResPrecio2_Text;
+            lblPrecio2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPrecio2_Text;
+            lblUbicacion2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblUbicacion2_Text;
+            btnEnviarMensajeChat2.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnEnviarMensajeChat2_Text;
+            lblResPrecio1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblResPrecio1_Text;
+            lblPrecio1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPrecio1_Text;
+            lblUbicacion1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblUbicacion1_Text;
+            btnEnviarMensajeChat1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.btnEnviarMensajeChat1_Text;
+            lblNombreCuidador1.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblNombreCuidador1_Text;
+            lblPaginaActual.Text = Resources.Recursos_Localizable.FrmResultadoFiltrado.lblPaginaActual_Text;
         }
+
 
         private void FrmResultadoFiltrado_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -218,7 +245,7 @@ namespace pet4sitter
         private void CargarPagina()
         {
 
-            users = User.ObtenerUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta, paginaActual * elementosPorPagina, elementosPorPagina);
+            users = User.ObtenerUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta, ordenDist, ordenDistOrden, ordenPrecio, ordenPrecioOrden, paginaActual * elementosPorPagina, elementosPorPagina);
             CargarResultados();
         }
 
@@ -278,8 +305,6 @@ namespace pet4sitter
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            precioDesde = double.Parse(txtPrecioDesde.Text);
-            precioHasta = double.Parse(txtPrecioHasta.Text);
             totalUsuarios = User.ContarUsuariosCercanos(latitudReferencia, longitudReferencia, precioDesde, precioHasta);
         }
     }

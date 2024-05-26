@@ -29,6 +29,7 @@ namespace pet4sitter
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIAyuda));
             this.lblTitlepet4sitter = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -45,7 +46,7 @@ namespace pet4sitter
             this.btnSend = new System.Windows.Forms.Button();
             this.txtPrompt = new System.Windows.Forms.TextBox();
             this.cmbPrompts = new System.Windows.Forms.ComboBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral(this);
+            this.barraLateral1 = new pet4sitter.BarraLateral();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLoading)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoWifi)).BeginInit();
@@ -58,7 +59,7 @@ namespace pet4sitter
             this.lblTitlepet4sitter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitlepet4sitter.AutoSize = true;
             this.lblTitlepet4sitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.4F, System.Drawing.FontStyle.Bold);
-            this.lblTitlepet4sitter.Location = new System.Drawing.Point(473, 94);
+            this.lblTitlepet4sitter.Location = new System.Drawing.Point(562, 92);
             this.lblTitlepet4sitter.Name = "lblTitlepet4sitter";
             this.lblTitlepet4sitter.Size = new System.Drawing.Size(111, 25);
             this.lblTitlepet4sitter.TabIndex = 3;
@@ -91,7 +92,7 @@ namespace pet4sitter
             this.panel1.Controls.Add(this.btnSend);
             this.panel1.Controls.Add(this.txtPrompt);
             this.panel1.Controls.Add(this.lblInfo);
-            this.panel1.Location = new System.Drawing.Point(140, 158);
+            this.panel1.Location = new System.Drawing.Point(229, 156);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(738, 326);
             this.panel1.TabIndex = 5;
@@ -222,7 +223,7 @@ namespace pet4sitter
             this.cmbPrompts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbPrompts.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPrompts.FormattingEnabled = true;
-            this.cmbPrompts.Location = new System.Drawing.Point(140, 135);
+            this.cmbPrompts.Location = new System.Drawing.Point(229, 133);
             this.cmbPrompts.Name = "cmbPrompts";
             this.cmbPrompts.Size = new System.Drawing.Size(738, 21);
             this.cmbPrompts.TabIndex = 14;
@@ -230,9 +231,10 @@ namespace pet4sitter
             // 
             // barraLateral1
             // 
+            this.barraLateral1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.barraLateral1.BackColor = System.Drawing.Color.Transparent;
-            this.barraLateral1.Location = new System.Drawing.Point(-5, -2);
-            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barraLateral1.Location = new System.Drawing.Point(1, -2);
+            this.barraLateral1.Margin = new System.Windows.Forms.Padding(4);
             this.barraLateral1.Name = "barraLateral1";
             this.barraLateral1.Size = new System.Drawing.Size(311, 599);
             this.barraLateral1.TabIndex = 16;
@@ -244,16 +246,19 @@ namespace pet4sitter
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(217)))), ((int)(((byte)(190)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(931, 600);
+            this.ClientSize = new System.Drawing.Size(1109, 596);
             this.Controls.Add(this.cmbPrompts);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitlepet4sitter);
             this.Controls.Add(this.barraLateral1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
-            this.MinimumSize = new System.Drawing.Size(947, 478);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1125, 635);
             this.Name = "FrmIAyuda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pet4sitter";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmIAyuda_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

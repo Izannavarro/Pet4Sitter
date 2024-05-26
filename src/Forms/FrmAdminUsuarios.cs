@@ -24,6 +24,7 @@ namespace pet4sitter
 
         private void FrmAdminUsuarios_Load(object sender, EventArgs e)
         {
+            ModoOscuro();
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
             if (ConBD.Conexion != null)
@@ -43,7 +44,14 @@ namespace pet4sitter
                 }
             }
         }
-
+        void ModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+            }
+        }
         private void AplicarIdioma()
         {
             btnVolver.Text = Resources.Recursos_Localizable.FrmAdminUsuarios.btnVolver_Text;
@@ -89,15 +97,17 @@ namespace pet4sitter
                 {
                     ptbImagen.Image = Properties.Resources.usuario;
                 }
-                if (fila.Cells[5].Value.ToString() == "0" || fila.Cells[5].Value.ToString() == "")
+                if (fila.Cells[5].Value.ToString() == "0")
                 {
+                    ckbSitter.Checked = false;
                 }
                 else
                 {
                     ckbSitter.Checked = true;
                 }
-                if (fila.Cells[6].Value.ToString() == "" || fila.Cells[6].Value.ToString() == "0")
+                if ( fila.Cells[6].Value.ToString() == "0")
                 {
+                    ckbAdministrator.Checked = false;   
                 }
                 else
                 {
@@ -131,9 +141,9 @@ namespace pet4sitter
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnVolver_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

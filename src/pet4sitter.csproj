@@ -15,6 +15,22 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\rngir\Desktop\sitter\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,6 +53,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>lgo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>681BAFAFEE95F6DDAA7158FE22C180E4B9F27C16</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>pet4sitter_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BCrypt.Net, Version=0.1.4141.31969, Culture=neutral, PublicKeyToken=f3bc8f8c31beeb49, processorArchitecture=MSIL">
@@ -197,7 +225,6 @@
     <Compile Include="Clases\BufferedLayoutPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Clases\Busqueda.cs" />
     <Compile Include="Clases\Carrito.cs" />
     <Compile Include="Clases\Mensaje.cs" />
     <Compile Include="Clases\ConfiguracionIdioma.cs" />
@@ -205,8 +232,10 @@
     <Compile Include="Clases\GeoLocalizacion.cs" />
     <Compile Include="Clases\NewsFetcher.cs" />
     <Compile Include="Clases\Noticia.cs" />
+    <Compile Include="Clases\Pedido.cs" />
     <Compile Include="Clases\Producto.cs" />
     <Compile Include="Clases\Prompt.cs" />
+    <Compile Include="Clases\StripePaymentService.cs" />
     <Compile Include="Clases\Tarjeta.cs" />
     <Compile Include="Clases\User.cs" />
     <Compile Include="Forms\FrmIAyuda.cs">
@@ -241,6 +270,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmEditarPerfil.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmInicio.en-US.Designer.cs">
+      <DependentUpon>FrmInicio.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmNoticias.en-US.Designer.cs">
+      <DependentUpon>FrmNoticias.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmNoticias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmNoticias.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Recursos Localizable\FrmInicio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrmInicio.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\BarraLateral.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -248,14 +297,8 @@
       <DependentUpon>BarraLateral.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Utiles.cs" />
-    <Compile Include="Forms\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\Data.cs" />
-    <Compile Include="Clases\ForgotPasswordMail.cs" />
+    <Compile Include="Clases\MailPet4Sitter.cs" />
     <Compile Include="Forms\FrmAdminProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -345,12 +388,6 @@
     </Compile>
     <Compile Include="Forms\FrmResultadoFiltrado.Designer.cs">
       <DependentUpon>FrmResultadoFiltrado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FrmTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmTest.Designer.cs">
-      <DependentUpon>FrmTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmTienda.cs">
       <SubType>Form</SubType>
@@ -507,16 +544,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FrmLogin.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\Recursos Localizable\FrmNoticias.en-US.Designer.cs">
-      <DependentUpon>FrmNoticias.en-US.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Resources\Recursos Localizable\FrmNoticias.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FrmNoticias.resx</DependentUpon>
-    </Compile>
     <Compile Include="Resources\Recursos Localizable\FrmPerfil.en-US.Designer.cs">
       <DependentUpon>FrmPerfil.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -590,11 +617,23 @@
       <LastGenOutput>FrmEditarPerfil.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmInicio.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmInicio.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmNoticias.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmNoticias.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Recursos Localizable\FrmInicio.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FrmInicio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\BarraLateral.resx">
       <DependentUpon>BarraLateral.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmAdminProductos.resx">
       <DependentUpon>FrmAdminProductos.cs</DependentUpon>
@@ -640,9 +679,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmResultadoFiltrado.resx">
       <DependentUpon>FrmResultadoFiltrado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmTest.resx">
-      <DependentUpon>FrmTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmTienda.resx">
       <DependentUpon>FrmTienda.cs</DependentUpon>
@@ -781,15 +817,10 @@
       <LastGenOutput>FrmLogin.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Recursos Localizable\FrmNoticias.en-US.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>FrmNoticias.en-US.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmNoticias.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>FrmNoticias.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>FrmNoticias.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Recursos Localizable\FrmPerfil.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -843,6 +874,7 @@
       <DependentUpon>ProductoEnCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="pet4sitter_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -884,6 +916,7 @@
     <Content Include="Resources\no-wifi.png" />
     <Content Include="Resources\perfil.png" />
     <None Include="Resources\perfilBlanco.png" />
+    <None Include="Resources\pet4sitterLogo1.png" />
     <Content Include="Resources\piTestLogo.png" />
     <Content Include="Resources\roboy.png" />
     <Content Include="Resources\shopbag.png" />
@@ -899,6 +932,18 @@
     <None Include="Resources\corona.png" />
     <Content Include="Resources\config.png" />
     <Content Include="Resources\gAuthRedirection.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

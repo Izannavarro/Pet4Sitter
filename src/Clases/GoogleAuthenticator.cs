@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
-using System.Net.Http;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using pet4sitter;
 using pet4sitter.Clases;
 
+//Método para la autenticación con google
 public class GoogleAuthenticator
 {
     // Configuración del cliente
@@ -22,8 +21,8 @@ public class GoogleAuthenticator
     private readonly string clientSecret;
     private static  readonly string authorizationEndpoint = "https://accounts.google.com/o/oauth2/v2/auth";
     private static  readonly string tokenEndpoint = "https://www.googleapis.com/oauth2/v4/token";
-    //private static  readonly string userInfoEndpoint = "https://www.googleapis.com/oauth2/v3/userinfo";
 
+    //Ctor
     public GoogleAuthenticator(string clientId, string clientSecret)
     {
         this.clientID = clientId;
@@ -198,18 +197,6 @@ public class GoogleAuthenticator
             Console.WriteLine("Excepción en userinfoCall: " + ex.Message);
             // También podrías lanzar o registrar la excepción, dependiendo de tus necesidades
         }
-    }
-
-    public void ShowUserInfo(string userInfo)
-    {
-
-        ShowUserInfoOnDashboard(userInfo);
-    }
-
-    public void ShowUserInfoOnDashboard(string userInfo)
-    {
-        Dashboard dashboardForm = new Dashboard(userInfo);
-        dashboardForm.Show();
     }
 
     public void output(string output)

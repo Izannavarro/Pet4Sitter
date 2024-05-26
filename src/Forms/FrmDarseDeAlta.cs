@@ -23,7 +23,15 @@ namespace pet4sitter
         {
             CultureInfo.CurrentCulture = ConfiguracionIdioma.Cultura;
             AplicarIdioma();
-            
+            ModoOscuro();
+        }
+        void ModoOscuro()
+        {
+            if (Data.DarkMode)
+            {
+                this.Icon = Utiles.BitmapToIcon(Properties.Resources.pet4sitterLogo1 as Bitmap);
+                this.BackColor = Color.DarkGreen;
+            }
         }
 
         private void AplicarIdioma()
@@ -53,6 +61,8 @@ namespace pet4sitter
                     {
                         ConBD.AbrirConexion();
                         User.ActivarCuidador(u);
+                        Data.CurrentUser = User.EncontrarUsuario((int)u.IdUser);
+                        //(int)Data.CurrentUser.IdUser
                         ConBD.CerrarConexion();
                     }
                     MessageBox.Show("Has sido dado de Alta como Cuidador!");
