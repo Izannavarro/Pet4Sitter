@@ -342,7 +342,7 @@ input:checked+.slider:before {
     /* Alinea verticalmente */
 }
 .background-image {
-    background-image: url('fondo.jpg');
+    background-image: url("../img/fondo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
