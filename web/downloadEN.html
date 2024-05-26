@@ -6,7 +6,7 @@
     <title>Pet4Sitter - Animal Caretakers</title>
     <link rel="stylesheet" href="./style/styleDownload.css">
 </head>
-<body >
+<body>
     <header>
         <div class="logo-container">
             <img src="./img/logo.png" alt="Logo de Pet4Sitter">
@@ -40,37 +40,37 @@
     <div id="message-box" class="hidden">
         <div id="message-container">
             <p id="message-text"></p>
-            <button id="download-btn" class="download-button">Download Here</button> <!-- Text Changed -->
+            <button id="download-btn" class="download-button" style="display: none;">
+                <a id="download-link" style="text-decoration: none; color: white;" href="./Installer/Setup-Pet4Sitter.exe" download>Download here</a>
+            </button>
         </div>
     </div>
 
-    <br><br><br>
     <footer>
         <p>&copy; 2024 Pet4Sitter. All rights reserved.</p>
     </footer>
-    
+
     <script>
-        const checkbox = document.getElementById('cambiarColor');
-        var solLuna = document.querySelector(".sol-luna");
+        const checkbox = document.getElementById('changeColor');
+        var sunMoon = document.querySelector(".sun-moon");
         checkbox.addEventListener('change', () => {
             document.body.classList.toggle('dark-mode');
             const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
-    
+
             elementsToToggle.forEach(element => {
                 element.classList.toggle('dark-mode');
-                
             });
-    
+
             if (checkbox.checked) {
-                solLuna.innerHTML = "&#127769;";
+                sunMoon.innerHTML = "&#127769;";
             } else {
-                solLuna.innerHTML = "&#9728;";
+                sunMoon.innerHTML = "&#9728;";
             }
-    
+
             const isDarkMode = document.body.classList.contains('dark-mode');
             localStorage.setItem('isDarkMode', isDarkMode);
         });
-    
+
         document.addEventListener('DOMContentLoaded', () => {
             const isDarkMode = JSON.parse(localStorage.getItem('isDarkMode'));
             if (isDarkMode) {
@@ -79,25 +79,23 @@
                 const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
                 elementsToToggle.forEach(element => {
                     element.classList.add('dark-mode');
-                    
                 });
-                solLuna.innerHTML = "&#127769;";
-            }else{
-                solLuna.innerHTML = "&#9728;";
+                sunMoon.innerHTML = "&#127769;";
+            } else {
+                sunMoon.innerHTML = "&#9728;";
             }
         });
-    </script>
-    <script>
+
         function showMessage(type) {
             const messageBox = document.getElementById('message-box');
             const messageText = document.getElementById('message-text');
             const downloadBtn = document.getElementById('download-btn');
-        
+
             // Highlight the selected image
             document.getElementById('windows-img').style.border = 'none';
             document.getElementById('mac-img').style.border = 'none';
             document.getElementById('linux-img').style.border = 'none';
-        
+
             if (type === 'windows') {
                 messageText.textContent = 'You can download the version for Windows.';
                 downloadBtn.style.display = 'block';
@@ -107,50 +105,9 @@
                 downloadBtn.style.display = 'none';
                 document.getElementById(type + '-img').style.border = '2px solid #000';
             }
-        
+
             messageBox.classList.remove('hidden');
         }
     </script>
-    <button id="download-btn" class="download-button" style="display: none;" onclick="download()">Download Here</button> <!-- Text Changed -->
-
-    <script>
-        function download() {
-            // Download simulation
-            alert('Downloading the version for Windows...');
-        }
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const os = urlParams.get('os');
-            if (os) {
-                showMessage(os);
-            }
-        });
-    
-        function showMessage(type) {
-            const messageBox = document.getElementById('message-box');
-            const messageText = document.getElementById('message-text');
-            const downloadBtn = document.getElementById('download-btn');
-    
-            // Resaltar la imagen seleccionada
-            document.getElementById('windows-img').style.border = 'none';
-            document.getElementById('mac-img').style.border = 'none';
-            document.getElementById('linux-img').style.border = 'none';
-    
-            if (type === 'windows') {
-                messageText.textContent = 'Puedes descargar la versión para Windows.';
-                downloadBtn.style.display = 'block';
-                document.getElementById('windows-img').style.border = '2px solid #000';
-            } else {
-                messageText.textContent = 'La descarga para esta plataforma estará disponible próximamente...';
-                downloadBtn.style.display = 'none';
-                document.getElementById(type + '-img').style.border = '2px solid #000';
-            }
-    
-            messageBox.classList.remove('hidden');
-        }
-    </script>
-
 </body>
 </html>

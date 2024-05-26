@@ -342,7 +342,7 @@ input:checked+.slider:before {
     /* Alinea verticalmente */
 }
 .background-image {
-    background-image: url('fondo.jpg');
+    background-image: url("../img/fondo.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -353,3 +353,42 @@ input:checked+.slider:before {
     background-color: #aa8f72; /* Marrón muy claro */
     padding: 50px 0; /* Ajusta el espaciado según sea necesario */
 }
+
+.video-section {
+    padding: 50px 0;
+    margin: 0;
+}
+
+.video-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px; /* Aumenta el tamaño máximo del contenedor de video */
+    border-radius: 15px;
+    background-color: transparent; /* Hace transparente el fondo del contenedor */
+}
+
+video {
+    width: 100%; /* Hace que el video ocupe el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 15px;
+}
+
+.video-title h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #000; /* Color del título */
+    font-family:'Times New Roman', Times, serif;
+    letter-spacing: 0.3cap;
+}
+
+.dark-mode .video-title h1 {
+    color: #fff; /* Color del título en modo oscuro */
+}
+
+.dark-mode .video-section {
+    background: linear-gradient(135deg, rgb(170, 217, 190) 0%, rgb(110, 150, 123) 100%);
+}
+
+
+

@@ -204,7 +204,7 @@ footer p.dark-mode {
 .member-card {
     position: relative;
     display: inline-block;
-    width: 200px; /* Aumenta el ancho de cada tarjeta */
+    width: 27%; /* Aumenta el ancho de cada tarjeta */
     margin-right: 20px;
     border: 1px solid #DFF2BF;
     border-radius: 5px;
@@ -213,6 +213,17 @@ footer p.dark-mode {
     margin-bottom: 60px; /* Ajusta el margen inferior */
     height: 275px;
 }
+
+.small-image {
+    width: 50%; /* Puedes ajustar este valor según tus preferencias */
+    height: auto; /* Esto mantiene la proporción de la imagen */
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
 .member-card:last-child {
     margin-right: 0; /* Elimina el margen derecho del último elemento */
 }
