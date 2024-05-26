@@ -46,7 +46,7 @@ namespace pet4sitter
             this.btnSend = new System.Windows.Forms.Button();
             this.txtPrompt = new System.Windows.Forms.TextBox();
             this.cmbPrompts = new System.Windows.Forms.ComboBox();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLoading)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbNoWifi)).BeginInit();

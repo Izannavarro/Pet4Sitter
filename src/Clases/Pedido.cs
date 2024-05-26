@@ -2,31 +2,47 @@
 using pet4sitter.Clases;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace pet4sitter.Clases
 {
+    /// <summary>
+    /// La clase Pedido representa un pedido realizado por un usuario, incluyendo la localización y los productos.
+    /// </summary>
     public class Pedido
     {
-        int? idUsuario;
-        string localizacion;
-        List<Producto> productos;
+        private int? idUsuario;
+        private string localizacion;
+        private List<Producto> productos;
 
+        /// <summary>
+        /// Obtiene el ID del usuario que realizó el pedido.
+        /// </summary>
         public int? IdUsuario
         {
             get { return this.idUsuario; }
         }
 
+        /// <summary>
+        /// Obtiene o establece la localización de entrega del pedido.
+        /// </summary>
         public string Localizacion
         {
             get { return this.localizacion; }
             set { this.localizacion = value; }
         }
 
+        /// <summary>
+        /// Obtiene la lista de productos incluidos en el pedido.
+        /// </summary>
         public List<Producto> Productos { get { return this.productos; } }
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase Pedido con los parámetros especificados.
+        /// </summary>
+        /// <param name="idUsuario">ID del usuario que realizó el pedido.</param>
+        /// <param name="localizacion">Localización de entrega del pedido.</param>
+        /// <param name="productos">Lista de productos incluidos en el pedido.</param>
         public Pedido(int? idUsuario, string localizacion, List<Producto> productos)
         {
             this.idUsuario = idUsuario;
@@ -34,10 +50,14 @@ namespace pet4sitter.Clases
             this.productos = productos;
         }
 
+        /// <summary>
+        /// Guarda el pedido en la base de datos.
+        /// </summary>
+        /// <param name="pedido">El pedido a guardar.</param>
         public static void GuardarPedido(Pedido pedido)
         {
             string query = "INSERT INTO `pet4sitter`.`delivery` (`id_receiver`, `delivery_date`, `direction`) VALUES (@idUsuario, @fecha, @dirección);";
-            if(ConBD.Conexion != null)
+            if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
                 MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
@@ -49,15 +69,19 @@ namespace pet4sitter.Clases
             }
         }
 
+        /// <summary>
+        /// Obtiene el ID del último pedido guardado en la base de datos.
+        /// </summary>
+        /// <returns>El ID del último pedido.</returns>
         public static int ObtenerIdUltimoPedido()
         {
             string query = "SELECT MAX(id_delivery) FROM delivery;";
-            if(ConBD.Conexion != null)
+            if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
                 MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
                 MySqlDataReader dr = com.ExecuteReader();
-                if(dr.Read())
+                if (dr.Read())
                 {
                     int id = dr.GetInt32(0);
                     ConBD.CerrarConexion();
@@ -68,15 +92,21 @@ namespace pet4sitter.Clases
             return -1;
         }
 
+        /// <summary>
+        /// Guarda los productos asociados a un pedido en la base de datos.
+        /// </summary>
+        /// <param name="idPedido">ID del pedido.</param>
+        /// <param name="productos">Lista de productos a guardar.</param>
+        /// <returns>Devuelve -1 si la operación falla.</returns>
         public static int GuardarProductosPedido(int idPedido, List<Producto> productos)
         {
             string query = "INSERT INTO `pet4sitter`.`delivery_products` (`id_delivery`, `id_product`) VALUES (@idPedido, @idProducto);";
-            if(ConBD.Conexion != null)
+            if (ConBD.Conexion != null)
             {
                 ConBD.AbrirConexion();
                 MySqlCommand com = new MySqlCommand(query, ConBD.Conexion);
                 com.Parameters.AddWithValue("@idPedido", idPedido);
-                foreach(Producto p in productos)
+                foreach (Producto p in productos)
                 {
                     com.Parameters.AddWithValue("@idProducto", p.Id);
                     com.ExecuteNonQuery();
@@ -87,6 +117,11 @@ namespace pet4sitter.Clases
             return -1;
         }
 
+        /// <summary>
+        /// Genera un HTML con los detalles del pedido.
+        /// </summary>
+        /// <param name="pedido">El pedido cuyos detalles se quieren generar.</param>
+        /// <returns>El HTML generado en formato string.</returns>
         public static string GenerarHtmlPedido(Pedido pedido)
         {
             var sb = new StringBuilder();
@@ -138,7 +173,5 @@ namespace pet4sitter.Clases
 
             return sb.ToString();
         }
-
-
     }
 }

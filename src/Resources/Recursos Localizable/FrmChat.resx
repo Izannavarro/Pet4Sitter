@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblNombre1.Text" xml:space="preserve">
-    <value>Nombre1</value>
+    <value>Sin Mensajes</value>
   </data>
   <data name="lblNombre2.Text" xml:space="preserve">
-    <value>Nombre2</value>
+    <value>Sin Mensajes</value>
   </data>
   <data name="lblNombre3.Text" xml:space="preserve">
-    <value>Nombre3</value>
+    <value>Sin Mensajes</value>
   </data>
   <data name="lblNombre4.Text" xml:space="preserve">
-    <value>Nombre4</value>
+    <value>Sin Mensajes</value>
   </data>
   <data name="lblNombre5.Text" xml:space="preserve">
-    <value>Nombre5</value>
+    <value>Sin Mensajes</value>
   </data>
   <data name="btnSiguiente.Text" xml:space="preserve">
     <value>Siguiente</value>

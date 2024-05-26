@@ -92,6 +92,12 @@ namespace pet4sitter
         }
         private async void btnGuardar_Click(object sender, EventArgs e)
         {
+            if(ConBD.Conexion != null)
+            {
+                ConBD.AbrirConexion();
+                Data.CurrentUser = User.EncontrarUsuario((int)Data.CurrentUser.IdUser);
+                ConBD.CerrarConexion();
+            }
             string oldPass = Data.CurrentUser.Password;
             double oldLat = (double)Data.CurrentUser.Latitud;
             double oldLong = (double)Data.CurrentUser.Longitud;
@@ -155,7 +161,7 @@ namespace pet4sitter
 
             int id = Data.CurrentUser.IdUser.Value;
 
-            User u = new User(id, null, nombre, apellidos, email, null, contra,Data.CurrentUser.Precio, localizacion, null, null, null, imgFinal, lat, longi);
+            User u = new User(id,Data.CurrentUser.IdGoogle, nombre, apellidos, email,Data.CurrentUser.Dni, contra,Data.CurrentUser.Precio, localizacion,Data.CurrentUser.Premium, Data.CurrentUser.Sitter, Data.CurrentUser.Admin, imgFinal, lat, longi);
 
             if (ConBD.Conexion != null)
             {

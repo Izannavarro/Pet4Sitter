@@ -53,7 +53,7 @@
             this.pcbGifCarga = new System.Windows.Forms.PictureBox();
             this.lblTituloNoticias = new System.Windows.Forms.Label();
             this.lblInfoPulsar = new System.Windows.Forms.Label();
-            this.barraLateral1 = new pet4sitter.BarraLateral();
+            this.barraLateral1 = new pet4sitter.BarraLateral(this);
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -288,11 +288,12 @@
             // 
             this.lblFuncPre.AutoSize = true;
             this.lblFuncPre.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFuncPre.Location = new System.Drawing.Point(234, 218);
+            this.lblFuncPre.Location = new System.Drawing.Point(140, 219);
             this.lblFuncPre.Name = "lblFuncPre";
             this.lblFuncPre.Size = new System.Drawing.Size(318, 31);
             this.lblFuncPre.TabIndex = 1;
             this.lblFuncPre.Text = "Funcionalidad PREMIUM";
+            this.lblFuncPre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ptbCorona
             // 
@@ -359,9 +360,9 @@
             this.Controls.Add(this.lblInfoPulsar);
             this.Controls.Add(this.lblTituloNoticias);
             this.Controls.Add(this.pcbGifCarga);
+            this.Controls.Add(this.pnlPremium);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.barraLateral1);
-            this.Controls.Add(this.pnlPremium);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1125, 635);

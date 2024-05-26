@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdminProductos));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVaciarCampos = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.barraLateral2 = new pet4sitter.BarraLateral(this);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImagen)).BeginInit();
             this.panel4.SuspendLayout();
@@ -70,6 +70,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
+            this.panel1.Controls.Add(this.btnVaciarCampos);
             this.panel1.Controls.Add(this.btnVolver);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnEditar);
@@ -77,16 +78,28 @@
             this.panel1.Controls.Add(this.btnAñadir);
             this.panel1.Controls.Add(this.ptbImagen);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Location = new System.Drawing.Point(719, 66);
+            this.panel1.Location = new System.Drawing.Point(624, 48);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(362, 476);
+            this.panel1.Size = new System.Drawing.Size(362, 490);
             this.panel1.TabIndex = 10;
+            // 
+            // btnVaciarCampos
+            // 
+            this.btnVaciarCampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVaciarCampos.Location = new System.Drawing.Point(87, 460);
+            this.btnVaciarCampos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVaciarCampos.Name = "btnVaciarCampos";
+            this.btnVaciarCampos.Size = new System.Drawing.Size(197, 26);
+            this.btnVaciarCampos.TabIndex = 50;
+            this.btnVaciarCampos.Text = "Vaciar";
+            this.btnVaciarCampos.UseVisualStyleBackColor = true;
+            this.btnVaciarCampos.Click += new System.EventHandler(this.btnVaciarCampos_Click);
             // 
             // btnVolver
             // 
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(272, 440);
+            this.btnVolver.Location = new System.Drawing.Point(272, 430);
             this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(88, 26);
@@ -98,7 +111,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(182, 440);
+            this.btnEliminar.Location = new System.Drawing.Point(182, 430);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 26);
@@ -110,7 +123,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(97, 440);
+            this.btnEditar.Location = new System.Drawing.Point(97, 430);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(88, 26);
@@ -133,7 +146,7 @@
             // btnAñadir
             // 
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Location = new System.Drawing.Point(10, 440);
+            this.btnAñadir.Location = new System.Drawing.Point(10, 430);
             this.btnAñadir.Margin = new System.Windows.Forms.Padding(2);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(88, 26);
@@ -306,14 +319,15 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(133)))), ((int)(((byte)(98)))));
             this.panel3.Controls.Add(this.dgvProductos);
-            this.panel3.Location = new System.Drawing.Point(180, 66);
+            this.panel3.Location = new System.Drawing.Point(85, 48);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(509, 476);
+            this.panel3.Size = new System.Drawing.Size(509, 490);
             this.panel3.TabIndex = 9;
             // 
             // dgvProductos
             // 
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Location = new System.Drawing.Point(27, 16);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(2);
@@ -336,16 +350,6 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // barraLateral2
-            // 
-            this.barraLateral2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.barraLateral2.BackColor = System.Drawing.Color.Transparent;
-            this.barraLateral2.Location = new System.Drawing.Point(-1, -2);
-            this.barraLateral2.Margin = new System.Windows.Forms.Padding(4);
-            this.barraLateral2.Name = "barraLateral2";
-            this.barraLateral2.Size = new System.Drawing.Size(311, 599);
-            this.barraLateral2.TabIndex = 1;
-            // 
             // FrmAdminProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,7 +358,6 @@
             this.ClientSize = new System.Drawing.Size(1109, 596);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.barraLateral2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1125, 635);
@@ -403,8 +406,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private BarraLateral barraLateral2;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnVaciarCampos;
     }
 }

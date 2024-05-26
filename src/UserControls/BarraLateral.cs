@@ -299,8 +299,11 @@ namespace pet4sitter
         {
             FrmConfiguracion frm = new FrmConfiguracion();
             frm.ShowDialog();
-            formActual.Refresh();
-            if(Data.CurrentUser == null)
+            Type formType = formActual.GetType();
+            Form newForm = (Form)Activator.CreateInstance(formType);
+            newForm.Show();
+            formActual.Dispose();
+            if (Data.CurrentUser == null)
             {
                 formActual.Dispose();
                 FrmLogin login = new FrmLogin();

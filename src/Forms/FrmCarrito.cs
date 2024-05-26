@@ -18,6 +18,7 @@ namespace pet4sitter
     {
         int cantProdList;
         string loc;
+        bool tarjetaCargada = false;
         List<Producto> prodListAnt;
 
         public FrmCarrito()
@@ -75,10 +76,12 @@ namespace pet4sitter
         {
             FrmEditarTarjeta frmET = new FrmEditarTarjeta();
             frmET.ShowDialog();
-            if (Data.CurrentTarjeta != null)
+            if (Data.CurrentTarjeta != null && !tarjetaCargada)
             {
+                
                 lblNumTarjeta.Text = "**** **** **** " + Data.CurrentTarjeta.NumeroTarjeta.ToString().Substring(Data.CurrentTarjeta.NumeroTarjeta.ToString().Length - 4);
                 lblDescripcionTarjeta.Text += "\n" + Data.CurrentTarjeta.ToString();
+                tarjetaCargada = true;
             }
         }
 
@@ -154,6 +157,12 @@ namespace pet4sitter
 
                         var mailService = new MailServices.MailPet4Sitter();
                         mailService.sendMailHtml("Pedido Realizado!", htmlMailPedido, Data.CurrentUser.Email);
+                        if(ConBD.Conexion != null)
+                        {
+                            ConBD.AbrirConexion();
+                            Data.CurrentUser = User.EncontrarUsuario((int)Data.CurrentUser.IdUser);
+                            ConBD.CerrarConexion();
+                        }
                     }
                     else
                     {

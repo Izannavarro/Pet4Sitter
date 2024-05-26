@@ -61,7 +61,8 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Funcionalidad Premium.
+        ///   Busca una cadena traducida similar a Funcionalidad Premium
+        ///Haz almenos una compra para ser premium.
         /// </summary>
         internal static string lbl {
             get {

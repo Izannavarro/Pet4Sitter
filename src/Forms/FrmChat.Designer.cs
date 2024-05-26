@@ -146,7 +146,7 @@ namespace pet4sitter
             // 
             this.lblNombre1.AutoSize = true;
             this.lblNombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre1.Location = new System.Drawing.Point(91, 28);
+            this.lblNombre1.Location = new System.Drawing.Point(89, 28);
             this.lblNombre1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre1.Name = "lblNombre1";
             this.lblNombre1.Size = new System.Drawing.Size(52, 18);
@@ -181,7 +181,7 @@ namespace pet4sitter
             // 
             this.lblNombre2.AutoSize = true;
             this.lblNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre2.Location = new System.Drawing.Point(92, 30);
+            this.lblNombre2.Location = new System.Drawing.Point(90, 30);
             this.lblNombre2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre2.Name = "lblNombre2";
             this.lblNombre2.Size = new System.Drawing.Size(52, 18);
@@ -240,7 +240,7 @@ namespace pet4sitter
             // 
             this.lblNombre3.AutoSize = true;
             this.lblNombre3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre3.Location = new System.Drawing.Point(92, 31);
+            this.lblNombre3.Location = new System.Drawing.Point(90, 31);
             this.lblNombre3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre3.Name = "lblNombre3";
             this.lblNombre3.Size = new System.Drawing.Size(52, 18);
@@ -298,7 +298,7 @@ namespace pet4sitter
             // 
             this.lblNombre4.AutoSize = true;
             this.lblNombre4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre4.Location = new System.Drawing.Point(92, 29);
+            this.lblNombre4.Location = new System.Drawing.Point(90, 29);
             this.lblNombre4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre4.Name = "lblNombre4";
             this.lblNombre4.Size = new System.Drawing.Size(52, 18);

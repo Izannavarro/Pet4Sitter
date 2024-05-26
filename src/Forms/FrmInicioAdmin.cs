@@ -65,7 +65,7 @@ namespace pet4sitter
         {
             FrmLogin frm = new FrmLogin();
             frm.Show();
-            this.Close();
+            this.Dispose();
         }
 
         private void FrmInicioAdmin_FormClosed(object sender, FormClosedEventArgs e)

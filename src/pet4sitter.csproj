@@ -874,7 +874,6 @@
       <DependentUpon>ProductoEnCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="pet4sitter_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

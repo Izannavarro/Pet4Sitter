@@ -118,9 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lbl" xml:space="preserve">
-    <value>Premium Functionality</value>
-</data>
-<data name="link" xml:space="preserve">
+    <value>Premium Functionality
+Make at least one purchase to become premium</value>
+  </data>
+  <data name="link" xml:space="preserve">
     <value>Link to the news</value>
-</data>
+  </data>
 </root>

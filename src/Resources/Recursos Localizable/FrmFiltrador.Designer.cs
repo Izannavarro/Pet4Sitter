@@ -61,7 +61,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Delete.
+        ///   Busca una cadena traducida similar a Eliminar.
         /// </summary>
         internal static string btnBorrar_Text {
             get {
@@ -70,7 +70,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Search.
+        ///   Busca una cadena traducida similar a Buscar.
         /// </summary>
         internal static string btnBuscar_Text {
             get {
@@ -88,7 +88,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Distance.
+        ///   Busca una cadena traducida similar a Distancia.
         /// </summary>
         internal static string cmbDistancia_Text {
             get {
@@ -97,7 +97,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Ascending.
+        ///   Busca una cadena traducida similar a Ascendente.
         /// </summary>
         internal static string cmbDistanciaAscDesc_Text {
             get {
@@ -106,7 +106,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Price.
+        ///   Busca una cadena traducida similar a Precio.
         /// </summary>
         internal static string cmbOrdenarPrecio_Text {
             get {
@@ -115,7 +115,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Ascending.
+        ///   Busca una cadena traducida similar a Ascendente.
         /// </summary>
         internal static string cmbPrecioAscDesc_Text {
             get {
@@ -133,7 +133,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a From:.
+        ///   Busca una cadena traducida similar a Desde:.
         /// </summary>
         internal static string lblDesde_Text {
             get {
@@ -142,7 +142,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Filters:.
+        ///   Busca una cadena traducida similar a Filtros:.
         /// </summary>
         internal static string lblFiltros_Text {
             get {
@@ -151,7 +151,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a To:.
+        ///   Busca una cadena traducida similar a Hasta:.
         /// </summary>
         internal static string lblHasta_Text {
             get {
@@ -160,7 +160,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Sort by Distance:.
+        ///   Busca una cadena traducida similar a Ordenar por distancia:.
         /// </summary>
         internal static string lblOrdenarPorDistancia_Text {
             get {
@@ -169,7 +169,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Sort by Price:.
+        ///   Busca una cadena traducida similar a Ordenar por precio:.
         /// </summary>
         internal static string lblOrdenarPrecio_Text {
             get {
@@ -178,7 +178,7 @@ namespace pet4sitter.Resources.Recursos_Localizable {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Range:.
+        ///   Busca una cadena traducida similar a Rango de precios:.
         /// </summary>
         internal static string lblRango_Text {
             get {

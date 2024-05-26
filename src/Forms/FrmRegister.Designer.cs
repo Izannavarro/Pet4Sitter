@@ -93,7 +93,7 @@ namespace pet4sitter
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(432, 27);
-            this.txtMail.TabIndex = 2;
+            this.txtMail.TabIndex = 3;
             this.txtMail.Text = "Introduce email";
             this.txtMail.Enter += new System.EventHandler(this.txtMail_Enter);
             this.txtMail.Leave += new System.EventHandler(this.txtMail_Leave);
@@ -149,7 +149,7 @@ namespace pet4sitter
             this.btnLogin.Location = new System.Drawing.Point(345, 438);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(432, 28);
-            this.btnLogin.TabIndex = 8;
+            this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Volver a Iniciar Sesión";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -161,7 +161,7 @@ namespace pet4sitter
             this.btnContinueWGoogle.Location = new System.Drawing.Point(345, 471);
             this.btnContinueWGoogle.Name = "btnContinueWGoogle";
             this.btnContinueWGoogle.Size = new System.Drawing.Size(432, 28);
-            this.btnContinueWGoogle.TabIndex = 11;
+            this.btnContinueWGoogle.TabIndex = 8;
             this.btnContinueWGoogle.Text = "Regístrate con google";
             this.btnContinueWGoogle.UseVisualStyleBackColor = true;
             this.btnContinueWGoogle.Click += new System.EventHandler(this.btnIniciarSesionGoogle_Click);
@@ -201,7 +201,7 @@ namespace pet4sitter
             this.txtNombre.Multiline = true;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(144, 27);
-            this.txtNombre.TabIndex = 14;
+            this.txtNombre.TabIndex = 0;
             this.txtNombre.Text = "Nombre";
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
@@ -238,7 +238,7 @@ namespace pet4sitter
             this.txtApellido.Multiline = true;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(226, 27);
-            this.txtApellido.TabIndex = 17;
+            this.txtApellido.TabIndex = 1;
             this.txtApellido.Text = "Apellido:";
             this.txtApellido.Enter += new System.EventHandler(this.txtApellido_Enter);
             this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
@@ -275,7 +275,7 @@ namespace pet4sitter
             this.txtDni.Multiline = true;
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(226, 27);
-            this.txtDni.TabIndex = 21;
+            this.txtDni.TabIndex = 2;
             this.txtDni.Text = "DNI:";
             this.txtDni.Enter += new System.EventHandler(this.txtDni_Enter);
             this.txtDni.Leave += new System.EventHandler(this.txtDni_Leave);
@@ -311,7 +311,7 @@ namespace pet4sitter
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(432, 27);
-            this.txtDireccion.TabIndex = 24;
+            this.txtDireccion.TabIndex = 5;
             this.txtDireccion.Text = "Introduce dirección";
             this.txtDireccion.Enter += new System.EventHandler(this.txtDireccion_Enter);
             this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
@@ -333,7 +333,7 @@ namespace pet4sitter
             this.btnRegistro.Location = new System.Drawing.Point(345, 404);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(432, 28);
-            this.btnRegistro.TabIndex = 27;
+            this.btnRegistro.TabIndex = 6;
             this.btnRegistro.Text = "Regístrate";
             this.btnRegistro.UseVisualStyleBackColor = true;
             this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);

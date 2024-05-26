@@ -116,7 +116,6 @@
             this.Name = "FrmEditarDireccion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmEditarDireccion";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmEditarDireccion_FormClosed);
             this.Load += new System.EventHandler(this.FrmEditarDireccion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

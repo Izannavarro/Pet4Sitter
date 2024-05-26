@@ -14,7 +14,7 @@ namespace pet4sitter.Clases
         {
             try
             {
-                StripeConfiguration.ApiKey = Data.stripePrivateKey; // Reemplaza con tu clave secreta de Stripe
+                StripeConfiguration.ApiKey = Data.stripePrivateKey;
 
                 var chargeOptions = new ChargeCreateOptions
                 {
