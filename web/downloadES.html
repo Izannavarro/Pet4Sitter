@@ -84,6 +84,11 @@
             } else {
                 solLuna.innerHTML = "&#9728;";
             }
+            const urlParams = new URLSearchParams(window.location.search);
+            const os = urlParams.get('os');
+            if (os) {
+                showMessage(os);
+            }
         });
 
         function showMessage(type) {
@@ -100,10 +105,14 @@
                 messageText.textContent = 'Puedes descargar la versión para Windows.';
                 downloadBtn.style.display = 'block';
                 document.getElementById('windows-img').style.border = '2px solid #000';
-            } else {
-                messageText.textContent = 'La descarga para esta plataforma estará disponible próximamente...';
+            } else if (type === 'mac') {
+                messageText.textContent = 'La descarga para macOS estará disponible próximamente...';
                 downloadBtn.style.display = 'none';
-                document.getElementById(type + '-img').style.border = '2px solid #000';
+                document.getElementById('mac-img').style.border = '2px solid #000';
+            } else if (type === 'linux') {
+                messageText.textContent = 'La descarga para Linux estará disponible próximamente...';
+                downloadBtn.style.display = 'none';
+                document.getElementById('linux-img').style.border = '2px solid #000';
             }
 
             messageBox.classList.remove('hidden');
