@@ -51,8 +51,8 @@
     </footer>
 
     <script>
-        const checkbox = document.getElementById('changeColor');
-        var sunMoon = document.querySelector(".sun-moon");
+        const checkbox = document.getElementById('cambiarColor');
+        var solLuna = document.querySelector(".sol-luna");
         checkbox.addEventListener('change', () => {
             document.body.classList.toggle('dark-mode');
             const elementsToToggle = document.querySelectorAll('header, nav, .download-button, input[type="submit"], .intro, .services, .about, .contact, input[type="text"], input[type="email"], textarea, .member-card, nav a, footer p');
@@ -62,9 +62,9 @@
             });
 
             if (checkbox.checked) {
-                sunMoon.innerHTML = "&#127769;";
+                solLuna.innerHTML = "&#127769;";
             } else {
-                sunMoon.innerHTML = "&#9728;";
+                solLuna.innerHTML = "&#9728;";
             }
 
             const isDarkMode = document.body.classList.contains('dark-mode');
@@ -80,9 +80,14 @@
                 elementsToToggle.forEach(element => {
                     element.classList.add('dark-mode');
                 });
-                sunMoon.innerHTML = "&#127769;";
+                solLuna.innerHTML = "&#127769;";
             } else {
-                sunMoon.innerHTML = "&#9728;";
+                solLuna.innerHTML = "&#9728;";
+            }
+            const urlParams = new URLSearchParams(window.location.search);
+            const os = urlParams.get('os');
+            if (os) {
+                showMessage(os);
             }
         });
 
@@ -91,19 +96,23 @@
             const messageText = document.getElementById('message-text');
             const downloadBtn = document.getElementById('download-btn');
 
-            // Highlight the selected image
+            // Resaltar la imagen seleccionada
             document.getElementById('windows-img').style.border = 'none';
             document.getElementById('mac-img').style.border = 'none';
             document.getElementById('linux-img').style.border = 'none';
 
             if (type === 'windows') {
-                messageText.textContent = 'You can download the version for Windows.';
+                messageText.textContent = 'Puedes descargar la versión para Windows.';
                 downloadBtn.style.display = 'block';
                 document.getElementById('windows-img').style.border = '2px solid #000';
-            } else {
-                messageText.textContent = 'Download for this platform will be available soon...';
+            } else if (type === 'mac') {
+                messageText.textContent = 'La descarga para macOS estará disponible próximamente...';
                 downloadBtn.style.display = 'none';
-                document.getElementById(type + '-img').style.border = '2px solid #000';
+                document.getElementById('mac-img').style.border = '2px solid #000';
+            } else if (type === 'linux') {
+                messageText.textContent = 'La descarga para Linux estará disponible próximamente...';
+                downloadBtn.style.display = 'none';
+                document.getElementById('linux-img').style.border = '2px solid #000';
             }
 
             messageBox.classList.remove('hidden');
